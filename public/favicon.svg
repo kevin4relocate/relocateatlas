@@ -1,6 +1,5 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="18" fill="#0B1220"/>
-  <path d="M32 10L48 54H39.5L36.5 45.5H20.5L17.5 54H9L25 10H32ZM23.2 38H33.8L28.5 22.8L23.2 38Z" fill="white"/>
-  <path d="M42.5 16C48.3 21.8 50.1 30.3 47.9 37.7" stroke="#2DD4BF" stroke-width="4" stroke-linecap="round"/>
-  <path d="M16.1 27.1C17.5 20.7 22.6 15.5 29.3 14" stroke="#60A5FA" stroke-width="4" stroke-linecap="round"/>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RelocateAtlas RA favicon">
+  <rect width="64" height="64" rx="16" fill="#0F172A"/>
+  <text x="50%" y="53%" text-anchor="middle" dominant-baseline="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="25" font-weight="800" letter-spacing="-1.5" fill="#FFFFFF">RA</text>
+  <circle cx="50" cy="14" r="4" fill="#14B8A6"/>
 </svg>

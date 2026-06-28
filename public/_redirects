@@ -1,0 +1,2 @@
+# Common sitemap path redirect for Cloudflare Pages
+/sitemap.xml /sitemap-index.xml 301
