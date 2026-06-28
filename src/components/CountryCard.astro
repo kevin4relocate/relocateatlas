@@ -1,0 +1,30 @@
+---
+type Props = {
+  flag: string;
+  name: string;
+  slug: string;
+  primaryVisa: string;
+  shortDescription: string;
+  popularRoles?: string[];
+  priority?: 'Launch' | 'Next';
+};
+const { flag, name, slug, primaryVisa, shortDescription, popularRoles = [], priority = 'Launch' } = Astro.props;
+---
+<a class="country-card" href={`/countries/${slug}`}>
+  <div class="country-card-glow" aria-hidden="true"></div>
+  <div class="country-top">
+    <span class="flag" aria-hidden="true">{flag}</span>
+    <div>
+      <div class="country-label">{priority === 'Launch' ? 'Launch focus' : 'Next market'}</div>
+      <h3>{name}</h3>
+    </div>
+  </div>
+  <p class="country-visa">{primaryVisa}</p>
+  <p>{shortDescription}</p>
+  {popularRoles.length > 0 && (
+    <div class="tags" aria-label={`${name} popular roles`}>
+      {popularRoles.slice(0, 3).map((role) => <span class="tag">{role}</span>)}
+    </div>
+  )}
+  <span class="country-link">View guide →</span>
+</a>

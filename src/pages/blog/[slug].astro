@@ -1,0 +1,314 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.astro';
+import { blogPosts, SITE } from '../../data';
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const isSponsorGuide = post.slug === 'how-to-find-visa-sponsor-jobs-abroad';
+const relatedPosts = blogPosts.filter((item) => item.slug !== post.slug).slice(0, 4);
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  author: {
+    '@type': 'Organization',
+    name: SITE.name
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE.name,
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL('/favicon.svg', SITE.url).toString()
+    }
+  },
+  mainEntityOfPage: new URL(`/blog/${post.slug}`, SITE.url).toString()
+};
+
+const faqJsonLd = isSponsorGuide ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is a visa sponsor job?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A visa sponsor job is a role where an employer may support part of the work authorization process for a foreign candidate. Sponsorship does not guarantee a job offer, visa approval, or relocation package.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Which job description phrases are red flags for international candidates?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Red flags include no visa sponsorship available, must already have work rights, citizens or permanent residents only, local candidates only, and remote roles limited to one country or region.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How should I use RelocateAtlas sponsor-friendly job research?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'RelocateAtlas helps candidates research sponsor-friendly opportunities faster. Final eligibility, visa support, and hiring decisions depend on each employer and official immigration rules.'
+      }
+    }
+  ]
+} : null;
+---
+<BaseLayout
+  title={`${post.title} | RelocateAtlas`}
+  description={post.description}
+  canonicalPath={`/blog/${post.slug}`}
+  structuredData={faqJsonLd ? [articleJsonLd, faqJsonLd] : articleJsonLd}
+>
+  <Header />
+  <main>
+    <section class="page-hero page-hero-gradient compact-hero blog-hero">
+      <div class="container narrow">
+        <span class="eyebrow">{post.category} · {post.date}</span>
+        <h1>{post.title}</h1>
+        <p class="lead">{post.description}</p>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <article class="container prose prose-wide">
+        {isSponsorGuide ? (
+          <>
+            <div class="article-toc content-block">
+              <span class="mini-eyebrow">In this guide</span>
+              <h2>What you will learn</h2>
+              <ol>
+                <li><a href="#meaning">What a visa sponsor job actually means</a></li>
+                <li><a href="#phrases">Phrases to look for in job descriptions</a></li>
+                <li><a href="#red-flags">Red flags to avoid</a></li>
+                <li><a href="#countries">Best countries to start with</a></li>
+                <li><a href="#industries">Best industries for sponsor-friendly roles</a></li>
+                <li><a href="#where-to-search">Where to search</a></li>
+                <li><a href="#cv">How to prepare your CV and recruiter message</a></li>
+                <li><a href="#checklist">Application checklist</a></li>
+              </ol>
+            </div>
+
+            <p>
+              Finding visa sponsor jobs abroad is not the same as normal job hunting. A normal job board can show thousands of open roles, but many of those roles quietly require local work rights, exclude foreign applicants, or offer no support for work permits. International candidates often waste weeks applying to jobs that were never realistic for them.
+            </p>
+            <p>
+              The goal is not to apply to every job that looks interesting. The goal is to identify jobs with stronger sponsor signals, understand the risks, and apply only where your profile, industry, country, salary level, and visa pathway make sense together.
+            </p>
+
+            <section id="meaning">
+              <h2>What is a visa sponsor job?</h2>
+              <p>
+                A visa sponsor job is a role where an employer may support part of the legal work authorization process so a foreign candidate can work in that country. The exact meaning depends on the country. In some markets, the employer must be licensed or accredited. In others, the employer may need to prove the role, salary, occupation, and candidate meet specific rules.
+              </p>
+              <p>
+                Sponsorship does not mean a guaranteed job offer. It also does not mean a guaranteed visa. It simply means the employer may be willing and able to support the process if you are selected and if the job meets the relevant requirements.
+              </p>
+              <div class="callout-box">
+                <strong>RelocateAtlas note</strong>
+                <p>We treat sponsorship as a research signal. RelocateAtlas helps you compare sponsor-friendly language, employer context, country pathway notes, and application risk before you decide where to spend time.</p>
+              </div>
+            </section>
+
+            <section id="phrases">
+              <h2>Phrases to look for in job descriptions</h2>
+              <p>
+                Job descriptions often reveal whether a role is worth your time. The strongest phrases are direct. The weaker phrases require more verification. The dangerous phrases usually mean you should skip the role unless you already have local work rights.
+              </p>
+              <div class="content-table-wrap">
+                <table class="content-table">
+                  <thead><tr><th>Phrase</th><th>What it usually means</th><th>How to treat it</th></tr></thead>
+                  <tbody>
+                    <tr><td>Visa sponsorship available</td><td>Strong sponsor signal</td><td>Good candidate for review</td></tr>
+                    <tr><td>Work permit support</td><td>Employer may support authorization</td><td>Good, but verify details</td></tr>
+                    <tr><td>Relocation support provided</td><td>May help with moving costs, not always visa</td><td>Ask specifically about visa sponsorship</td></tr>
+                    <tr><td>Open to international candidates</td><td>Positive but not enough alone</td><td>Check employer policy and visa pathway</td></tr>
+                    <tr><td>Skilled Worker sponsor</td><td>Common UK signal</td><td>Check sponsor license and salary fit</td></tr>
+                    <tr><td>Accredited employer</td><td>Important for New Zealand-style routes</td><td>Check current accreditation and role fit</td></tr>
+                    <tr><td>EU Blue Card eligible</td><td>Useful for Germany/EU skilled roles</td><td>Check degree, salary, and contract requirements</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section id="red-flags">
+              <h2>Red flags to avoid</h2>
+              <p>
+                Many job posts look international but are not suitable for foreign candidates. If you see hard exclusion language, do not spend much time on the role unless you already meet that work-right requirement.
+              </p>
+              <ul>
+                <li><strong>No visa sponsorship available</strong> — usually not worth applying as an overseas candidate.</li>
+                <li><strong>Must already have the right to work</strong> — often means the employer will not sponsor.</li>
+                <li><strong>Citizens or permanent residents only</strong> — skip unless you qualify.</li>
+                <li><strong>Local candidates only</strong> — not relocation-friendly.</li>
+                <li><strong>Remote within the country only</strong> — remote does not mean global.</li>
+                <li><strong>Very junior role with no sponsor signal</strong> — sponsorship is less likely unless the occupation has strong demand.</li>
+              </ul>
+            </section>
+
+            <section id="countries">
+              <h2>Best countries to start with</h2>
+              <p>
+                The best country depends on your industry, experience, language ability, salary target, and documents. For RelocateAtlas, the first countries to research are those with strong demand, clearer employer-sponsored pathways, or active international hiring markets.
+              </p>
+              <div class="info-grid two">
+                <div class="info-tile"><strong>Australia</strong><span>Strong for tech, healthcare, engineering, construction, finance, and skilled work. Always check role eligibility and employer sponsorship.</span></div>
+                <div class="info-tile"><strong>New Zealand</strong><span>Useful for accredited employer routes, healthcare, education, trades, tech, and regional demand.</span></div>
+                <div class="info-tile"><strong>United Kingdom</strong><span>Good for Skilled Worker research, healthcare, tech, finance, education, and care roles, but salary and sponsor-license checks matter.</span></div>
+                <div class="info-tile"><strong>Germany</strong><span>Strong for tech, engineering, healthcare, and EU Blue Card-style profiles; language requirements vary by role.</span></div>
+                <div class="info-tile"><strong>Canada</strong><span>Useful for skilled workers, provincial routes, healthcare, engineering, and tech, but employer support varies.</span></div>
+                <div class="info-tile"><strong>Ireland, Netherlands, Denmark, Singapore, Japan</strong><span>Good secondary markets depending on industry, salary, language, and employer policy.</span></div>
+              </div>
+            </section>
+
+            <section id="industries">
+              <h2>Best industries for sponsor-friendly jobs</h2>
+              <p>
+                Relocation is not only for software engineers. Many international candidates come from healthcare, engineering, education, finance, hospitality, trades, and other skilled backgrounds. The key is to understand what each industry requires before applying.
+              </p>
+              <div class="info-grid two">
+                <div class="info-tile"><strong>Tech, QA, Data & Cloud</strong><span>Software engineers, QA engineers, automation testers, data engineers, cloud engineers, cybersecurity, and AI roles. Strongest for mid-level and senior candidates.</span></div>
+                <div class="info-tile"><strong>Healthcare & Care</strong><span>Nurses, care workers, healthcare assistants, pharmacists, allied health, and medical technicians. Registration and English proof are often critical.</span></div>
+                <div class="info-tile"><strong>Engineering & Skilled Trades</strong><span>Civil, mechanical, electrical, construction, welding, plumbing, automotive, and maintenance roles. Trade assessment and licensing may apply.</span></div>
+                <div class="info-tile"><strong>Finance, Accounting & Audit</strong><span>Accountants, auditors, risk, compliance, payroll, and analysts. Local standards knowledge can matter.</span></div>
+                <div class="info-tile"><strong>Education & Teaching</strong><span>Teachers, childcare educators, special education, STEM teachers, and lecturers. Registration, background checks, and language requirements are common.</span></div>
+                <div class="info-tile"><strong>Hospitality & Skilled Roles</strong><span>Chefs, hotel managers, restaurant managers, bakers, logistics, and supply-chain roles. Watch salary and local-work-right phrases carefully.</span></div>
+              </div>
+              <p><a class="inline-link" href="/industries">Explore RelocateAtlas industry guides →</a></p>
+            </section>
+
+            <section id="where-to-search">
+              <h2>Where to search for sponsor jobs</h2>
+              <p>
+                The best search strategy combines several sources. Do not rely only on large job boards. Use employer career pages, government sponsor lists where available, relocation-focused job boards, LinkedIn searches, recruiter posts, industry communities, and newsletters that already filter for sponsor signals.
+              </p>
+              <ul>
+                <li><strong>Employer career pages</strong> — best for official apply links and fresh roles.</li>
+                <li><strong>LinkedIn</strong> — useful for recruiter activity and company hiring patterns.</li>
+                <li><strong>Government or sponsor registers</strong> — useful where official employer lists exist.</li>
+                <li><strong>Industry communities</strong> — useful for healthcare, education, trades, tech, and finance leads.</li>
+                <li><strong>Curated newsletters</strong> — useful when you want fewer links and more context.</li>
+              </ul>
+              <div class="article-cta-card">
+                <strong>Save time searching for sponsor-friendly jobs</strong>
+                <p>RelocateAtlas publishes free previews and paid weekly sponsor-friendly job intelligence through Substack. Paid members get full lists with direct apply links, sponsor signals, relocation scores, salary notes when available, and practical planning notes.</p>
+                <div class="article-cta-actions">
+                  <a class="button" href="/jobs/free-preview">View free job preview</a>
+                  <a class="button-ghost" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe on Substack</a>
+                </div>
+              </div>
+            </section>
+
+            <section id="cv">
+              <h2>How to prepare your CV and recruiter message</h2>
+              <p>
+                International applications need to be clear and fast to understand. Recruiters should immediately see your role, experience level, strongest skills, industries, tools, certifications, and whether you are open to relocation.
+              </p>
+              <ul>
+                <li>Put your target role and strongest skills near the top.</li>
+                <li>Use measurable outcomes, not only task lists.</li>
+                <li>Match keywords from the job description, especially tools, domain, license, or certification requirements.</li>
+                <li>Prepare a short answer for sponsorship: “I am currently based in [country] and open to relocation. Does this role support visa sponsorship or work permit assistance for international candidates?”</li>
+                <li>Do not begin with a long visa explanation. First show fit for the role, then confirm sponsorship details.</li>
+              </ul>
+            </section>
+
+            <section id="checklist">
+              <h2>Visa sponsor job checklist</h2>
+              <p>Before applying, check these items:</p>
+              <ul class="check-list">
+                <li>Does the job mention sponsorship, relocation, work permit support, accredited employer, skilled worker, or international applicants?</li>
+                <li>Does the job clearly reject candidates without local work rights?</li>
+                <li>Is the employer credible and using an official apply link?</li>
+                <li>Does the role match your experience level and industry?</li>
+                <li>Does the salary appear realistic for the country and possible visa pathway?</li>
+                <li>Do you need license, registration, English test, trade assessment, or local language ability?</li>
+                <li>Can you explain your relocation reason clearly in interviews?</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Final advice</h2>
+              <p>
+                The strongest sponsor-job strategy is not volume. It is filtering. Apply to fewer but better roles, track sponsor signals, avoid obvious red flags, and prepare your documents before the recruiter asks for them.
+              </p>
+              <p>
+                RelocateAtlas is designed to make that process faster by combining AI-assisted research, human review, sponsor confidence notes, relocation scores, and practical risk notes across multiple industries.
+              </p>
+            </section>
+          </>
+        ) : (
+          <>
+            <h2>Overview</h2>
+            <p>
+              This guide is part of RelocateAtlas, a weekly publication for international candidates researching visa sponsor jobs, relocation-friendly employers, country guides, and practical global career moves.
+            </p>
+            <p>
+              The key idea is simple: international candidates should not treat every open job as equal. A good relocation opportunity needs a credible employer, a realistic role, salary context, a possible visa pathway, and no hard exclusion language such as “no sponsorship” or “must already have work rights.”
+            </p>
+            <h2>What to check before applying</h2>
+            <ul>
+              <li>Does the job description mention visa sponsorship, relocation support, work permit support, or international candidates?</li>
+              <li>Does the role clearly exclude candidates who do not already have local work rights?</li>
+              <li>Is the company real, active, and hiring through an official career page?</li>
+              <li>Does the salary appear suitable for the location and possible visa route?</li>
+              <li>Does the role require licensing, registration, local language, or document assessment?</li>
+              <li>Is the role recent enough to be worth applying to now?</li>
+            </ul>
+            <h2>How RelocateAtlas helps</h2>
+            <p>
+              We use AI-assisted research to find possible sponsor-friendly roles, then review selected opportunities before sharing them with readers. Our goal is not to guarantee visa sponsorship, but to help candidates spend more time on better opportunities.
+            </p>
+            <div class="article-cta-card">
+              <strong>Weekly sponsor job intelligence</strong>
+              <p>Paid members unlock full weekly job lists with direct apply links, sponsor confidence, relocation score, salary notes when available, visa pathway notes, practical planning notes, and application guidance.</p>
+              <div class="article-cta-actions">
+                <a class="button" href="/jobs/free-preview">View free job preview</a>
+                <a class="button-ghost" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe on Substack</a>
+              </div>
+            </div>
+            <h2>Next step</h2>
+            <p>
+              Subscribe to RelocateAtlas on Substack to receive weekly previews, country guides, industry requirement notes, and future paid job lists with direct apply links and relocation notes.
+            </p>
+          </>
+        )}
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="mini-eyebrow">Related guides</span><h2>Keep researching</h2></div>
+          <p>Use these guides to compare countries, industries, and sponsor-job signals before applying.</p>
+        </div>
+        <div class="grid-3 related-post-grid">
+          {relatedPosts.map((item) => (
+            <a class="card card-hover" href={`/blog/${item.slug}`}>
+              <span class="mini-eyebrow">{item.category}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>

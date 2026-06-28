@@ -1,0 +1,340 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import CTA from './CTA.astro';
+import { countries, resourceSections, blogPosts } from '../data';
+
+interface Props {
+  sectionSlug: string;
+}
+
+const { sectionSlug } = Astro.props;
+const section = resourceSections.find((item) => item.slug === sectionSlug);
+if (!section) throw new Error(`Unknown resource section: ${sectionSlug}`);
+
+type LandingCopy = {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  introTitle: string;
+  introParagraphs: string[];
+  compareTitle: string;
+  compareItems: string[];
+  warningTitle: string;
+  warningItems: string[];
+  countryTitle: string;
+  countryLead: string;
+  cardLabel: string;
+  relatedTitle: string;
+};
+
+const copyMap: Record<string, LandingCopy> = {
+  visas: {
+    eyebrow: 'Visa research',
+    title: 'Work visas and sponsor pathways by country.',
+    lead: 'Compare employer sponsorship routes, skilled worker pathways, visa signals, and risk phrases before applying for jobs abroad.',
+    introTitle: 'Why visa research matters before job applications',
+    introParagraphs: [
+      'A job opening abroad is not automatically useful for an international candidate. Some roles are open only to local citizens or people who already have work rights. Others may be posted by employers that can sponsor foreign workers, support relocation, or hire through recognized skilled worker programs.',
+      'RelocateAtlas helps candidates understand the difference between a normal job advertisement and a sponsor-friendly opportunity. The goal is not to replace official immigration advice. The goal is to help you ask better questions before spending hours applying.',
+      'Each country has different rules, employer obligations, salary expectations, occupation lists, and processing paths. A strong application strategy starts with knowing which country and pathway match your profile.'
+    ],
+    compareTitle: 'What to compare across visa routes',
+    compareItems: ['Employer sponsorship requirements', 'Eligible roles and occupation categories', 'Salary or income thresholds', 'Language and qualification expectations', 'Pathway to long-term residence', 'Risk phrases such as “must already have work rights”'],
+    warningTitle: 'Common visa research mistakes',
+    warningItems: ['Applying to jobs that clearly say no sponsorship', 'Ignoring salary and occupation requirements', 'Assuming a global company sponsors every role', 'Confusing relocation assistance with legal sponsorship', 'Relying on old blog posts instead of current official sources'],
+    countryTitle: 'Select a country',
+    countryLead: 'Choose a country to review its main work visa and sponsor-friendly job context.',
+    cardLabel: 'View visa guide',
+    relatedTitle: 'Latest visa and job-search guides'
+  },
+  taxes: {
+    eyebrow: 'Money and taxes',
+    title: 'Taxes by country for people planning to work abroad.',
+    lead: 'Understand tax-year basics, income-tax context, payroll deductions, social contributions, and why gross salary is not enough.',
+    introTitle: 'Why taxes matter in relocation planning',
+    introParagraphs: [
+      'A salary offer can look strong on paper but feel very different after taxes, social contributions, mandatory insurance, rent, and first-month relocation costs. Before accepting an international offer, candidates should compare gross salary with realistic take-home income.',
+      'Tax systems vary widely. Some countries use progressive income tax bands. Others include social security contributions, municipal taxes, payroll deductions, or mandatory health insurance. The exact outcome depends on residency status, family situation, income, and local law.',
+      'RelocateAtlas tax pages are designed as a research starting point. They help you understand what questions to ask before speaking with employers, payroll teams, accountants, or official tax authorities.'
+    ],
+    compareTitle: 'What to compare before accepting an offer',
+    compareItems: ['Tax residency rules', 'Income-tax bands or payroll deductions', 'Social security or pension contributions', 'Healthcare or insurance contributions', 'Relocation allowance tax treatment', 'Net salary after rent and essential costs'],
+    warningTitle: 'Common tax mistakes',
+    warningItems: ['Comparing gross salaries only', 'Ignoring tax residency rules', 'Forgetting social contributions', 'Not budgeting for the first tax year', 'Assuming all relocation benefits are tax-free'],
+    countryTitle: 'Select a country',
+    countryLead: 'Choose a country to review tax basics and salary-planning context for relocation.',
+    cardLabel: 'View tax guide',
+    relatedTitle: 'Latest money and relocation guides'
+  },
+  salaries: {
+    eyebrow: 'Salary research',
+    title: 'Salaries by country for global job seekers.',
+    lead: 'Compare salary expectations, high-paying roles, pay frequency, and city context before choosing where to apply.',
+    introTitle: 'Why salary research should include location context',
+    introParagraphs: [
+      'International salary research is more than checking an average number. A strong salary in an expensive city may leave less disposable income than a slightly lower salary in a more affordable location.',
+      'Candidates should evaluate salary together with visa requirements, seniority, industry, taxes, rent, healthcare, transportation, and family needs. The best relocation market is not always the one with the highest headline salary.',
+      'RelocateAtlas salary guides are built to help candidates compare countries before applying, negotiate with better context, and avoid underestimating real living costs.'
+    ],
+    compareTitle: 'What to compare when reviewing salaries',
+    compareItems: ['Gross salary and likely take-home income', 'City-level rent and transport', 'Visa salary thresholds where relevant', 'Pay frequency and probation rules', 'Relocation support and sign-on bonuses', 'Long-term career growth in that market'],
+    warningTitle: 'Common salary mistakes',
+    warningItems: ['Using one average salary for an entire country', 'Ignoring city rent differences', 'Forgetting tax and insurance deductions', 'Accepting offers below visa thresholds', 'Not comparing relocation package value'],
+    countryTitle: 'Select a country',
+    countryLead: 'Choose a country to review salary context, high-demand roles, and pay-planning notes.',
+    cardLabel: 'View salary guide',
+    relatedTitle: 'Latest salary and career guides'
+  },
+  'cost-of-living': {
+    eyebrow: 'Cost planning',
+    title: 'Cost of living by country.',
+    lead: 'Plan rent, transport, groceries, insurance, deposits, and first-month relocation costs before you move abroad.',
+    introTitle: 'Why cost of living can change your relocation decision',
+    introParagraphs: [
+      'The cost of living is one of the critical factors to consider when deciding where to relocate. Expenses usually include housing, utilities, food, transportation, healthcare, phone and internet, clothing, and personal spending. Depending on your family situation, it may also include childcare, education, entertainment, and support for dependents.',
+      'Moving to a lower-cost country can help you save money, especially if you work remotely or earn a salary above local market averages. However, countries with lower living costs may also offer lower salaries, fewer sponsor-friendly jobs, or different long-term residency options.',
+      'RelocateAtlas cost pages help candidates compare practical expenses before applying. The goal is to avoid accepting an offer that looks attractive but becomes stressful after rent, deposits, insurance, and setup costs.'
+    ],
+    compareTitle: 'Expenses to compare before moving',
+    compareItems: ['Rent and rental deposit', 'Temporary accommodation for arrival', 'Utilities and internet', 'Groceries and transport', 'Healthcare and insurance', 'Emergency savings for the first 60–90 days'],
+    warningTitle: 'Common cost-of-living mistakes',
+    warningItems: ['Checking only national averages', 'Ignoring city-level rent differences', 'Forgetting deposit and furniture costs', 'Assuming salary is enough without tax calculation', 'Not budgeting for healthcare or insurance'],
+    countryTitle: 'Select a country',
+    countryLead: 'Curious about the cost of living in a specific country? Select from the list below to review housing, food, transport, healthcare, and settlement notes.',
+    cardLabel: 'View cost guide',
+    relatedTitle: 'Latest cost and money guides'
+  },
+  'relocation-companies': {
+    eyebrow: 'Relocation support',
+    title: 'Relocation companies and moving support by country.',
+    lead: 'Understand what relocation companies can help with, what to ask employers, and how to plan the practical side of moving abroad.',
+    introTitle: 'When relocation companies can help',
+    introParagraphs: [
+      'Relocation companies can support international moves by helping with shipping, temporary accommodation, home search, local registration, school search, banking setup, utilities, and settling-in services. Some employers include relocation vendors in the offer package, while others provide only a fixed allowance.',
+      'The value of relocation support depends on your situation. A single candidate moving with two suitcases may need very little help. A family relocating with children, pets, furniture, and school requirements may benefit from structured support.',
+      'RelocateAtlas relocation company pages help candidates understand the service categories and questions to ask before signing an offer or paying for relocation help.'
+    ],
+    compareTitle: 'What relocation support can include',
+    compareItems: ['Shipment and storage', 'Temporary accommodation', 'Home search and lease support', 'School and family settling-in support', 'Local registration and administration', 'Airport pickup and arrival orientation'],
+    warningTitle: 'Common relocation support mistakes',
+    warningItems: ['Assuming the employer pays for everything', 'Not asking what the allowance covers', 'Booking services before visa approval', 'Ignoring refund or cancellation rules', 'Not comparing self-move versus full-service relocation'],
+    countryTitle: 'Select a country',
+    countryLead: 'Choose a country to review relocation support notes and service providers to research before moving.',
+    cardLabel: 'View relocation guide',
+    relatedTitle: 'Latest relocation planning guides'
+  },
+  jobs: {
+    eyebrow: 'Job research',
+    title: 'Visa sponsor jobs and relocation-friendly markets by country.',
+    lead: 'Research sponsor-friendly job markets, high-demand sectors, risk phrases, and role types before applying abroad.',
+    introTitle: 'Why sponsor-friendly job research is different',
+    introParagraphs: [
+      'A normal job board is designed to show open roles. It does not always tell international candidates whether the employer can sponsor, whether the role is realistic for relocation, or whether the description quietly excludes people without local work rights.',
+      'RelocateAtlas focuses on job intelligence rather than raw job volume. We look for sponsor signals, relocation language, employer credibility, role seniority, salary context, and risk phrases that may reduce the chance of sponsorship.',
+      'The paid weekly list is designed to save time: fewer noisy links, more context, and a clearer reason why each role may be worth checking.'
+    ],
+    compareTitle: 'What makes a job stronger for relocation',
+    compareItems: ['Clear sponsorship or relocation language', 'Employer credibility and international hiring history', 'Role seniority and skill scarcity', 'Salary context that fits local requirements', 'Official apply link and fresh posting', 'No hard requirement for existing local work rights'],
+    warningTitle: 'Jobs to treat carefully',
+    warningItems: ['No visa sponsorship available', 'Must already have unrestricted work rights', 'Local candidates only', 'Unclear company or unofficial apply link', 'Very junior roles with no sponsor signal'],
+    countryTitle: 'Select a country',
+    countryLead: 'Choose a country to review its sponsor-friendly job market, high-demand sectors, and common roles.',
+    cardLabel: 'View jobs guide',
+    relatedTitle: 'Latest job-search guides'
+  }
+};
+
+const copy = copyMap[section.slug];
+const related = blogPosts.slice(0, 3);
+
+const exampleMap = {
+  visas: {
+    eyebrow: 'Practical examples',
+    title: 'Common sponsor-pathway signals to compare',
+    lead: 'Use these examples to understand how sponsor language can differ by market. Always verify current rules before applying.',
+    headers: ['Signal', 'Why it matters', 'How to use it'],
+    rows: [
+      ['Licensed or accredited employer', 'Some countries require employers to be approved before sponsoring foreign workers.', 'Prioritize roles where the employer status can be checked.'],
+      ['Salary threshold or occupation fit', 'Many skilled routes depend on pay level, occupation code, or qualification match.', 'Compare job salary, role title, and your profile before applying.'],
+      ['Relocation support language', 'Moving support is useful but not always the same as visa sponsorship.', 'Ask recruiters specifically about work authorization support.']
+    ]
+  },
+  taxes: {
+    eyebrow: 'Take-home planning',
+    title: 'What can change your actual monthly income',
+    lead: 'Gross salary is only a starting point. Taxes, deductions, insurance, pension, and local rules can change the offer value.',
+    headers: ['Factor', 'What to check', 'Planning impact'],
+    rows: [
+      ['Federal and local tax', 'Some countries have national plus provincial, state, municipal, or local rules.', 'Two cities can produce different take-home pay.'],
+      ['Payroll deductions', 'Social insurance, pension, health insurance, or mandatory contributions.', 'Net salary may be materially lower than gross salary.'],
+      ['Benefits and allowances', 'Relocation allowance, pension, health cover, and family benefits.', 'A lower base salary can still be attractive with strong benefits.']
+    ]
+  },
+  salaries: {
+    eyebrow: 'Offer analysis',
+    title: 'How to compare salary offers across countries',
+    lead: 'A relocation salary should be judged together with visa fit, tax, rent, benefits, and long-term career value.',
+    headers: ['Comparison point', 'Why it matters', 'Candidate action'],
+    rows: [
+      ['Role seniority', 'Sponsor-friendly roles are often easier for mid-level and senior candidates.', 'Match your CV headline to the role level.'],
+      ['City cost pressure', 'Higher salary cities can also have higher rent.', 'Compare net pay after rent, not gross salary only.'],
+      ['Relocation package', 'Flights, temporary housing, and moving allowance can reduce first-month stress.', 'Ask what is covered before accepting.']
+    ]
+  },
+  'cost-of-living': {
+    eyebrow: 'Planning ranges',
+    title: 'Typical relocation costs to budget before arrival',
+    lead: 'The exact number varies, but most candidates should plan for more than one month of rent.',
+    headers: ['Cost area', 'Typical range type', 'Why it matters'],
+    rows: [
+      ['Rent and deposit', 'Often the largest upfront cost.', 'Can require several months of cash depending on country and landlord.'],
+      ['Temporary accommodation', 'Hotel or short stay for 2–6 weeks.', 'Useful while searching for long-term housing.'],
+      ['Setup costs', 'Phone, transit pass, furniture, insurance, documents, and emergency buffer.', 'Prevents stress after landing.']
+    ]
+  },
+  'relocation-companies': {
+    eyebrow: 'Service planning',
+    title: 'What relocation support may include',
+    lead: 'Relocation help can range from a simple allowance to full family settlement support.',
+    headers: ['Service', 'Useful for', 'Question to ask'],
+    rows: [
+      ['Shipping and storage', 'Candidates moving furniture or family items.', 'Is there a weight or reimbursement limit?'],
+      ['Temporary housing', 'First few weeks after arrival.', 'How many days are covered?'],
+      ['Destination services', 'Housing search, school search, banking, local registration.', 'Is this included or paid separately?']
+    ]
+  },
+  jobs: {
+    eyebrow: 'Job intelligence',
+    title: 'What makes a job more useful for relocation',
+    lead: 'A good lead is not just an open role. It should have sponsor signals, suitable seniority, employer credibility, and a realistic pathway.',
+    headers: ['Signal', 'Why it matters', 'How RelocateAtlas uses it'],
+    rows: [
+      ['Sponsor-friendly wording', 'Shows the employer may consider international candidates.', 'Marked as a stronger signal when wording is clear.'],
+      ['No local-only restriction', 'Some jobs quietly exclude foreign applicants.', 'Filtered out when the job says no sponsorship or local candidates only.'],
+      ['Official apply link', 'Reduces scam and outdated-post risk.', 'Prioritized over copied job-board posts.']
+    ]
+  }
+};
+const examples = exampleMap[section.slug];
+
+const canonicalPath = `/${section.slug}`;
+---
+<BaseLayout
+  title={`${section.title} by Country | RelocateAtlas`}
+  description={copy.lead}
+  canonicalPath={canonicalPath}
+>
+  <Header />
+  <main>
+    <section class="page-hero page-hero-gradient compact-hero">
+      <div class="container narrow">
+        <span class="eyebrow">{copy.eyebrow}</span>
+        <h1>{copy.title}</h1>
+        <p class="lead">{copy.lead}</p>
+      </div>
+    </section>
+
+    <section class="section section-white resource-intro-section">
+      <div class="container resource-intro-grid">
+        <article class="content-block resource-main-copy">
+          <span class="mini-eyebrow">Overview</span>
+          <h2>{copy.introTitle}</h2>
+          {copy.introParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </article>
+        <aside class="content-block resource-side-card">
+          <span class="mini-eyebrow">Quick filter</span>
+          <h2>Start with your target country</h2>
+          <p>Use these country shortcuts when you already know where you want to apply. Each country page connects back to visas, taxes, salaries, cost of living, companies, jobs, relocation services, healthcare, and cities.</p>
+          <div class="select-list">
+            {countries.map((country) => <a href={`/${section.slug}/${country.slug}`}>{country.flag} {country.name}</a>)}
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-column-feature">
+        <div class="content-block">
+          <span class="mini-eyebrow">Compare</span>
+          <h2>{copy.compareTitle}</h2>
+          <ul class="check-list">{copy.compareItems.map((item) => <li>{item}</li>)}</ul>
+        </div>
+        <div class="content-block warning-block">
+          <span class="mini-eyebrow">Avoid mistakes</span>
+          <h2>{copy.warningTitle}</h2>
+          <ul>{copy.warningItems.map((item) => <li>{item}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="content-block compact-content-block">
+          <span class="mini-eyebrow">{examples.eyebrow}</span>
+          <h2>{examples.title}</h2>
+          <p>{examples.lead}</p>
+          <div class="content-table-wrap">
+            <table class="content-table">
+              <thead><tr>{examples.headers.map((header) => <th>{header}</th>)}</tr></thead>
+              <tbody>{examples.rows.map((row) => <tr>{row.map((cell, index) => <td>{index === 0 ? <strong>{cell}</strong> : cell}</td>)}</tr>)}</tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="mini-eyebrow">Choose a country</span>
+            <h2>{copy.countryTitle}</h2>
+          </div>
+          <p>{copy.countryLead}</p>
+        </div>
+        <div class="grid-3">
+          {countries.map((country) => (
+            <a class="country-card" href={`/${section.slug}/${country.slug}`}>
+              <div class="country-card-glow" aria-hidden="true"></div>
+              <div class="country-top">
+                <span class="flag">{country.flag}</span>
+                <div>
+                  <div class="country-label">{country.region}</div>
+                  <h3>{country.name}</h3>
+                </div>
+              </div>
+              <p class="country-visa">{country.primaryVisa}</p>
+              <span class="country-link">{copy.cardLabel} →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="mini-eyebrow">Related posts</span>
+            <h2>{copy.relatedTitle}</h2>
+          </div>
+          <p>Use these practical guides together with the country resource pages to plan smarter applications.</p>
+        </div>
+        <div class="grid-3">
+          {related.map((post) => (
+            <a class="article-card" href={`/blog/${post.slug}`}>
+              <div class="article-meta">{post.category} · {post.date}</div>
+              <h3>{post.title}</h3>
+              <p>{post.description}</p>
+              <span>Read guide →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>

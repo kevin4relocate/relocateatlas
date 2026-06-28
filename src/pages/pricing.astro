@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTA from '../components/CTA.astro';
+import { SITE } from '../data';
+
+const productJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'RelocateAtlas Weekly Sponsor Job Intelligence',
+  description: 'Weekly sponsor-friendly job intelligence for international candidates across high-demand industries.',
+  brand: { '@type': 'Brand', name: 'RelocateAtlas' },
+  offers: [
+    { '@type': 'Offer', price: '9', priceCurrency: 'USD', name: 'Monthly Access', availability: 'https://schema.org/InStock' },
+    { '@type': 'Offer', price: '49', priceCurrency: 'USD', name: 'Founding Yearly Access', availability: 'https://schema.org/InStock' }
+  ]
+};
+---
+<BaseLayout
+  title="Pricing — $9/month or $49/year Founding Access | RelocateAtlas"
+  description="RelocateAtlas founding pricing: $9/month or $49/year for weekly sponsor-friendly job intelligence, direct apply links, sponsor signals, relocation scores, and practical planning notes."
+  canonicalPath="/pricing"
+  structuredData={productJsonLd}
+>
+  <Header />
+  <main>
+    <section class="page-hero page-hero-gradient compact-hero pricing-hero">
+      <div class="container narrow">
+        <span class="eyebrow">Special founding price</span>
+        <h1>Start with free previews. Upgrade when you want the full weekly list.</h1>
+        <p class="lead">RelocateAtlas is currently available at a special launch price for early members. Future pricing may increase as country coverage, job volume, and member resources expand.</p>
+      </div>
+    </section>
+
+    <section id="pricing" class="section section-white">
+      <div class="container pricing-grid-full">
+        <article class="pricing-card-full">
+          <span class="badge badge-blue">Monthly</span>
+          <h2>$9/month</h2>
+          <p>Best for candidates who want to test the full weekly sponsor job intelligence list before committing.</p>
+          <ul class="check-list">
+            <li>Full weekly sponsor-friendly job list</li>
+            <li>Direct apply links</li>
+            <li>Sponsor signals and confidence notes</li>
+            <li>Relocation scores and practical planning notes</li>
+            <li>Archive access while subscribed</li>
+          </ul>
+          <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe monthly</a>
+        </article>
+
+        <article class="pricing-card-full featured-pricing-card">
+          <span class="badge badge-success">Best value · Founding</span>
+          <h2>$49/year</h2>
+          <p>Best for serious candidates preparing to apply abroad over the next 6–12 months.</p>
+          <ul class="check-list">
+            <li>Everything in monthly access</li>
+            <li>Lower founding yearly price</li>
+            <li>Monthly templates or checklists when available</li>
+            <li>Country and industry priority polls</li>
+            <li>Future public price may increase to $99/year</li>
+          </ul>
+          <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Join founding yearly</a>
+        </article>
+
+        <article class="pricing-card-full muted-pricing-card">
+          <span class="badge badge-warning">Free</span>
+          <h2>$0</h2>
+          <p>Use the free preview to understand the format before upgrading.</p>
+          <ul class="check-list">
+            <li>Sample job cards</li>
+            <li>Country and industry breakdowns</li>
+            <li>Public relocation guides</li>
+            <li>Substack free posts</li>
+            <li>No full apply-link list</li>
+          </ul>
+          <a class="button-ghost" href="/jobs/free-preview">View free preview</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-feature">
+        <div class="content-block">
+          <span class="mini-eyebrow">What you get</span>
+          <h2>Paid access is for weekly job intelligence.</h2>
+          <p>Paid members get the full weekly sponsor-friendly job list, direct apply links, sponsor status, sponsor confidence notes, relocation scores, visa pathway notes, salary notes when available, practical planning notes, and practical application guidance.</p>
+        </div>
+        <div class="content-block warning-block">
+          <span class="mini-eyebrow">What you do not get</span>
+          <h2>Clear research boundaries.</h2>
+          <p>RelocateAtlas helps you research sponsor-friendly opportunities faster. Final eligibility, visa support, and hiring decisions depend on each employer and official immigration rules.</p>
+          <a class="inline-link" href="/terms">Read full subscription terms →</a>
+        </div>
+      </div>
+    </section>
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>

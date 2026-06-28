@@ -1,0 +1,278 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CountryCard from '../components/CountryCard.astro';
+import CTA from '../components/CTA.astro';
+import { SITE, countries, industries, blogPosts } from '../data';
+const launchCountries = countries.filter((country) => country.priority === 'Launch');
+const nextCountries = countries.filter((country) => country.priority === 'Next');
+---
+<BaseLayout
+  title="RelocateAtlas — Weekly Visa Sponsor Jobs and Relocation Guides"
+  description="RelocateAtlas helps international candidates discover visa sponsor jobs across high-demand global industries, compare countries, and prepare smarter relocation applications."
+  canonicalPath="/"
+>
+  <Header />
+  <main>
+    <section class="hero hero-premium">
+      <div class="hero-visual-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">🌍 AI-assisted, human-reviewed relocation job intelligence</span>
+          <h1>Find sponsor-friendly jobs with country, visa, and industry context.</h1>
+          <p class="lead">
+            RelocateAtlas helps international candidates discover sponsor-friendly jobs across tech, healthcare, engineering, finance, education, hospitality, and other skilled industries.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-large" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Get Weekly Sponsor Jobs</a>
+            <a class="button-ghost button-large" href="/jobs/free-preview">View Free Job Preview</a>
+          </div>
+          <div class="trust-row" aria-label="RelocateAtlas features">
+            <span>Weekly job research</span>
+            <span>Sponsor signals</span>
+            <span>Country guides</span>
+          </div>
+        </div>
+
+        <div class="hero-dashboard" aria-label="RelocateAtlas sample dashboard preview">
+          <div class="dashboard-topbar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>Weekly Sponsor Jobs</strong>
+          </div>
+          <div class="dashboard-card featured-job">
+            <div class="job-card-header">
+              <span class="badge badge-success">Sponsor-friendly sample</span>
+              <strong>🇦🇺 Australia</strong>
+            </div>
+            <div class="job-title">QA Engineer — FinTech Platform</div>
+            <p class="job-meta">Sydney · Hybrid · Skills in Demand pathway likely</p>
+            <div class="score-grid">
+              <div class="score-box">
+                <div class="score-label">Sponsor Confidence</div>
+                <div class="score-value">78%</div>
+              </div>
+              <div class="score-box">
+                <div class="score-label">Relocation Score</div>
+                <div class="score-value">8.2/10</div>
+              </div>
+            </div>
+          </div>
+          <div class="mini-job-list">
+            <div class="mini-job"><span>🇬🇧</span><strong>Backend Engineer</strong><em>Skilled Worker likely</em></div>
+            <div class="mini-job"><span>🇩🇪</span><strong>Data Engineer</strong><em>EU Blue Card signal</em></div>
+            <div class="mini-job"><span>🇳🇿</span><strong>Software Tester</strong><em>Accredited employer</em></div>
+          </div>
+          <p class="note">
+            RelocateAtlas helps you research sponsor-friendly opportunities faster. Final eligibility, visa support, and hiring decisions depend on each employer and official immigration rules.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="RelocateAtlas launch focus">
+      <div class="container stats-grid">
+        <div>
+          <strong>10</strong>
+          <span>target countries</span>
+        </div>
+        <div>
+          <strong>5</strong>
+          <span>launch markets first</span>
+        </div>
+        <div>
+          <strong>Weekly</strong>
+          <span>Substack job previews</span>
+        </div>
+        <div>
+          <strong>Human</strong>
+          <span>review before publishing</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="mini-eyebrow">The workflow</span>
+          <h2>How RelocateAtlas works</h2>
+          <p>
+            We combine AI-assisted research with human review to reduce job search noise and highlight better relocation opportunities.
+          </p>
+        </div>
+        <div class="process-grid">
+          <div class="process-card">
+            <span class="icon-circle">1</span>
+            <h3>Search public job sources</h3>
+            <p>We look for visa sponsorship, relocation support, work permit support, and international hiring signals across public job sources.</p>
+          </div>
+          <div class="process-card">
+            <span class="icon-circle">2</span>
+            <h3>Analyze sponsor signals</h3>
+            <p>Each selected role is reviewed for visa keywords, employer quality, salary context, location, and risk phrases.</p>
+          </div>
+          <div class="process-card">
+            <span class="icon-circle">3</span>
+            <h3>Publish weekly insights</h3>
+            <p>Subscribers receive free previews and future paid job lists through the RelocateAtlas Substack publication.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="mini-eyebrow">New: industry guides</span>
+            <h2>Relocation is not only for tech candidates.</h2>
+          </div>
+          <p>
+            RelocateAtlas covers multiple high-demand industries so candidates can understand what roles, documents, qualifications, and risks apply to their own profession.
+          </p>
+        </div>
+        <div class="industry-grid compact-industry-grid">
+          {industries.map((industry) => (
+            <a class="industry-card compact" href={`/industries/${industry.slug}`}>
+              <div class="industry-icon">{industry.icon}</div>
+              <h3>{industry.shortName}</h3>
+              <p>{industry.description}</p>
+              <strong>Explore requirements →</strong>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="mini-eyebrow">Launch focus</span>
+            <h2>Top relocation countries</h2>
+          </div>
+          <p>
+            We start with countries that are popular among international candidates and have clearer skilled migration or employer-sponsored work routes.
+          </p>
+        </div>
+        <div class="grid-3">
+          {launchCountries.map((country) => <CountryCard {...country} />)}
+        </div>
+        <div class="next-market-panel">
+          <div>
+            <span class="mini-eyebrow">Next markets</span>
+            <h3>Expanding after launch</h3>
+            <p>Singapore, Ireland, Netherlands, Denmark, and Japan are prepared as next-market country guides.</p>
+          </div>
+          <div class="market-pills">
+            {nextCountries.map((country) => <a href={`/countries/${country.slug}`}>{country.flag} {country.name}</a>)}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-feature">
+        <div>
+          <span class="mini-eyebrow">Why it matters</span>
+          <h2>Most job boards are not built for international candidates.</h2>
+          <p class="feature-lead">
+            A job can look attractive, but still be a poor option if the company does not support work permits, relocation, or international applicants. RelocateAtlas adds context before you spend time applying.
+          </p>
+          <div class="feature-list">
+            <div><strong>Filter weak signals</strong><span>We avoid jobs that clearly say no sponsorship, local candidates only, or existing work rights required.</span></div>
+            <div><strong>Add visa context</strong><span>We classify sponsor signals as confirmed, likely, unknown, or unsuitable.</span></div>
+            <div><strong>Save research time</strong><span>Weekly previews help candidates focus on stronger relocation opportunities.</span></div>
+          </div>
+        </div>
+        <div class="comparison-card">
+          <div class="comparison-row muted"><span>Raw job board</span><span>RelocateAtlas</span></div>
+          <div class="comparison-row"><span>Job title only</span><strong>Visa signal + country context</strong></div>
+          <div class="comparison-row"><span>Unclear sponsorship</span><strong>Sponsor confidence note</strong></div>
+          <div class="comparison-row"><span>Hours of searching</span><strong>Weekly curated preview</strong></div>
+          <div class="comparison-row"><span>Generic results</span><strong>Relocation-focused roles</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="mini-eyebrow">Weekly value</span>
+            <h2>What you get every week</h2>
+          </div>
+          <p>RelocateAtlas is designed for candidates who do not want to waste hours filtering job posts that do not support international applicants.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card card-hover">
+            <h3>Weekly sponsor-friendly jobs</h3>
+            <p>Curated opportunities across Australia, New Zealand, the UK, Germany, Canada, and more countries as the list expands.</p>
+          </div>
+          <div class="card card-hover">
+            <h3>Short job summaries</h3>
+            <p>Each role is summarized so readers can quickly understand the company, location, role type, and relocation signal.</p>
+          </div>
+          <div class="card card-hover">
+            <h3>Sponsor confidence notes</h3>
+            <p>We separate confirmed, likely, unknown, and poor sponsor signals so candidates can apply with more context.</p>
+          </div>
+          <div class="card card-hover">
+            <h3>Practical relocation guides</h3>
+            <p>Free guides cover country selection, visa basics, salary expectations, cost of living, and application strategy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="mini-eyebrow">Relocation resource library</span>
+          <h2>More than a job list: compare the full move.</h2>
+          <p>RelocateAtlas is structured like a relocation portal, with practical sections for countries, visas, taxes, salaries, cost of living, relocation companies, and jobs.</p>
+        </div>
+        <div class="resource-grid">
+          <a class="resource-card" href="/countries"><strong>Countries</strong><span>Compare top destinations and relocation readiness.</span></a>
+          <a class="resource-card" href="/industries"><strong>Industries</strong><span>See requirements, missing skills, and roles by profession.</span></a>
+          <a class="resource-card" href="/visas"><strong>Visas</strong><span>Review employer-sponsored and skilled work routes.</span></a>
+          <a class="resource-card" href="/taxes"><strong>Taxes</strong><span>Understand take-home pay basics before moving.</span></a>
+          <a class="resource-card" href="/salaries"><strong>Salaries</strong><span>Compare salary context by market and role.</span></a>
+          <a class="resource-card" href="/cost-of-living"><strong>Cost of Living</strong><span>Plan rent, transport, insurance, and setup costs.</span></a>
+          <a class="resource-card" href="/relocation-companies"><strong>Relocation Companies</strong><span>Find services that support housing, shipping, and settling in.</span></a>
+          <a class="resource-card" href="/jobs"><strong>Jobs</strong><span>Research sponsor-friendly job markets and roles.</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="mini-eyebrow">Latest guides</span>
+            <h2>Start with practical relocation research</h2>
+          </div>
+          <p>Learn how to evaluate sponsor-friendly jobs, avoid weak postings, and choose stronger target countries.</p>
+        </div>
+        <div class="grid-3">
+          {blogPosts.slice(0, 3).map((post) => (
+            <a class="article-card" href={`/blog/${post.slug}`}>
+              <div class="article-meta">{post.category} · {post.date}</div>
+              <h3>{post.title}</h3>
+              <p>{post.description}</p>
+              <span>Read guide →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>

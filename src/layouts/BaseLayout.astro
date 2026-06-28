@@ -1,0 +1,251 @@
+---
+import '../styles.css';
+import { SITE } from '../data';
+
+type Props = {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  image?: string;
+  noindex?: boolean;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
+};
+
+const {
+  title = SITE.title,
+  description = SITE.description,
+  canonicalPath = '/',
+  image = '/og-image.svg',
+  noindex = false,
+  structuredData = []
+} = Astro.props;
+
+const canonicalUrl = new URL(canonicalPath, SITE.url).toString();
+const imageUrl = new URL(image, SITE.url).toString();
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE.name,
+  url: SITE.url,
+  logo: new URL('/favicon.svg', SITE.url).toString(),
+  sameAs: [SITE.linkedinUrl, SITE.facebookUrl, SITE.substackUrl]
+};
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: SITE.url,
+  description: SITE.description,
+  publisher: {
+    '@type': 'Organization',
+    name: SITE.name,
+    url: SITE.url,
+    logo: new URL('/favicon.svg', SITE.url).toString()
+  }
+};
+const customJsonLd = Array.isArray(structuredData) ? structuredData : [structuredData];
+const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(Boolean)];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="application-name" content={SITE.name} />
+    <meta name="generator" content="Astro" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'} />
+    <meta name="theme-color" content="#102A43" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdGraph)} />
+  </head>
+  <body>
+    <slot />
+    <button class="scroll-top-button" type="button" aria-label="Move to top of page">
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <div class="cookie-banner" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie notice">
+      <div>
+        <strong>🍪 Use of cookies</strong>
+        <p>We use essential cookies to remember preferences and may use privacy-friendly analytics to understand how visitors use RelocateAtlas. You can continue browsing or accept this notice.</p>
+      </div>
+      <div class="cookie-actions">
+        <a href="/privacy">More info</a>
+        <button type="button" data-cookie-accept>Accept</button>
+      </div>
+    </div>
+
+    <script is:inline>
+      (() => {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const headerOffset = () => {
+          const header = document.querySelector('.site-header');
+          return header ? header.getBoundingClientRect().height + 14 : 88;
+        };
+
+        const easeOutCubic = (progress) => 1 - Math.pow(1 - progress, 3);
+
+        const smoothScrollTo = (targetY, duration = 320) => {
+          const startY = window.scrollY;
+          const distance = targetY - startY;
+
+          if (prefersReducedMotion || Math.abs(distance) < 4) {
+            window.scrollTo(0, targetY);
+            return;
+          }
+
+          let startTime = null;
+          const step = (timestamp) => {
+            if (startTime === null) startTime = timestamp;
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const nextY = startY + distance * easeOutCubic(progress);
+            window.scrollTo(0, nextY);
+
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            }
+          };
+
+          window.requestAnimationFrame(step);
+        };
+
+        const scrollToElement = (element, updateHash = true) => {
+          if (!element) return;
+          const targetY = Math.max(0, element.getBoundingClientRect().top + window.scrollY - headerOffset());
+          smoothScrollTo(targetY, 210);
+
+          if (updateHash && element.id) {
+            window.history.pushState(null, '', `#${element.id}`);
+          }
+        };
+
+        document.addEventListener('click', (event) => {
+          const link = event.target.closest('a[href^="#"]');
+          if (!link) return;
+
+          const hash = link.getAttribute('href');
+          if (!hash || hash === '#') return;
+
+          const target = document.querySelector(hash);
+          if (!target) return;
+
+          event.preventDefault();
+          scrollToElement(target);
+        });
+
+        const topButton = document.querySelector('.scroll-top-button');
+        if (topButton) {
+          topButton.addEventListener('click', () => smoothScrollTo(0, 240));
+
+          const updateTopButton = () => {
+            const visible = window.scrollY > 420;
+            topButton.classList.toggle('is-visible', visible);
+          };
+
+          updateTopButton();
+          window.addEventListener('scroll', updateTopButton, { passive: true });
+        }
+
+        const sidebarLinks = Array.from(document.querySelectorAll('.guide-sidebar a[href^="#"]'));
+        const sections = sidebarLinks
+          .map((link) => document.querySelector(link.getAttribute('href')))
+          .filter(Boolean);
+
+        if (sidebarLinks.length && sections.length && 'IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            const visibleEntries = entries
+              .filter((entry) => entry.isIntersecting)
+              .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+            if (!visibleEntries.length) return;
+            const activeId = visibleEntries[0].target.id;
+
+            sidebarLinks.forEach((link) => {
+              link.classList.toggle('is-active', link.getAttribute('href') === `#${activeId}`);
+            });
+          }, {
+            rootMargin: `-${headerOffset() + 8}px 0px -66% 0px`,
+            threshold: [0.05, 0.2, 0.45]
+          });
+
+          sections.forEach((section) => observer.observe(section));
+        }
+
+        const mobileButton = document.querySelector('[data-mobile-menu-toggle]');
+        const mobileMenu = document.querySelector('[data-mobile-menu]');
+        if (mobileButton && mobileMenu) {
+          let savedScrollY = 0;
+
+          const lockBodyScroll = () => {
+            savedScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+            document.body.style.top = `-${savedScrollY}px`;
+            document.body.classList.add('mobile-menu-open');
+          };
+
+          const unlockBodyScroll = () => {
+            document.body.classList.remove('mobile-menu-open');
+            document.body.style.top = '';
+            window.scrollTo(0, savedScrollY);
+          };
+
+          const setOpen = (isOpen) => {
+            const currentlyOpen = mobileMenu.classList.contains('is-open');
+            if (isOpen === currentlyOpen) return;
+
+            mobileButton.setAttribute('aria-expanded', String(isOpen));
+            mobileMenu.classList.toggle('is-open', isOpen);
+            if (isOpen) {
+              lockBodyScroll();
+              mobileMenu.scrollTop = 0;
+            } else {
+              unlockBodyScroll();
+            }
+          };
+
+          mobileButton.addEventListener('click', () => {
+            setOpen(mobileButton.getAttribute('aria-expanded') !== 'true');
+          });
+
+          mobileMenu.addEventListener('click', (event) => {
+            if (event.target.closest('a')) setOpen(false);
+          });
+
+          document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') setOpen(false);
+          });
+        }
+
+        const cookieBanner = document.querySelector('[data-cookie-banner]');
+        const cookieAccept = document.querySelector('[data-cookie-accept]');
+        if (cookieBanner && cookieAccept) {
+          const accepted = window.localStorage.getItem('relocateatlas_cookie_notice') === 'accepted';
+          if (!accepted) cookieBanner.classList.add('is-visible');
+          cookieAccept.addEventListener('click', () => {
+            window.localStorage.setItem('relocateatlas_cookie_notice', 'accepted');
+            cookieBanner.classList.remove('is-visible');
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

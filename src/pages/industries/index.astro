@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.astro';
+import { SITE, industries, countries, blogPosts } from '../../data';
+
+const itemListJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'RelocateAtlas industry relocation guides',
+  description: 'Industry guides for visa sponsor jobs and relocation planning across high-demand global sectors.',
+  itemListElement: industries.map((industry, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: industry.name,
+    url: new URL(`/industries/${industry.slug}`, SITE.url).toString()
+  }))
+};
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Which industries are best for visa sponsor jobs?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Common relocation-friendly sectors include technology, healthcare, engineering, construction, skilled trades, finance, education, hospitality, logistics, and other skilled roles. The strongest option depends on the target country, qualification, language ability, licensing requirements, salary, and employer sponsorship policy.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Does RelocateAtlas guarantee visa sponsorship?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. RelocateAtlas is a research and education resource. It highlights sponsor-friendly signals, risks, and job-search context, but candidates must verify visa support with employers and official sources.'
+      }
+    }
+  ]
+};
+---
+<BaseLayout
+  title="Industries for Visa Sponsor Jobs Abroad | RelocateAtlas"
+  description="Explore visa sponsor job opportunities by industry, including tech, healthcare, engineering, finance, education, hospitality, and skilled roles."
+  canonicalPath="/industries"
+  structuredData={[itemListJsonLd, faqJsonLd]}
+>
+  <Header />
+  <main>
+    <section class="page-hero page-hero-gradient compact-hero">
+      <div class="container narrow">
+        <span class="eyebrow">Industry relocation guides</span>
+        <h1>Visa sponsor jobs by industry.</h1>
+        <p class="lead">
+          RelocateAtlas is not tech-only. Compare high-demand industries, common roles, qualification requirements, missing skills, country demand, and relocation risks before choosing where to apply.
+        </p>
+        <div class="hero-actions compact-actions">
+          <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Get weekly jobs on Substack</a>
+          <a class="button-ghost" href="/visa-sponsor-jobs">View pricing</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container resource-intro-grid">
+        <article class="content-block resource-main-copy">
+          <span class="mini-eyebrow">Why industries matter</span>
+          <h2>Relocation is different for every profession.</h2>
+          <p>
+            A software engineer, nurse, electrician, accountant, teacher, and chef do not face the same relocation path. Some roles depend on employer sponsorship, some require licensing, some need language tests, and some are only realistic in specific countries or regions.
+          </p>
+          <p>
+            RelocateAtlas uses industry pages to help candidates understand what they need before applying: common sponsor-friendly roles, likely blockers, qualification documents, visa-pathway context, salary concerns, and mistakes to avoid.
+          </p>
+          <p>
+            This turns the website into more than a job list. It becomes a practical research funnel: read the industry guide, choose target countries, then subscribe on Substack for weekly sponsor-friendly job leads.
+          </p>
+        </article>
+        <aside class="content-block resource-side-card">
+          <span class="mini-eyebrow">Weekly product</span>
+          <h2>Founding price</h2>
+          <p>Subscribe for weekly sponsor-friendly job intelligence across multiple industries.</p>
+          <div class="pricing-mini-grid">
+            <div><strong>$9/month</strong><span>Monthly access</span></div>
+            <div><strong>$49/year</strong><span>Founding yearly access</span></div>
+          </div>
+          <p class="small-note">Special founding pricing for early members. Future pricing may increase to $15/month or $99/year.</p>
+          <a class="button full-width" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Join on Substack</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="mini-eyebrow">Select your industry</span>
+            <h2>Start with the sector closest to your profile.</h2>
+          </div>
+          <p>Each industry guide includes common roles, target countries, visa pathway notes, required documents, missing skills, and example sponsor-friendly job cards.</p>
+        </div>
+        <div class="industry-grid">
+          {industries.map((industry) => (
+            <a class="industry-card" href={`/industries/${industry.slug}`}>
+              <div class="industry-icon">{industry.icon}</div>
+              <h3>{industry.name}</h3>
+              <p>{industry.description}</p>
+              <div class="industry-pills">
+                {industry.commonRoles.slice(0, 4).map((role) => <span>{role}</span>)}
+              </div>
+              <strong>View industry guide →</strong>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container two-column-feature">
+        <div class="content-block">
+          <span class="mini-eyebrow">What readers learn</span>
+          <h2>Each page answers practical questions.</h2>
+          <ul class="check-list">
+            <li>Which roles in this industry commonly appear in relocation job searches?</li>
+            <li>Which countries should candidates compare first?</li>
+            <li>What qualifications, licenses, language skills, or documents may be required?</li>
+            <li>What missing skills usually block international candidates?</li>
+            <li>What sponsor signals and risk phrases should candidates check?</li>
+            <li>How can candidates improve their profile before applying?</li>
+          </ul>
+        </div>
+        <div class="content-block warning-block">
+          <span class="mini-eyebrow">Important</span>
+          <h2>Relocation job research is not legal advice.</h2>
+          <p>
+            Industry pages are educational starting points. Visa rules, licensing bodies, salary thresholds, job eligibility, and employer sponsorship policies can change. Candidates must verify important details through employers, official government sources, and qualified professionals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="mini-eyebrow">Country connection</span>
+            <h2>Use industries together with country guides.</h2>
+          </div>
+          <p>The strongest relocation strategy compares both sides: your industry and your target country.</p>
+        </div>
+        <div class="select-list wide-select-list">
+          {countries.map((country) => <a href={`/countries/${country.slug}`}>{country.flag} {country.name}</a>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="mini-eyebrow">Related guides</span>
+            <h2>Continue researching before applying.</h2>
+          </div>
+          <p>Use these articles to understand sponsor signals, right-to-work wording, and better application strategy.</p>
+        </div>
+        <div class="grid-3">
+          {blogPosts.slice(0, 3).map((post) => (
+            <a class="article-card" href={`/blog/${post.slug}`}>
+              <div class="article-meta">{post.category} · {post.date}</div>
+              <h3>{post.title}</h3>
+              <p>{post.description}</p>
+              <span>Read guide →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>

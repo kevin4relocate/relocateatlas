@@ -1,0 +1,26 @@
+---
+import { resourceSections } from '../data';
+
+const { country, active } = Astro.props;
+const links = [
+  { slug: 'overview', label: 'Overview', href: `/countries/${country.slug}` },
+  ...resourceSections.map((section) => ({
+    slug: section.slug,
+    label: section.title,
+    href: `/${section.slug}/${country.slug}`
+  }))
+];
+---
+<aside class="guide-sidebar country-resource-nav" aria-label={`${country.name} resource navigation`}>
+  <strong>{country.flag} {country.name} resources</strong>
+  <p class="sidebar-note">Switch between country guides without reloading the current active page.</p>
+  {links.map((item) => (
+    item.slug === active
+      ? <span class="resource-nav-current" aria-current="page">{item.label}</span>
+      : <a href={item.href}>{item.label}</a>
+  ))}
+  <div class="sidebar-cta-mini">
+    <span>Need weekly sponsor jobs?</span>
+    <a href="/jobs/free-preview">View free preview →</a>
+  </div>
+</aside>

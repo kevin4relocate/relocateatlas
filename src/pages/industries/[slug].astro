@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.astro';
+import { SITE, industries, countries, blogPosts } from '../../data';
+
+export function getStaticPaths() {
+  return industries.map((industry) => ({ params: { slug: industry.slug }, props: { industry } }));
+}
+
+const { industry } = Astro.props;
+const relatedCountries = countries.filter((country) => industry.countriesWithDemand.includes(country.name));
+const relatedPosts = blogPosts.filter((post) => post.category === 'Industry Guide' || post.category === 'Job Search' || post.category === 'Application Tips').slice(0, 3);
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'Industries', item: new URL('/industries', SITE.url).toString() },
+    { '@type': 'ListItem', position: 3, name: industry.name, item: new URL(`/industries/${industry.slug}`, SITE.url).toString() }
+  ]
+};
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: `${industry.name} Visa Sponsor Jobs Guide`,
+  description: industry.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  publisher: { '@type': 'Organization', name: SITE.name, logo: new URL('/favicon.svg', SITE.url).toString() },
+  mainEntityOfPage: new URL(`/industries/${industry.slug}`, SITE.url).toString()
+};
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: `Can ${industry.shortName} candidates find visa sponsor jobs abroad?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `${industry.shortName} candidates may find sponsor-friendly opportunities when their role is in demand, their experience matches employer needs, and the country has suitable skilled work routes. Sponsorship is never guaranteed and must be verified with employers and official sources.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `What should ${industry.shortName} candidates prepare before applying?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Candidates should prepare an English CV, proof of work experience, qualification documents, references, and any licensing, registration, language, or certification documents required for their role and target country.`
+      }
+    }
+  ]
+};
+---
+<BaseLayout
+  title={`${industry.name} Visa Sponsor Jobs Guide | RelocateAtlas`}
+  description={`${industry.description} Learn common roles, requirements, missing skills, target countries, and sponsor-friendly job signals.`}
+  canonicalPath={`/industries/${industry.slug}`}
+  structuredData={[breadcrumbJsonLd, articleJsonLd, faqJsonLd]}
+>
+  <Header />
+  <main>
+    <section class="page-hero page-hero-gradient compact-hero">
+      <div class="container guide-hero-grid">
+        <div>
+          <span class="eyebrow">{industry.icon} Industry guide</span>
+          <h1>{industry.name} visa sponsor jobs.</h1>
+          <p class="lead">{industry.description}</p>
+          <div class="hero-actions compact-actions">
+            <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Get weekly {industry.shortName} jobs</a>
+            <a class="button-ghost" href="#requirements">Check requirements</a>
+          </div>
+        </div>
+        <aside class="hero-useful-card">
+          <span class="mini-eyebrow">Best for</span>
+          <h2>This guide is useful for:</h2>
+          <div class="useful-role-list">
+            {industry.commonRoles.slice(0, 7).map((role) => <span>{role}</span>)}
+          </div>
+          <p>Use this guide to compare typical requirements, visa signals, target countries, and preparation gaps before you apply.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container guide-layout">
+        <aside class="guide-sidebar">
+          <strong>{industry.shortName}</strong>
+          <a href="#overview">Overview</a>
+          <a href="#roles">Common roles</a>
+          <a href="#countries">Countries</a>
+          <a href="#pathways">Visa pathways</a>
+          <a href="#requirements">Requirements</a>
+          <a href="#missing-skills">Missing skills</a>
+          <a href="#documents">Documents</a>
+          <a href="#example-jobs">Example jobs</a>
+          <a href="#substack">Weekly jobs</a>
+        </aside>
+
+        <article class="guide-content">
+          <section id="overview" class="content-block">
+            <span class="mini-eyebrow">Overview</span>
+            <h2>Why {industry.shortName} can be a relocation path</h2>
+            {industry.overview.map((paragraph) => <p>{paragraph}</p>)}
+            <div class="callout-box insight-box">
+              <strong>RelocateAtlas insight</strong>
+              <p>Most job boards only show job links. RelocateAtlas adds sponsor status, confidence notes, relocation scores, requirements, and planning signals so readers can decide which roles are worth checking first.</p>
+            </div>
+          </section>
+
+          <section id="roles" class="content-block">
+            <span class="mini-eyebrow">Role map</span>
+            <h2>Common relocation roles in this industry</h2>
+            <p>These are example role groups that may appear in sponsor-friendly job research. Actual availability depends on country, employer, salary, licensing, and candidate profile.</p>
+            <div class="tag-cloud">
+              {industry.commonRoles.map((role) => <span>{role}</span>)}
+            </div>
+          </section>
+
+          <section id="countries" class="content-block">
+            <span class="mini-eyebrow">Country demand</span>
+            <h2>Countries to compare first</h2>
+            <p>Start with countries where this industry often appears in skilled-work, shortage, or employer-sponsored discussions. Then compare visa rules, salary, licensing, language, and cost of living.</p>
+            <div class="country-mini-grid">
+              {relatedCountries.map((country) => (
+                <a href={`/countries/${country.slug}`}>
+                  <span>{country.flag}</span>
+                  <strong>{country.name}</strong>
+                  <em>{country.primaryVisa}</em>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          <section id="pathways" class="content-block">
+            <span class="mini-eyebrow">Visa context</span>
+            <h2>Typical visa or sponsorship pathways to research</h2>
+            <ul class="check-list">
+              {industry.typicalVisaPathways.map((item) => <li>{item}</li>)}
+            </ul>
+            <p class="small-note">These are general pathway categories for research, not legal advice. Always verify current rules with official government sources and qualified professionals.</p>
+          </section>
+
+          <section id="requirements" class="content-block">
+            <span class="mini-eyebrow">Preparation</span>
+            <h2>Common requirements candidates should prepare</h2>
+            <ul>
+              {industry.requirements.map((item) => <li>{item}</li>)}
+            </ul>
+            <div class="info-grid two">
+              <div class="info-tile"><strong>Language notes</strong><span>{industry.languageNotes}</span></div>
+              <div class="info-tile"><strong>Salary notes</strong><span>{industry.salaryNotes}</span></div>
+            </div>
+          </section>
+
+          <section id="missing-skills" class="content-block warning-block">
+            <span class="mini-eyebrow">Common blockers</span>
+            <h2>What candidates are often missing</h2>
+            <ul>
+              {industry.missingSkills.map((item) => <li>{item}</li>)}
+            </ul>
+          </section>
+
+          <section id="documents" class="content-block">
+            <span class="mini-eyebrow">Document checklist</span>
+            <h2>Documents to prepare before applying</h2>
+            <div class="tag-cloud">
+              {industry.documents.map((item) => <span>{item}</span>)}
+            </div>
+            <h3>How to improve your profile</h3>
+            <ul class="check-list">
+              {industry.improveProfile.map((item) => <li>{item}</li>)}
+            </ul>
+          </section>
+
+          <section id="example-jobs" class="content-block">
+            <span class="mini-eyebrow">Example job cards</span>
+            <h2>How RelocateAtlas would summarize jobs in this industry</h2>
+            <p>These are sample formats. Paid Substack posts should use real jobs, current links, sponsor signals, and human-reviewed notes.</p>
+            <div class="example-job-grid">
+              {industry.exampleJobs.map((job) => (
+                <article class="example-job-card">
+                  <span class="badge badge-success">{job.signal}</span>
+                  <h3>{job.country} — {job.title}</h3>
+                  <p><strong>Requirements:</strong> {job.requirements}</p>
+                  <p class="planning-note"><strong>Planning note:</strong> {job.risk}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section id="substack" class="content-block cta-panel inline-substack-cta">
+            <span class="mini-eyebrow">Weekly jobs</span>
+            <h2>Want real {industry.shortName} sponsor-friendly jobs every week?</h2>
+            <p>{industry.substackPitch}</p>
+            <div class="pricing-mini-grid">
+              <div><strong>$9/month</strong><span>Monthly access</span></div>
+              <div><strong>$49/year</strong><span>Founding yearly access</span></div>
+            </div>
+            <p class="small-note">Free readers get previews. Paid members unlock full lists, direct apply links, sponsor confidence, relocation score, and practical planning notes.</p>
+            <div class="cta-actions-spaced">
+              <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe on Substack</a>
+              <a class="button-light" href="/jobs/free-preview">View free job preview</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="mini-eyebrow">Related guides</span>
+            <h2>Read next before applying.</h2>
+          </div>
+          <p>Use these guides to understand sponsor language, application strategy, and country research.</p>
+        </div>
+        <div class="grid-3">
+          {relatedPosts.map((post) => (
+            <a class="article-card" href={`/blog/${post.slug}`}>
+              <div class="article-meta">{post.category} · {post.date}</div>
+              <h3>{post.title}</h3>
+              <p>{post.description}</p>
+              <span>Read guide →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>

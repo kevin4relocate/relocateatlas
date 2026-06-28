@@ -1,0 +1,11 @@
+---
+import CountryResourcePage from '../../components/CountryResourcePage.astro';
+import { countries } from '../../data';
+
+export function getStaticPaths() {
+  return countries.map((country) => ({ params: { slug: country.slug }, props: { country } }));
+}
+
+const { country } = Astro.props;
+---
+<CountryResourcePage country={country} sectionSlug="cost-of-living" />

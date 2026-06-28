@@ -1,0 +1,92 @@
+---
+import { SITE, industries } from '../data';
+const year = new Date().getFullYear();
+
+const exploreLinks = [
+  { href: '/countries', label: 'Countries' },
+  { href: '/industries', label: 'Industries' },
+  { href: '/jobs', label: 'Jobs' },
+  { href: '/blog', label: 'Guides' },
+  { href: '/pricing', label: 'Pricing' }
+];
+
+const resourceLinks = [
+  { href: '/visas', label: 'Visas' },
+  { href: '/taxes', label: 'Taxes' },
+  { href: '/salaries', label: 'Salaries' },
+  { href: '/cost-of-living', label: 'Cost of Living' },
+  { href: '/relocation-companies', label: 'Relocation Companies' }
+];
+
+const companyLinks = [
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+  { href: '/privacy', label: 'Privacy Policy' },
+  { href: '/terms', label: 'Terms' },
+  { href: '/disclaimer', label: 'Disclaimer' }
+];
+---
+<footer class="footer footer-clean">
+  <div class="container footer-clean-grid">
+    <div class="footer-clean-brand">
+      <a class="logo" href="/" aria-label="RelocateAtlas home">
+        <span class="logo-mark" aria-hidden="true">RA</span>
+        <span>RelocateAtlas</span>
+      </a>
+      <p>
+        Visa sponsor job intelligence, country guides, industry requirements, salary context, tax basics, and relocation planning for global candidates.
+      </p>
+      <div class="footer-mini-badges" aria-label="RelocateAtlas principles">
+        <span>AI-assisted</span>
+        <span>Human-reviewed</span>
+        <span>Research only</span>
+      </div>
+      <div class="footer-social-compact" aria-label="RelocateAtlas social links">
+        <a href={SITE.linkedinUrl} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href={SITE.facebookUrl} target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Substack</a>
+      </div>
+    </div>
+
+    <div class="footer-links-group">
+      <h3>Explore</h3>
+      <div class="footer-links">
+        {exploreLinks.map((item) => <a href={item.href}>{item.label}</a>)}
+      </div>
+    </div>
+
+    <div class="footer-links-group">
+      <h3>Resources</h3>
+      <div class="footer-links">
+        {resourceLinks.map((item) => <a href={item.href}>{item.label}</a>)}
+      </div>
+    </div>
+
+    <div class="footer-links-group">
+      <h3>Industries</h3>
+      <div class="footer-links">
+        {industries.slice(0, 6).map((industry) => <a href={`/industries/${industry.slug}`}>{industry.icon} {industry.shortName}</a>)}
+      </div>
+    </div>
+
+    <div class="footer-links-group">
+      <h3>Company</h3>
+      <div class="footer-links">
+        {companyLinks.map((item) => <a href={item.href}>{item.label}</a>)}
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-cta-row">
+    <div>
+      <strong>Get weekly sponsor-friendly jobs.</strong>
+      <span>$9/month or $49/year founding price for early members.</span>
+    </div>
+    <a class="button button-small" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe</a>
+  </div>
+
+  <div class="container footer-bottom footer-bottom-clean">
+    <p>© {year} RelocateAtlas. All rights reserved.</p>
+    <p>RelocateAtlas is not an immigration law firm and does not provide legal immigration advice.</p>
+  </div>
+</footer>

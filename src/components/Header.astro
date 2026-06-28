@@ -1,0 +1,134 @@
+---
+import { SITE, countries, industries } from '../data';
+
+const launchCountries = countries.filter((country) => country.priority === 'Launch');
+const nextCountries = countries.filter((country) => country.priority === 'Next');
+
+const resourceLinks = [
+  { href: '/visas', label: 'Visa Guides', description: 'Work visas and sponsorship pathways' },
+  { href: '/taxes', label: 'Tax Guides', description: 'Income tax, tax year, payroll basics' },
+  { href: '/salaries', label: 'Salary Guides', description: 'Salary signals and pay context' },
+  { href: '/cost-of-living', label: 'Cost of Living', description: 'Rent, groceries, transport, insurance' },
+  { href: '/relocation-companies', label: 'Relocation Companies', description: 'Moving, settling-in, and relocation support' }
+];
+---
+<header class="site-header">
+  <div class="container header-inner header-inner-clean">
+    <a class="logo" href="/" aria-label="RelocateAtlas home">
+      <span class="logo-mark" aria-hidden="true">RA</span>
+      <span>RelocateAtlas</span>
+    </a>
+
+    <nav class="nav nav-wide nav-clean" aria-label="Main navigation">
+      <div class="nav-dropdown">
+        <a href="/countries" class="nav-dropdown-link" aria-haspopup="true" aria-expanded="false">Countries</a>
+        <div class="nav-dropdown-panel country-dropdown-panel" aria-label="Country shortcuts">
+          <div class="nav-dropdown-grid country-dropdown-grid">
+            <div>
+              <strong>Launch countries</strong>
+              {launchCountries.map((country) => (
+                <a href={`/countries/${country.slug}`}><span>{country.flag}</span>{country.name}</a>
+              ))}
+            </div>
+            <div>
+              <strong>More countries</strong>
+              {nextCountries.map((country) => (
+                <a href={`/countries/${country.slug}`}><span>{country.flag}</span>{country.name}</a>
+              ))}
+            </div>
+          </div>
+          <a class="nav-dropdown-footer" href="/countries">Compare all countries →</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown nav-dropdown-industries">
+        <a href="/industries" class="nav-dropdown-link" aria-haspopup="true" aria-expanded="false">Industries</a>
+        <div class="nav-dropdown-panel industries-dropdown-panel" aria-label="Industry shortcuts">
+          <div class="industries-dropdown-list">
+            {industries.map((industry) => (
+              <a href={`/industries/${industry.slug}`}>
+                <span class="dropdown-icon" aria-hidden="true">{industry.icon}</span>
+                <span>
+                  <strong>{industry.shortName}</strong>
+                  <small>{industry.commonRoles.slice(0, 3).join(', ')}</small>
+                </span>
+              </a>
+            ))}
+          </div>
+          <a class="nav-dropdown-footer" href="/industries">Explore all industries →</a>
+        </div>
+      </div>
+
+      <a href="/jobs">Jobs</a>
+
+      <div class="nav-dropdown nav-dropdown-resources">
+        <a href="/visas" class="nav-dropdown-link" aria-haspopup="true" aria-expanded="false">Resources</a>
+        <div class="nav-dropdown-panel resources-dropdown-panel" aria-label="Relocation resources">
+          <div class="resources-dropdown-list">
+            {resourceLinks.map((item) => (
+              <a href={item.href}>
+                <strong>{item.label}</strong>
+                <small>{item.description}</small>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <a href="/pricing">Pricing</a>
+      <a href="/blog">Guides</a>
+    </nav>
+
+    <div class="header-actions header-actions-clean">
+      <a class="button button-small" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe</a>
+      <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-mobile-menu-toggle>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span class="sr-only">Open menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu" data-mobile-menu>
+    <div class="container mobile-menu-inner mobile-menu-clean">
+      <div class="mobile-menu-section">
+        <strong>Main</strong>
+        <a href="/countries">Countries</a>
+        <a href="/industries">Industries</a>
+        <a href="/jobs">Jobs</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog">Guides</a>
+      </div>
+
+      <div class="mobile-menu-section">
+        <strong>Resources</strong>
+        <div class="mobile-country-grid mobile-resource-grid">
+          {resourceLinks.map((item) => <a href={item.href}>{item.label}</a>)}
+        </div>
+      </div>
+
+      <div class="mobile-menu-section">
+        <strong>Countries</strong>
+        <div class="mobile-country-grid">
+          {countries.map((country) => (
+            <a href={`/countries/${country.slug}`}>{country.flag} {country.name}</a>
+          ))}
+        </div>
+      </div>
+
+      <div class="mobile-menu-section">
+        <strong>Industries</strong>
+        <div class="mobile-country-grid mobile-industry-grid">
+          {industries.map((industry) => (
+            <a href={`/industries/${industry.slug}`}>{industry.icon} {industry.shortName}</a>
+          ))}
+        </div>
+      </div>
+
+      <div class="mobile-menu-actions">
+        <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe on Substack</a>
+      </div>
+    </div>
+  </div>
+</header>

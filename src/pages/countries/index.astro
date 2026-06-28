@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CountryCard from '../../components/CountryCard.astro';
+import CTA from '../../components/CTA.astro';
+import { countries } from '../../data';
+const launchCountries = countries.filter((country) => country.priority === 'Launch');
+const nextCountries = countries.filter((country) => country.priority === 'Next');
+---
+<BaseLayout
+  title="Countries for Visa Sponsor Jobs and Relocation | RelocateAtlas"
+  description="Compare top relocation countries by visas, taxes, cost of living, salaries, jobs, healthcare, cities, and relocation companies."
+  canonicalPath="/countries"
+>
+  <Header />
+  <main>
+    <section class="page-hero page-hero-gradient">
+      <div class="container narrow">
+        <span class="eyebrow">🌍 Countries</span>
+        <h1>Compare countries before you apply for jobs abroad.</h1>
+        <p class="lead">
+          Each country guide includes visa pathways, taxes, salaries, cost of living, companies hiring, job sectors, relocation companies, healthcare, and key cities.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="mini-eyebrow">Start here</span><h2>Launch focus countries</h2></div>
+          <p>These markets are prioritized for weekly sponsor-friendly job research and deeper relocation guides.</p>
+        </div>
+        <div class="grid-3">{launchCountries.map((country) => <CountryCard {...country} />)}</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="mini-eyebrow">Expansion markets</span><h2>Next countries to monitor</h2></div>
+          <p>These destinations are also important for global candidates and are included in the resource library.</p>
+        </div>
+        <div class="grid-3">{nextCountries.map((country) => <CountryCard {...country} />)}</div>
+      </div>
+    </section>
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>
