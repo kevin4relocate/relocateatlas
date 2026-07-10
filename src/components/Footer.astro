@@ -1,11 +1,10 @@
 ---
-import { SITE, countries, industries, blogPosts } from '../data';
+import { SITE, countries } from '../data';
 
 const year = new Date().getFullYear();
 
-const popularCountries = countries.filter((country) => country.priority === 'Launch').slice(0, 6);
-const popularIndustries = industries.slice(0, 6);
-const latestGuides = blogPosts.slice(0, 4);
+// Chỉ lấy 5 nước phổ biến nhất để footer không bị quá dài
+const popularCountries = countries.filter((country) => country.priority === 'Launch').slice(0, 5);
 
 const exploreLinks = [
   { href: '/countries', label: 'Countries' },
@@ -20,8 +19,7 @@ const resourceLinks = [
   { href: '/jobs', label: 'Job Guides' },
   { href: '/salaries', label: 'Salary Guides' },
   { href: '/taxes', label: 'Tax Guides' },
-  { href: '/cost-of-living', label: 'Cost of Living' },
-  { href: '/relocation-companies', label: 'Relocation Companies' }
+  { href: '/cost-of-living', label: 'Cost of Living' }
 ];
 
 const companyLinks = [
@@ -34,6 +32,8 @@ const companyLinks = [
 ---
 <footer class="footer footer-clean">
   <div class="container footer-clean-grid">
+    
+    <!-- Cột 1: Brand Info -->
     <div class="footer-clean-brand">
       <a class="logo" href="/" aria-label="Relocate Works home">
         <img
@@ -65,6 +65,7 @@ const companyLinks = [
       </div>
     </div>
 
+    <!-- Cột 2: Explore -->
     <div class="footer-links-group">
       <h3>Explore</h3>
       <div class="footer-links">
@@ -72,6 +73,7 @@ const companyLinks = [
       </div>
     </div>
 
+    <!-- Cột 3: Resources -->
     <div class="footer-links-group">
       <h3>Resources</h3>
       <div class="footer-links">
@@ -79,15 +81,19 @@ const companyLinks = [
       </div>
     </div>
 
+    <!-- Cột 4: Top Countries -->
     <div class="footer-links-group">
-      <h3>Popular Countries</h3>
+      <h3>Top Countries</h3>
       <div class="footer-links">
         {popularCountries.map((country) => (
-          <a href={`/countries/${country.slug}`}>{country.flag} {country.name}</a>
+          <a href={`/countries/${country.slug}`}>
+            <span aria-hidden="true">{country.flag}</span> {country.name}
+          </a>
         ))}
       </div>
     </div>
 
+    <!-- Cột 5: Company -->
     <div class="footer-links-group">
       <h3>Company</h3>
       <div class="footer-links">
@@ -96,56 +102,7 @@ const companyLinks = [
     </div>
   </div>
 
-  <div class="container footer-clean-grid footer-clean-grid-secondary">
-    <div class="footer-links-group">
-      <h3>Popular Industries</h3>
-      <div class="footer-links">
-        {popularIndustries.map((industry) => (
-          <a href={`/industries/${industry.slug}`}>{industry.icon} {industry.shortName}</a>
-        ))}
-      </div>
-    </div>
-
-    <div class="footer-links-group">
-      <h3>Latest Guides</h3>
-      <div class="footer-links">
-        {latestGuides.map((post) => (
-          <a href={`/blog/${post.slug}`}>{post.title}</a>
-        ))}
-      </div>
-    </div>
-
-    <div class="footer-links-group">
-      <h3>Country Job Guides</h3>
-      <div class="footer-links">
-        {popularCountries.slice(0, 5).map((country) => (
-          <a href={`/jobs/${country.slug}`}>{country.flag} Jobs in {country.name}</a>
-        ))}
-      </div>
-    </div>
-
-    <div class="footer-links-group">
-      <h3>Country Visa Guides</h3>
-      <div class="footer-links">
-        {popularCountries.slice(0, 5).map((country) => (
-          <a href={`/visas/${country.slug}`}>{country.flag} Visas in {country.name}</a>
-        ))}
-      </div>
-    </div>
-
-    <div class="footer-links-group">
-      <h3>Money Guides</h3>
-      <div class="footer-links">
-        <a href="/salaries">Salary Guides</a>
-        <a href="/taxes">Tax Guides</a>
-        <a href="/cost-of-living">Cost of Living Guides</a>
-        {popularCountries.slice(0, 2).map((country) => (
-          <a href={`/salaries/${country.slug}`}>{country.name} salary guide</a>
-        ))}
-      </div>
-    </div>
-  </div>
-
+  <!-- Box Call To Action -->
   <div class="container footer-cta-row">
     <div>
       <strong>Get weekly sponsor-friendly jobs.</strong>
@@ -162,6 +119,7 @@ const companyLinks = [
     </a>
   </div>
 
+  <!-- Bottom Legal -->
   <div class="container footer-bottom footer-bottom-clean">
     <p>© {year} Relocate Works. All rights reserved.</p>
     <p>Relocate Works is not an immigration law firm and does not provide legal immigration advice.</p>

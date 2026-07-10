@@ -110,7 +110,7 @@ p {
   gap: 11px;
   font-weight: 900;
   color: var(--color-ink);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
   font-size: 1.18rem;
 }
 
@@ -278,9 +278,9 @@ p {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
-  gap: 58px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr); /*[cite: 1] */
+  gap: 58px; /*[cite: 1] */
+  align-items: start; /* <--- Đổi từ center thành start ở dòng này */
 }
 
 .hero-copy {
@@ -2034,7 +2034,7 @@ h1 {
   .page-hero h1,
   .country-hero h1 {
     font-size: clamp(2rem, 11vw, 3rem);
-    letter-spacing: -0.06em;
+    letter-spacing: -0.02em;
   }
 
   h2 {
@@ -2598,7 +2598,7 @@ h3,
 }
 
 .hero h1 {
-  font-size: clamp(2.45rem, 4.85vw, 4.35rem);
+font-size: clamp(2.45rem, 4.2vw, 3.8rem); /* Chỉnh nhỏ lại một chút */
   letter-spacing: -0.058em;
 }
 
@@ -2607,7 +2607,7 @@ h3,
 .resource-country-hero h1,
 .blog-hero h1 {
   font-size: clamp(2rem, 3.5vw, 3.15rem);
-  letter-spacing: -0.048em;
+  letter-spacing: -0.02em;
 }
 
 .hero,
