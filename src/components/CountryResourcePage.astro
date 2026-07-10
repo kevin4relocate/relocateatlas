@@ -10,7 +10,7 @@ const { country, sectionSlug } = Astro.props;
 const section = resourceSections.find((item) => item.slug === sectionSlug);
 if (!section) throw new Error(`Unknown resource section: ${sectionSlug}`);
 
-const softDisclaimer = 'RelocateAtlas helps you research sponsor-friendly opportunities faster. Final eligibility, visa support, and hiring decisions depend on each employer and official immigration rules.';
+const softDisclaimer = 'Relocate Works helps you research sponsor-friendly opportunities faster. Final eligibility, visa support, and hiring decisions depend on each employer and official immigration rules.';
 
 const profiles = {
   australia: {
@@ -144,8 +144,8 @@ function renderHeroLead() {
 }
 ---
 <BaseLayout
-  title={`${section.title} in ${country.name} | RelocateAtlas`}
-  description={`${renderHeroLead()} RelocateAtlas provides planning ranges and research context for international candidates.`}
+  title={`${section.title} in ${country.name} | Relocate Works`}
+  description={`${renderHeroLead()} Relocate Works provides planning ranges and research context for international candidates.`}
   canonicalPath={canonicalPath}
   structuredData={[breadcrumbJsonLd, articleJsonLd]}
 >
@@ -196,7 +196,7 @@ function renderHeroLead() {
                 </div>
               </section>
               <section class="content-block compact-content-block insight-box">
-                <span class="mini-eyebrow">RelocateAtlas insight</span>
+                <span class="mini-eyebrow">Relocate Works insight</span>
                 <h2>How to judge a {country.name} offer</h2>
                 <p>A higher salary in the most expensive city is not always better than a slightly lower salary in a more affordable city. Compare gross salary, estimated take-home pay, rent, commute, healthcare or insurance, and whether the employer covers flights, temporary housing, or settlement support.</p>
                 <ul class="check-list"><li>Calculate first 60–90 days of cash needs before accepting an offer.</li><li>Check whether the role requires a car or has realistic public transport options.</li><li>Ask whether relocation support is paid upfront, reimbursed later, or not included.</li></ul>
@@ -239,7 +239,7 @@ function renderHeroLead() {
                 <ul class="check-list"><li>Tax year and filing obligations</li><li>Income tax and local/provincial tax where applicable</li><li>Payroll deductions and social contributions</li><li>Sales tax or VAT/GST on daily spending</li><li>Benefits, pension, insurance, and family deductions</li></ul>
               </section>
               <section class="content-block compact-content-block insight-box">
-                <span class="mini-eyebrow">RelocateAtlas insight</span>
+                <span class="mini-eyebrow">Relocate Works insight</span>
                 <h2>Do not compare countries by gross salary only</h2>
                 <p>A role that looks lower-paid on paper may still be attractive if taxes, rent, healthcare, transport, and relocation support are favorable. Before applying heavily in {country.name}, build a simple net-income worksheet with salary, estimated tax, rent, monthly expenses, and one-time settlement costs.</p>
               </section>
@@ -328,7 +328,7 @@ function renderHeroLead() {
           <section class="content-block cta-panel inline-substack-cta improved-inline-cta">
             <span class="mini-eyebrow">Weekly job intelligence</span>
             <h2>Want sponsor-friendly jobs for {country.name} and other countries?</h2>
-            <p>RelocateAtlas publishes free previews and paid weekly sponsor-friendly job intelligence through Substack. Paid members get full lists with direct apply links, sponsor signals, relocation scores, salary notes when available, and practical planning notes.</p>
+            <p>Relocate Works publishes free previews and paid weekly sponsor-friendly job intelligence through Substack. Paid members get full lists with direct apply links, sponsor signals, relocation scores, salary notes when available, and practical planning notes.</p>
             <div class="pricing-mini-grid">
               <div><strong>$9/month</strong><span>Monthly access</span></div>
               <div><strong>$49/year</strong><span>Founding yearly access</span></div>

@@ -25,7 +25,7 @@ const guideNav = [
 ];
 ---
 <BaseLayout
-  title={`${country.name} Relocation Guide: Visas, Taxes, Salaries, Jobs and Cost of Living | RelocateAtlas`}
+  title={`${country.name} Relocation Guide: Visas, Taxes, Salaries, Jobs and Cost of Living | Relocate Works`}
   description={`Moving to ${country.name}? Explore visa pathways, taxes, cost of living, salaries, jobs, relocation companies, healthcare, cities, and sponsor-friendly job research.`}
   canonicalPath={`/countries/${country.slug}`}
 >
@@ -81,7 +81,7 @@ const guideNav = [
             {country.visaOverview.map((paragraph) => <p>{paragraph}</p>)}
             <div class="two-column-list">
               <div><h3>Common route categories</h3><ul>{country.visaTypes.map((item) => <li>{item}</li>)}</ul></div>
-              <div class="callout-box"><strong>RelocateAtlas note</strong><p>We classify jobs as Confirmed, Likely, Unknown, or Not Suitable based on public sponsor signals and manual review.</p></div>
+              <div class="callout-box"><strong>Relocate Works note</strong><p>We classify jobs as Confirmed, Likely, Unknown, or Not Suitable based on public sponsor signals and manual review.</p></div>
             </div>
             <a class="inline-link" href={`/visas/${country.slug}`}>Explore {country.name} visa guide →</a>
           </section>

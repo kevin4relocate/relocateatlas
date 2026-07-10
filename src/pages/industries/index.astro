@@ -8,7 +8,7 @@ import { SITE, industries, countries, blogPosts } from '../../data';
 const itemListJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'RelocateAtlas industry relocation guides',
+  name: 'Relocate Works industry relocation guides',
   description: 'Industry guides for visa sponsor jobs and relocation planning across high-demand global sectors.',
   itemListElement: industries.map((industry, index) => ({
     '@type': 'ListItem',
@@ -32,17 +32,17 @@ const faqJsonLd = {
     },
     {
       '@type': 'Question',
-      name: 'Does RelocateAtlas guarantee visa sponsorship?',
+      name: 'Does Relocate Works guarantee visa sponsorship?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. RelocateAtlas is a research and education resource. It highlights sponsor-friendly signals, risks, and job-search context, but candidates must verify visa support with employers and official sources.'
+        text: 'No. Relocate Works is a research and education resource. It highlights sponsor-friendly signals, risks, and job-search context, but candidates must verify visa support with employers and official sources.'
       }
     }
   ]
 };
 ---
 <BaseLayout
-  title="Industries for Visa Sponsor Jobs Abroad | RelocateAtlas"
+  title="Industries for Visa Sponsor Jobs Abroad | Relocate Works"
   description="Explore visa sponsor job opportunities by industry, including tech, healthcare, engineering, finance, education, hospitality, and skilled roles."
   canonicalPath="/industries"
   structuredData={[itemListJsonLd, faqJsonLd]}
@@ -54,7 +54,7 @@ const faqJsonLd = {
         <span class="eyebrow">Industry relocation guides</span>
         <h1>Visa sponsor jobs by industry.</h1>
         <p class="lead">
-          RelocateAtlas is not tech-only. Compare high-demand industries, common roles, qualification requirements, missing skills, country demand, and relocation risks before choosing where to apply.
+          Relocate Works is not tech-only. Compare high-demand industries, common roles, qualification requirements, missing skills, country demand, and relocation risks before choosing where to apply.
         </p>
         <div class="hero-actions compact-actions">
           <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Get weekly jobs on Substack</a>
@@ -72,7 +72,7 @@ const faqJsonLd = {
             A software engineer, nurse, electrician, accountant, teacher, and chef do not face the same relocation path. Some roles depend on employer sponsorship, some require licensing, some need language tests, and some are only realistic in specific countries or regions.
           </p>
           <p>
-            RelocateAtlas uses industry pages to help candidates understand what they need before applying: common sponsor-friendly roles, likely blockers, qualification documents, visa-pathway context, salary concerns, and mistakes to avoid.
+            Relocate Works uses industry pages to help candidates understand what they need before applying: common sponsor-friendly roles, likely blockers, qualification documents, visa-pathway context, salary concerns, and mistakes to avoid.
           </p>
           <p>
             This turns the website into more than a job list. It becomes a practical research funnel: read the industry guide, choose target countries, then subscribe on Substack for weekly sponsor-friendly job leads.

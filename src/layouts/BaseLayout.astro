@@ -86,7 +86,7 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
     <div class="cookie-banner" data-cookie-banner role="dialog" aria-live="polite" aria-label="Cookie notice">
       <div>
         <strong>🍪 Use of cookies</strong>
-        <p>We use essential cookies to remember preferences and may use privacy-friendly analytics to understand how visitors use RelocateAtlas. You can continue browsing or accept this notice.</p>
+        <p>We use essential cookies to remember preferences and may use privacy-friendly analytics to understand how visitors use Relocate Works. You can continue browsing or accept this notice.</p>
       </div>
       <div class="cookie-actions">
         <a href="/privacy">More info</a>
@@ -238,10 +238,10 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
         const cookieBanner = document.querySelector('[data-cookie-banner]');
         const cookieAccept = document.querySelector('[data-cookie-accept]');
         if (cookieBanner && cookieAccept) {
-          const accepted = window.localStorage.getItem('relocateatlas_cookie_notice') === 'accepted';
+          const accepted = window.localStorage.getItem('Relocate Works_cookie_notice') === 'accepted';
           if (!accepted) cookieBanner.classList.add('is-visible');
           cookieAccept.addEventListener('click', () => {
-            window.localStorage.setItem('relocateatlas_cookie_notice', 'accepted');
+            window.localStorage.setItem('Relocate Works_cookie_notice', 'accepted');
             cookieBanner.classList.remove('is-visible');
           });
         }

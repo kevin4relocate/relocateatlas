@@ -37,7 +37,7 @@ const copyMap: Record<string, LandingCopy> = {
     introTitle: 'Why visa research matters before job applications',
     introParagraphs: [
       'A job opening abroad is not automatically useful for an international candidate. Some roles are open only to local citizens or people who already have work rights. Others may be posted by employers that can sponsor foreign workers, support relocation, or hire through recognized skilled worker programs.',
-      'RelocateAtlas helps candidates understand the difference between a normal job advertisement and a sponsor-friendly opportunity. The goal is not to replace official immigration advice. The goal is to help you ask better questions before spending hours applying.',
+      'Relocate Works helps candidates understand the difference between a normal job advertisement and a sponsor-friendly opportunity. The goal is not to replace official immigration advice. The goal is to help you ask better questions before spending hours applying.',
       'Each country has different rules, employer obligations, salary expectations, occupation lists, and processing paths. A strong application strategy starts with knowing which country and pathway match your profile.'
     ],
     compareTitle: 'What to compare across visa routes',
@@ -57,7 +57,7 @@ const copyMap: Record<string, LandingCopy> = {
     introParagraphs: [
       'A salary offer can look strong on paper but feel very different after taxes, social contributions, mandatory insurance, rent, and first-month relocation costs. Before accepting an international offer, candidates should compare gross salary with realistic take-home income.',
       'Tax systems vary widely. Some countries use progressive income tax bands. Others include social security contributions, municipal taxes, payroll deductions, or mandatory health insurance. The exact outcome depends on residency status, family situation, income, and local law.',
-      'RelocateAtlas tax pages are designed as a research starting point. They help you understand what questions to ask before speaking with employers, payroll teams, accountants, or official tax authorities.'
+      'Relocate Works tax pages are designed as a research starting point. They help you understand what questions to ask before speaking with employers, payroll teams, accountants, or official tax authorities.'
     ],
     compareTitle: 'What to compare before accepting an offer',
     compareItems: ['Tax residency rules', 'Income-tax bands or payroll deductions', 'Social security or pension contributions', 'Healthcare or insurance contributions', 'Relocation allowance tax treatment', 'Net salary after rent and essential costs'],
@@ -76,7 +76,7 @@ const copyMap: Record<string, LandingCopy> = {
     introParagraphs: [
       'International salary research is more than checking an average number. A strong salary in an expensive city may leave less disposable income than a slightly lower salary in a more affordable location.',
       'Candidates should evaluate salary together with visa requirements, seniority, industry, taxes, rent, healthcare, transportation, and family needs. The best relocation market is not always the one with the highest headline salary.',
-      'RelocateAtlas salary guides are built to help candidates compare countries before applying, negotiate with better context, and avoid underestimating real living costs.'
+      'Relocate Works salary guides are built to help candidates compare countries before applying, negotiate with better context, and avoid underestimating real living costs.'
     ],
     compareTitle: 'What to compare when reviewing salaries',
     compareItems: ['Gross salary and likely take-home income', 'City-level rent and transport', 'Visa salary thresholds where relevant', 'Pay frequency and probation rules', 'Relocation support and sign-on bonuses', 'Long-term career growth in that market'],
@@ -95,7 +95,7 @@ const copyMap: Record<string, LandingCopy> = {
     introParagraphs: [
       'The cost of living is one of the critical factors to consider when deciding where to relocate. Expenses usually include housing, utilities, food, transportation, healthcare, phone and internet, clothing, and personal spending. Depending on your family situation, it may also include childcare, education, entertainment, and support for dependents.',
       'Moving to a lower-cost country can help you save money, especially if you work remotely or earn a salary above local market averages. However, countries with lower living costs may also offer lower salaries, fewer sponsor-friendly jobs, or different long-term residency options.',
-      'RelocateAtlas cost pages help candidates compare practical expenses before applying. The goal is to avoid accepting an offer that looks attractive but becomes stressful after rent, deposits, insurance, and setup costs.'
+      'Relocate Works cost pages help candidates compare practical expenses before applying. The goal is to avoid accepting an offer that looks attractive but becomes stressful after rent, deposits, insurance, and setup costs.'
     ],
     compareTitle: 'Expenses to compare before moving',
     compareItems: ['Rent and rental deposit', 'Temporary accommodation for arrival', 'Utilities and internet', 'Groceries and transport', 'Healthcare and insurance', 'Emergency savings for the first 60–90 days'],
@@ -114,7 +114,7 @@ const copyMap: Record<string, LandingCopy> = {
     introParagraphs: [
       'Relocation companies can support international moves by helping with shipping, temporary accommodation, home search, local registration, school search, banking setup, utilities, and settling-in services. Some employers include relocation vendors in the offer package, while others provide only a fixed allowance.',
       'The value of relocation support depends on your situation. A single candidate moving with two suitcases may need very little help. A family relocating with children, pets, furniture, and school requirements may benefit from structured support.',
-      'RelocateAtlas relocation company pages help candidates understand the service categories and questions to ask before signing an offer or paying for relocation help.'
+      'Relocate Works relocation company pages help candidates understand the service categories and questions to ask before signing an offer or paying for relocation help.'
     ],
     compareTitle: 'What relocation support can include',
     compareItems: ['Shipment and storage', 'Temporary accommodation', 'Home search and lease support', 'School and family settling-in support', 'Local registration and administration', 'Airport pickup and arrival orientation'],
@@ -132,7 +132,7 @@ const copyMap: Record<string, LandingCopy> = {
     introTitle: 'Why sponsor-friendly job research is different',
     introParagraphs: [
       'A normal job board is designed to show open roles. It does not always tell international candidates whether the employer can sponsor, whether the role is realistic for relocation, or whether the description quietly excludes people without local work rights.',
-      'RelocateAtlas focuses on job intelligence rather than raw job volume. We look for sponsor signals, relocation language, employer credibility, role seniority, salary context, and risk phrases that may reduce the chance of sponsorship.',
+      'Relocate Works focuses on job intelligence rather than raw job volume. We look for sponsor signals, relocation language, employer credibility, role seniority, salary context, and risk phrases that may reduce the chance of sponsorship.',
       'The paid weekly list is designed to save time: fewer noisy links, more context, and a clearer reason why each role may be worth checking.'
     ],
     compareTitle: 'What makes a job stronger for relocation',
@@ -209,7 +209,7 @@ const exampleMap = {
     eyebrow: 'Job intelligence',
     title: 'What makes a job more useful for relocation',
     lead: 'A good lead is not just an open role. It should have sponsor signals, suitable seniority, employer credibility, and a realistic pathway.',
-    headers: ['Signal', 'Why it matters', 'How RelocateAtlas uses it'],
+    headers: ['Signal', 'Why it matters', 'How Relocate Works uses it'],
     rows: [
       ['Sponsor-friendly wording', 'Shows the employer may consider international candidates.', 'Marked as a stronger signal when wording is clear.'],
       ['No local-only restriction', 'Some jobs quietly exclude foreign applicants.', 'Filtered out when the job says no sponsorship or local candidates only.'],
@@ -222,7 +222,7 @@ const examples = exampleMap[section.slug];
 const canonicalPath = `/${section.slug}`;
 ---
 <BaseLayout
-  title={`${section.title} by Country | RelocateAtlas`}
+  title={`${section.title} by Country | Relocate Works`}
   description={copy.lead}
   canonicalPath={canonicalPath}
 >

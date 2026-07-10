@@ -3,7 +3,7 @@
   <circle cx="1020" cy="90" r="260" fill="#2563EB" fill-opacity="0.28"/>
   <circle cx="130" cy="520" r="260" fill="#14B8A6" fill-opacity="0.22"/>
   <path d="M105 130H1095V500H105V130Z" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.12"/>
-  <text x="105" y="220" fill="white" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="800">RelocateAtlas</text>
+  <text x="105" y="220" fill="white" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="800">Relocate Works</text>
   <text x="108" y="292" fill="#BAE6FD" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600">Weekly visa sponsor jobs and relocation guides</text>
   <text x="108" y="362" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="28">AI-assisted. Human-reviewed. Built for global candidates.</text>
   <rect x="108" y="420" width="285" height="56" rx="28" fill="#2DD4BF"/>

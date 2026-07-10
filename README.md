@@ -1,6 +1,6 @@
-# RelocateAtlas Astro Website
+# Relocate Works Astro Website
 
-RelocateAtlas is a static Astro website for visa sponsor jobs, country guides, industry guides, relocation resources, and Substack conversion.
+Relocate Works is a static Astro website for visa sponsor jobs, country guides, industry guides, relocation resources, and Substack conversion.
 
 ## What is included
 

@@ -1,18 +1,18 @@
-# RelocateAtlas
+# Relocate Works
 
-RelocateAtlas is a relocation research website and Substack publication for international candidates researching visa sponsor jobs, relocation-friendly employers, country guides, industries, visas, taxes, salaries, cost of living, relocation companies, and job-search strategy.
+Relocate Works is a relocation research website and Substack publication for international candidates researching visa sponsor jobs, relocation-friendly employers, country guides, industries, visas, taxes, salaries, cost of living, relocation companies, and job-search strategy.
 
 Important pages:
-- Home: https://relocateatlas.com/
-- Countries: https://relocateatlas.com/countries
-- Industries: https://relocateatlas.com/industries
-- Visa sponsor jobs: https://relocateatlas.com/visa-sponsor-jobs
-- Visas: https://relocateatlas.com/visas
-- Taxes: https://relocateatlas.com/taxes
-- Salaries: https://relocateatlas.com/salaries
-- Cost of living: https://relocateatlas.com/cost-of-living
-- Relocation companies: https://relocateatlas.com/relocation-companies
-- Jobs: https://relocateatlas.com/jobs
-- Blog: https://relocateatlas.com/blog
+- Home: https://relocateworks.com/
+- Countries: https://relocateworks.com/countries
+- Industries: https://relocateworks.com/industries
+- Visa sponsor jobs: https://relocateworks.com/visa-sponsor-jobs
+- Visas: https://relocateworks.com/visas
+- Taxes: https://relocateworks.com/taxes
+- Salaries: https://relocateworks.com/salaries
+- Cost of living: https://relocateworks.com/cost-of-living
+- Relocation companies: https://relocateworks.com/relocation-companies
+- Jobs: https://relocateworks.com/jobs
+- Blog: https://relocateworks.com/blog
 
-RelocateAtlas is not an immigration law firm, recruiter, employer, or government service. Content is educational and for research only. Always verify visa, job, salary, tax, healthcare, and relocation information with official sources and qualified professionals.
+Relocate Works is not an immigration law firm, recruiter, employer, or government service. Content is educational and for research only. Always verify visa, job, salary, tax, healthcare, and relocation information with official sources and qualified professionals.

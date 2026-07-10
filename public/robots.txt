@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://relocateatlas.com/sitemap-index.xml
+Sitemap: https://relocateworks.com/sitemap-index.xml

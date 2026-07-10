@@ -1,12 +1,12 @@
 export const SITE = {
-  "name": "RelocateAtlas",
-  "url": "https://relocateatlas.com",
-  "title": "RelocateAtlas — Visa Sponsor Jobs, Country Guides and Relocation Intelligence",
-  "description": "RelocateAtlas helps international candidates compare countries, understand visa sponsor jobs, review salaries, taxes, cost of living, and plan relocation abroad.",
-  "substackUrl": "https://relocateatlas.substack.com",
-  "email": "hello@relocateatlas.com",
-  "linkedinUrl": "https://www.linkedin.com/company/relocateatlas/",
-  "facebookUrl": "https://www.facebook.com/RelocateAtlas/"
+  "name": "Relocate Works",
+  "url": "https://relocateworks.com",
+  "title": "Relocate Works — Visa Sponsor Jobs, Country Guides and Relocation Intelligence",
+  "description": "Relocate Works helps international candidates compare countries, understand visa sponsor jobs, review salaries, taxes, cost of living, and plan relocation abroad.",
+  "substackUrl": "https://relocateworks.substack.com",
+  "email": "hello@relocateworks.com",
+  "linkedinUrl": "https://linkedin.com/company/relocate-works/",
+  "facebookUrl": "https://facebook.com/relocateworks/"
 } as const;
 
 export type Country = typeof countries[number];
@@ -42,9 +42,9 @@ export const countries = [
     "currency": "Australian Dollar (AUD)",
     "languages": "English is the main workplace language.",
     "overview": [
-      "Australia is one of the strongest launch markets for RelocateAtlas because many international candidates already understand it as a destination for skilled work, higher salaries, and long-term settlement. It has large English-speaking job markets, global companies, established migrant communities, and employer-sponsored work pathways that are easy for candidates to research before applying.",
+      "Australia is one of the strongest launch markets for Relocate Works because many international candidates already understand it as a destination for skilled work, higher salaries, and long-term settlement. It has large English-speaking job markets, global companies, established migrant communities, and employer-sponsored work pathways that are easy for candidates to research before applying.",
       "The strongest opportunities are usually found in technology, healthcare, engineering, finance, education, construction, mining, and professional services. For international candidates, the key is not simply finding open jobs. The real challenge is identifying employers and roles that may support sponsorship, relocation, or long-term skilled migration pathways.",
-      "RelocateAtlas treats Australia as a priority market for weekly job research. We look for job descriptions that mention sponsorship, relocation, work rights flexibility, global hiring, or roles that match common skilled occupation pathways. Candidates should still verify every visa detail with the employer and official sources before applying."
+      "Relocate Works treats Australia as a priority market for weekly job research. We look for job descriptions that mention sponsorship, relocation, work rights flexibility, global hiring, or roles that match common skilled occupation pathways. Candidates should still verify every visa detail with the employer and official sources before applying."
     ],
     "facts": [
       "Large English-speaking job market",
@@ -53,7 +53,7 @@ export const countries = [
     ],
     "visaOverview": [
       "Australia has several employer-supported and skilled migration routes. For job seekers, the most important task is to understand whether the employer is willing and able to sponsor, whether the role fits an eligible occupation pathway, and whether the salary and experience level are realistic.",
-      "RelocateAtlas does not provide legal immigration advice. Instead, our job research highlights public sponsor signals and risk phrases so candidates can prioritize better applications."
+      "Relocate Works does not provide legal immigration advice. Instead, our job research highlights public sponsor signals and risk phrases so candidates can prioritize better applications."
     ],
     "visaTypes": [
       "Skills in Demand visa / subclass 482-style employer sponsorship",
@@ -93,7 +93,7 @@ export const countries = [
     "monthlyExpenses": "Plan a conservative budget for rent, transport, food, utilities, health cover, and deposits.",
     "companiesOverview": [
       "Australia has local and multinational employers across SaaS, fintech, mining, healthcare, telecom, banking, consulting, and gaming. Candidates should prioritize official career pages and companies with public evidence of international hiring.",
-      "RelocateAtlas looks for companies that show relocation language, sponsor-friendly wording, international teams, or repeated hiring in skilled roles."
+      "Relocate Works looks for companies that show relocation language, sponsor-friendly wording, international teams, or repeated hiring in skilled roles."
     ],
     "companies": [
       "Canva",
@@ -137,7 +137,7 @@ export const countries = [
     ],
     "salariesOverview": [
       "Australia salaries can be attractive for skilled professionals, but the useful number is always net income after tax and living costs. A strong salary in a high-rent area may feel weaker than a slightly lower salary in a more affordable city.",
-      "RelocateAtlas salary pages should eventually compare role salary, city cost, visa suitability, and relocation risk."
+      "Relocate Works salary pages should eventually compare role salary, city cost, visa suitability, and relocation risk."
     ],
     "averageSalary": "High compared with many global markets, especially in specialized professional roles.",
     "minimumWage": "Set nationally and updated periodically.",
@@ -215,7 +215,7 @@ export const countries = [
     "overview": [
       "New Zealand is attractive for candidates who want a smaller English-speaking market, strong lifestyle appeal, and a clear employer-led work visa concept. The job market is smaller than Australia or the UK, so applicants need to be targeted and realistic.",
       "The best opportunities are usually in technology, engineering, healthcare, construction, agriculture, education, and public services. Because the market is smaller, company research and employer fit matter a lot.",
-      "RelocateAtlas tracks New Zealand because the accredited employer concept can help candidates focus on better job leads instead of applying randomly."
+      "Relocate Works tracks New Zealand because the accredited employer concept can help candidates focus on better job leads instead of applying randomly."
     ],
     "facts": [
       "Smaller market but strong lifestyle appeal",
@@ -224,7 +224,7 @@ export const countries = [
     ],
     "visaOverview": [
       "New Zealand's employer-led routes make employer quality especially important. Candidates should check whether the employer is accredited, whether the role is genuine, and whether the offer matches visa requirements.",
-      "A job being open does not automatically mean it supports an overseas applicant. RelocateAtlas highlights sponsor-friendly language and risk signals to help candidates prioritize."
+      "A job being open does not automatically mean it supports an overseas applicant. Relocate Works highlights sponsor-friendly language and risk signals to help candidates prioritize."
     ],
     "visaTypes": [
       "Accredited Employer Work Visa",
@@ -275,7 +275,7 @@ export const countries = [
     ],
     "jobsOverview": [
       "Because the market is smaller, candidates should focus on quality applications rather than volume. Strong local-style CVs, clear skill match, and direct employer research are important.",
-      "RelocateAtlas prioritizes jobs with accredited employer signals, relocation wording, skill shortage relevance, or specialist experience requirements."
+      "Relocate Works prioritizes jobs with accredited employer signals, relocation wording, skill shortage relevance, or specialist experience requirements."
     ],
     "sectors": [
       "Technology",
@@ -384,7 +384,7 @@ export const countries = [
     "overview": [
       "The United Kingdom is one of the most important markets for visa sponsor job research because employer sponsorship is a visible and structured part of the hiring landscape. Candidates can often identify stronger opportunities by checking whether an employer appears sponsor-friendly and whether the role is suitable for skilled work.",
       "The market is large and competitive. London has the largest concentration of roles, but Manchester, Birmingham, Leeds, Edinburgh, Glasgow, Bristol, and Cambridge can also be strong depending on sector.",
-      "RelocateAtlas prioritizes UK jobs because sponsor evidence, role requirements, and risk phrases can be reviewed more clearly than in many other markets."
+      "Relocate Works prioritizes UK jobs because sponsor evidence, role requirements, and risk phrases can be reviewed more clearly than in many other markets."
     ],
     "facts": [
       "Large sponsor-friendly job market",
@@ -393,7 +393,7 @@ export const countries = [
     ],
     "visaOverview": [
       "The UK Skilled Worker route is a key employer-sponsored pathway for international candidates. Applicants should check whether the employer can sponsor, whether the role meets requirements, and whether salary and occupation conditions are realistic.",
-      "Job descriptions that say applicants must already have the right to work usually need caution. RelocateAtlas flags these risk phrases so readers can avoid wasting time."
+      "Job descriptions that say applicants must already have the right to work usually need caution. Relocate Works flags these risk phrases so readers can avoid wasting time."
     ],
     "visaTypes": [
       "Skilled Worker visa",
@@ -434,7 +434,7 @@ export const countries = [
     "monthlyExpenses": "Budget for rent, council tax, utilities, transport, food, mobile, and visa-related costs.",
     "companiesOverview": [
       "The UK hosts multinational employers in banking, consulting, technology, healthcare, research, telecom, retail, and public services. Sponsor-friendly jobs may appear at both large enterprises and specialist firms.",
-      "RelocateAtlas looks for public sponsor signals, official career page details, and repeated international hiring patterns."
+      "Relocate Works looks for public sponsor signals, official career page details, and repeated international hiring patterns."
     ],
     "companies": [
       "Wise",
@@ -557,7 +557,7 @@ export const countries = [
     "overview": [
       "Germany is a core relocation market because of its large economy, demand for skilled labor, strong engineering base, and established routes for qualified professionals. It is especially attractive for software engineers, data engineers, mechanical and electrical engineers, researchers, healthcare professionals, and manufacturing specialists.",
       "English-speaking technology roles exist, especially in Berlin, Munich, Hamburg, Frankfurt, and international companies, but German language skills can significantly expand opportunities and long-term integration.",
-      "RelocateAtlas tracks Germany because the EU Blue Card and skilled worker concepts are relevant to many professional candidates, but each job still needs salary, qualification, and employer review."
+      "Relocate Works tracks Germany because the EU Blue Card and skilled worker concepts are relevant to many professional candidates, but each job still needs salary, qualification, and employer review."
     ],
     "facts": [
       "Strong engineering and technology market",
@@ -566,7 +566,7 @@ export const countries = [
     ],
     "visaOverview": [
       "Germany offers routes for qualified professionals, including EU Blue Card-style opportunities for eligible candidates. The key factors are usually qualification, job match, salary level, and whether the role is suitable for qualified employment.",
-      "Candidates should not assume every English job is relocation-friendly. RelocateAtlas looks for relocation support, work permit language, global hiring signals, and salary context."
+      "Candidates should not assume every English job is relocation-friendly. Relocate Works looks for relocation support, work permit language, global hiring signals, and salary context."
     ],
     "visaTypes": [
       "EU Blue Card",
@@ -607,7 +607,7 @@ export const countries = [
     "monthlyExpenses": "Budget for rent, health insurance, transport, food, registration, and initial housing deposits.",
     "companiesOverview": [
       "Germany has global employers in automotive, manufacturing, software, enterprise technology, finance, logistics, and research. Startups may offer English-speaking roles, while traditional companies may require German.",
-      "RelocateAtlas prioritizes companies with global hiring patterns, English job descriptions, relocation notes, and roles likely to meet skilled worker criteria."
+      "Relocate Works prioritizes companies with global hiring patterns, English job descriptions, relocation notes, and roles likely to meet skilled worker criteria."
     ],
     "companies": [
       "SAP",
@@ -731,7 +731,7 @@ export const countries = [
     "overview": [
       "Canada is one of the most searched relocation markets, but it is also one of the easiest to misunderstand. Many candidates search for visa sponsor jobs, while employers may use different hiring language such as work permit support, LMIA support, Global Talent Stream, or relocation assistance.",
       "The market is strong for technology, healthcare, engineering, skilled trades, finance, education, and logistics. Toronto and Vancouver attract many candidates, but costs can be high and competition is strong.",
-      "RelocateAtlas covers Canada carefully by separating confirmed sponsor language from possible or weak signals."
+      "Relocate Works covers Canada carefully by separating confirmed sponsor language from possible or weak signals."
     ],
     "facts": [
       "Large immigration interest worldwide",
@@ -781,7 +781,7 @@ export const countries = [
     "monthlyExpenses": "Budget for rent, transport, winter clothing, phone, internet, groceries, and settlement costs.",
     "companiesOverview": [
       "Canada has technology companies, banks, consultancies, telecom firms, healthcare organizations, universities, and manufacturing employers. Sponsor-friendly roles often require specialized skills or hard-to-fill experience.",
-      "RelocateAtlas looks for LMIA/work permit language, global hiring signals, official career page evidence, and role scarcity."
+      "Relocate Works looks for LMIA/work permit language, global hiring signals, official career page evidence, and role scarcity."
     ],
     "companies": [
       "Shopify",
@@ -898,7 +898,7 @@ export const countries = [
     "languages": "English may be used in some international roles; local language ability can significantly expand options.",
     "overview": [
       "Singapore is a compact but highly competitive market. It is attractive for candidates in tech, finance, product, data, cybersecurity, gaming, and regional management. The country has strong multinational employers and regional headquarters, but candidates must pay close attention to work pass requirements and salary expectations.",
-      "RelocateAtlas includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
+      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
       "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
     ],
     "facts": [
@@ -908,7 +908,7 @@ export const countries = [
     ],
     "visaOverview": [
       "Singapore has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "RelocateAtlas marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
     ],
     "visaTypes": [
       "Employment Pass / S Pass",
@@ -942,7 +942,7 @@ export const countries = [
     "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
     "companiesOverview": [
       "Singapore has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "RelocateAtlas looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
     ],
     "companies": [
       "Global technology employers",
@@ -953,7 +953,7 @@ export const countries = [
     ],
     "jobsOverview": [
       "The best job strategy for Singapore is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "RelocateAtlas filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
     ],
     "sectors": [
       "Technology",
@@ -1051,7 +1051,7 @@ export const countries = [
     "languages": "English may be used in some international roles; local language ability can significantly expand options.",
     "overview": [
       "Ireland is a strong relocation market for experienced professionals who want an English-speaking EU destination. The country is especially attractive for technology, cloud, data, cybersecurity, pharmaceuticals, finance, healthcare, and shared services roles.",
-      "RelocateAtlas includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
+      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
       "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
     ],
     "facts": [
@@ -1061,7 +1061,7 @@ export const countries = [
     ],
     "visaOverview": [
       "Ireland has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "RelocateAtlas marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
     ],
     "visaTypes": [
       "Critical Skills Employment Permit",
@@ -1098,7 +1098,7 @@ export const countries = [
     "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
     "companiesOverview": [
       "Ireland has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "RelocateAtlas looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
     ],
     "companies": [
       "Global technology employers",
@@ -1109,7 +1109,7 @@ export const countries = [
     ],
     "jobsOverview": [
       "The best job strategy for Ireland is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "RelocateAtlas filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
     ],
     "sectors": [
       "Technology",
@@ -1213,7 +1213,7 @@ export const countries = [
     "languages": "English may be used in some international roles; local language ability can significantly expand options.",
     "overview": [
       "The Netherlands is known for international teams, strong English usage in many professional environments, and a recognized sponsor concept for highly skilled migrants. It is a good market for tech, data, product, design, engineering, logistics, and research roles.",
-      "RelocateAtlas includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
+      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
       "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
     ],
     "facts": [
@@ -1223,7 +1223,7 @@ export const countries = [
     ],
     "visaOverview": [
       "Netherlands has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "RelocateAtlas marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
     ],
     "visaTypes": [
       "Highly Skilled Migrant route",
@@ -1260,7 +1260,7 @@ export const countries = [
     "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
     "companiesOverview": [
       "Netherlands has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "RelocateAtlas looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
     ],
     "companies": [
       "Global technology employers",
@@ -1271,7 +1271,7 @@ export const countries = [
     ],
     "jobsOverview": [
       "The best job strategy for Netherlands is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "RelocateAtlas filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
     ],
     "sectors": [
       "Technology",
@@ -1375,7 +1375,7 @@ export const countries = [
     "languages": "English may be used in some international roles; local language ability can significantly expand options.",
     "overview": [
       "Denmark is a smaller but attractive market for candidates who value quality of life, stable institutions, and highly skilled work. It can be relevant for technology, engineering, healthcare, life sciences, renewable energy, and research roles.",
-      "RelocateAtlas includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
+      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
       "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
     ],
     "facts": [
@@ -1385,7 +1385,7 @@ export const countries = [
     ],
     "visaOverview": [
       "Denmark has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "RelocateAtlas marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
     ],
     "visaTypes": [
       "Positive List / Pay Limit Scheme",
@@ -1422,7 +1422,7 @@ export const countries = [
     "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
     "companiesOverview": [
       "Denmark has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "RelocateAtlas looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
     ],
     "companies": [
       "Global technology employers",
@@ -1433,7 +1433,7 @@ export const countries = [
     ],
     "jobsOverview": [
       "The best job strategy for Denmark is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "RelocateAtlas filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
     ],
     "sectors": [
       "Technology",
@@ -1537,7 +1537,7 @@ export const countries = [
     "languages": "English may be used in some international roles; local language ability can significantly expand options.",
     "overview": [
       "Japan can be attractive for candidates in technology, gaming, embedded systems, manufacturing, robotics, research, hospitality, and specialized skilled work. The opportunity level depends heavily on role type, Japanese language requirements, employer support, and visa category.",
-      "RelocateAtlas includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
+      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
       "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
     ],
     "facts": [
@@ -1547,7 +1547,7 @@ export const countries = [
     ],
     "visaOverview": [
       "Japan has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "RelocateAtlas marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
     ],
     "visaTypes": [
       "Highly Skilled Professional / Engineer visa routes",
@@ -1584,7 +1584,7 @@ export const countries = [
     "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
     "companiesOverview": [
       "Japan has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "RelocateAtlas looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
     ],
     "companies": [
       "Global technology employers",
@@ -1595,7 +1595,7 @@ export const countries = [
     ],
     "jobsOverview": [
       "The best job strategy for Japan is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "RelocateAtlas filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
     ],
     "sectors": [
       "Technology",
@@ -1685,7 +1685,7 @@ export const industries = [
     "description": "Sponsor-friendly roles for software engineers, QA engineers, data professionals, cloud engineers, cybersecurity specialists, and AI builders.",
     "overview": [
       "Technology remains one of the most practical relocation industries because many companies already work in English, hire internationally, and value specialized experience that can be hard to find locally.",
-      "This industry is not only software development. RelocateAtlas includes QA, software testing, data, cloud, DevOps, cybersecurity, product engineering, AI, and technical support roles where international candidates may have a realistic chance.",
+      "This industry is not only software development. Relocate Works includes QA, software testing, data, cloud, DevOps, cybersecurity, product engineering, AI, and technical support roles where international candidates may have a realistic chance.",
       "The strongest candidates usually show evidence of real project impact, production systems experience, automation, cloud exposure, clear communication, and the ability to work with cross-functional teams. Junior roles can be harder to sponsor, so mid-level and senior candidates often have better relocation potential."
     ],
     "commonRoles": [
@@ -1775,7 +1775,7 @@ export const industries = [
     "overview": [
       "Healthcare and care work can be one of the strongest relocation industries because many countries face long-term workforce shortages in hospitals, aged care, disability support, community health, and allied health services.",
       "However, healthcare relocation is more complex than simply finding a job. Many roles require registration, licensing, document assessment, English tests, background checks, supervised practice, or local-equivalent qualifications before a candidate can work legally.",
-      "RelocateAtlas helps candidates understand which healthcare roles may have sponsor-friendly demand, what conditions to review, and which job postings require careful checking before applying."
+      "Relocate Works helps candidates understand which healthcare roles may have sponsor-friendly demand, what conditions to review, and which job postings require careful checking before applying."
     ],
     "commonRoles": [
       "Registered Nurse",
@@ -1862,7 +1862,7 @@ export const industries = [
     "overview": [
       "Engineering, construction, and skilled trades are important relocation categories because many countries need people who can build infrastructure, maintain energy systems, support housing growth, and fill technical labor gaps.",
       "This industry covers both university-qualified engineers and practical trade professionals. The visa logic can differ a lot between a civil engineer, electrician, welder, automotive mechanic, quantity surveyor, and construction project manager.",
-      "RelocateAtlas focuses on sponsor-friendly job signals, qualification requirements, trade assessment risks, and countries where these roles may appear in shortage or skilled occupation pathways."
+      "Relocate Works focuses on sponsor-friendly job signals, qualification requirements, trade assessment risks, and countries where these roles may appear in shortage or skilled occupation pathways."
     ],
     "commonRoles": [
       "Civil Engineer",
@@ -1949,7 +1949,7 @@ export const industries = [
     "overview": [
       "Finance, accounting, and audit can be strong relocation categories for candidates with international standards experience, regulated industry exposure, Big Four background, banking experience, risk knowledge, or specialized reporting skills.",
       "These roles are not always easy to sponsor at junior level, but experienced candidates can be competitive when they bring scarce industry knowledge, language skills, compliance experience, or certifications that match multinational employers.",
-      "RelocateAtlas helps candidates compare countries, role types, certification expectations, salary context, and sponsor-friendly employer signals before applying."
+      "Relocate Works helps candidates compare countries, role types, certification expectations, salary context, and sponsor-friendly employer signals before applying."
     ],
     "commonRoles": [
       "Accountant",
@@ -2035,7 +2035,7 @@ export const industries = [
     "overview": [
       "Education and teaching roles can support relocation in countries with teacher shortages, childcare demand, special education needs, STEM teacher shortages, or international school growth.",
       "Teaching relocation is highly dependent on qualification recognition, teacher registration, background checks, language ability, and whether the employer can sponsor. International schools may have different requirements from public school systems.",
-      "RelocateAtlas helps candidates understand which teaching roles may be sponsor-friendly, what documents to prepare, and where licensing or local registration can become the biggest blocker."
+      "Relocate Works helps candidates understand which teaching roles may be sponsor-friendly, what documents to prepare, and where licensing or local registration can become the biggest blocker."
     ],
     "commonRoles": [
       "Primary School Teacher",
@@ -2119,7 +2119,7 @@ export const industries = [
     "overview": [
       "Hospitality, tourism, and other skilled roles can create relocation opportunities, especially in countries with regional labor shortages, seasonal demand, food service needs, tourism recovery, and skill gaps in practical occupations.",
       "This category must be filtered carefully because many hospitality and general roles require existing local work rights. Sponsorship is possible in some cases, but weak job posts, agencies, and unrealistic promises are common risks.",
-      "RelocateAtlas includes this industry because many non-tech candidates want relocation options. The focus is on practical sponsor signals, employer credibility, salary fit, and whether the role is skilled enough for a realistic pathway."
+      "Relocate Works includes this industry because many non-tech candidates want relocation options. The focus is on practical sponsor signals, employer credibility, salary fit, and whether the role is skilled enough for a realistic pathway."
     ],
     "commonRoles": [
       "Chef",
@@ -2221,8 +2221,8 @@ export const blogPosts = [
     "category": "Career Guides"
   },
   {
-    "title": "How RelocateAtlas Reviews Sponsor-Friendly Jobs",
-    "slug": "how-relocateatlas-reviews-sponsor-friendly-jobs",
+    "title": "How Relocate Works Reviews Sponsor-Friendly Jobs",
+    "slug": "how-Relocate Works-reviews-sponsor-friendly-jobs",
     "description": "A clear look at the AI-assisted and human-reviewed process used to evaluate sponsor signals, risk phrases, and job quality.",
     "date": "2026-06-28",
     "category": "Methodology"
