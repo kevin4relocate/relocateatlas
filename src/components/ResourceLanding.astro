@@ -3,13 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 import CTA from './CTA.astro';
-import { countries, resourceSections, blogPosts } from '../data';
+import { SITE, countries, resourceSections, blogPosts } from '../data';
 
 interface Props {
   sectionSlug: string;
 }
 
 const { sectionSlug } = Astro.props;
+
 const section = resourceSections.find((item) => item.slug === sectionSlug);
 if (!section) throw new Error(`Unknown resource section: ${sectionSlug}`);
 
@@ -41,9 +42,22 @@ const copyMap: Record<string, LandingCopy> = {
       'Each country has different rules, employer obligations, salary expectations, occupation lists, and processing paths. A strong application strategy starts with knowing which country and pathway match your profile.'
     ],
     compareTitle: 'What to compare across visa routes',
-    compareItems: ['Employer sponsorship requirements', 'Eligible roles and occupation categories', 'Salary or income thresholds', 'Language and qualification expectations', 'Pathway to long-term residence', 'Risk phrases such as “must already have work rights”'],
+    compareItems: [
+      'Employer sponsorship requirements',
+      'Eligible roles and occupation categories',
+      'Salary or income thresholds',
+      'Language and qualification expectations',
+      'Pathway to long-term residence',
+      'Risk phrases such as “must already have work rights”'
+    ],
     warningTitle: 'Common visa research mistakes',
-    warningItems: ['Applying to jobs that clearly say no sponsorship', 'Ignoring salary and occupation requirements', 'Assuming a global company sponsors every role', 'Confusing relocation assistance with legal sponsorship', 'Relying on old blog posts instead of current official sources'],
+    warningItems: [
+      'Applying to jobs that clearly say no sponsorship',
+      'Ignoring salary and occupation requirements',
+      'Assuming a global company sponsors every role',
+      'Confusing relocation assistance with legal sponsorship',
+      'Relying on old blog posts instead of current official sources'
+    ],
     countryTitle: 'Select a country',
     countryLead: 'Choose a country to review its main work visa and sponsor-friendly job context.',
     cardLabel: 'View visa guide',
@@ -60,9 +74,22 @@ const copyMap: Record<string, LandingCopy> = {
       'Relocate Works tax pages are designed as a research starting point. They help you understand what questions to ask before speaking with employers, payroll teams, accountants, or official tax authorities.'
     ],
     compareTitle: 'What to compare before accepting an offer',
-    compareItems: ['Tax residency rules', 'Income-tax bands or payroll deductions', 'Social security or pension contributions', 'Healthcare or insurance contributions', 'Relocation allowance tax treatment', 'Net salary after rent and essential costs'],
+    compareItems: [
+      'Tax residency rules',
+      'Income-tax bands or payroll deductions',
+      'Social security or pension contributions',
+      'Healthcare or insurance contributions',
+      'Relocation allowance tax treatment',
+      'Net salary after rent and essential costs'
+    ],
     warningTitle: 'Common tax mistakes',
-    warningItems: ['Comparing gross salaries only', 'Ignoring tax residency rules', 'Forgetting social contributions', 'Not budgeting for the first tax year', 'Assuming all relocation benefits are tax-free'],
+    warningItems: [
+      'Comparing gross salaries only',
+      'Ignoring tax residency rules',
+      'Forgetting social contributions',
+      'Not budgeting for the first tax year',
+      'Assuming all relocation benefits are tax-free'
+    ],
     countryTitle: 'Select a country',
     countryLead: 'Choose a country to review tax basics and salary-planning context for relocation.',
     cardLabel: 'View tax guide',
@@ -79,9 +106,22 @@ const copyMap: Record<string, LandingCopy> = {
       'Relocate Works salary guides are built to help candidates compare countries before applying, negotiate with better context, and avoid underestimating real living costs.'
     ],
     compareTitle: 'What to compare when reviewing salaries',
-    compareItems: ['Gross salary and likely take-home income', 'City-level rent and transport', 'Visa salary thresholds where relevant', 'Pay frequency and probation rules', 'Relocation support and sign-on bonuses', 'Long-term career growth in that market'],
+    compareItems: [
+      'Gross salary and likely take-home income',
+      'City-level rent and transport',
+      'Visa salary thresholds where relevant',
+      'Pay frequency and probation rules',
+      'Relocation support and sign-on bonuses',
+      'Long-term career growth in that market'
+    ],
     warningTitle: 'Common salary mistakes',
-    warningItems: ['Using one average salary for an entire country', 'Ignoring city rent differences', 'Forgetting tax and insurance deductions', 'Accepting offers below visa thresholds', 'Not comparing relocation package value'],
+    warningItems: [
+      'Using one average salary for an entire country',
+      'Ignoring city rent differences',
+      'Forgetting tax and insurance deductions',
+      'Accepting offers below visa thresholds',
+      'Not comparing relocation package value'
+    ],
     countryTitle: 'Select a country',
     countryLead: 'Choose a country to review salary context, high-demand roles, and pay-planning notes.',
     cardLabel: 'View salary guide',
@@ -98,9 +138,22 @@ const copyMap: Record<string, LandingCopy> = {
       'Relocate Works cost pages help candidates compare practical expenses before applying. The goal is to avoid accepting an offer that looks attractive but becomes stressful after rent, deposits, insurance, and setup costs.'
     ],
     compareTitle: 'Expenses to compare before moving',
-    compareItems: ['Rent and rental deposit', 'Temporary accommodation for arrival', 'Utilities and internet', 'Groceries and transport', 'Healthcare and insurance', 'Emergency savings for the first 60–90 days'],
+    compareItems: [
+      'Rent and rental deposit',
+      'Temporary accommodation for arrival',
+      'Utilities and internet',
+      'Groceries and transport',
+      'Healthcare and insurance',
+      'Emergency savings for the first 60–90 days'
+    ],
     warningTitle: 'Common cost-of-living mistakes',
-    warningItems: ['Checking only national averages', 'Ignoring city-level rent differences', 'Forgetting deposit and furniture costs', 'Assuming salary is enough without tax calculation', 'Not budgeting for healthcare or insurance'],
+    warningItems: [
+      'Checking only national averages',
+      'Ignoring city-level rent differences',
+      'Forgetting deposit and furniture costs',
+      'Assuming salary is enough without tax calculation',
+      'Not budgeting for healthcare or insurance'
+    ],
     countryTitle: 'Select a country',
     countryLead: 'Curious about the cost of living in a specific country? Select from the list below to review housing, food, transport, healthcare, and settlement notes.',
     cardLabel: 'View cost guide',
@@ -117,9 +170,22 @@ const copyMap: Record<string, LandingCopy> = {
       'Relocate Works relocation company pages help candidates understand the service categories and questions to ask before signing an offer or paying for relocation help.'
     ],
     compareTitle: 'What relocation support can include',
-    compareItems: ['Shipment and storage', 'Temporary accommodation', 'Home search and lease support', 'School and family settling-in support', 'Local registration and administration', 'Airport pickup and arrival orientation'],
+    compareItems: [
+      'Shipment and storage',
+      'Temporary accommodation',
+      'Home search and lease support',
+      'School and family settling-in support',
+      'Local registration and administration',
+      'Airport pickup and arrival orientation'
+    ],
     warningTitle: 'Common relocation support mistakes',
-    warningItems: ['Assuming the employer pays for everything', 'Not asking what the allowance covers', 'Booking services before visa approval', 'Ignoring refund or cancellation rules', 'Not comparing self-move versus full-service relocation'],
+    warningItems: [
+      'Assuming the employer pays for everything',
+      'Not asking what the allowance covers',
+      'Booking services before visa approval',
+      'Ignoring refund or cancellation rules',
+      'Not comparing self-move versus full-service relocation'
+    ],
     countryTitle: 'Select a country',
     countryLead: 'Choose a country to review relocation support notes and service providers to research before moving.',
     cardLabel: 'View relocation guide',
@@ -136,9 +202,22 @@ const copyMap: Record<string, LandingCopy> = {
       'The paid weekly list is designed to save time: fewer noisy links, more context, and a clearer reason why each role may be worth checking.'
     ],
     compareTitle: 'What makes a job stronger for relocation',
-    compareItems: ['Clear sponsorship or relocation language', 'Employer credibility and international hiring history', 'Role seniority and skill scarcity', 'Salary context that fits local requirements', 'Official apply link and fresh posting', 'No hard requirement for existing local work rights'],
+    compareItems: [
+      'Clear sponsorship or relocation language',
+      'Employer credibility and international hiring history',
+      'Role seniority and skill scarcity',
+      'Salary context that fits local requirements',
+      'Official apply link and fresh posting',
+      'No hard requirement for existing local work rights'
+    ],
     warningTitle: 'Jobs to treat carefully',
-    warningItems: ['No visa sponsorship available', 'Must already have unrestricted work rights', 'Local candidates only', 'Unclear company or unofficial apply link', 'Very junior roles with no sponsor signal'],
+    warningItems: [
+      'No visa sponsorship available',
+      'Must already have unrestricted work rights',
+      'Local candidates only',
+      'Unclear company or unofficial apply link',
+      'Very junior roles with no sponsor signal'
+    ],
     countryTitle: 'Select a country',
     countryLead: 'Choose a country to review its sponsor-friendly job market, high-demand sectors, and common roles.',
     cardLabel: 'View jobs guide',
@@ -217,16 +296,109 @@ const exampleMap = {
     ]
   }
 };
-const examples = exampleMap[section.slug];
 
+const faqMap = {
+  visas: [
+    ['What is a sponsor-friendly work visa route?', 'A sponsor-friendly route is a work authorization pathway where an employer may be able to support a foreign candidate if the role, salary, employer status, and candidate profile meet the country requirements.'],
+    ['Does relocation support always mean visa sponsorship?', 'No. Relocation support may cover flights, temporary housing, or moving costs, but visa sponsorship is a separate work authorization issue that should be confirmed directly with the employer.'],
+    ['How should I use these visa guides?', 'Use them as a research starting point before applying. Always verify current rules through official government sources, employers, and qualified professionals where needed.']
+  ],
+  taxes: [
+    ['Why should I check taxes before accepting a job abroad?', 'Gross salary can look attractive, but take-home pay depends on income tax, payroll deductions, social contributions, insurance, pension, and local cost of living.'],
+    ['Are these tax pages personal tax advice?', 'No. Relocate Works provides general research context only. Candidates should verify important tax decisions with official sources or qualified tax professionals.'],
+    ['What should I compare across countries?', 'Compare tax residency, payroll deductions, social contributions, healthcare or insurance contributions, rent, and first-month setup costs.']
+  ],
+  salaries: [
+    ['Why are salary averages not enough?', 'Salary value depends on city, tax, rent, healthcare, transport, benefits, visa salary thresholds, and relocation support.'],
+    ['Should I compare salary by country or by city?', 'City-level comparison is usually more useful because rent, transport, and job density can vary widely within the same country.'],
+    ['What makes a relocation salary stronger?', 'A strong relocation offer usually combines market-level salary, sponsor support, benefits, relocation help, realistic cost of living, and long-term career value.']
+  ],
+  'cost-of-living': [
+    ['What costs should I plan before moving abroad?', 'Plan for rent, rental deposit, temporary accommodation, utilities, groceries, transport, healthcare, insurance, documents, phone, internet, and emergency savings.'],
+    ['Why is first-month setup cost important?', 'Many relocation costs happen before the first full paycheck, including deposit, temporary housing, furniture, transport passes, and basic administration.'],
+    ['Should I move to the cheapest country?', 'Not always. Lower living costs can also mean lower salaries, fewer sponsor-friendly employers, or weaker long-term career options.']
+  ],
+  'relocation-companies': [
+    ['When is a relocation company useful?', 'Relocation companies are useful when you need help with shipping, housing, school search, local registration, temporary accommodation, pets, or family settlement.'],
+    ['Should I pay for relocation help before visa approval?', 'Be careful. Ask about refund rules, cancellation terms, timing, and what happens if your visa or start date changes.'],
+    ['What should I ask my employer?', 'Ask whether flights, temporary housing, shipping, destination services, family support, and visa-related costs are included, reimbursed, or excluded.']
+  ],
+  jobs: [
+    ['What is a visa sponsor job?', 'A visa sponsor job is a role where an employer may support part of the work authorization process for a foreign candidate. It does not guarantee a job offer or visa approval.'],
+    ['Which job descriptions should I avoid?', 'Be careful with roles that say no sponsorship, must already have work rights, citizens or permanent residents only, local candidates only, or remote within one country only.'],
+    ['How does Relocate Works help?', 'Relocate Works helps candidates filter job opportunities by sponsor signals, country context, industry fit, role risk, and practical application notes.']
+  ]
+};
+
+const examples = exampleMap[section.slug];
+const faqItems = faqMap[section.slug] || faqMap.jobs;
 const canonicalPath = `/${section.slug}`;
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: section.title, item: new URL(canonicalPath, SITE.url).toString() }
+  ]
+};
+
+const collectionJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `${section.title} by Country`,
+  description: copy.lead,
+  url: new URL(canonicalPath, SITE.url).toString(),
+  isPartOf: {
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: SITE.url
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE.name,
+    url: SITE.url,
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL('/favicon.svg', SITE.url).toString()
+    }
+  }
+};
+
+const itemListJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${section.title} country guides`,
+  description: `Country-specific ${section.title.toLowerCase()} guides for international candidates planning relocation.`,
+  itemListElement: countries.map((country, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: `${section.title} in ${country.name}`,
+    url: new URL(`/${section.slug}/${country.slug}`, SITE.url).toString()
+  }))
+};
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(([question, answer]) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: answer
+    }
+  }))
+};
 ---
 <BaseLayout
   title={`${section.title} by Country | Relocate Works`}
   description={copy.lead}
   canonicalPath={canonicalPath}
+  structuredData={[breadcrumbJsonLd, collectionJsonLd, itemListJsonLd, faqJsonLd]}
 >
   <Header />
+
   <main>
     <section class="page-hero page-hero-gradient compact-hero">
       <div class="container narrow">
@@ -243,12 +415,16 @@ const canonicalPath = `/${section.slug}`;
           <h2>{copy.introTitle}</h2>
           {copy.introParagraphs.map((paragraph) => <p>{paragraph}</p>)}
         </article>
+
         <aside class="content-block resource-side-card">
           <span class="mini-eyebrow">Quick filter</span>
           <h2>Start with your target country</h2>
           <p>Use these country shortcuts when you already know where you want to apply. Each country page connects back to visas, taxes, salaries, cost of living, companies, jobs, relocation services, healthcare, and cities.</p>
+
           <div class="select-list">
-            {countries.map((country) => <a href={`/${section.slug}/${country.slug}`}>{country.flag} {country.name}</a>)}
+            {countries.map((country) => (
+              <a href={`/${section.slug}/${country.slug}`}>{country.flag} {country.name}</a>
+            ))}
           </div>
         </aside>
       </div>
@@ -259,12 +435,17 @@ const canonicalPath = `/${section.slug}`;
         <div class="content-block">
           <span class="mini-eyebrow">Compare</span>
           <h2>{copy.compareTitle}</h2>
-          <ul class="check-list">{copy.compareItems.map((item) => <li>{item}</li>)}</ul>
+          <ul class="check-list">
+            {copy.compareItems.map((item) => <li>{item}</li>)}
+          </ul>
         </div>
+
         <div class="content-block warning-block">
           <span class="mini-eyebrow">Avoid mistakes</span>
           <h2>{copy.warningTitle}</h2>
-          <ul>{copy.warningItems.map((item) => <li>{item}</li>)}</ul>
+          <ul>
+            {copy.warningItems.map((item) => <li>{item}</li>)}
+          </ul>
         </div>
       </div>
     </section>
@@ -275,10 +456,23 @@ const canonicalPath = `/${section.slug}`;
           <span class="mini-eyebrow">{examples.eyebrow}</span>
           <h2>{examples.title}</h2>
           <p>{examples.lead}</p>
+
           <div class="content-table-wrap">
             <table class="content-table">
-              <thead><tr>{examples.headers.map((header) => <th>{header}</th>)}</tr></thead>
-              <tbody>{examples.rows.map((row) => <tr>{row.map((cell, index) => <td>{index === 0 ? <strong>{cell}</strong> : cell}</td>)}</tr>)}</tbody>
+              <thead>
+                <tr>
+                  {examples.headers.map((header) => <th>{header}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {examples.rows.map((row) => (
+                  <tr>
+                    {row.map((cell, index) => (
+                      <td>{index === 0 ? <strong>{cell}</strong> : cell}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </div>
         </div>
@@ -294,18 +488,29 @@ const canonicalPath = `/${section.slug}`;
           </div>
           <p>{copy.countryLead}</p>
         </div>
+
         <div class="grid-3">
           {countries.map((country) => (
             <a class="country-card" href={`/${section.slug}/${country.slug}`}>
               <div class="country-card-glow" aria-hidden="true"></div>
+
               <div class="country-top">
-                <span class="flag">{country.flag}</span>
+                <span class="flag" aria-hidden="true">{country.flag}</span>
                 <div>
                   <div class="country-label">{country.region}</div>
                   <h3>{country.name}</h3>
                 </div>
               </div>
+
               <p class="country-visa">{country.primaryVisa}</p>
+              <p>{country.shortDescription}</p>
+
+              <div class="tags" aria-label={`${country.name} related resource links`}>
+                <span class="tag">Visa</span>
+                <span class="tag">Jobs</span>
+                <span class="tag">Salary</span>
+              </div>
+
               <span class="country-link">{copy.cardLabel} →</span>
             </a>
           ))}
@@ -314,6 +519,38 @@ const canonicalPath = `/${section.slug}`;
     </section>
 
     <section class="section">
+      <div class="container two-column-feature">
+        <div class="content-block">
+          <span class="mini-eyebrow">Decision guide</span>
+          <h2>How to choose the right country page.</h2>
+          <p>
+            Start with the country where your role has the strongest demand, then compare visa fit, salary, taxes, cost of living, employer sponsorship signals, and relocation support. The best country is not always the one with the highest salary or the lowest rent.
+          </p>
+          <ul class="check-list">
+            <li>Use visa pages to check whether your role has a realistic work pathway.</li>
+            <li>Use salary and tax pages to estimate actual take-home value.</li>
+            <li>Use cost-of-living pages to avoid underestimating rent and first-month expenses.</li>
+            <li>Use jobs pages to understand sponsor signals and job-description red flags.</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <span class="mini-eyebrow">People also ask</span>
+          <h2>Common questions</h2>
+
+          <div class="faq-list">
+            {faqItems.map(([question, answer]) => (
+              <details class="faq-item">
+                <summary>{question}</summary>
+                <p>{answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
       <div class="container">
         <div class="section-heading">
           <div>
@@ -322,6 +559,7 @@ const canonicalPath = `/${section.slug}`;
           </div>
           <p>Use these practical guides together with the country resource pages to plan smarter applications.</p>
         </div>
+
         <div class="grid-3">
           {related.map((post) => (
             <a class="article-card" href={`/blog/${post.slug}`}>
@@ -334,7 +572,9 @@ const canonicalPath = `/${section.slug}`;
         </div>
       </div>
     </section>
+
     <CTA />
   </main>
+
   <Footer />
 </BaseLayout>

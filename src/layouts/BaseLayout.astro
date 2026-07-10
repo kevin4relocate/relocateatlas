@@ -22,14 +22,20 @@ const {
 
 const canonicalUrl = new URL(canonicalPath, SITE.url).toString();
 const imageUrl = new URL(image, SITE.url).toString();
+const logoUrl = new URL('/favicon.svg', SITE.url).toString();
+
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: SITE.name,
   url: SITE.url,
-  logo: new URL('/favicon.svg', SITE.url).toString(),
-  sameAs: [SITE.linkedinUrl, SITE.facebookUrl, SITE.substackUrl]
+  logo: {
+    '@type': 'ImageObject',
+    url: logoUrl
+  },
+  sameAs: [SITE.linkedinUrl, SITE.facebookUrl, SITE.substackUrl].filter(Boolean)
 };
+
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -40,24 +46,58 @@ const websiteJsonLd = {
     '@type': 'Organization',
     name: SITE.name,
     url: SITE.url,
-    logo: new URL('/favicon.svg', SITE.url).toString()
+    logo: {
+      '@type': 'ImageObject',
+      url: logoUrl
+    }
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE.url}/search?q={search_term_string}`,
+    'query-input': 'required name=search_term_string'
   }
 };
+
+const webPageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description,
+  url: canonicalUrl,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: SITE.url
+  },
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: imageUrl
+  }
+};
+
 const customJsonLd = Array.isArray(structuredData) ? structuredData : [structuredData];
-const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(Boolean)];
+const jsonLdGraph = [
+  organizationJsonLd,
+  websiteJsonLd,
+  webPageJsonLd,
+  ...customJsonLd.filter(Boolean)
+];
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="application-name" content={SITE.name} />
     <meta name="generator" content="Astro" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+
     <link rel="canonical" href={canonicalUrl} />
-    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'} />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+
     <meta name="theme-color" content="#102A43" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
@@ -69,6 +109,7 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content={`${SITE.name} preview image`} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
@@ -77,8 +118,10 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdGraph)} />
   </head>
+
   <body>
     <slot />
+
     <button class="scroll-top-button" type="button" aria-label="Move to top of page">
       <span aria-hidden="true">↑</span>
     </button>
@@ -97,6 +140,7 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
     <script is:inline>
       (() => {
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
         const headerOffset = () => {
           const header = document.querySelector('.site-header');
           return header ? header.getBoundingClientRect().height + 14 : 88;
@@ -114,11 +158,14 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
           }
 
           let startTime = null;
+
           const step = (timestamp) => {
             if (startTime === null) startTime = timestamp;
+
             const elapsed = timestamp - startTime;
             const progress = Math.min(elapsed / duration, 1);
             const nextY = startY + distance * easeOutCubic(progress);
+
             window.scrollTo(0, nextY);
 
             if (progress < 1) {
@@ -131,6 +178,7 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
 
         const scrollToElement = (element, updateHash = true) => {
           if (!element) return;
+
           const targetY = Math.max(0, element.getBoundingClientRect().top + window.scrollY - headerOffset());
           smoothScrollTo(targetY, 210);
 
@@ -154,6 +202,7 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
         });
 
         const topButton = document.querySelector('.scroll-top-button');
+
         if (topButton) {
           topButton.addEventListener('click', () => smoothScrollTo(0, 240));
 
@@ -178,6 +227,7 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
               .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
             if (!visibleEntries.length) return;
+
             const activeId = visibleEntries[0].target.id;
 
             sidebarLinks.forEach((link) => {
@@ -193,6 +243,7 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
 
         const mobileButton = document.querySelector('[data-mobile-menu-toggle]');
         const mobileMenu = document.querySelector('[data-mobile-menu]');
+
         if (mobileButton && mobileMenu) {
           let savedScrollY = 0;
 
@@ -214,6 +265,7 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
 
             mobileButton.setAttribute('aria-expanded', String(isOpen));
             mobileMenu.classList.toggle('is-open', isOpen);
+
             if (isOpen) {
               lockBodyScroll();
               mobileMenu.scrollTop = 0;
@@ -237,11 +289,14 @@ const jsonLdGraph = [organizationJsonLd, websiteJsonLd, ...customJsonLd.filter(B
 
         const cookieBanner = document.querySelector('[data-cookie-banner]');
         const cookieAccept = document.querySelector('[data-cookie-accept]');
+
         if (cookieBanner && cookieAccept) {
-          const accepted = window.localStorage.getItem('Relocate Works_cookie_notice') === 'accepted';
+          const accepted = window.localStorage.getItem('relocate_works_cookie_notice') === 'accepted';
+
           if (!accepted) cookieBanner.classList.add('is-visible');
+
           cookieAccept.addEventListener('click', () => {
-            window.localStorage.setItem('Relocate Works_cookie_notice', 'accepted');
+            window.localStorage.setItem('relocate_works_cookie_notice', 'accepted');
             cookieBanner.classList.remove('is-visible');
           });
         }

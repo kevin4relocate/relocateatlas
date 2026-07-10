@@ -2222,7 +2222,7 @@ export const blogPosts = [
   },
   {
     "title": "How Relocate Works Reviews Sponsor-Friendly Jobs",
-    "slug": "how-Relocate Works-reviews-sponsor-friendly-jobs",
+    "slug": "how-relocate-works-reviews-sponsor-friendly-jobs",
     "description": "A clear look at the AI-assisted and human-reviewed process used to evaluate sponsor signals, risk phrases, and job quality.",
     "date": "2026-06-28",
     "category": "Methodology"

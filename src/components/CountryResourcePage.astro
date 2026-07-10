@@ -7,101 +7,394 @@ import CountryResourceNav from './CountryResourceNav.astro';
 import { SITE, resourceSections, blogPosts } from '../data';
 
 const { country, sectionSlug } = Astro.props;
+
 const section = resourceSections.find((item) => item.slug === sectionSlug);
 if (!section) throw new Error(`Unknown resource section: ${sectionSlug}`);
 
-const softDisclaimer = 'Relocate Works helps you research sponsor-friendly opportunities faster. Final eligibility, visa support, and hiring decisions depend on each employer and official immigration rules.';
+const softDisclaimer =
+  'Relocate Works helps you research sponsor-friendly opportunities faster. Final eligibility, visa support, and hiring decisions depend on each employer and official immigration rules.';
 
 const profiles = {
   australia: {
     currency: 'AUD',
-    monthly: [['Sydney', 'AUD 3,600–5,600', 'Highest rent pressure, strongest finance and tech density.'], ['Melbourne', 'AUD 3,100–4,900', 'Strong job market with slightly different cost profile.'], ['Brisbane', 'AUD 2,700–4,300', 'Often better lifestyle-cost balance for skilled workers.'], ['Perth', 'AUD 2,600–4,200', 'Important for engineering, resources, and professional roles.']],
-    setup: 'AUD 7,000–14,000+', rent: 'AUD 1,900–3,600+ / month', groceries: 'AUD 450–800 / month', transport: 'AUD 120–260 / month', utilities: 'AUD 180–350 / month',
-    salaries: [['Software Engineer', 'AUD 95k–160k'], ['QA / Test Engineer', 'AUD 75k–120k'], ['Cloud / DevOps Engineer', 'AUD 110k–180k'], ['Registered Nurse', 'AUD 75k–115k'], ['Civil Engineer', 'AUD 80k–135k'], ['Accountant / Auditor', 'AUD 70k–115k']],
-    tax: ['Tax year commonly runs July to June.', 'Take-home pay depends on residency status, income level, deductions, and superannuation.', 'GST affects everyday spending and should be considered when estimating monthly costs.'],
-    visas: [['Skills in Demand / employer sponsorship', 'Skilled roles where an employer is willing to support work authorization.', 'Employer sponsorship and occupation fit matter.', 'Check occupation relevance, salary, experience, and sponsorship wording.'], ['Employer Nomination pathways', 'Longer-term employer-led routes.', 'Employer nomination is central.', 'Useful for candidates with stronger experience and long-term plans.'], ['State or skilled migration routes', 'Candidates with eligible skills and points.', 'May not require one employer at the start.', 'Research occupation lists and state requirements.']],
-    relocationCosts: [['Shipment / moving help', 'AUD 2,000–9,000+'], ['Temporary housing', 'AUD 2,500–7,000+'], ['Destination services', 'AUD 700–3,000+'], ['Full corporate package', 'Varies by employer and family size']]
+    monthly: [
+      ['Sydney', 'AUD 3,600–5,600', 'Highest rent pressure, strongest finance and tech density.'],
+      ['Melbourne', 'AUD 3,100–4,900', 'Strong job market with slightly different cost profile.'],
+      ['Brisbane', 'AUD 2,700–4,300', 'Often better lifestyle-cost balance for skilled workers.'],
+      ['Perth', 'AUD 2,600–4,200', 'Important for engineering, resources, and professional roles.']
+    ],
+    setup: 'AUD 7,000–14,000+',
+    rent: 'AUD 1,900–3,600+ / month',
+    groceries: 'AUD 450–800 / month',
+    transport: 'AUD 120–260 / month',
+    utilities: 'AUD 180–350 / month',
+    salaries: [
+      ['Software Engineer', 'AUD 95k–160k'],
+      ['QA / Test Engineer', 'AUD 75k–120k'],
+      ['Cloud / DevOps Engineer', 'AUD 110k–180k'],
+      ['Registered Nurse', 'AUD 75k–115k'],
+      ['Civil Engineer', 'AUD 80k–135k'],
+      ['Accountant / Auditor', 'AUD 70k–115k']
+    ],
+    tax: [
+      'Tax year commonly runs July to June.',
+      'Take-home pay depends on residency status, income level, deductions, and superannuation.',
+      'GST affects everyday spending and should be considered when estimating monthly costs.'
+    ],
+    visas: [
+      ['Skills in Demand / employer sponsorship', 'Skilled roles where an employer is willing to support work authorization.', 'Employer sponsorship and occupation fit matter.', 'Check occupation relevance, salary, experience, and sponsorship wording.'],
+      ['Employer Nomination pathways', 'Longer-term employer-led routes.', 'Employer nomination is central.', 'Useful for candidates with stronger experience and long-term plans.'],
+      ['State or skilled migration routes', 'Candidates with eligible skills and points.', 'May not require one employer at the start.', 'Research occupation lists and state requirements.']
+    ],
+    relocationCosts: [
+      ['Shipment / moving help', 'AUD 2,000–9,000+'],
+      ['Temporary housing', 'AUD 2,500–7,000+'],
+      ['Destination services', 'AUD 700–3,000+'],
+      ['Full corporate package', 'Varies by employer and family size']
+    ]
   },
   'new-zealand': {
     currency: 'NZD',
-    monthly: [['Auckland', 'NZD 3,200–5,000', 'Largest market, high housing pressure.'], ['Wellington', 'NZD 2,900–4,600', 'Government, tech, and professional services hub.'], ['Christchurch', 'NZD 2,500–4,000', 'Often more manageable cost base.'], ['Hamilton', 'NZD 2,300–3,800', 'Useful for some healthcare, education, and regional roles.']],
-    setup: 'NZD 6,000–12,000+', rent: 'NZD 1,700–3,200+ / month', groceries: 'NZD 450–750 / month', transport: 'NZD 100–240 / month', utilities: 'NZD 180–330 / month',
-    salaries: [['Software Engineer', 'NZD 85k–140k'], ['QA / Test Engineer', 'NZD 70k–115k'], ['Cloud / DevOps Engineer', 'NZD 100k–160k'], ['Registered Nurse', 'NZD 75k–110k'], ['Civil Engineer', 'NZD 80k–130k'], ['Teacher / Educator', 'NZD 60k–95k']],
-    tax: ['Tax year commonly runs April to March.', 'Income tax is usually assessed through progressive bands.', 'KiwiSaver and other deductions can affect net pay where applicable.'],
-    visas: [['Accredited Employer Work Visa', 'Employer-led roles with accredited employers.', 'Employer accreditation and job fit are central.', 'Check current accreditation, job check requirements, salary, and role details.'], ['Green List / residence-related routes', 'Shortage and skilled roles where applicable.', 'Employer and role may matter.', 'Useful for healthcare, engineering, and other shortage profiles.'], ['Skilled residence routes', 'Long-term settlement planning.', 'May involve skills, income, and employment factors.', 'Verify current rules before applying.']],
-    relocationCosts: [['Shipment / moving help', 'NZD 2,000–8,000+'], ['Temporary housing', 'NZD 2,000–6,000+'], ['Destination services', 'NZD 600–2,500+'], ['Full corporate package', 'Varies widely']]
+    monthly: [
+      ['Auckland', 'NZD 3,200–5,000', 'Largest market, high housing pressure.'],
+      ['Wellington', 'NZD 2,900–4,600', 'Government, tech, and professional services hub.'],
+      ['Christchurch', 'NZD 2,500–4,000', 'Often more manageable cost base.'],
+      ['Hamilton', 'NZD 2,300–3,800', 'Useful for some healthcare, education, and regional roles.']
+    ],
+    setup: 'NZD 6,000–12,000+',
+    rent: 'NZD 1,700–3,200+ / month',
+    groceries: 'NZD 450–750 / month',
+    transport: 'NZD 100–240 / month',
+    utilities: 'NZD 180–330 / month',
+    salaries: [
+      ['Software Engineer', 'NZD 85k–140k'],
+      ['QA / Test Engineer', 'NZD 70k–115k'],
+      ['Cloud / DevOps Engineer', 'NZD 100k–160k'],
+      ['Registered Nurse', 'NZD 75k–110k'],
+      ['Civil Engineer', 'NZD 80k–130k'],
+      ['Teacher / Educator', 'NZD 60k–95k']
+    ],
+    tax: [
+      'Tax year commonly runs April to March.',
+      'Income tax is usually assessed through progressive bands.',
+      'KiwiSaver and other deductions can affect net pay where applicable.'
+    ],
+    visas: [
+      ['Accredited Employer Work Visa', 'Employer-led roles with accredited employers.', 'Employer accreditation and job fit are central.', 'Check current accreditation, job check requirements, salary, and role details.'],
+      ['Green List / residence-related routes', 'Shortage and skilled roles where applicable.', 'Employer and role may matter.', 'Useful for healthcare, engineering, and other shortage profiles.'],
+      ['Skilled residence routes', 'Long-term settlement planning.', 'May involve skills, income, and employment factors.', 'Verify current rules before applying.']
+    ],
+    relocationCosts: [
+      ['Shipment / moving help', 'NZD 2,000–8,000+'],
+      ['Temporary housing', 'NZD 2,000–6,000+'],
+      ['Destination services', 'NZD 600–2,500+'],
+      ['Full corporate package', 'Varies widely']
+    ]
   },
   'united-kingdom': {
     currency: 'GBP',
-    monthly: [['London', 'GBP 2,600–4,500', 'Largest job market, highest rent pressure.'], ['Manchester', 'GBP 1,700–2,900', 'Strong tech, media, finance, and healthcare activity.'], ['Birmingham', 'GBP 1,600–2,700', 'Large regional market with lower rent than London.'], ['Leeds', 'GBP 1,500–2,600', 'Good balance for some professional roles.']],
-    setup: 'GBP 4,500–10,000+', rent: 'GBP 900–2,400+ / month', groceries: 'GBP 250–500 / month', transport: 'GBP 80–250 / month', utilities: 'GBP 160–320 / month',
-    salaries: [['Software Engineer', 'GBP 50k–95k'], ['QA / Test Engineer', 'GBP 38k–70k'], ['Cloud / DevOps Engineer', 'GBP 60k–110k'], ['Registered Nurse', 'GBP 32k–55k'], ['Civil Engineer', 'GBP 40k–75k'], ['Accountant / Auditor', 'GBP 38k–75k']],
-    tax: ['Tax year commonly runs April to April.', 'Income tax, National Insurance, pension contributions, and student-loan-style deductions may affect take-home pay.', 'London salaries should be compared carefully against rent and transport costs.'],
-    visas: [['Skilled Worker route', 'Eligible roles with licensed sponsors.', 'Sponsor license and Certificate of Sponsorship are central.', 'Check salary threshold, occupation code, sponsor license, and role fit.'], ['Health and care-related routes', 'Healthcare and care roles where eligible.', 'Employer sponsorship and role eligibility matter.', 'Registration or professional requirements may apply.'], ['Global talent / specialist routes', 'Exceptional or specialized profiles.', 'Employer role may vary.', 'Useful only for specific candidates.']],
-    relocationCosts: [['Shipment / moving help', 'GBP 1,500–7,000+'], ['Temporary housing', 'GBP 2,000–6,000+'], ['Destination services', 'GBP 500–2,500+'], ['Full corporate package', 'Varies by employer']]
+    monthly: [
+      ['London', 'GBP 2,600–4,500', 'Largest job market, highest rent pressure.'],
+      ['Manchester', 'GBP 1,700–2,900', 'Strong tech, media, finance, and healthcare activity.'],
+      ['Birmingham', 'GBP 1,600–2,700', 'Large regional market with lower rent than London.'],
+      ['Leeds', 'GBP 1,500–2,600', 'Good balance for some professional roles.']
+    ],
+    setup: 'GBP 4,500–10,000+',
+    rent: 'GBP 900–2,400+ / month',
+    groceries: 'GBP 250–500 / month',
+    transport: 'GBP 80–250 / month',
+    utilities: 'GBP 160–320 / month',
+    salaries: [
+      ['Software Engineer', 'GBP 50k–95k'],
+      ['QA / Test Engineer', 'GBP 38k–70k'],
+      ['Cloud / DevOps Engineer', 'GBP 60k–110k'],
+      ['Registered Nurse', 'GBP 32k–55k'],
+      ['Civil Engineer', 'GBP 40k–75k'],
+      ['Accountant / Auditor', 'GBP 38k–75k']
+    ],
+    tax: [
+      'Tax year commonly runs April to April.',
+      'Income tax, National Insurance, pension contributions, and student-loan-style deductions may affect take-home pay.',
+      'London salaries should be compared carefully against rent and transport costs.'
+    ],
+    visas: [
+      ['Skilled Worker route', 'Eligible roles with licensed sponsors.', 'Sponsor license and Certificate of Sponsorship are central.', 'Check salary threshold, occupation code, sponsor license, and role fit.'],
+      ['Health and care-related routes', 'Healthcare and care roles where eligible.', 'Employer sponsorship and role eligibility matter.', 'Registration or professional requirements may apply.'],
+      ['Global talent / specialist routes', 'Exceptional or specialized profiles.', 'Employer role may vary.', 'Useful only for specific candidates.']
+    ],
+    relocationCosts: [
+      ['Shipment / moving help', 'GBP 1,500–7,000+'],
+      ['Temporary housing', 'GBP 2,000–6,000+'],
+      ['Destination services', 'GBP 500–2,500+'],
+      ['Full corporate package', 'Varies by employer']
+    ]
   },
   germany: {
     currency: 'EUR',
-    monthly: [['Munich', 'EUR 2,400–4,100', 'High salaries but very high housing demand.'], ['Berlin', 'EUR 2,000–3,500', 'Strong tech market with rising rents.'], ['Frankfurt', 'EUR 2,100–3,700', 'Finance and corporate hub.'], ['Hamburg', 'EUR 1,900–3,300', 'Good professional market with moderate-to-high costs.']],
-    setup: 'EUR 4,500–10,000+', rent: 'EUR 900–2,200+ / month', groceries: 'EUR 300–550 / month', transport: 'EUR 60–150 / month', utilities: 'EUR 180–350 / month',
-    salaries: [['Software Engineer', 'EUR 60k–100k'], ['QA / Test Engineer', 'EUR 48k–80k'], ['Cloud / DevOps Engineer', 'EUR 70k–115k'], ['Data Engineer', 'EUR 60k–105k'], ['Mechanical Engineer', 'EUR 55k–90k'], ['Healthcare Specialist', 'EUR 45k–85k']],
-    tax: ['Tax year generally follows the calendar year.', 'Take-home pay depends on tax class, social contributions, health insurance, and family status.', 'Gross salary can look high but deductions are material; net calculators are useful for planning.'],
-    visas: [['EU Blue Card-style route', 'Qualified professionals meeting degree and salary expectations.', 'Employer contract is important.', 'Check salary, degree recognition, and occupation fit.'], ['Skilled worker routes', 'Qualified vocational or academic professionals.', 'Employer contract and qualification recognition may matter.', 'Useful for engineering, healthcare, tech, and trades.'], ['Opportunity / job-search concepts where applicable', 'Candidates exploring Germany before employment.', 'Employer role may come later.', 'Verify current rules and eligibility.']],
-    relocationCosts: [['Shipment / moving help', 'EUR 1,500–7,000+'], ['Temporary housing', 'EUR 2,000–5,500+'], ['Destination services', 'EUR 500–2,300+'], ['Full corporate package', 'Varies widely']]
+    monthly: [
+      ['Munich', 'EUR 2,400–4,100', 'High salaries but very high housing demand.'],
+      ['Berlin', 'EUR 2,000–3,500', 'Strong tech market with rising rents.'],
+      ['Frankfurt', 'EUR 2,100–3,700', 'Finance and corporate hub.'],
+      ['Hamburg', 'EUR 1,900–3,300', 'Good professional market with moderate-to-high costs.']
+    ],
+    setup: 'EUR 4,500–10,000+',
+    rent: 'EUR 900–2,200+ / month',
+    groceries: 'EUR 300–550 / month',
+    transport: 'EUR 60–150 / month',
+    utilities: 'EUR 180–350 / month',
+    salaries: [
+      ['Software Engineer', 'EUR 60k–100k'],
+      ['QA / Test Engineer', 'EUR 48k–80k'],
+      ['Cloud / DevOps Engineer', 'EUR 70k–115k'],
+      ['Data Engineer', 'EUR 60k–105k'],
+      ['Mechanical Engineer', 'EUR 55k–90k'],
+      ['Healthcare Specialist', 'EUR 45k–85k']
+    ],
+    tax: [
+      'Tax year generally follows the calendar year.',
+      'Take-home pay depends on tax class, social contributions, health insurance, and family status.',
+      'Gross salary can look high but deductions are material; net calculators are useful for planning.'
+    ],
+    visas: [
+      ['EU Blue Card-style route', 'Qualified professionals meeting degree and salary expectations.', 'Employer contract is important.', 'Check salary, degree recognition, and occupation fit.'],
+      ['Skilled worker routes', 'Qualified vocational or academic professionals.', 'Employer contract and qualification recognition may matter.', 'Useful for engineering, healthcare, tech, and trades.'],
+      ['Opportunity / job-search concepts where applicable', 'Candidates exploring Germany before employment.', 'Employer role may come later.', 'Verify current rules and eligibility.']
+    ],
+    relocationCosts: [
+      ['Shipment / moving help', 'EUR 1,500–7,000+'],
+      ['Temporary housing', 'EUR 2,000–5,500+'],
+      ['Destination services', 'EUR 500–2,300+'],
+      ['Full corporate package', 'Varies widely']
+    ]
   },
   canada: {
     currency: 'CAD',
-    monthly: [['Toronto', 'CAD 3,000–4,500', 'High rent but strong tech, finance, and corporate job density.'], ['Vancouver', 'CAD 3,200–4,800', 'Very high housing cost with strong tech and healthcare demand.'], ['Montreal', 'CAD 2,300–3,500', 'Often lower rent, but language fit may matter.'], ['Calgary', 'CAD 2,400–3,700', 'Useful balance for energy, engineering, tech, and professional roles.'], ['Ottawa', 'CAD 2,500–3,800', 'Government, tech, and stable professional market.']],
-    setup: 'CAD 6,000–12,000+', rent: 'CAD 1,400–2,800+ / month', groceries: 'CAD 350–700 / month', transport: 'CAD 100–180 / month', utilities: 'CAD 120–280 / month',
-    salaries: [['Software Engineer', 'CAD 80k–140k'], ['QA / Test Engineer', 'CAD 65k–105k'], ['Cloud / DevOps Engineer', 'CAD 90k–150k'], ['Registered Nurse', 'CAD 70k–110k'], ['Civil Engineer', 'CAD 75k–120k'], ['Accountant / Auditor', 'CAD 60k–95k']],
-    tax: ['Tax planning should consider both federal and provincial rules.', 'Two candidates with the same gross salary can have different take-home pay depending on province.', 'Payroll deductions, benefits, and sales taxes can materially affect monthly budgets.'],
-    visas: [['LMIA-supported work permit', 'Many employer-supported roles.', 'Employer may need to support the LMIA process.', 'Process can be employer-dependent and time-sensitive.'], ['Global Talent Stream-related hiring', 'Certain specialized tech and high-skill profiles.', 'Employer participation matters.', 'Useful for roles where speed and specialization matter.'], ['Provincial nominee-related pathways', 'Candidates linked to province needs.', 'Province, employer, and occupation may matter.', 'Research by province before applying.'], ['Express Entry-related skilled pathways', 'Skilled workers with strong profiles.', 'Employer may not always be required at first.', 'CRS score and eligibility matter.']],
-    relocationCosts: [['Shipment / moving help', 'CAD 2,000–10,000+'], ['Temporary housing', 'CAD 2,000–6,000+'], ['Destination services', 'CAD 500–2,500+'], ['Full corporate relocation package', 'Varies widely by employer']]
+    monthly: [
+      ['Toronto', 'CAD 3,000–4,500', 'High rent but strong tech, finance, and corporate job density.'],
+      ['Vancouver', 'CAD 3,200–4,800', 'Very high housing cost with strong tech and healthcare demand.'],
+      ['Montreal', 'CAD 2,300–3,500', 'Often lower rent, but language fit may matter.'],
+      ['Calgary', 'CAD 2,400–3,700', 'Useful balance for energy, engineering, tech, and professional roles.'],
+      ['Ottawa', 'CAD 2,500–3,800', 'Government, tech, and stable professional market.']
+    ],
+    setup: 'CAD 6,000–12,000+',
+    rent: 'CAD 1,400–2,800+ / month',
+    groceries: 'CAD 350–700 / month',
+    transport: 'CAD 100–180 / month',
+    utilities: 'CAD 120–280 / month',
+    salaries: [
+      ['Software Engineer', 'CAD 80k–140k'],
+      ['QA / Test Engineer', 'CAD 65k–105k'],
+      ['Cloud / DevOps Engineer', 'CAD 90k–150k'],
+      ['Registered Nurse', 'CAD 70k–110k'],
+      ['Civil Engineer', 'CAD 75k–120k'],
+      ['Accountant / Auditor', 'CAD 60k–95k']
+    ],
+    tax: [
+      'Tax planning should consider both federal and provincial rules.',
+      'Two candidates with the same gross salary can have different take-home pay depending on province.',
+      'Payroll deductions, benefits, and sales taxes can materially affect monthly budgets.'
+    ],
+    visas: [
+      ['LMIA-supported work permit', 'Many employer-supported roles.', 'Employer may need to support the LMIA process.', 'Process can be employer-dependent and time-sensitive.'],
+      ['Global Talent Stream-related hiring', 'Certain specialized tech and high-skill profiles.', 'Employer participation matters.', 'Useful for roles where speed and specialization matter.'],
+      ['Provincial nominee-related pathways', 'Candidates linked to province needs.', 'Province, employer, and occupation may matter.', 'Research by province before applying.'],
+      ['Express Entry-related skilled pathways', 'Skilled workers with strong profiles.', 'Employer may not always be required at first.', 'CRS score and eligibility matter.']
+    ],
+    relocationCosts: [
+      ['Shipment / moving help', 'CAD 2,000–10,000+'],
+      ['Temporary housing', 'CAD 2,000–6,000+'],
+      ['Destination services', 'CAD 500–2,500+'],
+      ['Full corporate relocation package', 'Varies widely by employer']
+    ]
   },
   singapore: {
     currency: 'SGD',
-    monthly: [['Central Singapore', 'SGD 4,000–7,000', 'Highest rent, strongest corporate density.'], ['East / West districts', 'SGD 3,200–5,500', 'Often more practical if commute works.'], ['North / suburban areas', 'SGD 2,800–4,800', 'Lower rent but commute should be checked.']],
-    setup: 'SGD 8,000–18,000+', rent: 'SGD 2,000–4,800+ / month', groceries: 'SGD 350–750 / month', transport: 'SGD 100–220 / month', utilities: 'SGD 180–400 / month',
-    salaries: [['Software Engineer', 'SGD 75k–150k'], ['QA / Test Engineer', 'SGD 55k–100k'], ['Cloud / DevOps Engineer', 'SGD 90k–170k'], ['Data Analyst / Engineer', 'SGD 65k–140k'], ['Finance / Risk Analyst', 'SGD 65k–130k'], ['Product Manager', 'SGD 90k–170k']],
-    tax: ['Income tax can be comparatively lower for some profiles, but housing can be very expensive.', 'Employment Pass eligibility depends on salary, qualifications, experience, and employer factors.', 'Budgeting should focus heavily on rent and family schooling if applicable.'],
-    visas: [['Employment Pass', 'Skilled professionals, managers, executives, and specialists.', 'Employer application is central.', 'Salary, profile, employer, and COMPASS-style factors may matter.'], ['S Pass', 'Mid-skilled roles where applicable.', 'Employer support and quota/levy context may matter.', 'Check salary and role eligibility carefully.'], ['Intra-company transfer routes', 'Multinational transfers.', 'Employer structure matters.', 'Useful for candidates moving within global companies.']],
-    relocationCosts: [['Shipment / moving help', 'SGD 2,000–9,000+'], ['Temporary housing', 'SGD 4,000–12,000+'], ['Destination services', 'SGD 800–3,000+'], ['Full corporate package', 'Often valuable because housing is expensive']]
+    monthly: [
+      ['Central Singapore', 'SGD 4,000–7,000', 'Highest rent, strongest corporate density.'],
+      ['East / West districts', 'SGD 3,200–5,500', 'Often more practical if commute works.'],
+      ['North / suburban areas', 'SGD 2,800–4,800', 'Lower rent but commute should be checked.']
+    ],
+    setup: 'SGD 8,000–18,000+',
+    rent: 'SGD 2,000–4,800+ / month',
+    groceries: 'SGD 350–750 / month',
+    transport: 'SGD 100–220 / month',
+    utilities: 'SGD 180–400 / month',
+    salaries: [
+      ['Software Engineer', 'SGD 75k–150k'],
+      ['QA / Test Engineer', 'SGD 55k–100k'],
+      ['Cloud / DevOps Engineer', 'SGD 90k–170k'],
+      ['Data Analyst / Engineer', 'SGD 65k–140k'],
+      ['Finance / Risk Analyst', 'SGD 65k–130k'],
+      ['Product Manager', 'SGD 90k–170k']
+    ],
+    tax: [
+      'Income tax can be comparatively lower for some profiles, but housing can be very expensive.',
+      'Employment Pass eligibility depends on salary, qualifications, experience, and employer factors.',
+      'Budgeting should focus heavily on rent and family schooling if applicable.'
+    ],
+    visas: [
+      ['Employment Pass', 'Skilled professionals, managers, executives, and specialists.', 'Employer application is central.', 'Salary, profile, employer, and COMPASS-style factors may matter.'],
+      ['S Pass', 'Mid-skilled roles where applicable.', 'Employer support and quota/levy context may matter.', 'Check salary and role eligibility carefully.'],
+      ['Intra-company transfer routes', 'Multinational transfers.', 'Employer structure matters.', 'Useful for candidates moving within global companies.']
+    ],
+    relocationCosts: [
+      ['Shipment / moving help', 'SGD 2,000–9,000+'],
+      ['Temporary housing', 'SGD 4,000–12,000+'],
+      ['Destination services', 'SGD 800–3,000+'],
+      ['Full corporate package', 'Often valuable because housing is expensive']
+    ]
   },
   ireland: {
     currency: 'EUR',
-    monthly: [['Dublin', 'EUR 2,400–4,200', 'Strong tech and finance market, high rent.'], ['Cork', 'EUR 1,900–3,300', 'Good tech, pharma, and professional market.'], ['Galway', 'EUR 1,800–3,100', 'Useful for medtech and professional roles.'], ['Limerick', 'EUR 1,600–2,900', 'Potentially better cost base.']],
-    setup: 'EUR 4,500–10,000+', rent: 'EUR 1,000–2,400+ / month', groceries: 'EUR 300–600 / month', transport: 'EUR 70–180 / month', utilities: 'EUR 170–350 / month',
-    salaries: [['Software Engineer', 'EUR 60k–105k'], ['QA / Test Engineer', 'EUR 45k–75k'], ['Cloud / DevOps Engineer', 'EUR 70k–120k'], ['Cybersecurity Engineer', 'EUR 65k–115k'], ['Accountant / Auditor', 'EUR 45k–80k'], ['Healthcare Professional', 'EUR 40k–80k']],
-    tax: ['Tax planning should consider income tax, social insurance, and universal social charge-style deductions.', 'Dublin salaries should be compared carefully against housing availability.', 'Benefits, pension, and relocation support can meaningfully change the offer value.'],
-    visas: [['Critical Skills Employment Permit', 'High-skill eligible roles.', 'Employer offer is central.', 'Useful for technology, engineering, healthcare, and specialist roles.'], ['General Employment Permit', 'Roles not covered by critical skills where eligible.', 'Employer and labor-market context matter.', 'Check occupation lists, salary, and employer obligations.'], ['Intra-company transfer routes', 'Moving within a multinational employer.', 'Employer structure matters.', 'Useful for candidates already inside global companies.']],
-    relocationCosts: [['Shipment / moving help', 'EUR 1,500–7,000+'], ['Temporary housing', 'EUR 2,000–6,000+'], ['Destination services', 'EUR 500–2,500+'], ['Full corporate package', 'Varies by employer']]
+    monthly: [
+      ['Dublin', 'EUR 2,400–4,200', 'Strong tech and finance market, high rent.'],
+      ['Cork', 'EUR 1,900–3,300', 'Good tech, pharma, and professional market.'],
+      ['Galway', 'EUR 1,800–3,100', 'Useful for medtech and professional roles.'],
+      ['Limerick', 'EUR 1,600–2,900', 'Potentially better cost base.']
+    ],
+    setup: 'EUR 4,500–10,000+',
+    rent: 'EUR 1,000–2,400+ / month',
+    groceries: 'EUR 300–600 / month',
+    transport: 'EUR 70–180 / month',
+    utilities: 'EUR 170–350 / month',
+    salaries: [
+      ['Software Engineer', 'EUR 60k–105k'],
+      ['QA / Test Engineer', 'EUR 45k–75k'],
+      ['Cloud / DevOps Engineer', 'EUR 70k–120k'],
+      ['Cybersecurity Engineer', 'EUR 65k–115k'],
+      ['Accountant / Auditor', 'EUR 45k–80k'],
+      ['Healthcare Professional', 'EUR 40k–80k']
+    ],
+    tax: [
+      'Tax planning should consider income tax, social insurance, and universal social charge-style deductions.',
+      'Dublin salaries should be compared carefully against housing availability.',
+      'Benefits, pension, and relocation support can meaningfully change the offer value.'
+    ],
+    visas: [
+      ['Critical Skills Employment Permit', 'High-skill eligible roles.', 'Employer offer is central.', 'Useful for technology, engineering, healthcare, and specialist roles.'],
+      ['General Employment Permit', 'Roles not covered by critical skills where eligible.', 'Employer and labor-market context matter.', 'Check occupation lists, salary, and employer obligations.'],
+      ['Intra-company transfer routes', 'Moving within a multinational employer.', 'Employer structure matters.', 'Useful for candidates already inside global companies.']
+    ],
+    relocationCosts: [
+      ['Shipment / moving help', 'EUR 1,500–7,000+'],
+      ['Temporary housing', 'EUR 2,000–6,000+'],
+      ['Destination services', 'EUR 500–2,500+'],
+      ['Full corporate package', 'Varies by employer']
+    ]
   },
   netherlands: {
     currency: 'EUR',
-    monthly: [['Amsterdam', 'EUR 2,400–4,100', 'High demand, strong international companies, high rent.'], ['Eindhoven', 'EUR 1,900–3,300', 'Strong engineering and technology cluster.'], ['Rotterdam', 'EUR 1,900–3,300', 'Logistics, engineering, and professional services.'], ['Utrecht', 'EUR 2,000–3,500', 'Central location with high professional demand.']],
-    setup: 'EUR 4,500–10,000+', rent: 'EUR 1,000–2,300+ / month', groceries: 'EUR 300–600 / month', transport: 'EUR 80–180 / month', utilities: 'EUR 180–350 / month',
-    salaries: [['Software Engineer', 'EUR 60k–100k'], ['QA / Test Engineer', 'EUR 45k–78k'], ['Cloud / DevOps Engineer', 'EUR 70k–115k'], ['Data Engineer', 'EUR 60k–105k'], ['Mechanical Engineer', 'EUR 55k–90k'], ['Finance / Risk Analyst', 'EUR 55k–95k']],
-    tax: ['Take-home pay depends on income level, social contributions, pension, and tax status.', 'Some international workers may research special tax rulings where applicable, but eligibility is specific.', 'Housing availability can be a bigger constraint than salary in some cities.'],
-    visas: [['Highly Skilled Migrant route', 'Skilled professionals hired by recognized sponsors.', 'Recognized sponsor status is central.', 'Check employer sponsor status, salary threshold, and contract details.'], ['EU Blue Card-related routes', 'Higher-paid qualified professionals where applicable.', 'Employer contract and salary matter.', 'Useful for some senior and specialist roles.'], ['Intra-company transfer routes', 'Internal movement within multinational groups.', 'Employer structure matters.', 'Useful for candidates already employed by global companies.']],
-    relocationCosts: [['Shipment / moving help', 'EUR 1,500–7,000+'], ['Temporary housing', 'EUR 2,000–6,000+'], ['Destination services', 'EUR 600–2,700+'], ['Full corporate package', 'Varies by employer']]
+    monthly: [
+      ['Amsterdam', 'EUR 2,400–4,100', 'High demand, strong international companies, high rent.'],
+      ['Eindhoven', 'EUR 1,900–3,300', 'Strong engineering and technology cluster.'],
+      ['Rotterdam', 'EUR 1,900–3,300', 'Logistics, engineering, and professional services.'],
+      ['Utrecht', 'EUR 2,000–3,500', 'Central location with high professional demand.']
+    ],
+    setup: 'EUR 4,500–10,000+',
+    rent: 'EUR 1,000–2,300+ / month',
+    groceries: 'EUR 300–600 / month',
+    transport: 'EUR 80–180 / month',
+    utilities: 'EUR 180–350 / month',
+    salaries: [
+      ['Software Engineer', 'EUR 60k–100k'],
+      ['QA / Test Engineer', 'EUR 45k–78k'],
+      ['Cloud / DevOps Engineer', 'EUR 70k–115k'],
+      ['Data Engineer', 'EUR 60k–105k'],
+      ['Mechanical Engineer', 'EUR 55k–90k'],
+      ['Finance / Risk Analyst', 'EUR 55k–95k']
+    ],
+    tax: [
+      'Take-home pay depends on income level, social contributions, pension, and tax status.',
+      'Some international workers may research special tax rulings where applicable, but eligibility is specific.',
+      'Housing availability can be a bigger constraint than salary in some cities.'
+    ],
+    visas: [
+      ['Highly Skilled Migrant route', 'Skilled professionals hired by recognized sponsors.', 'Recognized sponsor status is central.', 'Check employer sponsor status, salary threshold, and contract details.'],
+      ['EU Blue Card-related routes', 'Higher-paid qualified professionals where applicable.', 'Employer contract and salary matter.', 'Useful for some senior and specialist roles.'],
+      ['Intra-company transfer routes', 'Internal movement within multinational groups.', 'Employer structure matters.', 'Useful for candidates already employed by global companies.']
+    ],
+    relocationCosts: [
+      ['Shipment / moving help', 'EUR 1,500–7,000+'],
+      ['Temporary housing', 'EUR 2,000–6,000+'],
+      ['Destination services', 'EUR 600–2,700+'],
+      ['Full corporate package', 'Varies by employer']
+    ]
   },
   denmark: {
     currency: 'DKK',
-    monthly: [['Copenhagen', 'DKK 19,000–32,000', 'Largest market, highest rent pressure.'], ['Aarhus', 'DKK 15,000–25,000', 'Strong secondary city for education, tech, and professional roles.'], ['Odense', 'DKK 13,000–22,000', 'More manageable cost base.'], ['Aalborg', 'DKK 12,000–21,000', 'Potentially lower housing pressure.']],
-    setup: 'DKK 45,000–90,000+', rent: 'DKK 8,000–18,000+ / month', groceries: 'DKK 2,500–4,500 / month', transport: 'DKK 500–1,100 / month', utilities: 'DKK 1,000–2,400 / month',
-    salaries: [['Software Engineer', 'DKK 550k–850k'], ['QA / Test Engineer', 'DKK 430k–680k'], ['Cloud / DevOps Engineer', 'DKK 600k–950k'], ['Mechanical Engineer', 'DKK 500k–800k'], ['Data Engineer', 'DKK 550k–900k'], ['Healthcare Specialist', 'DKK 420k–750k']],
-    tax: ['Tax and municipal rules can materially affect take-home salary.', 'Gross salary should be evaluated with expected deductions, pension, rent, and relocation support.', 'High wages may still require careful budgeting in Copenhagen.'],
-    visas: [['Positive List route', 'Occupations facing shortage where applicable.', 'Employer job offer is important.', 'Check whether your occupation appears and requirements are current.'], ['Pay Limit Scheme', 'Higher-salary roles where applicable.', 'Employer contract and salary are central.', 'Useful for experienced professionals with strong offers.'], ['Fast-track / employer schemes where applicable', 'Employers approved for faster handling.', 'Employer status matters.', 'Check employer and role details.']],
-    relocationCosts: [['Shipment / moving help', 'DKK 12,000–60,000+'], ['Temporary housing', 'DKK 18,000–55,000+'], ['Destination services', 'DKK 4,000–20,000+'], ['Full corporate package', 'Varies widely']]
+    monthly: [
+      ['Copenhagen', 'DKK 19,000–32,000', 'Largest market, highest rent pressure.'],
+      ['Aarhus', 'DKK 15,000–25,000', 'Strong secondary city for education, tech, and professional roles.'],
+      ['Odense', 'DKK 13,000–22,000', 'More manageable cost base.'],
+      ['Aalborg', 'DKK 12,000–21,000', 'Potentially lower housing pressure.']
+    ],
+    setup: 'DKK 45,000–90,000+',
+    rent: 'DKK 8,000–18,000+ / month',
+    groceries: 'DKK 2,500–4,500 / month',
+    transport: 'DKK 500–1,100 / month',
+    utilities: 'DKK 1,000–2,400 / month',
+    salaries: [
+      ['Software Engineer', 'DKK 550k–850k'],
+      ['QA / Test Engineer', 'DKK 430k–680k'],
+      ['Cloud / DevOps Engineer', 'DKK 600k–950k'],
+      ['Mechanical Engineer', 'DKK 500k–800k'],
+      ['Data Engineer', 'DKK 550k–900k'],
+      ['Healthcare Specialist', 'DKK 420k–750k']
+    ],
+    tax: [
+      'Tax and municipal rules can materially affect take-home salary.',
+      'Gross salary should be evaluated with expected deductions, pension, rent, and relocation support.',
+      'High wages may still require careful budgeting in Copenhagen.'
+    ],
+    visas: [
+      ['Positive List route', 'Occupations facing shortage where applicable.', 'Employer job offer is important.', 'Check whether your occupation appears and requirements are current.'],
+      ['Pay Limit Scheme', 'Higher-salary roles where applicable.', 'Employer contract and salary are central.', 'Useful for experienced professionals with strong offers.'],
+      ['Fast-track / employer schemes where applicable', 'Employers approved for faster handling.', 'Employer status matters.', 'Check employer and role details.']
+    ],
+    relocationCosts: [
+      ['Shipment / moving help', 'DKK 12,000–60,000+'],
+      ['Temporary housing', 'DKK 18,000–55,000+'],
+      ['Destination services', 'DKK 4,000–20,000+'],
+      ['Full corporate package', 'Varies widely']
+    ]
   },
   japan: {
     currency: 'JPY',
-    monthly: [['Tokyo', 'JPY 230k–420k', 'Largest market, highest housing and commute complexity.'], ['Osaka', 'JPY 180k–330k', 'Strong business region with lower cost than Tokyo.'], ['Yokohama', 'JPY 200k–360k', 'Close to Tokyo market with varied costs.'], ['Fukuoka', 'JPY 160k–300k', 'Lower cost base and growing tech/startup interest.']],
-    setup: 'JPY 600k–1.5m+', rent: 'JPY 80k–220k+ / month', groceries: 'JPY 35k–80k / month', transport: 'JPY 10k–30k / month', utilities: 'JPY 15k–35k / month',
-    salaries: [['Software Engineer', 'JPY 6m–12m'], ['QA / Test Engineer', 'JPY 4.5m–8m'], ['Cloud / DevOps Engineer', 'JPY 7m–13m'], ['Data Engineer', 'JPY 6m–11m'], ['Product Manager', 'JPY 8m–15m'], ['Bilingual Business Role', 'JPY 5m–10m']],
-    tax: ['Take-home pay depends on income tax, residence tax, social insurance, and employer benefits.', 'Initial move-in costs can be high because deposits, key money, agent fees, and guarantor costs may apply.', 'Language ability can influence both job range and daily settlement cost.'],
-    visas: [['Engineer / Specialist in Humanities / International Services', 'Professional roles in tech, business, language, and specialist work.', 'Employer sponsorship is central.', 'Degree/experience and role match matter.'], ['Highly Skilled Professional route', 'High-scoring candidates with strong education, salary, and experience.', 'Employer offer usually matters.', 'Useful for senior profiles.'], ['Intra-company transfer', 'Moving within a multinational employer.', 'Company relationship matters.', 'Useful for internal transfers.']],
-    relocationCosts: [['Shipment / moving help', 'JPY 200k–900k+'], ['Temporary housing', 'JPY 250k–800k+'], ['Destination services', 'JPY 80k–300k+'], ['Full corporate package', 'Varies by employer']]
+    monthly: [
+      ['Tokyo', 'JPY 230k–420k', 'Largest market, highest housing and commute complexity.'],
+      ['Osaka', 'JPY 180k–330k', 'Strong business region with lower cost than Tokyo.'],
+      ['Yokohama', 'JPY 200k–360k', 'Close to Tokyo market with varied costs.'],
+      ['Fukuoka', 'JPY 160k–300k', 'Lower cost base and growing tech/startup interest.']
+    ],
+    setup: 'JPY 600k–1.5m+',
+    rent: 'JPY 80k–220k+ / month',
+    groceries: 'JPY 35k–80k / month',
+    transport: 'JPY 10k–30k / month',
+    utilities: 'JPY 15k–35k / month',
+    salaries: [
+      ['Software Engineer', 'JPY 6m–12m'],
+      ['QA / Test Engineer', 'JPY 4.5m–8m'],
+      ['Cloud / DevOps Engineer', 'JPY 7m–13m'],
+      ['Data Engineer', 'JPY 6m–11m'],
+      ['Product Manager', 'JPY 8m–15m'],
+      ['Bilingual Business Role', 'JPY 5m–10m']
+    ],
+    tax: [
+      'Take-home pay depends on income tax, residence tax, social insurance, and employer benefits.',
+      'Initial move-in costs can be high because deposits, key money, agent fees, and guarantor costs may apply.',
+      'Language ability can influence both job range and daily settlement cost.'
+    ],
+    visas: [
+      ['Engineer / Specialist in Humanities / International Services', 'Professional roles in tech, business, language, and specialist work.', 'Employer sponsorship is central.', 'Degree/experience and role match matter.'],
+      ['Highly Skilled Professional route', 'High-scoring candidates with strong education, salary, and experience.', 'Employer offer usually matters.', 'Useful for senior profiles.'],
+      ['Intra-company transfer', 'Moving within a multinational employer.', 'Company relationship matters.', 'Useful for internal transfers.']
+    ],
+    relocationCosts: [
+      ['Shipment / moving help', 'JPY 200k–900k+'],
+      ['Temporary housing', 'JPY 250k–800k+'],
+      ['Destination services', 'JPY 80k–300k+'],
+      ['Full corporate package', 'Varies by employer']
+    ]
   }
 };
 
@@ -110,6 +403,63 @@ const paragraphs = country[section.field];
 const listItems = country[section.items] || [];
 const canonicalPath = `/${section.slug}/${country.slug}`;
 const relatedPosts = blogPosts.slice(0, 3);
+
+function renderHeroLead() {
+  const map = {
+    visas: `Compare ${country.name} work authorization routes, employer sponsor signals, red flags, and questions to ask before applying.`,
+    taxes: `Understand ${country.name} tax-planning basics, take-home pay factors, payroll deductions, and newcomer money questions.`,
+    salaries: `Compare ${country.name} salary ranges by role, city context, and how gross pay can change after tax and rent.`,
+    'cost-of-living': `Plan ${country.name} rent, groceries, transport, utilities, and first-month setup costs using practical planning ranges.`,
+    'relocation-companies': `Compare relocation services in ${country.name}, what employers may cover, estimated support costs, and questions to ask.`,
+    jobs: `Review ${country.name} sponsor-friendly job market signals, high-demand sectors, role types, and application risks.`
+  };
+
+  return map[section.slug] || section.description;
+}
+
+const relatedResourceLinks = resourceSections
+  .filter((item) => item.slug !== section.slug)
+  .slice(0, 5)
+  .map((item) => ({
+    title: `${item.title} in ${country.name}`,
+    href: `/${item.slug}/${country.slug}`,
+    description: `Continue researching ${country.name} with ${item.title.toLowerCase()} context.`
+  }));
+
+const peopleAlsoAsk = {
+  visas: [
+    [`Can foreigners work in ${country.name}?`, `Foreign candidates may be able to work in ${country.name} when they meet visa, employer, role, salary, and documentation requirements. The exact pathway depends on the country and role.`],
+    [`Do employers in ${country.name} sponsor visas?`, `Some employers may sponsor or support work authorization, especially for skilled or shortage roles. Candidates should verify sponsorship directly with the employer.`],
+    [`What should I check before applying in ${country.name}?`, `Check sponsor language, salary suitability, role requirements, official visa rules, employer credibility, and whether the job excludes applicants without local work rights.`]
+  ],
+  taxes: [
+    [`How should I estimate take-home pay in ${country.name}?`, `Start with gross salary, then estimate income tax, payroll deductions, social contributions, pension, insurance, and city-level living costs.`],
+    [`Is gross salary enough to compare offers in ${country.name}?`, `No. Gross salary should be compared with rent, tax, healthcare, transport, relocation support, and first-month setup costs.`],
+    [`Should I get tax advice before relocating to ${country.name}?`, `For important decisions, use official tax sources or qualified professionals. Relocate Works is a research starting point, not tax advice.`]
+  ],
+  salaries: [
+    [`What salary should I expect in ${country.name}?`, `Salary depends on role, seniority, city, employer, industry, language requirements, licensing, and visa pathway. Use ranges as planning context only.`],
+    [`How do I compare salary offers in ${country.name}?`, `Compare base salary with tax, rent, benefits, relocation support, healthcare, pay frequency, probation, and long-term career value.`],
+    [`Can a lower salary still be a good relocation offer?`, `Yes, if taxes, rent, benefits, relocation support, and long-term visa or residence potential make the total package stronger.`]
+  ],
+  'cost-of-living': [
+    [`How much money should I prepare before moving to ${country.name}?`, `A conservative plan should include rent, deposit, temporary accommodation, transport, groceries, utilities, insurance, documents, and emergency savings.`],
+    [`Which costs are easiest to underestimate in ${country.name}?`, `Candidates often underestimate temporary housing, rental deposits, furniture, insurance, healthcare, transport, and first-month setup costs.`],
+    [`Should I accept a job before checking cost of living?`, `No. Compare the offer with realistic city-level expenses before accepting, especially if relocation support is limited.`]
+  ],
+  'relocation-companies': [
+    [`Do I need a relocation company for ${country.name}?`, `It depends on family size, shipment needs, housing difficulty, employer support, and how much local administration you want help with.`],
+    [`What should I ask before paying for relocation help?`, `Ask about scope, refunds, temporary housing, shipment limits, school search, storage, timing, and what happens if your visa or start date changes.`],
+    [`Will my employer pay for relocation support?`, `Some employers provide flights, temporary housing, allowances, or relocation vendors. Others provide no support. Confirm this before accepting an offer.`]
+  ],
+  jobs: [
+    [`Where can I find visa sponsor jobs in ${country.name}?`, `Start with official employer career pages, sponsor lists where available, recruiter posts, industry communities, and curated job research with sponsor signals.`],
+    [`What job descriptions should I avoid in ${country.name}?`, `Avoid roles that say no sponsorship, must already have work rights, citizens or permanent residents only, local candidates only, or remote only within one country.`],
+    [`Which roles are more likely to support relocation?`, `Mid-level, senior, shortage, licensed, specialized, or high-demand roles are often stronger than generic entry-level roles without sponsor language.`]
+  ]
+};
+
+const faqItems = peopleAlsoAsk[section.slug] || peopleAlsoAsk.jobs;
 
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
@@ -125,31 +475,53 @@ const articleJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: `${section.title} in ${country.name}`,
-  description: `${section.description} Planning ranges, checklists, country notes, and relocation context for ${country.name}.`,
+  description: `${renderHeroLead()} Relocate Works provides planning ranges and research context for international candidates.`,
   author: { '@type': 'Organization', name: SITE.name },
-  publisher: { '@type': 'Organization', name: SITE.name, logo: new URL('/favicon.svg', SITE.url).toString() },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE.name,
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL('/favicon.svg', SITE.url).toString()
+    }
+  },
   mainEntityOfPage: new URL(canonicalPath, SITE.url).toString()
 };
 
-function renderHeroLead() {
-  const map = {
-    visas: `Compare ${country.name} work authorization routes, employer sponsor signals, red flags, and questions to ask before applying.`,
-    taxes: `Understand ${country.name} tax-planning basics, take-home pay factors, payroll deductions, and newcomer money questions.`,
-    salaries: `Compare ${country.name} salary ranges by role, city context, and how gross pay can change after tax and rent.`,
-    'cost-of-living': `Plan ${country.name} rent, groceries, transport, utilities, and first-month setup costs using practical planning ranges.`,
-    'relocation-companies': `Compare relocation services in ${country.name}, what employers may cover, estimated support costs, and questions to ask.`,
-    jobs: `Review ${country.name} sponsor-friendly job market signals, high-demand sectors, role types, and application risks.`
-  };
-  return map[section.slug] || section.description;
-}
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(([question, answer]) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: answer
+    }
+  }))
+};
+
+const itemListJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${country.name} relocation resource guides`,
+  description: `Related ${country.name} guides for visas, jobs, salaries, taxes, cost of living, and relocation planning.`,
+  itemListElement: relatedResourceLinks.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.title,
+    url: new URL(item.href, SITE.url).toString()
+  }))
+};
 ---
 <BaseLayout
   title={`${section.title} in ${country.name} | Relocate Works`}
   description={`${renderHeroLead()} Relocate Works provides planning ranges and research context for international candidates.`}
   canonicalPath={canonicalPath}
-  structuredData={[breadcrumbJsonLd, articleJsonLd]}
+  structuredData={[breadcrumbJsonLd, articleJsonLd, faqJsonLd, itemListJsonLd]}
 >
   <Header />
+
   <main>
     <section class="page-hero page-hero-gradient compact-hero resource-country-hero">
       <div class="container narrow">
@@ -162,16 +534,50 @@ function renderHeroLead() {
     <section class="section section-white resource-deep-section">
       <div class="container guide-layout single-guide">
         <CountryResourceNav country={country} active={section.slug} />
+
         <article class="guide-content">
           <section class="content-block compact-content-block">
             <span class="mini-eyebrow">{country.name} guide</span>
             <h2>{section.title} overview</h2>
-            {Array.isArray(paragraphs) ? paragraphs.map((paragraph) => <p>{paragraph}</p>) : <p>{paragraphs}</p>}
+
+            {Array.isArray(paragraphs)
+              ? paragraphs.map((paragraph) => <p>{paragraph}</p>)
+              : <p>{paragraphs}</p>
+            }
+
             <div class="info-grid two">
               <div class="info-tile"><strong>Primary work pathway</strong><span>{country.primaryVisa}</span></div>
               <div class="info-tile"><strong>Key cities</strong><span>{country.keyCities.join(', ')}</span></div>
               <div class="info-tile"><strong>Popular roles</strong><span>{country.popularRoles.join(', ')}</span></div>
               <div class="info-tile"><strong>Currency</strong><span>{country.currency}</span></div>
+            </div>
+          </section>
+
+          <section class="content-block compact-content-block insight-box">
+            <span class="mini-eyebrow">Decision guide</span>
+            <h2>Is {country.name} a good fit for your relocation plan?</h2>
+            <p>
+              {country.name} can be a strong option if your role, salary level, documents, language ability, and employer support fit the likely pathway. Do not judge the destination by one factor only. Compare visa fit, job demand, salary, tax, rent, settlement cost, and employer credibility together.
+            </p>
+            <div class="two-column-list">
+              <div>
+                <strong>Good fit when</strong>
+                <ul class="check-list">
+                  <li>Your role appears in high-demand or skilled sectors.</li>
+                  <li>The employer shows sponsor-friendly language.</li>
+                  <li>The salary fits the city and possible work pathway.</li>
+                  <li>You can prepare documents before interviews move quickly.</li>
+                </ul>
+              </div>
+              <div>
+                <strong>Be careful when</strong>
+                <ul>
+                  <li>The job says no sponsorship or local candidates only.</li>
+                  <li>The salary is unclear or below likely pathway expectations.</li>
+                  <li>You have not checked rent, tax, and first-month setup costs.</li>
+                  <li>Licensing, registration, or language requirements are unclear.</li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -181,12 +587,28 @@ function renderHeroLead() {
                 <span class="mini-eyebrow">Planning ranges</span>
                 <h2>Estimated monthly budget ranges</h2>
                 <p>Use these as rough planning ranges for a single person. Actual expenses vary by neighborhood, housing type, family size, lifestyle, and whether your employer provides relocation support.</p>
+
                 <div class="content-table-wrap">
                   <table class="content-table">
-                    <thead><tr><th>City</th><th>Monthly planning range</th><th>Planning note</th></tr></thead>
-                    <tbody>{profile.monthly.map((row) => <tr><td><strong>{row[0]}</strong></td><td>{row[1]}</td><td>{row[2]}</td></tr>)}</tbody>
+                    <thead>
+                      <tr>
+                        <th>City</th>
+                        <th>Monthly planning range</th>
+                        <th>Planning note</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {profile.monthly.map((row) => (
+                        <tr>
+                          <td><strong>{row[0]}</strong></td>
+                          <td>{row[1]}</td>
+                          <td>{row[2]}</td>
+                        </tr>
+                      ))}
+                    </tbody>
                   </table>
                 </div>
+
                 <div class="resource-range-grid">
                   <div class="range-card"><span>Rent</span><strong>{profile.rent}</strong></div>
                   <div class="range-card"><span>Groceries</span><strong>{profile.groceries}</strong></div>
@@ -195,11 +617,16 @@ function renderHeroLead() {
                   <div class="range-card highlight"><span>First-month buffer</span><strong>{profile.setup}</strong></div>
                 </div>
               </section>
+
               <section class="content-block compact-content-block insight-box">
                 <span class="mini-eyebrow">Relocate Works insight</span>
                 <h2>How to judge a {country.name} offer</h2>
                 <p>A higher salary in the most expensive city is not always better than a slightly lower salary in a more affordable city. Compare gross salary, estimated take-home pay, rent, commute, healthcare or insurance, and whether the employer covers flights, temporary housing, or settlement support.</p>
-                <ul class="check-list"><li>Calculate first 60–90 days of cash needs before accepting an offer.</li><li>Check whether the role requires a car or has realistic public transport options.</li><li>Ask whether relocation support is paid upfront, reimbursed later, or not included.</li></ul>
+                <ul class="check-list">
+                  <li>Calculate first 60–90 days of cash needs before accepting an offer.</li>
+                  <li>Check whether the role requires a car or has realistic public transport options.</li>
+                  <li>Ask whether relocation support is paid upfront, reimbursed later, or not included.</li>
+                </ul>
               </section>
             </>
           )}
@@ -210,18 +637,54 @@ function renderHeroLead() {
                 <span class="mini-eyebrow">Role ranges</span>
                 <h2>Common salary ranges to research</h2>
                 <p>These planning ranges help candidates compare offers before deeper research. Seniority, city, employer size, industry, licensing, and language skills can move pay above or below these ranges.</p>
+
                 <div class="content-table-wrap">
                   <table class="content-table">
-                    <thead><tr><th>Role group</th><th>Typical gross range</th><th>How to use it</th></tr></thead>
-                    <tbody>{profile.salaries.map((row) => <tr><td><strong>{row[0]}</strong></td><td>{row[1]}</td><td>Compare with visa rules, tax, rent, and relocation package.</td></tr>)}</tbody>
+                    <thead>
+                      <tr>
+                        <th>Role group</th>
+                        <th>Typical gross range</th>
+                        <th>How to use it</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {profile.salaries.map((row) => (
+                        <tr>
+                          <td><strong>{row[0]}</strong></td>
+                          <td>{row[1]}</td>
+                          <td>Compare with visa rules, tax, rent, and relocation package.</td>
+                        </tr>
+                      ))}
+                    </tbody>
                   </table>
                 </div>
               </section>
+
               <section class="content-block compact-content-block insight-box">
                 <span class="mini-eyebrow">Offer analysis</span>
                 <h2>Salary is only one part of relocation value</h2>
                 <p>For international candidates, a good offer should be evaluated as a package: base salary, bonus, pension or retirement contributions, healthcare or insurance, relocation allowance, paid leave, visa support, probation risk, and long-term residence potential.</p>
-                <div class="two-column-list"><div><strong>Strong signs</strong><ul><li>Clear salary range</li><li>Relocation or visa language</li><li>Market-level pay for the city</li><li>Benefits listed clearly</li></ul></div><div><strong>Questions to ask</strong><ul><li>Is sponsorship available for this role?</li><li>Is relocation assistance included?</li><li>What is the pay frequency?</li><li>Are benefits deducted from salary?</li></ul></div></div>
+
+                <div class="two-column-list">
+                  <div>
+                    <strong>Strong signs</strong>
+                    <ul>
+                      <li>Clear salary range</li>
+                      <li>Relocation or visa language</li>
+                      <li>Market-level pay for the city</li>
+                      <li>Benefits listed clearly</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <strong>Questions to ask</strong>
+                    <ul>
+                      <li>Is sponsorship available for this role?</li>
+                      <li>Is relocation assistance included?</li>
+                      <li>What is the pay frequency?</li>
+                      <li>Are benefits deducted from salary?</li>
+                    </ul>
+                  </div>
+                </div>
               </section>
             </>
           )}
@@ -232,12 +695,26 @@ function renderHeroLead() {
                 <span class="mini-eyebrow">Take-home planning</span>
                 <h2>What can affect your net income</h2>
                 <p>Tax pages should be used for planning, not final filing decisions. The same gross salary can produce very different monthly take-home pay depending on city, province/state, residency status, benefits, family status, and payroll deductions.</p>
+
                 <div class="resource-analysis-grid">
-                  {profile.tax.map((item) => <div class="analysis-card"><strong>{item}</strong><span>Use this as a research point before accepting an offer.</span></div>)}
+                  {profile.tax.map((item) => (
+                    <div class="analysis-card">
+                      <strong>{item}</strong>
+                      <span>Use this as a research point before accepting an offer.</span>
+                    </div>
+                  ))}
                 </div>
+
                 <h3>Common items to compare</h3>
-                <ul class="check-list"><li>Tax year and filing obligations</li><li>Income tax and local/provincial tax where applicable</li><li>Payroll deductions and social contributions</li><li>Sales tax or VAT/GST on daily spending</li><li>Benefits, pension, insurance, and family deductions</li></ul>
+                <ul class="check-list">
+                  <li>Tax year and filing obligations</li>
+                  <li>Income tax and local/provincial tax where applicable</li>
+                  <li>Payroll deductions and social contributions</li>
+                  <li>Sales tax or VAT/GST on daily spending</li>
+                  <li>Benefits, pension, insurance, and family deductions</li>
+                </ul>
               </section>
+
               <section class="content-block compact-content-block insight-box">
                 <span class="mini-eyebrow">Relocate Works insight</span>
                 <h2>Do not compare countries by gross salary only</h2>
@@ -252,17 +729,56 @@ function renderHeroLead() {
                 <span class="mini-eyebrow">Pathway map</span>
                 <h2>Visa and work-route concepts to research</h2>
                 <p>The names and requirements can change, but the practical question stays the same: can the employer legally hire and support you for this role, at this salary, in this location?</p>
+
                 <div class="content-table-wrap">
                   <table class="content-table">
-                    <thead><tr><th>Pathway</th><th>Useful for</th><th>Employer role</th><th>Candidate note</th></tr></thead>
-                    <tbody>{profile.visas.map((row) => <tr><td><strong>{row[0]}</strong></td><td>{row[1]}</td><td>{row[2]}</td><td>{row[3]}</td></tr>)}</tbody>
+                    <thead>
+                      <tr>
+                        <th>Pathway</th>
+                        <th>Useful for</th>
+                        <th>Employer role</th>
+                        <th>Candidate note</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {profile.visas.map((row) => (
+                        <tr>
+                          <td><strong>{row[0]}</strong></td>
+                          <td>{row[1]}</td>
+                          <td>{row[2]}</td>
+                          <td>{row[3]}</td>
+                        </tr>
+                      ))}
+                    </tbody>
                   </table>
                 </div>
               </section>
+
               <section class="content-block compact-content-block">
                 <span class="mini-eyebrow">Sponsor signals</span>
                 <h2>What to look for in job descriptions</h2>
-                <div class="two-column-list"><div><strong>Positive signals</strong><ul class="check-list"><li>Visa sponsorship available</li><li>Work permit support</li><li>Relocation support or international hiring language</li><li>Employer listed as licensed/accredited/recognized where relevant</li><li>Salary range appears suitable for skilled work routes</li></ul></div><div><strong>Risk phrases</strong><ul><li>No sponsorship available</li><li>Must already have unrestricted work rights</li><li>Citizens or permanent residents only</li><li>Local candidates only</li><li>Remote role limited to one country</li></ul></div></div>
+                <div class="two-column-list">
+                  <div>
+                    <strong>Positive signals</strong>
+                    <ul class="check-list">
+                      <li>Visa sponsorship available</li>
+                      <li>Work permit support</li>
+                      <li>Relocation support or international hiring language</li>
+                      <li>Employer listed as licensed/accredited/recognized where relevant</li>
+                      <li>Salary range appears suitable for skilled work routes</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <strong>Risk phrases</strong>
+                    <ul>
+                      <li>No sponsorship available</li>
+                      <li>Must already have unrestricted work rights</li>
+                      <li>Citizens or permanent residents only</li>
+                      <li>Local candidates only</li>
+                      <li>Remote role limited to one country</li>
+                    </ul>
+                  </div>
+                </div>
               </section>
             </>
           )}
@@ -273,19 +789,44 @@ function renderHeroLead() {
                 <span class="mini-eyebrow">Service map</span>
                 <h2>What relocation support can include</h2>
                 <p>Relocation companies can help with the practical side of moving, but many candidates should first check what the employer already covers. Some offers include flights and temporary housing; others only support paperwork.</p>
+
                 <div class="content-table-wrap">
                   <table class="content-table">
-                    <thead><tr><th>Service</th><th>Planning range</th><th>When it matters</th></tr></thead>
-                    <tbody>{profile.relocationCosts.map((row) => <tr><td><strong>{row[0]}</strong></td><td>{row[1]}</td><td>Costs vary by shipment size, family needs, city, and timing.</td></tr>)}</tbody>
+                    <thead>
+                      <tr>
+                        <th>Service</th>
+                        <th>Planning range</th>
+                        <th>When it matters</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {profile.relocationCosts.map((row) => (
+                        <tr>
+                          <td><strong>{row[0]}</strong></td>
+                          <td>{row[1]}</td>
+                          <td>Costs vary by shipment size, family needs, city, and timing.</td>
+                        </tr>
+                      ))}
+                    </tbody>
                   </table>
                 </div>
+
                 <h3>Providers to research</h3>
-                <div class="tag-cloud">{(country.relocationCompanies || listItems).map((item) => <span>{item}</span>)}</div>
+                <div class="tag-cloud">
+                  {(country.relocationCompanies || listItems).map((item) => <span>{item}</span>)}
+                </div>
               </section>
+
               <section class="content-block compact-content-block insight-box">
                 <span class="mini-eyebrow">Questions to ask</span>
                 <h2>Before paying for relocation help</h2>
-                <ul class="check-list"><li>Does the employer provide a relocation allowance or vendor?</li><li>Is temporary accommodation included, and for how long?</li><li>Are flights, shipping, storage, pets, school search, or family support covered?</li><li>Is the service paid upfront or reimbursed after arrival?</li><li>What happens if the visa or start date is delayed?</li></ul>
+                <ul class="check-list">
+                  <li>Does the employer provide a relocation allowance or vendor?</li>
+                  <li>Is temporary accommodation included, and for how long?</li>
+                  <li>Are flights, shipping, storage, pets, school search, or family support covered?</li>
+                  <li>Is the service paid upfront or reimbursed after arrival?</li>
+                  <li>What happens if the visa or start date is delayed?</li>
+                </ul>
               </section>
             </>
           )}
@@ -296,6 +837,7 @@ function renderHeroLead() {
                 <span class="mini-eyebrow">Market signals</span>
                 <h2>Where sponsor-friendly jobs may appear</h2>
                 <p>In {country.name}, stronger relocation opportunities usually appear in sectors where skills are scarce, employers hire internationally, and the role is senior or specialized enough to justify sponsorship effort.</p>
+
                 <div class="info-grid two">
                   <div class="info-tile"><strong>Common sectors</strong><span>{country.sectors.join(', ')}</span></div>
                   <div class="info-tile"><strong>Role examples</strong><span>{country.demandJobs.join(', ')}</span></div>
@@ -303,18 +845,40 @@ function renderHeroLead() {
                   <div class="info-tile"><strong>Application filter</strong><span>Prioritize roles with explicit sponsor language or no hard local-work-right requirement.</span></div>
                 </div>
               </section>
+
               <section class="content-block compact-content-block insight-box">
                 <span class="mini-eyebrow">Apply smarter</span>
                 <h2>How to choose better roles</h2>
                 <p>Do not apply randomly to every open position. Build a shortlist of roles where your experience, salary level, occupation category, employer credibility, and visa pathway make sense together.</p>
-                <ul class="check-list"><li>Start with mid-level and senior roles unless your industry has strong shortage demand.</li><li>Use exact sponsor phrases in search, then remove jobs that say no sponsorship.</li><li>Match your CV headline and first page to the role category.</li><li>Track company, apply date, sponsor signal, and recruiter response.</li></ul>
+
+                <ul class="check-list">
+                  <li>Start with mid-level and senior roles unless your industry has strong shortage demand.</li>
+                  <li>Use exact sponsor phrases in search, then remove jobs that say no sponsorship.</li>
+                  <li>Match your CV headline and first page to the role category.</li>
+                  <li>Track company, apply date, sponsor signal, and recruiter response.</li>
+                </ul>
               </section>
             </>
           )}
 
+          <section class="content-block compact-content-block">
+            <span class="mini-eyebrow">People also ask</span>
+            <h2>Common questions about {section.title.toLowerCase()} in {country.name}</h2>
+
+            <div class="faq-list">
+              {faqItems.map(([question, answer]) => (
+                <details class="faq-item">
+                  <summary>{question}</summary>
+                  <p>{answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+
           <section class="content-block compact-content-block resource-checklist-block">
             <span class="mini-eyebrow">Planning checklist</span>
             <h2>Before making a decision about {country.name}</h2>
+
             <ul class="check-list">
               <li>Verify current official visa and work authorization rules.</li>
               <li>Check whether your occupation, salary, and experience level fit the likely pathway.</li>
@@ -322,17 +886,36 @@ function renderHeroLead() {
               <li>Confirm employer support directly before spending time on long application steps.</li>
               <li>Keep documents ready: CV, certificates, references, transcripts, licenses, and language results where needed.</li>
             </ul>
+
             <p class="soft-disclaimer">{softDisclaimer}</p>
+          </section>
+
+          <section class="content-block compact-content-block">
+            <span class="mini-eyebrow">Related {country.name} resources</span>
+            <h2>Continue researching {country.name}</h2>
+
+            <div class="grid-3 related-compact-grid">
+              {relatedResourceLinks.map((item) => (
+                <a class="article-card" href={item.href}>
+                  <div class="article-meta">Country resource</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <span>Open guide →</span>
+                </a>
+              ))}
+            </div>
           </section>
 
           <section class="content-block cta-panel inline-substack-cta improved-inline-cta">
             <span class="mini-eyebrow">Weekly job intelligence</span>
             <h2>Want sponsor-friendly jobs for {country.name} and other countries?</h2>
             <p>Relocate Works publishes free previews and paid weekly sponsor-friendly job intelligence through Substack. Paid members get full lists with direct apply links, sponsor signals, relocation scores, salary notes when available, and practical planning notes.</p>
+
             <div class="pricing-mini-grid">
               <div><strong>$9/month</strong><span>Monthly access</span></div>
               <div><strong>$49/year</strong><span>Founding yearly access</span></div>
             </div>
+
             <div class="cta-actions-spaced">
               <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe on Substack</a>
               <a class="button-light" href="/jobs/free-preview">View free job preview</a>
@@ -342,6 +925,7 @@ function renderHeroLead() {
           <section class="content-block compact-content-block">
             <span class="mini-eyebrow">Related guides</span>
             <h2>Continue planning your move</h2>
+
             <div class="grid-3 related-compact-grid">
               {relatedPosts.map((post) => (
                 <a class="article-card" href={`/blog/${post.slug}`}>
@@ -356,7 +940,9 @@ function renderHeroLead() {
         </article>
       </div>
     </section>
+
     <CTA />
   </main>
+
   <Footer />
 </BaseLayout>

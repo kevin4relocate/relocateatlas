@@ -3,14 +3,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTA from '../../components/CTA.astro';
-import { countries, blogPosts } from '../../data';
+import { SITE, countries, blogPosts } from '../../data';
 
 export function getStaticPaths() {
-  return countries.map((country) => ({ params: { slug: country.slug }, props: { country } }));
+  return countries.map((country) => ({
+    params: { slug: country.slug },
+    props: { country }
+  }));
 }
 
 const { country } = Astro.props;
+
 const relatedPosts = blogPosts.slice(0, 3);
+const relatedCountries = countries
+  .filter((item) => item.slug !== country.slug)
+  .slice(0, 3);
+
 const guideNav = [
   ['overview', 'Overview'],
   ['visas', 'Visas/Immigration'],
@@ -23,13 +31,90 @@ const guideNav = [
   ['healthcare', 'Healthcare & Insurance'],
   ['cities', 'Cities']
 ];
+
+const canonicalPath = `/countries/${country.slug}`;
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'Countries', item: new URL('/countries', SITE.url).toString() },
+    { '@type': 'ListItem', position: 3, name: country.name, item: new URL(canonicalPath, SITE.url).toString() }
+  ]
+};
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: `${country.name} Relocation Guide`,
+  description: `Moving to ${country.name}? Explore visas, taxes, salaries, jobs, cost of living, healthcare, cities, and sponsor-friendly relocation planning.`,
+  author: { '@type': 'Organization', name: SITE.name },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE.name,
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL('/favicon.svg', SITE.url).toString()
+    }
+  },
+  mainEntityOfPage: new URL(canonicalPath, SITE.url).toString()
+};
+
+const faqItems = [
+  [
+    `Is ${country.name} a good country for relocation?`,
+    `${country.name} may be a good relocation option if your role, salary level, documents, visa pathway, employer support, and city budget fit together. Candidates should compare visa rules, jobs, taxes, salaries, cost of living, and settlement costs before applying.`
+  ],
+  [
+    `Can foreigners find visa sponsor jobs in ${country.name}?`,
+    `Foreign candidates may find sponsor-friendly jobs in ${country.name}, especially in skilled or high-demand sectors. Sponsorship depends on the employer, role, salary, candidate profile, and current immigration rules.`
+  ],
+  [
+    `What should I check before moving to ${country.name}?`,
+    `Before moving to ${country.name}, check visa eligibility, employer sponsorship, salary, taxes, rent, healthcare, relocation costs, document requirements, and whether the role excludes candidates without local work rights.`
+  ],
+  [
+    `Which jobs are common for international candidates in ${country.name}?`,
+    `${country.name} can be relevant for roles such as ${country.demandJobs.slice(0, 5).join(', ')}. Actual demand depends on employer needs, visa rules, salary, licensing, and candidate experience.`
+  ]
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(([question, answer]) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: answer
+    }
+  }))
+};
+
+const itemListJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${country.name} relocation planning sections`,
+  description: `Relocation planning topics for ${country.name}, including visas, taxes, jobs, salaries, cost of living, companies, healthcare, and cities.`,
+  itemListElement: guideNav.map(([id, label], index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: label,
+    url: new URL(`${canonicalPath}#${id}`, SITE.url).toString()
+  }))
+};
 ---
+
 <BaseLayout
   title={`${country.name} Relocation Guide: Visas, Taxes, Salaries, Jobs and Cost of Living | Relocate Works`}
   description={`Moving to ${country.name}? Explore visa pathways, taxes, cost of living, salaries, jobs, relocation companies, healthcare, cities, and sponsor-friendly job research.`}
-  canonicalPath={`/countries/${country.slug}`}
+  canonicalPath={canonicalPath}
+  structuredData={[breadcrumbJsonLd, articleJsonLd, faqJsonLd, itemListJsonLd]}
 >
   <Header />
+
   <main>
     <section class="page-hero country-hero country-hero-compact">
       <div class="container country-hero-stack">
@@ -37,17 +122,20 @@ const guideNav = [
           <span class="eyebrow">{country.flag} Moving to {country.name}</span>
           <h1>Moving to {country.name}: visa, jobs, tax, salary, and living-cost guide.</h1>
           <p class="lead">{country.shortDescription}</p>
+
           <div class="hero-actions compact-actions">
             <a class="button" href={`/jobs/${country.slug}`}>Explore jobs</a>
             <a class="button-ghost" href={`/visas/${country.slug}`}>Visa overview</a>
             <a class="button-ghost" href="/jobs/free-preview">Free job preview</a>
           </div>
         </div>
+
         <aside class="quick-facts-compact" aria-label={`${country.name} quick facts`}>
           <div class="quick-facts-title">
             <strong>{country.name} quick facts</strong>
             <span>Useful basics before reading the full guide.</span>
           </div>
+
           <dl class="fact-list fact-list-compact">
             <div><dt>Capital</dt><dd>{country.capital}</dd></div>
             <div><dt>Currency</dt><dd>{country.currency}</dd></div>
@@ -70,8 +158,47 @@ const guideNav = [
             <span class="mini-eyebrow">Country Overview</span>
             <h2>{country.name} overview</h2>
             {country.overview.map((paragraph) => <p>{paragraph}</p>)}
+
             <div class="info-grid">
-              {country.facts.map((fact) => <div class="info-tile"><strong>Interesting fact</strong><span>{fact}</span></div>)}
+              {country.facts.map((fact) => (
+                <div class="info-tile">
+                  <strong>Interesting fact</strong>
+                  <span>{fact}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section class="content-block insight-box">
+            <span class="mini-eyebrow">Decision guide</span>
+            <h2>Is {country.name} a good fit for your relocation plan?</h2>
+            <p>
+              {country.name} can be a strong option if your role, experience level, documents,
+              salary expectations, and visa pathway fit the local market. Do not judge the country
+              by salary alone. Compare sponsor signals, job demand, rent, tax, healthcare,
+              relocation costs, and long-term settlement potential together.
+            </p>
+
+            <div class="two-column-list">
+              <div>
+                <strong>{country.name} may be a good fit if</strong>
+                <ul class="check-list">
+                  <li>Your role appears in skilled or high-demand sectors.</li>
+                  <li>You can show strong experience, documents, and role fit.</li>
+                  <li>The employer has sponsor-friendly or relocation language.</li>
+                  <li>The salary makes sense after tax, rent, and setup costs.</li>
+                </ul>
+              </div>
+
+              <div>
+                <strong>Be careful if</strong>
+                <ul>
+                  <li>The job says no sponsorship or local candidates only.</li>
+                  <li>You have not checked licensing, registration, or language rules.</li>
+                  <li>The salary is unclear or weak for the city.</li>
+                  <li>You do not have enough savings for the first 60–90 days.</li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -79,10 +206,19 @@ const guideNav = [
             <span class="mini-eyebrow">Visas & Immigration</span>
             <h2>Visas and work pathways in {country.name}</h2>
             {country.visaOverview.map((paragraph) => <p>{paragraph}</p>)}
+
             <div class="two-column-list">
-              <div><h3>Common route categories</h3><ul>{country.visaTypes.map((item) => <li>{item}</li>)}</ul></div>
-              <div class="callout-box"><strong>Relocate Works note</strong><p>We classify jobs as Confirmed, Likely, Unknown, or Not Suitable based on public sponsor signals and manual review.</p></div>
+              <div>
+                <h3>Common route categories</h3>
+                <ul>{country.visaTypes.map((item) => <li>{item}</li>)}</ul>
+              </div>
+
+              <div class="callout-box">
+                <strong>Relocate Works note</strong>
+                <p>We classify jobs as Confirmed, Likely, Unknown, or Not Suitable based on public sponsor signals and manual review.</p>
+              </div>
             </div>
+
             <a class="inline-link" href={`/visas/${country.slug}`}>Explore {country.name} visa guide →</a>
           </section>
 
@@ -90,12 +226,15 @@ const guideNav = [
             <span class="mini-eyebrow">Taxes</span>
             <h2>Taxes in {country.name}</h2>
             {country.taxOverview.map((paragraph) => <p>{paragraph}</p>)}
+
             <div class="data-strip">
               <div><strong>Tax year</strong><span>{country.taxYear}</span></div>
               <div><strong>Income tax</strong><span>{country.incomeTax}</span></div>
             </div>
+
             <h3>Types of taxes to understand</h3>
             <ul>{country.taxTypes.map((item) => <li>{item}</li>)}</ul>
+
             <a class="inline-link" href={`/taxes/${country.slug}`}>Learn about taxes in {country.name} →</a>
           </section>
 
@@ -103,12 +242,14 @@ const guideNav = [
             <span class="mini-eyebrow">Cost of Living</span>
             <h2>Cost of living in {country.name}</h2>
             {country.costOverview.map((paragraph) => <p>{paragraph}</p>)}
+
             <div class="info-grid two">
               <div class="info-tile"><strong>Most expensive cities</strong><span>{country.expensiveCities.join(', ')}</span></div>
               <div class="info-tile"><strong>More affordable options</strong><span>{country.affordableCities.join(', ')}</span></div>
               <div class="info-tile"><strong>Average rent note</strong><span>{country.averageRent}</span></div>
               <div class="info-tile"><strong>Monthly expenses</strong><span>{country.monthlyExpenses}</span></div>
             </div>
+
             <a class="inline-link" href={`/cost-of-living/${country.slug}`}>See cost of living guide →</a>
           </section>
 
@@ -116,6 +257,7 @@ const guideNav = [
             <span class="mini-eyebrow">International Companies</span>
             <h2>International companies hiring in {country.name}</h2>
             {country.companiesOverview.map((paragraph) => <p>{paragraph}</p>)}
+
             <div class="company-grid">
               {country.companies.map((company) => <div class="company-pill">{company}</div>)}
             </div>
@@ -125,6 +267,7 @@ const guideNav = [
             <span class="mini-eyebrow">Jobs</span>
             <h2>Jobs in {country.name}</h2>
             {country.jobsOverview.map((paragraph) => <p>{paragraph}</p>)}
+
             <div class="info-grid two">
               <div class="info-tile"><strong>Top sectors</strong><span>{country.sectors.join(', ')}</span></div>
               <div class="info-tile"><strong>High-demand roles</strong><span>{country.demandJobs.join(', ')}</span></div>
@@ -133,6 +276,7 @@ const guideNav = [
               <div class="info-tile"><strong>Paid time off</strong><span>{country.pto}</span></div>
               <div class="info-tile"><strong>Common benefits</strong><span>{country.benefits.join(', ')}</span></div>
             </div>
+
             <a class="inline-link" href={`/jobs/${country.slug}`}>Explore sponsor-friendly job research →</a>
           </section>
 
@@ -140,6 +284,7 @@ const guideNav = [
             <span class="mini-eyebrow">Salaries</span>
             <h2>Salaries in {country.name}</h2>
             {country.salariesOverview.map((paragraph) => <p>{paragraph}</p>)}
+
             <div class="info-grid two">
               <div class="info-tile"><strong>Average salary note</strong><span>{country.averageSalary}</span></div>
               <div class="info-tile"><strong>Minimum wage note</strong><span>{country.minimumWage}</span></div>
@@ -147,6 +292,7 @@ const guideNav = [
               <div class="info-tile"><strong>Salary cities</strong><span>{country.salaryCities.join(', ')}</span></div>
               <div class="info-tile"><strong>Pay frequency</strong><span>{country.payFrequency}</span></div>
             </div>
+
             <a class="inline-link" href={`/salaries/${country.slug}`}>Explore salary guide →</a>
           </section>
 
@@ -154,7 +300,9 @@ const guideNav = [
             <span class="mini-eyebrow">Relocation Companies</span>
             <h2>Relocation companies in {country.name}</h2>
             {country.relocationOverview.map((paragraph) => <p>{paragraph}</p>)}
+
             <ul>{country.relocationCompanies.map((item) => <li>{item}</li>)}</ul>
+
             <a class="inline-link" href={`/relocation-companies/${country.slug}`}>View relocation companies guide →</a>
           </section>
 
@@ -162,6 +310,7 @@ const guideNav = [
             <span class="mini-eyebrow">Healthcare & Insurance</span>
             <h2>Healthcare and insurance in {country.name}</h2>
             <p>{country.healthcareOverview}</p>
+
             <div class="info-grid two">
               <div class="info-tile"><strong>Insurance types</strong><span>{country.healthInsuranceTypes.join(', ')}</span></div>
               <div class="info-tile"><strong>Private insurance cost</strong><span>{country.privateHealthCost}</span></div>
@@ -173,21 +322,69 @@ const guideNav = [
             <span class="mini-eyebrow">Cities</span>
             <h2>Best cities for relocation in {country.name}</h2>
             <p>{country.citiesOverview}</p>
+
             <div class="city-grid">
-              {country.popularCities.map((city) => <div class="city-card"><strong>{city}</strong><span>Compare jobs, rent, salary, commute, and long-term settlement fit.</span></div>)}
+              {country.popularCities.map((city) => (
+                <div class="city-card">
+                  <strong>{city}</strong>
+                  <span>Compare jobs, rent, salary, commute, and long-term settlement fit.</span>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section class="content-block">
+            <span class="mini-eyebrow">People also ask</span>
+            <h2>Common questions about moving to {country.name}</h2>
+
+            <div class="faq-list">
+              {faqItems.map(([question, answer]) => (
+                <details class="faq-item">
+                  <summary>{question}</summary>
+                  <p>{answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <section class="content-block">
+            <span class="mini-eyebrow">Related country guides</span>
+            <h2>Compare {country.name} with other countries</h2>
+
+            <div class="grid-3">
+              {relatedCountries.map((item) => (
+                <a class="country-card" href={`/countries/${item.slug}`}>
+                  <div class="country-card-glow" aria-hidden="true"></div>
+
+                  <div class="country-top">
+                    <span class="flag" aria-hidden="true">{item.flag}</span>
+                    <div>
+                      <div class="country-label">{item.region}</div>
+                      <h3>{item.name}</h3>
+                    </div>
+                  </div>
+
+                  <p class="country-visa">{item.primaryVisa}</p>
+                  <p>{item.shortDescription}</p>
+                  <span class="country-link">Compare guide →</span>
+                </a>
+              ))}
             </div>
           </section>
         </article>
       </div>
     </section>
 
-
     <section class="section related-section">
       <div class="container">
         <div class="section-heading">
-          <div><span class="mini-eyebrow">Related guides</span><h2>Plan your move with practical next steps</h2></div>
+          <div>
+            <span class="mini-eyebrow">Related guides</span>
+            <h2>Plan your move with practical next steps</h2>
+          </div>
           <p>Use these guides together with the country overview to reduce wasted applications and avoid weak sponsorship signals.</p>
         </div>
+
         <div class="grid-3">
           {relatedPosts.map((post) => (
             <a class="article-card" href={`/blog/${post.slug}`}>
@@ -200,7 +397,9 @@ const guideNav = [
         </div>
       </div>
     </section>
+
     <CTA />
   </main>
+
   <Footer />
 </BaseLayout>

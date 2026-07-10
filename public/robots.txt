@@ -1,4 +1,8 @@
 User-agent: *
+
 Allow: /
+
+Disallow: /api/
+Disallow: /_astro/
 
 Sitemap: https://relocateworks.com/sitemap-index.xml

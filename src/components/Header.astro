@@ -5,44 +5,120 @@ const launchCountries = countries.filter((country) => country.priority === 'Laun
 const nextCountries = countries.filter((country) => country.priority === 'Next');
 
 const resourceLinks = [
-  { href: '/visas', label: 'Visa Guides', description: 'Work visas and sponsorship pathways' },
-  { href: '/taxes', label: 'Tax Guides', description: 'Income tax, tax year, payroll basics' },
-  { href: '/salaries', label: 'Salary Guides', description: 'Salary signals and pay context' },
-  { href: '/cost-of-living', label: 'Cost of Living', description: 'Rent, groceries, transport, insurance' },
-  { href: '/relocation-companies', label: 'Relocation Companies', description: 'Moving, settling-in, and relocation support' }
+  {
+    href: '/visas',
+    label: 'Visa Guides',
+    description: 'Work visas and sponsorship pathways'
+  },
+  {
+    href: '/jobs',
+    label: 'Job Guides',
+    description: 'Sponsor-friendly job markets by country'
+  },
+  {
+    href: '/salaries',
+    label: 'Salary Guides',
+    description: 'Salary signals and pay context'
+  },
+  {
+    href: '/taxes',
+    label: 'Tax Guides',
+    description: 'Income tax, tax year, payroll basics'
+  },
+  {
+    href: '/cost-of-living',
+    label: 'Cost of Living',
+    description: 'Rent, groceries, transport, insurance'
+  },
+  {
+    href: '/relocation-companies',
+    label: 'Relocation Companies',
+    description: 'Moving, settling-in, and relocation support'
+  }
+];
+
+const productLinks = [
+  {
+    href: '/visa-sponsor-jobs',
+    label: 'Visa Sponsor Jobs',
+    description: 'Weekly sponsor-friendly job intelligence'
+  },
+  {
+    href: '/jobs/free-preview',
+    label: 'Free Job Preview',
+    description: 'See sample job cards before subscribing'
+  },
+  {
+    href: '/pricing',
+    label: 'Pricing',
+    description: '$9/month or $49/year founding access'
+  }
 ];
 ---
 <header class="site-header">
   <div class="container header-inner header-inner-clean">
     <a class="logo" href="/" aria-label="Relocate Works home">
-      <span class="logo-mark" aria-hidden="true">RW</span>
+      <img
+        class="logo-mark"
+        src="/favicon.svg"
+        width="40"
+        height="40"
+        alt=""
+        aria-hidden="true"
+      />
       <span>Relocate Works</span>
     </a>
 
     <nav class="nav nav-wide nav-clean" aria-label="Main navigation">
       <div class="nav-dropdown">
-        <a href="/countries" class="nav-dropdown-link" aria-haspopup="true" aria-expanded="false">Countries</a>
+        <a
+          href="/countries"
+          class="nav-dropdown-link"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Countries
+        </a>
+
         <div class="nav-dropdown-panel country-dropdown-panel" aria-label="Country shortcuts">
           <div class="nav-dropdown-grid country-dropdown-grid">
             <div>
               <strong>Launch countries</strong>
               {launchCountries.map((country) => (
-                <a href={`/countries/${country.slug}`}><span>{country.flag}</span>{country.name}</a>
+                <a href={`/countries/${country.slug}`}>
+                  <span aria-hidden="true">{country.flag}</span>
+                  {country.name}
+                </a>
               ))}
             </div>
+
             <div>
               <strong>More countries</strong>
               {nextCountries.map((country) => (
-                <a href={`/countries/${country.slug}`}><span>{country.flag}</span>{country.name}</a>
+                <a href={`/countries/${country.slug}`}>
+                  <span aria-hidden="true">{country.flag}</span>
+                  {country.name}
+                </a>
               ))}
             </div>
           </div>
+
           <a class="nav-dropdown-footer" href="/countries">Compare all countries →</a>
         </div>
       </div>
 
+      <a href="/visa-sponsor-jobs">Visa Sponsor Jobs</a>
+
       <div class="nav-dropdown nav-dropdown-industries">
-        <a href="/industries" class="nav-dropdown-link" aria-haspopup="true" aria-expanded="false">Industries</a>
+        <a
+          href="/industries"
+          class="nav-dropdown-link"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Industries
+        </a>
+
         <div class="nav-dropdown-panel industries-dropdown-panel" aria-label="Industry shortcuts">
           <div class="industries-dropdown-list">
             {industries.map((industry) => (
@@ -55,17 +131,48 @@ const resourceLinks = [
               </a>
             ))}
           </div>
+
           <a class="nav-dropdown-footer" href="/industries">Explore all industries →</a>
         </div>
       </div>
 
-      <a href="/jobs">Jobs</a>
-
       <div class="nav-dropdown nav-dropdown-resources">
-        <a href="/visas" class="nav-dropdown-link" aria-haspopup="true" aria-expanded="false">Resources</a>
-        <div class="nav-dropdown-panel resources-dropdown-panel" aria-label="Relocation resources">
+        <a
+          href="/visas"
+          class="nav-dropdown-link"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Guides
+        </a>
+
+        <div class="nav-dropdown-panel resources-dropdown-panel" aria-label="Relocation guides">
           <div class="resources-dropdown-list">
             {resourceLinks.map((item) => (
+              <a href={item.href}>
+                <strong>{item.label}</strong>
+                <small>{item.description}</small>
+              </a>
+            ))}
+          </div>
+
+          <a class="nav-dropdown-footer" href="/blog">Read latest guides →</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown nav-dropdown-resources">
+        <a
+          href="/pricing"
+          class="nav-dropdown-link"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Pricing
+        </a>
+
+        <div class="nav-dropdown-panel resources-dropdown-panel" aria-label="Relocate Works subscription">
+          <div class="resources-dropdown-list">
+            {productLinks.map((item) => (
               <a href={item.href}>
                 <strong>{item.label}</strong>
                 <small>{item.description}</small>
@@ -75,13 +182,26 @@ const resourceLinks = [
         </div>
       </div>
 
-      <a href="/pricing">Pricing</a>
-      <a href="/blog">Guides</a>
+      <a href="/blog">Blog</a>
     </nav>
 
     <div class="header-actions header-actions-clean">
-      <a class="button button-small" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe</a>
-      <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-mobile-menu-toggle>
+      <a
+        class="button button-small"
+        href={SITE.substackUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Subscribe
+      </a>
+
+      <button
+        class="mobile-menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-mobile-menu-toggle
+      >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -95,14 +215,14 @@ const resourceLinks = [
       <div class="mobile-menu-section">
         <strong>Main</strong>
         <a href="/countries">Countries</a>
+        <a href="/visa-sponsor-jobs">Visa Sponsor Jobs</a>
         <a href="/industries">Industries</a>
-        <a href="/jobs">Jobs</a>
         <a href="/pricing">Pricing</a>
-        <a href="/blog">Guides</a>
+        <a href="/blog">Blog</a>
       </div>
 
       <div class="mobile-menu-section">
-        <strong>Resources</strong>
+        <strong>Guides</strong>
         <div class="mobile-country-grid mobile-resource-grid">
           {resourceLinks.map((item) => <a href={item.href}>{item.label}</a>)}
         </div>
@@ -112,7 +232,9 @@ const resourceLinks = [
         <strong>Countries</strong>
         <div class="mobile-country-grid">
           {countries.map((country) => (
-            <a href={`/countries/${country.slug}`}>{country.flag} {country.name}</a>
+            <a href={`/countries/${country.slug}`}>
+              {country.flag} {country.name}
+            </a>
           ))}
         </div>
       </div>
@@ -121,13 +243,29 @@ const resourceLinks = [
         <strong>Industries</strong>
         <div class="mobile-country-grid mobile-industry-grid">
           {industries.map((industry) => (
-            <a href={`/industries/${industry.slug}`}>{industry.icon} {industry.shortName}</a>
+            <a href={`/industries/${industry.slug}`}>
+              {industry.icon} {industry.shortName}
+            </a>
           ))}
         </div>
       </div>
 
+      <div class="mobile-menu-section">
+        <strong>Subscription</strong>
+        <div class="mobile-country-grid mobile-resource-grid">
+          {productLinks.map((item) => <a href={item.href}>{item.label}</a>)}
+        </div>
+      </div>
+
       <div class="mobile-menu-actions">
-        <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe on Substack</a>
+        <a
+          class="button"
+          href={SITE.substackUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Subscribe on Substack
+        </a>
       </div>
     </div>
   </div>

@@ -1,19 +1,25 @@
 ---
-import { SITE, industries } from '../data';
+import { SITE, countries, industries, blogPosts } from '../data';
+
 const year = new Date().getFullYear();
+
+const popularCountries = countries.filter((country) => country.priority === 'Launch').slice(0, 6);
+const popularIndustries = industries.slice(0, 6);
+const latestGuides = blogPosts.slice(0, 4);
 
 const exploreLinks = [
   { href: '/countries', label: 'Countries' },
+  { href: '/visa-sponsor-jobs', label: 'Visa Sponsor Jobs' },
   { href: '/industries', label: 'Industries' },
-  { href: '/jobs', label: 'Jobs' },
-  { href: '/blog', label: 'Guides' },
+  { href: '/jobs/free-preview', label: 'Free Job Preview' },
   { href: '/pricing', label: 'Pricing' }
 ];
 
 const resourceLinks = [
-  { href: '/visas', label: 'Visas' },
-  { href: '/taxes', label: 'Taxes' },
-  { href: '/salaries', label: 'Salaries' },
+  { href: '/visas', label: 'Visa Guides' },
+  { href: '/jobs', label: 'Job Guides' },
+  { href: '/salaries', label: 'Salary Guides' },
+  { href: '/taxes', label: 'Tax Guides' },
   { href: '/cost-of-living', label: 'Cost of Living' },
   { href: '/relocation-companies', label: 'Relocation Companies' }
 ];
@@ -30,17 +36,28 @@ const companyLinks = [
   <div class="container footer-clean-grid">
     <div class="footer-clean-brand">
       <a class="logo" href="/" aria-label="Relocate Works home">
-        <span class="logo-mark" aria-hidden="true">RW</span>
+        <img
+          class="logo-mark"
+          src="/favicon.svg"
+          width="40"
+          height="40"
+          alt=""
+          aria-hidden="true"
+        />
         <span>Relocate Works</span>
       </a>
+
       <p>
-        Visa sponsor job intelligence, country guides, industry requirements, salary context, tax basics, and relocation planning for global candidates.
+        Visa sponsor job intelligence, country guides, industry requirements, salary context,
+        tax basics, and relocation planning for global candidates.
       </p>
+
       <div class="footer-mini-badges" aria-label="Relocate Works principles">
         <span>AI-assisted</span>
         <span>Human-reviewed</span>
         <span>Research only</span>
       </div>
+
       <div class="footer-social-compact" aria-label="Relocate Works social links">
         <a href={SITE.linkedinUrl} target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href={SITE.facebookUrl} target="_blank" rel="noopener noreferrer">Facebook</a>
@@ -63,9 +80,11 @@ const companyLinks = [
     </div>
 
     <div class="footer-links-group">
-      <h3>Industries</h3>
+      <h3>Popular Countries</h3>
       <div class="footer-links">
-        {industries.slice(0, 6).map((industry) => <a href={`/industries/${industry.slug}`}>{industry.icon} {industry.shortName}</a>)}
+        {popularCountries.map((country) => (
+          <a href={`/countries/${country.slug}`}>{country.flag} {country.name}</a>
+        ))}
       </div>
     </div>
 
@@ -77,12 +96,70 @@ const companyLinks = [
     </div>
   </div>
 
+  <div class="container footer-clean-grid footer-clean-grid-secondary">
+    <div class="footer-links-group">
+      <h3>Popular Industries</h3>
+      <div class="footer-links">
+        {popularIndustries.map((industry) => (
+          <a href={`/industries/${industry.slug}`}>{industry.icon} {industry.shortName}</a>
+        ))}
+      </div>
+    </div>
+
+    <div class="footer-links-group">
+      <h3>Latest Guides</h3>
+      <div class="footer-links">
+        {latestGuides.map((post) => (
+          <a href={`/blog/${post.slug}`}>{post.title}</a>
+        ))}
+      </div>
+    </div>
+
+    <div class="footer-links-group">
+      <h3>Country Job Guides</h3>
+      <div class="footer-links">
+        {popularCountries.slice(0, 5).map((country) => (
+          <a href={`/jobs/${country.slug}`}>{country.flag} Jobs in {country.name}</a>
+        ))}
+      </div>
+    </div>
+
+    <div class="footer-links-group">
+      <h3>Country Visa Guides</h3>
+      <div class="footer-links">
+        {popularCountries.slice(0, 5).map((country) => (
+          <a href={`/visas/${country.slug}`}>{country.flag} Visas in {country.name}</a>
+        ))}
+      </div>
+    </div>
+
+    <div class="footer-links-group">
+      <h3>Money Guides</h3>
+      <div class="footer-links">
+        <a href="/salaries">Salary Guides</a>
+        <a href="/taxes">Tax Guides</a>
+        <a href="/cost-of-living">Cost of Living Guides</a>
+        {popularCountries.slice(0, 2).map((country) => (
+          <a href={`/salaries/${country.slug}`}>{country.name} salary guide</a>
+        ))}
+      </div>
+    </div>
+  </div>
+
   <div class="container footer-cta-row">
     <div>
       <strong>Get weekly sponsor-friendly jobs.</strong>
       <span>$9/month or $49/year founding price for early members.</span>
     </div>
-    <a class="button button-small" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe</a>
+
+    <a
+      class="button button-small"
+      href={SITE.substackUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Subscribe
+    </a>
   </div>
 
   <div class="container footer-bottom footer-bottom-clean">
