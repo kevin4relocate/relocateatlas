@@ -1,5 +1,35 @@
-<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RW favicon">
-  <rect width="64" height="64" rx="16" fill="#0F172A"/>
-  <text x="50%" y="53%" text-anchor="middle" dominant-baseline="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="25" font-weight="800" letter-spacing="-1.5" fill="#FFFFFF">RA</text>
-  <circle cx="50" cy="14" r="4" fill="#14B8A6"/>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 40 40">
+
+    <defs>
+        <linearGradient id="logoGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+            <stop offset="0%" stop-color="#2DD4BF"/>
+            <stop offset="100%" stop-color="#2563EB"/>
+        </linearGradient>
+    </defs>
+
+    <rect
+        width="40"
+        height="40"
+        rx="14"
+        fill="url(#logoGradient)"
+    />
+
+    <text
+        x="20"
+        y="21"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        fill="#fff"
+        font-family="Inter, Arial, Helvetica, sans-serif"
+        font-size="18"
+        font-weight="900"
+        letter-spacing="-1">
+        RW
+    </text>
+
 </svg>
