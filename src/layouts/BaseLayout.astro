@@ -138,7 +138,7 @@ const jsonLdGraph = [
     </div>
 
     <script is:inline>
-      (() => {
+      const initPage = () => {
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         const headerOffset = () => {
@@ -247,17 +247,13 @@ const jsonLdGraph = [
         if (mobileButton && mobileMenu) {
           let savedScrollY = 0;
 
-          const lockBodyScroll = () => {
-            savedScrollY = window.scrollY || document.documentElement.scrollTop || 0;
-            document.body.style.top = `-${savedScrollY}px`;
-            document.body.classList.add('mobile-menu-open');
-          };
+const lockBodyScroll = () => {
+  document.body.classList.add('mobile-menu-open');
+};
 
-          const unlockBodyScroll = () => {
-            document.body.classList.remove('mobile-menu-open');
-            document.body.style.top = '';
-            window.scrollTo(0, savedScrollY);
-          };
+const unlockBodyScroll = () => {
+  document.body.classList.remove('mobile-menu-open');
+};
 
           const setOpen = (isOpen) => {
             const currentlyOpen = mobileMenu.classList.contains('is-open');
@@ -300,7 +296,11 @@ const jsonLdGraph = [
             cookieBanner.classList.remove('is-visible');
           });
         }
-      })();
+      };
+
+initPage();
+
+document.addEventListener('astro:page-load', initPage);
     </script>
   </body>
 </html>
