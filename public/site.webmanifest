@@ -1,9 +1,9 @@
 {
   "name": "Relocate Works",
   "short_name": "Relocate Works",
-  "description": "Weekly visa sponsor jobs and relocation guides for international candidates.",
+  "description": "Independent country, visa, salary, tax and relocation planning guides for people moving abroad.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F8FAFC",
-  "theme_color": "#102A43"
+  "background_color": "#F4F5EE",
+  "theme_color": "#12352F"
 }
