@@ -91,7 +91,7 @@ const countryDirectory = pages.get(join(root, 'countries', 'index.html')) || '';
 const guideDirectory = pages.get(join(root, 'guides', 'index.html')) || '';
 if (!guideDirectory.includes('THE RELOCATION LIBRARY') || !guideDirectory.includes('rw-topic-grid')) errors.push('Redesigned relocation guides directory missing');
 if (!countryDirectory.includes('data-country-search') || !countryDirectory.includes('data-country-filters')) errors.push('Destination search or region filter missing');
-if ((countryDirectory.match(/data-country-result=/g) || []).length < 10) errors.push('Country directory does not expose all 10 filterable guide cards');
+if ((countryDirectory.match(/<div\b[^>]*\bdata-country-result(?=[\s=>])/g) || []).length < 10) errors.push('Country directory does not expose all 10 filterable guide cards');
 if (!home.includes('action="/countries"') || !home.includes('name="q"')) errors.push('Homepage country search is not wired to the directory');
 if (!home.includes('rw-newsletter-section') || !home.includes('rw-hero')) errors.push('Redesigned homepage sections missing');
 for (const slug of ['australia','new-zealand','united-kingdom','germany','canada','singapore','ireland','netherlands','denmark','japan']) {
