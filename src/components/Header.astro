@@ -1,271 +1,92 @@
 ---
-import { SITE, countries, industries } from '../data';
-
-const launchCountries = countries.filter((country) => country.priority === 'Launch');
-const nextCountries = countries.filter((country) => country.priority === 'Next');
-
-const resourceLinks = [
-  {
-    href: '/visas',
-    label: 'Visa Guides',
-    description: 'Work visas and sponsorship pathways'
-  },
-  {
-    href: '/jobs',
-    label: 'Job Guides',
-    description: 'Country-specific job-market information'
-  },
-  {
-    href: '/salaries',
-    label: 'Salary Guides',
-    description: 'Salary signals and pay context'
-  },
-  {
-    href: '/taxes',
-    label: 'Tax Guides',
-    description: 'Income tax, tax year, payroll basics'
-  },
-  {
-    href: '/cost-of-living',
-    label: 'Cost of Living',
-    description: 'Rent, groceries, transport, insurance'
-  },
-  {
-    href: '/relocation-companies',
-    label: 'Relocation Companies',
-    description: 'Moving, settling-in, and relocation support'
-  }
-];
-
-const productLinks = [
-  {
-    href: '/visa-sponsor-jobs',
-    label: 'Visa Sponsor Jobs',
-    description: 'Weekly sponsor-friendly job intelligence'
-  },
-  {
-    href: '/jobs/free-preview',
-    label: 'Weekly Newsletter',
-    description: 'Learn how our Substack job roundup works'
-  },
-  {
-    href: '/pricing',
-    label: 'Pricing',
-    description: '$9/month or $49/year founding access'
-  }
+import { SITE, countries } from '../data';
+const featured = countries.filter((country) => country.priority === 'Launch');
+const more = countries.filter((country) => country.priority !== 'Launch');
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const navItems = [
+  { href: '/guides', label: 'Relocation guides', active: path === '/guides' || ['/visas','/taxes','/salaries','/cost-of-living','/relocation-companies','/jobs'].some((p) => path === p || path.startsWith(p + '/')) && path !== '/jobs/free-preview' },
+  { href: '/industries', label: 'Industries', active: path.startsWith('/industries') },
+  { href: '/jobs/free-preview', label: 'Weekly jobs', active: path === '/jobs/free-preview' || path === '/visa-sponsor-jobs' }
 ];
 ---
-<header class="site-header">
-  <div class="container header-inner header-inner-clean">
-    <a class="logo" href="/" aria-label="Relocate Works home">
-      <img
-        class="logo-mark"
-        src="/favicon.svg"
-        width="40"
-        height="40"
-        alt=""
-        aria-hidden="true"
-      />
-      <span>Relocate Works</span>
+<header class="site-header rw-header">
+  <div class="container rw-header-inner">
+    <a class="rw-brand" href="/" aria-label="Relocate Works home">
+      <img src="/favicon.svg" width="42" height="42" alt="" aria-hidden="true" />
+      <span class="rw-brand-wordmark">Relocate <strong>Works.</strong></span>
     </a>
-
-    <nav class="nav nav-wide nav-clean" aria-label="Main navigation">
-      <div class="nav-dropdown">
-        <a
-          href="/countries"
-          class="nav-dropdown-link"
-          aria-haspopup="true"
-        >
-          Countries
-        </a>
-
-        <div class="nav-dropdown-panel country-dropdown-panel" aria-label="Country shortcuts">
-          <div class="nav-dropdown-grid country-dropdown-grid">
-            <div>
-              <strong>Launch countries</strong>
-              {launchCountries.map((country) => (
-                <a href={`/countries/${country.slug}`}>
-                  <span aria-hidden="true">{country.flag}</span>
-                  {country.name}
-                </a>
-              ))}
+    <nav class="rw-desktop-nav" aria-label="Main navigation">
+      <details class="rw-nav-details" data-rw-nav-details>
+        <summary class:list={['rw-nav-link', { 'rw-current': path === '/countries' || path.startsWith('/countries/') }]} aria-label="Open country destinations menu">
+          Countries <span class="rw-chevron" aria-hidden="true">⌄</span>
+        </summary>
+        <div class="rw-mega-menu">
+          <div class="rw-menu-head"><strong>Explore destinations</strong><span>Start with the country that matters to you.</span></div>
+          <div class="rw-menu-cols">
+            <div><span class="rw-menu-label">FEATURED DESTINATIONS</span>
+              {featured.map((country) => <a href={'/countries/' + country.slug}><span aria-hidden="true">{country.flag}</span>{country.name}</a>)}
             </div>
-
-            <div>
-              <strong>More countries</strong>
-              {nextCountries.map((country) => (
-                <a href={`/countries/${country.slug}`}>
-                  <span aria-hidden="true">{country.flag}</span>
-                  {country.name}
-                </a>
-              ))}
+            <div><span class="rw-menu-label">MORE DESTINATIONS</span>
+              {more.map((country) => <a href={'/countries/' + country.slug}><span aria-hidden="true">{country.flag}</span>{country.name}</a>)}
             </div>
           </div>
-
-          <a class="nav-dropdown-footer" href="/countries">Compare all countries →</a>
+          <a class="rw-menu-footer" href="/countries">Browse all country guides <span aria-hidden="true">→</span></a>
         </div>
-      </div>
-
-      <a href="/visa-sponsor-jobs">Visa Sponsor Jobs</a>
-
-      <div class="nav-dropdown nav-dropdown-industries">
-        <a
-          href="/industries"
-          class="nav-dropdown-link"
-          aria-haspopup="true"
-        >
-          Industries
-        </a>
-
-        <div class="nav-dropdown-panel industries-dropdown-panel" aria-label="Industry shortcuts">
-          <div class="industries-dropdown-list">
-            {industries.map((industry) => (
-              <a href={`/industries/${industry.slug}`}>
-                <span class="dropdown-icon" aria-hidden="true">{industry.icon}</span>
-                <span>
-                  <strong>{industry.shortName}</strong>
-                  <small>{industry.commonRoles.slice(0, 3).join(', ')}</small>
-                </span>
-              </a>
-            ))}
-          </div>
-
-          <a class="nav-dropdown-footer" href="/industries">Explore all industries →</a>
-        </div>
-      </div>
-
-      <div class="nav-dropdown nav-dropdown-resources">
-        <a
-          href="/visas"
-          class="nav-dropdown-link"
-          aria-haspopup="true"
-        >
-          Guides
-        </a>
-
-        <div class="nav-dropdown-panel resources-dropdown-panel" aria-label="Relocation guides">
-          <div class="resources-dropdown-list">
-            {resourceLinks.map((item) => (
-              <a href={item.href}>
-                <strong>{item.label}</strong>
-                <small>{item.description}</small>
-              </a>
-            ))}
-          </div>
-
-          <a class="nav-dropdown-footer" href="/blog">Read latest guides →</a>
-        </div>
-      </div>
-
-      <div class="nav-dropdown nav-dropdown-resources">
-        <a
-          href="/pricing"
-          class="nav-dropdown-link"
-          aria-haspopup="true"
-        >
-          Pricing
-        </a>
-
-        <div class="nav-dropdown-panel resources-dropdown-panel" aria-label="Relocate Works subscription">
-          <div class="resources-dropdown-list">
-            {productLinks.map((item) => (
-              <a href={item.href}>
-                <strong>{item.label}</strong>
-                <small>{item.description}</small>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <a href="/blog">Blog</a>
+      </details>
+      {navItems.map((item) => <a class:list={['rw-nav-link', { 'rw-current': item.active }]} href={item.href} aria-current={item.active ? 'page' : undefined}>{item.label}</a>)}
     </nav>
-
-    <div class="header-actions header-actions-clean">
-      <a
-        class="button button-small"
-        href={SITE.substackUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Subscribe
-      </a>
-
-      <button
-        class="mobile-menu-button"
-        type="button"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        data-mobile-menu-toggle
-        aria-label="Open menu"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span class="sr-only">Open menu</span>
+    <div class="rw-header-actions">
+      <a class="rw-header-cta" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Read the newsletter <span aria-hidden="true">↗</span></a>
+      <button class="mobile-menu-button rw-menu-toggle" type="button" data-mobile-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
     </div>
   </div>
-
-  
 </header>
 
-<div id="mobile-menu" class="mobile-menu" data-mobile-menu>
-    <div class="container mobile-menu-inner mobile-menu-clean">
-      <div class="mobile-menu-section">
-        <strong>Main</strong>
-        <a href="/countries">Countries</a>
-        <a href="/visa-sponsor-jobs">Visa Sponsor Jobs</a>
-        <a href="/industries">Industries</a>
-        <a href="/pricing">Pricing</a>
-        <a href="/blog">Blog</a>
-      </div>
-
-      <div class="mobile-menu-section">
-        <strong>Guides</strong>
-        <div class="mobile-country-grid mobile-resource-grid">
-          {resourceLinks.map((item) => <a href={item.href}>{item.label}</a>)}
-        </div>
-      </div>
-
-      <div class="mobile-menu-section">
-        <strong>Countries</strong>
-        <div class="mobile-country-grid">
-          {countries.map((country) => (
-            <a href={`/countries/${country.slug}`}>
-              {country.flag} {country.name}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div class="mobile-menu-section">
-        <strong>Industries</strong>
-        <div class="mobile-country-grid mobile-industry-grid">
-          {industries.map((industry) => (
-            <a href={`/industries/${industry.slug}`}>
-              {industry.icon} {industry.shortName}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div class="mobile-menu-section">
-        <strong>Subscription</strong>
-        <div class="mobile-country-grid mobile-resource-grid">
-          {productLinks.map((item) => <a href={item.href}>{item.label}</a>)}
-        </div>
-      </div>
-
-      <div class="mobile-menu-actions">
-        <a
-          class="button"
-          href={SITE.substackUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Subscribe on Substack
-        </a>
+<div id="mobile-menu" class="mobile-menu rw-mobile-menu" data-mobile-menu>
+  <div class="container rw-mobile-inner">
+    <div class="rw-mobile-top">
+      <span>EXPLORE RELOCATE WORKS</span>
+      <button type="button" class="rw-mobile-close" data-rw-menu-close aria-label="Close menu">✕</button>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <a class="rw-mobile-primary" href="/countries">All countries <span aria-hidden="true">↗</span></a>
+      <a class="rw-mobile-primary" href="/guides">Relocation guides <span aria-hidden="true">↗</span></a>
+      <a class="rw-mobile-primary" href="/industries">Industries <span aria-hidden="true">↗</span></a>
+      <a class="rw-mobile-primary" href="/jobs/free-preview">Weekly jobs <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="rw-mobile-group">
+      <strong>COUNTRIES</strong>
+      <div class="rw-mobile-country-grid">
+        {countries.map((country) => <a href={'/countries/' + country.slug}><span aria-hidden="true">{country.flag}</span>{country.name}</a>)}
       </div>
     </div>
+    <div class="rw-mobile-group">
+      <strong>QUICK LINKS</strong>
+      <div class="rw-mobile-country-grid">
+        <a href="/visas">Visas</a><a href="/salaries">Salaries</a><a href="/taxes">Taxes</a><a href="/cost-of-living">Living costs</a>
+      </div>
+    </div>
+    <a class="rw-btn rw-btn-primary rw-mobile-substack" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Read weekly jobs on Substack <span aria-hidden="true">↗</span></a>
   </div>
+</div>
+
+<script>
+  const initCountryMenu = () => {
+    const dropdown = document.querySelector<HTMLDetailsElement>('[data-rw-nav-details]');
+    if (!dropdown || dropdown.dataset.ready === 'true') return;
+    dropdown.dataset.ready = 'true';
+    document.addEventListener('click', (event) => {
+      if (!dropdown.contains(event.target as Node)) dropdown.open = false;
+    });
+    dropdown.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        dropdown.open = false;
+        dropdown.querySelector('summary')?.focus();
+      }
+    });
+  };
+  initCountryMenu();
+  document.addEventListener('astro:page-load', initCountryMenu);
+</script>
