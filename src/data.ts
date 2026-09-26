@@ -1356,7 +1356,7 @@ export const countries = [
     "region": "Europe",
     "primaryVisa": "Positive List / Pay Limit Scheme",
     "priority": "Next",
-    "shortDescription": "A quality-of-life destination with opportunities in shortage occupations, engineering, healthcare, technology, and science.",
+    "shortDescription": "A northern European market for specialist employment, with Positive List and Pay Limit routes, Danish workplace standards and relocation administration to understand.",
     "popularRoles": [
       "Software Engineer",
       "Mechanical Engineer",
@@ -1372,137 +1372,135 @@ export const countries = [
     ],
     "capital": "Copenhagen",
     "currency": "Danish Krone (DKK)",
-    "languages": "English may be used in some international roles; local language ability can significantly expand options.",
+    "languages": "Danish is the primary public language; English is used by some international technology, science and business teams.",
     "overview": [
-      "Denmark is a smaller but attractive market for candidates who value quality of life, stable institutions, and highly skilled work. It can be relevant for technology, engineering, healthcare, life sciences, renewable energy, and research roles.",
-      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
-      "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
+      "Denmark has internationally oriented employers in renewable energy, pharmaceutical manufacturing, engineering, maritime logistics and enterprise technology. Copenhagen hosts many headquarters functions, while Aarhus, Odense and Aalborg offer distinctive university, robotics and industrial networks.",
+      "Denmark's Positive List applies to occupations explicitly named on the current list, with job-specific education or authorisation requirements. The Pay Limit Scheme instead examines a qualifying salary and other employment conditions. Neither a general skills shortage claim nor a high salary from an unrelated market proves eligibility.",
+      "Moving involves finding a rental property, arranging a CPR number and tax card when eligible, and determining when local healthcare coverage starts. Prospective long-term residents should study Denmark's separate permanent-residence rules, which include substantial additional conditions."
     ],
     "facts": [
-      "Important market for skilled candidates",
-      "Employer and role fit matter more than raw job volume",
-      "Language expectations should be checked carefully"
+      "Positive List eligibility must match the current occupation, education and any regional restriction.",
+      "Pay Limit Scheme remuneration thresholds are revised; confirm the relevant application-date amount.",
+      "Permanent residence is separate from a work permit and can require language, employment and integration conditions."
     ],
     "visaOverview": [
-      "Denmark has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "The Positive List for People with a Higher Education allows qualifying foreign professionals with an offer in an officially listed shortage occupation to apply for a residence and work permit; both the correct occupation and a relevant qualifying education matter.",
+      "The Pay Limit Scheme focuses on a qualifying high-salary offer. It does not require a specified academic degree but the offered salary and the rest of the contract must meet SIRI's conditions. Schemes, remuneration floors and processing requirements should be rechecked before filing.",
+      "Danish work authorisation is normally tied to the specific role; changing employment may require a new application. Permanent residence follows a different process and additional employment, language and integration tests."
     ],
     "visaTypes": [
-      "Positive List / Pay Limit Scheme",
-      "Specialist or skilled worker routes where applicable",
-      "Graduate or local-study routes where applicable",
-      "Intra-company transfer or multinational routes where applicable"
+      "Positive List for People with a Higher Education",
+      "Positive List for Skilled Work if occupation and experience align",
+      "Pay Limit Scheme where the offered pay reaches the current threshold",
+      "Permanent residence: separate application with residence and integration conditions"
     ],
     "taxOverview": [
-      "Denmark has tax and social contribution rules that affect take-home salary. Newcomers should understand tax residency, payroll deductions, and any mandatory contributions before judging an offer.",
-      "Salary should always be evaluated together with rent, transport, health insurance, and relocation costs."
+      "Danish employment income can involve state, municipal and labour-market taxes. Tax residence and the tax card influence withholding; some internationally recruited workers may qualify for specific schemes, but those cannot be assumed.",
+      "Ask for a locally calculated net-pay estimate that accounts for pension contributions and the municipality of residence. Employer salary packages should also be checked against Danish standards and any applicable collective agreement."
     ],
     "taxTypes": [
-      "Income tax",
-      "Social security or mandatory contributions",
-      "Value-added or goods/services tax",
-      "Local or municipal taxes where applicable"
+      "State and municipal income taxes",
+      "Labour market contributions",
+      "Employee and employer pension contributions",
+      "Value Added Tax on consumption"
     ],
-    "taxYear": "Usually calendar year or country-specific fiscal year.",
-    "incomeTax": "Progressive or structured tax rules depending on residency and income.",
+    "taxYear": "Calendar year; the Danish tax agency issues a tax assessment and tax card.",
+    "incomeTax": "State, municipal and labour-market taxes apply according to circumstances; confirm with Skattestyrelsen.",
     "costOverview": [
-      "Cost of living in Denmark varies by city and lifestyle. Capital or major business hubs are usually more expensive, while secondary cities can offer a better salary-to-cost balance.",
-      "Candidates should plan for rent deposits, temporary accommodation, transport, phone/internet, health insurance, and first-month setup."
+      "Copenhagen housing costs depend heavily on district and transit access. Aarhus, Odense and Aalborg have different rental and commuting conditions; compare your actual worksite and public transport rather than relying on nationwide averages.",
+      "Budget for deposit and prepaid rent where contractually and legally applicable, apartment furnishings, local transport, winter expenses and family childcare arrangements."
     ],
     "expensiveCities": [
-      "Copenhagen",
-      "Aarhus"
+      "Central Copenhagen",
+      "Central Aarhus",
+      "Prime commuter areas around Copenhagen"
     ],
     "affordableCities": [
-      "Aarhus",
-      "Odense",
-      "Aalborg"
+      "Selected Odense neighbourhoods",
+      "Aalborg neighbourhoods outside the centre",
+      "Commuter towns when transport works"
     ],
-    "averageRent": "Varies significantly by city, property type, and distance from business centers.",
-    "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
+    "averageRent": "Inspect current Danish listings and legal deposit/prepaid-rent terms for the exact area.",
+    "monthlyExpenses": "Include housing deposit, pension deductions, heating, transport and winter household costs.",
     "companiesOverview": [
-      "Denmark has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "Research direct vacancies at renewable-energy developers, life-sciences manufacturers, maritime businesses, enterprise-software firms, hospitals and universities; the suitable work scheme depends on the exact job.",
+      "An occupation on Denmark's Positive List can change as the list is updated. Confirm the listing and role requirements at the application date and ensure pay and employment terms meet Danish standards."
     ],
     "companies": [
-      "Global technology employers",
-      "Consulting firms",
-      "Financial services companies",
-      "Healthcare organizations",
-      "Manufacturing or engineering employers"
+      "Renewable-energy and industrial-technology employers",
+      "Pharmaceutical and life-sciences producers",
+      "Maritime and logistics groups",
+      "Research universities and hospitals"
     ],
     "jobsOverview": [
-      "The best job strategy for Denmark is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "Check each opening against the current Positive List if using that route; a related job title does not automatically satisfy the occupation, education or region-specific listing.",
+      "For the Pay Limit Scheme, compare the written annual remuneration with the current minimum and make sure Danish employment-standard requirements are satisfied."
     ],
     "sectors": [
-      "Technology",
-      "Finance",
-      "Engineering",
-      "Healthcare",
-      "Consulting",
-      "Data and AI"
+      "Renewable energy",
+      "Pharmaceuticals and biotech",
+      "Industrial engineering and robotics",
+      "Maritime logistics",
+      "Enterprise software"
     ],
     "demandJobs": [
-      "Software Engineer",
-      "Mechanical Engineer",
-      "Data Engineer",
-      "Healthcare Specialist",
-      "Automation Engineer"
+      "Automation Engineer",
+      "Renewable Energy Engineer",
+      "Bioprocess Specialist",
+      "Enterprise Software Developer",
+      "Research Specialist"
     ],
-    "workingHours": "Full-time schedules vary by role and local labor rules.",
-    "probation": "Probation terms vary by employer and contract.",
-    "pto": "Paid leave depends on local law and company policy.",
-    "publicHolidays": "Country-specific holidays apply.",
-    "unemployment": "Use official labor market sources for current data.",
+    "workingHours": "Contract and collective agreement matter; Denmark's standard working week is often 37 hours but varies.",
+    "probation": "Confirm contract and any applicable collective agreement on probation and dismissal terms.",
+    "pto": "Holiday rights are governed by the Danish Holiday Act and contract/collective agreements.",
+    "publicHolidays": "Public-holiday pay and days off may depend on employment terms.",
+    "unemployment": "Unemployment insurance is not automatic for every migrant; check voluntary fund membership and eligibility.",
     "benefits": [
-      "Paid leave",
-      "Health or social insurance support",
-      "Relocation support where offered",
-      "Hybrid work in some roles",
-      "Professional development"
+      "Pension contributions where applicable",
+      "Paid holiday under applicable rules",
+      "Workplace flexibility if agreed",
+      "Relocation or language support where contracted"
     ],
     "salariesOverview": [
-      "Salaries in Denmark vary strongly by role, employer, city, and seniority. International candidates should compare gross salary, tax, contributions, rent, and relocation costs before deciding.",
-      "Senior technical roles usually have stronger relocation potential than generic entry-level roles."
+      "Evaluate an offer in Danish kroner against the current Pay Limit threshold only when that scheme is relevant. For Positive List positions, check customary Danish pay and contract terms in the relevant sector.",
+      "Gross-to-net estimates should include municipal tax, labour-market contributions and pension arrangements; private relocation packages should be evaluated separately."
     ],
-    "averageSalary": "Varies by city, industry, and seniority.",
-    "minimumWage": "Check official sources because rules vary and may change.",
+    "averageSalary": "Use position-specific Danish statistics or offers; do not equate immigration salary floors with market averages.",
+    "minimumWage": "Denmark has no single statutory national minimum wage; collective agreements and customary employment standards matter.",
     "highestPayingJobs": [
-      "Engineering Manager",
-      "Software Architect",
-      "Cloud Engineer",
-      "Data Lead",
-      "Specialist Consultant"
+      "Engineering Director",
+      "Pharmaceutical Manufacturing Lead",
+      "Senior Cloud Architect",
+      "Renewable Energy Programme Lead",
+      "Specialist Physician"
     ],
     "salaryCities": [
       "Copenhagen",
       "Aarhus",
-      "Odense"
+      "Odense",
+      "Aalborg"
     ],
-    "payFrequency": "Usually monthly or country-specific payroll frequency.",
+    "payFrequency": "Usually monthly in salaried roles; check pension and holiday-pay treatment.",
     "relocationOverview": [
-      "Relocation companies in Denmark can support housing search, moving goods, arrival administration, local registration, schooling, and settling-in services. Employer packages vary widely."
+      "Plan CPR registration, local address documentation, banking and a tax card around your permit and actual arrival. The order of steps may vary with residence status.",
+      "Families should research school or daycare availability, language support and partner residence/work rights before accepting a relocation offer."
     ],
     "relocationCompanies": [
-      "Santa Fe Relocation",
-      "Crown Relocations",
-      "Sanelo",
-      "Asian Tigers Group",
-      "Local relocation providers"
+      "International movers with Danish delivery partners",
+      "Local rental and residence-registration assistance",
+      "Employer-contracted family settling services"
     ],
     "healthcareOverview": [
-      "Healthcare and insurance rules in Denmark depend on visa status, residency, employer benefits, and local systems. Candidates should confirm coverage before arrival."
+      "Access to Denmark's public healthcare system for eligible residents generally follows registration and issuance of a health insurance card. Coverage timing and requirements differ for temporary visitors and some cross-border workers; arrange necessary interim cover if required."
     ],
     "healthInsuranceTypes": [
-      "Public healthcare eligibility where applicable",
-      "Private health insurance",
-      "Employer-provided benefits",
-      "Travel or arrival insurance"
+      "Public resident healthcare where eligible",
+      "Travel/bridging cover until entitlement starts",
+      "Supplemental private services if preferred"
     ],
-    "privateHealthCost": "Depends on status, age, and cover level.",
-    "expatInsurance": "Arrange suitable cover before arrival if public access is not immediate.",
-    "citiesOverview": "Key relocation cities in Denmark include Copenhagen, Aarhus, Odense, Aalborg. Candidates should compare job density, salary level, rent, commute, language requirements, and long-term settlement options.",
+    "privateHealthCost": "Check public eligibility first and price any desired supplemental coverage separately.",
+    "expatInsurance": "Validate coverage until municipal registration and local health entitlements are effective.",
+    "citiesOverview": "Copenhagen offers headquarters and life-sciences employment; Aarhus is a university and engineering centre; Odense has robotics and automation firms; Aalborg is relevant for engineering, technology and research. Housing, transit and language requirements differ.",
     "popularCities": [
       "Copenhagen",
       "Aarhus",
@@ -1517,7 +1515,7 @@ export const countries = [
     "region": "Asia",
     "primaryVisa": "Highly Skilled Professional / Engineer visa routes",
     "priority": "Next",
-    "shortDescription": "A growing relocation market for technology, gaming, engineering, research, and specialized skilled candidates, with language fit as a key factor.",
+    "shortDescription": "A technology, manufacturing and research destination where the correct residence status, Japanese-language expectations and local registration matter.",
     "popularRoles": [
       "Software Engineer",
       "Game Developer",
@@ -1534,143 +1532,142 @@ export const countries = [
     ],
     "capital": "Tokyo",
     "currency": "Japanese Yen (JPY)",
-    "languages": "English may be used in some international roles; local language ability can significantly expand options.",
+    "languages": "Japanese is the main language of administration and most workplaces; some international technology and research teams use English.",
     "overview": [
-      "Japan can be attractive for candidates in technology, gaming, embedded systems, manufacturing, robotics, research, hospitality, and specialized skilled work. The opportunity level depends heavily on role type, Japanese language requirements, employer support, and visa category.",
-      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
-      "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
+      "Japan is not one uniform hiring market. Tokyo and Yokohama host international business and software teams, Osaka has commercial and industrial employers, Kyoto includes research and specialist manufacturing, and Fukuoka has a growing technology ecosystem.",
+      "Foreign professionals often research the Engineer/Specialist in Humanities/International Services status when their work fits that category and they have the right qualifications or experience. The points-based Highly Skilled Professional status is a separate category with its own scoring and activity rules; neither can be assumed from a generic 'IT job' label.",
+      "Before moving, understand the Certificate of Eligibility process where applicable, municipal residence registration, health insurance and pension enrolment, and language requirements for work and everyday life. Permanent residence is a separate application with different rules."
     ],
     "facts": [
-      "Important market for skilled candidates",
-      "Employer and role fit matter more than raw job volume",
-      "Language expectations should be checked carefully"
+      "A suitable residence status must match the actual contracted duties, not just the English job title.",
+      "Japanese-language expectations can vary sharply between international and domestic employers.",
+      "Newcomers generally need to complete municipal registration and applicable insurance/pension steps."
     ],
     "visaOverview": [
-      "Japan has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "Engineer/Specialist in Humanities/International Services may fit eligible software, engineering and certain business roles under a contract with an organisation in Japan. Education, professional experience and role duties must be checked against Japan's current immigration criteria.",
+      "Highly Skilled Professional is a separate points-based framework, with points based on factors such as qualifications, income, professional background and other eligible measures. The points category must align with the intended activities.",
+      "Permanent residence is not automatic. The usual residence-duration framework has exceptions for certain highly skilled categories, subject to the full immigration rules and compliance history."
     ],
     "visaTypes": [
-      "Highly Skilled Professional / Engineer visa routes",
-      "Specialist or skilled worker routes where applicable",
-      "Graduate or local-study routes where applicable",
-      "Intra-company transfer or multinational routes where applicable"
+      "Engineer/Specialist in Humanities/International Services",
+      "Highly Skilled Professional for eligible points-based applicants",
+      "Intra-company Transferee for qualifying group transfers",
+      "Permanent residence by separate immigration application"
     ],
     "taxOverview": [
-      "Japan has tax and social contribution rules that affect take-home salary. Newcomers should understand tax residency, payroll deductions, and any mandatory contributions before judging an offer.",
-      "Salary should always be evaluated together with rent, transport, health insurance, and relocation costs."
+      "Japanese employment can involve national income tax, local inhabitant/resident tax and social-insurance deductions. Some local resident-tax bills reflect preceding-year income, so a salary calculator and first-year take-home assumptions may diverge.",
+      "Tax treatment depends on resident and non-resident classifications as well as international income arrangements. Check your employer's payroll, social-insurance enrolment and the tax authority's guidance before accepting a net-pay estimate."
     ],
     "taxTypes": [
-      "Income tax",
-      "Social security or mandatory contributions",
-      "Value-added or goods/services tax",
-      "Local or municipal taxes where applicable"
+      "National individual income tax",
+      "Local inhabitant/resident tax",
+      "Health and pension social-insurance contributions",
+      "Consumption tax on purchases"
     ],
-    "taxYear": "Usually calendar year or country-specific fiscal year.",
-    "incomeTax": "Progressive or structured tax rules depending on residency and income.",
+    "taxYear": "Calendar year for individual income tax; municipal resident tax commonly references previous-year income.",
+    "incomeTax": "National and local taxes plus social insurance; residency status and prior-year income can affect take-home pay.",
     "costOverview": [
-      "Cost of living in Japan varies by city and lifestyle. Capital or major business hubs are usually more expensive, while secondary cities can offer a better salary-to-cost balance.",
-      "Candidates should plan for rent deposits, temporary accommodation, transport, phone/internet, health insurance, and first-month setup."
+      "Central Tokyo housing and commute choices vary by rail line and station access; Osaka, Fukuoka and other cities have distinct markets. Compare door-to-door commute and lease conditions rather than focusing only on an advertised apartment rent.",
+      "Initial rent, deposits, key money where applicable, guarantor arrangements, furnishing, moving and administrative setup can significantly increase relocation costs."
     ],
     "expensiveCities": [
-      "Tokyo",
-      "Osaka"
+      "Central Tokyo",
+      "Premium Yokohama commuter districts",
+      "Selected central Osaka locations"
     ],
     "affordableCities": [
-      "Kyoto",
-      "Fukuoka",
-      "Yokohama"
+      "Districts farther from central Tokyo stations",
+      "Selected Fukuoka neighbourhoods",
+      "Commuter towns with workable rail links"
     ],
-    "averageRent": "Varies significantly by city, property type, and distance from business centers.",
-    "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
+    "averageRent": "Check current station-level local listings and all move-in fees, not just monthly advertised rent.",
+    "monthlyExpenses": "Allow for initial lease payments, national and local taxes, transport, health insurance and pension.",
     "companiesOverview": [
-      "Japan has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "Evaluate employers with Japanese payroll and immigration-document experience, including product software companies, electronics and precision manufacturers, game developers and research institutions.",
+      "Ask who prepares Certificate of Eligibility documentation when needed and whether a role requires business-level Japanese. An English-language job post is not evidence of immigration support."
     ],
     "companies": [
-      "Global technology employers",
-      "Consulting firms",
-      "Financial services companies",
-      "Healthcare organizations",
-      "Manufacturing or engineering employers"
+      "Software and digital-product companies",
+      "Automotive and precision-manufacturing firms",
+      "Games and interactive entertainment studios",
+      "Research laboratories and universities"
     ],
     "jobsOverview": [
-      "The best job strategy for Japan is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "Check whether the duties and qualifications match the proposed Japanese residence status and whether the employer supports the necessary immigration procedure. Local language expectations may be a decisive factor beyond technical skill.",
+      "Evaluate base salary, overtime expectations, bonuses, commuter allowance and the practical commute from affordable housing."
     ],
     "sectors": [
-      "Technology",
-      "Finance",
-      "Engineering",
-      "Healthcare",
-      "Consulting",
-      "Data and AI"
+      "Product software and games",
+      "Precision manufacturing",
+      "Automotive and robotics",
+      "Scientific research",
+      "Enterprise technology"
     ],
     "demandJobs": [
-      "Software Engineer",
+      "Embedded Software Engineer",
       "Game Developer",
-      "Data Engineer",
-      "Product Manager",
-      "Mechanical Engineer"
+      "Robotics Engineer",
+      "Cloud Platform Engineer",
+      "Research Scientist"
     ],
-    "workingHours": "Full-time schedules vary by role and local labor rules.",
-    "probation": "Probation terms vary by employer and contract.",
-    "pto": "Paid leave depends on local law and company policy.",
-    "publicHolidays": "Country-specific holidays apply.",
-    "unemployment": "Use official labor market sources for current data.",
+    "workingHours": "Check the contract, Japanese Labour Standards Act and actual overtime culture at the specific employer.",
+    "probation": "Contractual and subject to Japanese labour-law protections; clarify termination and relocation-clawback terms.",
+    "pto": "Annual paid-leave rights depend on tenure and working pattern under Japanese labour law.",
+    "publicHolidays": "Public-holiday working conditions depend on the contract and workplace calendar.",
+    "unemployment": "Employment-insurance participation and benefit eligibility depend on your actual employment circumstances.",
     "benefits": [
-      "Paid leave",
-      "Health or social insurance support",
-      "Relocation support where offered",
-      "Hybrid work in some roles",
-      "Professional development"
+      "Commuter allowance where offered",
+      "Social-insurance enrolment where required",
+      "Relocation or temporary housing where negotiated",
+      "Language-study assistance if contracted"
     ],
     "salariesOverview": [
-      "Salaries in Japan vary strongly by role, employer, city, and seniority. International candidates should compare gross salary, tax, contributions, rent, and relocation costs before deciding.",
-      "Senior technical roles usually have stronger relocation potential than generic entry-level roles."
+      "Compare gross base salary, bonus structure, overtime pay, commuter allowance and social deductions before converting a Japanese offer into another currency.",
+      "National and municipal tax timing can change take-home pay after the first year. Check whether the role offers financial or administrative support for international relocation."
     ],
-    "averageSalary": "Varies by city, industry, and seniority.",
-    "minimumWage": "Check official sources because rules vary and may change.",
+    "averageSalary": "Research role- and city-specific employer offers; avoid using one national mean as the market rate for every speciality.",
+    "minimumWage": "Prefecture-based minimum wages apply and change; check the current official rate for the workplace.",
     "highestPayingJobs": [
-      "Engineering Manager",
-      "Software Architect",
-      "Cloud Engineer",
-      "Data Lead",
-      "Specialist Consultant"
+      "Principal Software Architect",
+      "Senior Robotics Researcher",
+      "Engineering Director",
+      "Quantitative Technology Lead",
+      "Specialist Medical Professional"
     ],
     "salaryCities": [
       "Tokyo",
+      "Yokohama",
       "Osaka",
-      "Kyoto"
+      "Fukuoka"
     ],
-    "payFrequency": "Usually monthly or country-specific payroll frequency.",
+    "payFrequency": "Typically monthly salary with contract-dependent bonuses.",
     "relocationOverview": [
-      "Relocation companies in Japan can support housing search, moving goods, arrival administration, local registration, schooling, and settling-in services. Employer packages vary widely."
+      "Arrange entry documentation, initial housing, residence-card and municipal registration procedures, bank account setup and necessary health-insurance or pension enrolment.",
+      "Families should check dependent status, schooling options and the difference between local and international education costs."
     ],
     "relocationCompanies": [
-      "Santa Fe Relocation",
-      "Crown Relocations",
-      "Sanelo",
-      "Asian Tigers Group",
-      "Local relocation providers"
+      "Japan-specialist moving and storage companies",
+      "Local lease and guarantor service providers",
+      "Employer-appointed immigration and housing advisers"
     ],
     "healthcareOverview": [
-      "Healthcare and insurance rules in Japan depend on visa status, residency, employer benefits, and local systems. Candidates should confirm coverage before arrival."
+      "Eligible employed residents generally participate in employee health insurance or other applicable public coverage, while other residents may need to enrol in National Health Insurance. Confirm the right arrangement and any waiting or bridging cover with your employer and municipality."
     ],
     "healthInsuranceTypes": [
-      "Public healthcare eligibility where applicable",
-      "Private health insurance",
-      "Employer-provided benefits",
-      "Travel or arrival insurance"
+      "Employees' Health Insurance where required",
+      "National Health Insurance where applicable",
+      "Optional private supplementary coverage",
+      "Travel/bridging cover before enrolment"
     ],
-    "privateHealthCost": "Depends on status, age, and cover level.",
-    "expatInsurance": "Arrange suitable cover before arrival if public access is not immediate.",
-    "citiesOverview": "Key relocation cities in Japan include Tokyo, Osaka, Kyoto, Fukuoka, Yokohama. Candidates should compare job density, salary level, rent, commute, language requirements, and long-term settlement options.",
+    "privateHealthCost": "Public contribution and any supplemental insurance depend on employment, municipality and coverage.",
+    "expatInsurance": "Check public registration and dependent enrolment rather than assuming private expat cover is the normal default.",
+    "citiesOverview": "Tokyo has broad international business opportunities; Yokohama offers connected industrial and technology roles; Osaka has corporate and manufacturing activity; Kyoto offers research and precision-industry teams; Fukuoka has a different technology and regional business ecosystem. Check Japanese-language requirements at company level.",
     "popularCities": [
       "Tokyo",
+      "Yokohama",
       "Osaka",
       "Kyoto",
-      "Fukuoka",
-      "Yokohama"
+      "Fukuoka"
     ]
   }
 ] as const;
