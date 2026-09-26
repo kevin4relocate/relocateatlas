@@ -214,9 +214,9 @@ const profiles = {
   },
 };
 
-// Do not display Canadian salary or cost estimates on newly added destinations.
-// For expanded markets, provide country-specific research prompts until independently
-// attributed and time-stamped local numeric ranges are available.
+// For nine expanded markets (five refreshed + four new), show evidence-first
+// research prompts instead of unverified national salary, housing or shipping prices.
+// The original five market profiles remain historical illustrations pending an audit.
 const qualitativeProfile = !Object.prototype.hasOwnProperty.call(profiles, country.slug);
 const profile = profiles[country.slug] ?? {
   currency: country.currency,
