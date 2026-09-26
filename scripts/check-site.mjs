@@ -85,6 +85,20 @@ const home = pages.get(join(root,'index.html')) || '';
 if (home.includes('"SearchAction"')) errors.push('Homepage still advertises nonexistent /search in structured data');
 if (home.includes('Expanding after launch') || home.includes('prepared as next-market country guides')) errors.push('Homepage implies already available guides are not yet launched');
 if (home.includes('Sponsor Confidence') || home.includes('8.2/10')) errors.push('Homepage still shows fictitious job scores');
+
+/* Phase 1 redesign smoke checks: no invented search route or dead-end design navigation. */
+const countryDirectory = pages.get(join(root, 'countries', 'index.html')) || '';
+const guideDirectory = pages.get(join(root, 'guides', 'index.html')) || '';
+if (!guideDirectory.includes('THE RELOCATION LIBRARY') || !guideDirectory.includes('rw-topic-grid')) errors.push('Redesigned relocation guides directory missing');
+if (!countryDirectory.includes('data-country-search') || !countryDirectory.includes('data-country-filters')) errors.push('Destination search or region filter missing');
+if ((countryDirectory.match(/data-country-result=/g) || []).length < 10) errors.push('Country directory does not expose all 10 filterable guide cards');
+if (!home.includes('action="/countries"') || !home.includes('name="q"')) errors.push('Homepage country search is not wired to the directory');
+if (!home.includes('rw-newsletter-section') || !home.includes('rw-hero')) errors.push('Redesigned homepage sections missing');
+for (const slug of ['australia','new-zealand','united-kingdom','germany','canada','singapore','ireland','netherlands','denmark','japan']) {
+  const txt = pages.get(join(root,'countries',slug,'index.html')) || '';
+  if (!txt.includes('rw-country-detail-hero') || !txt.includes('rw-country-toc')) errors.push('Destination detail redesign missing: ' + slug);
+}
+
 mkdirSync(resolve('reports'), { recursive: true });
 writeFileSync(resolve('reports', 'external-links.txt'), [...external].sort().join('\n') + '\n');
 console.log(`Checked ${pages.size} built HTML pages and ${checked} internal links; ${external.size} unique external destinations are listed in reports/external-links.txt`);
