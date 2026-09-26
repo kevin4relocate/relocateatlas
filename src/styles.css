@@ -3258,59 +3258,34 @@ font-size: clamp(2.45rem, 4.2vw, 3.8rem); /* Chỉnh nhỏ lại một chút */
   z-index: 100000;
 }
 
-/* Fix mobile drawer visibility */
-@media (max-width: 1040px) {
-  header.site-header .mobile-menu.is-open,
-  .site-header .mobile-menu.is-open,
-  #mobile-menu.mobile-menu.is-open {
-    display: block !important;
-    position: fixed !important;
-    top: 66px !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: 999999 !important;
-    background: #ffffff !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
-  }
+/* Accessible focus states and consistent fixed mobile drawer positioning. */
+:is(a, button, summary, input, select, textarea):focus-visible {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 3px;
 }
-
-/* Final mobile menu fix */
+.prose section[id],
+.guide-content section[id],
+.article-toc {
+  scroll-margin-top: 110px;
+}
+.prose a,
+.guide-content a {
+  overflow-wrap: anywhere;
+}
 @media (max-width: 1040px) {
-  .mobile-menu-button {
-    display: inline-block; /* Khôi phục lại inline-block ở đây */
-  }
-
-  .mobile-menu {
+  #mobile-menu.mobile-menu {
     display: none;
-  }
-
-  /* Đảm bảo Menu được fixed vào Viewport, không phải Header */
-  #mobile-menu.mobile-menu.is-open {
-    display: block !important;
-    position: fixed !important;
-    top: 76px !important; /* Đẩy xuống vừa đúng chiều cao header */
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: 999999 !important;
-    background: #ffffff !important;
-    overflow-y: auto !important;
+    top: var(--rw-mobile-header-height, 76px);
+    z-index: 100001;
+    max-height: calc(100dvh - var(--rw-mobile-header-height, 76px));
+    overflow-y: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
   }
-
-  /* KHÓA BODY CHUẨN KHI MỞ MENU */
-  body.mobile-menu-open {
-    overflow: hidden !important;
-    touch-action: none;
-  }
-}
-
-@media (max-width: 760px) {
   #mobile-menu.mobile-menu.is-open {
-    top: 66px !important;
+    display: block;
+  }
+  body.mobile-menu-open {
+    overflow: hidden;
   }
 }
-
