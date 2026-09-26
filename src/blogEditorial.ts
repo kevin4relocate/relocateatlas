@@ -404,7 +404,7 @@ export const blogEditorial:Record<string,EditorialArticle> = {
       ]
     ],
     "related": [
-      "/industries/engineering-skilled-trades",
+      "/industries/engineering-construction-trades",
       "/countries",
       "/visas"
     ]
