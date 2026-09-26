@@ -75,7 +75,9 @@ const countrySlugs = marketData.map((market) => market.slug);
 if (marketData.length !== 14 || new Set(countrySlugs).size !== marketData.length) {
   errors.push('Expected 14 unique destination guides, found ' + marketData.length);
 }
-const fourNewSlugs = ['sweden','finland','portugal','spain'];
+const newCountrySlugs = ['sweden','finland','portugal','spain'];
+const refreshedCountrySlugs = ['singapore','ireland','netherlands','denmark','japan'];
+const expandedCountrySlugs = [...refreshedCountrySlugs, ...newCountrySlugs];
 
 for (const slug of countrySlugs) {
   const file = join(root, 'countries', slug, 'index.html');
@@ -110,14 +112,14 @@ if ((countryDirectory.match(/<div\b[^>]*\bdata-country-result(?=[\s=>])/g) || []
 if (!home.includes('action="/countries"') || !home.includes('name="q"')) errors.push('Homepage country search is not wired to the directory');
 if (!home.includes('rw-newsletter-section') || !home.includes('rw-hero')) errors.push('Redesigned homepage sections missing');
 
-// New markets must have generated topic routes and retain independent references.
-for (const slug of fourNewSlugs) {
+// All nine expanded markets must have generated topic routes and evidence-first money research.
+for (const slug of expandedCountrySlugs) {
   for (const topic of ['visas','taxes','salaries','cost-of-living','jobs','relocation-companies']) {
     const doc = pages.get(join(root,topic,slug,'index.html'));
-    if (!doc) errors.push('New market resource route missing: ' + topic + '/' + slug);
+    if (!doc) errors.push('Expanded market resource route missing: ' + topic + '/' + slug);
     else if (topic === 'visas' && !doc.includes('Work authorisation and long-term residence are different')) errors.push('Residence research missing from visa guide: ' + slug);
-    else if (topic === 'salaries' && !doc.includes('No unsourced role-level pay numbers')) errors.push('New country still relies on old salary range template: ' + slug);
-    else if (topic === 'cost-of-living' && !doc.includes('These are research tasks')) errors.push('New country still relies on historical rent figures: ' + slug);
+    else if (topic === 'salaries' && !doc.includes('No unsourced role-level pay numbers')) errors.push('Expanded country still relies on legacy salary range template: ' + slug);
+    else if (topic === 'cost-of-living' && !doc.includes('These are research tasks')) errors.push('Expanded country still relies on historical rent figures: ' + slug);
   }
 }
 
