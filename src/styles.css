@@ -3,8 +3,8 @@
   --color-navy: #102a43;
   --color-blue: #2563eb;
   --color-blue-dark: #1d4ed8;
-  --color-teal: #14b8a6;
-  --color-teal-light: #ccfbf1;
+  --color-teal: #2563eb;
+  --color-teal-light: #dbeafe;
   --color-cloud: #f8fafc;
   --color-panel: #eef6ff;
   --color-white: #ffffff;
@@ -2794,7 +2794,7 @@ font-size: clamp(2.45rem, 4.2vw, 3.8rem); /* Chỉnh nhỏ lại một chút */
   padding: 7px 10px;
   border-radius: 999px;
   background: rgba(20, 184, 166, 0.1);
-  color: #0f766e;
+  color: #1d4ed8;
   border: 1px solid rgba(20, 184, 166, 0.22);
   font-weight: 900;
   font-size: 0.82rem;
