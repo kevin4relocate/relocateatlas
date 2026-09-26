@@ -1990,6 +1990,327 @@ export const countries = [
       "Turku",
       "Oulu"
     ]
+  },
+  {
+    "name": "Portugal",
+    "slug": "portugal",
+    "flag": "🇵🇹",
+    "region": "Europe",
+    "primaryVisa": "Residence route for remote work / employer-led residence visa",
+    "priority": "Next",
+    "shortDescription": "A destination with separate routes for locally employed workers and qualifying people performing remote work for entities outside Portugal.",
+    "popularRoles": [
+      "Remote Software Engineer",
+      "Independent Design Consultant",
+      "Product Specialist",
+      "Cloud Engineer",
+      "Renewable Energy Engineer"
+    ],
+    "keyCities": [
+      "Lisbon",
+      "Porto",
+      "Braga",
+      "Coimbra",
+      "Faro"
+    ],
+    "capital": "Lisbon",
+    "currency": "Euro (EUR)",
+    "languages": "Portuguese is the official language; English is used in some international technology and tourism-related environments.",
+    "overview": [
+      "Portugal serves several different relocation profiles. Lisbon and Porto host international employers, research and professional-services teams, while other cities appeal to people bringing a stable, eligible remote income and seeking a different cost structure.",
+      "People hired locally should research the relevant employer-supported work and residence procedures. Remote employees or independent professionals providing services for entities outside Portugal may qualify for a separate remote-work residence-visa route, often called the digital-nomad route. A tourist stay or an employer merely permitting work from abroad is not proof of immigration compliance.",
+      "Residence-card appointments and other administrative processes can take time; build a realistic housing and document plan before moving. Portuguese tax residence, overseas employer payroll and social-security obligations require individual advice, especially for remote workers."
+    ],
+    "facts": [
+      "The remote-work residence route and Portuguese local-employment procedures have different evidence requirements.",
+      "Maintaining foreign-source remote work and demonstrating the qualifying relationship or income are central to the remote route.",
+      "Long-term residence is a distinct legal process; obtaining a remote-work residence permit does not guarantee permanent residence."
+    ],
+    "visaOverview": [
+      "Portugal's AIMA publishes a dedicated residence-permit route for a person undertaking professional activity remotely for an entity outside Portuguese territory after obtaining the appropriate residence visa. Applicants must check current evidence of the employment or service relationship and all consular steps.",
+      "Local employment has separate visa and residence procedures; a Portuguese job offer does not automatically satisfy the remote-worker route, and the remote route should not be advertised as a work visa for open-ended Portuguese employment.",
+      "Permanent or long-term residence requires a separate application with legally prescribed residence and other conditions. Check the actual current residence rules and processing arrangements rather than using a generic five-year promise."
+    ],
+    "visaTypes": [
+      "Residence visa and AIMA residence permit for remote work outside Portugal",
+      "Residence visa and permit based on qualifying local employment",
+      "Other qualifying entrepreneurial or professional categories",
+      "Permanent/long-term residence when separate conditions are satisfied"
+    ],
+    "taxOverview": [
+      "Remote residence permission and tax residence are different legal concepts. Time in Portugal, household circumstances, source of income and any applicable tax treaty can change how Portuguese personal-income tax and overseas earnings are treated.",
+      "Independent professionals should investigate the local registration, VAT and social-security implications of their precise activity; an employer's agreement to remote work does not settle its payroll obligations."
+    ],
+    "taxTypes": [
+      "Portuguese personal income tax (IRS)",
+      "Social security contributions depending on work arrangement",
+      "VAT where relevant to services and consumption",
+      "Foreign income and treaty considerations"
+    ],
+    "taxYear": "Calendar year; consult Autoridade Tributária e Aduaneira for income tax and activity registration.",
+    "incomeTax": "Income-tax rates and special regimes depend on status and income; do not assume a blanket digital-nomad tax exemption.",
+    "costOverview": [
+      "Lisbon and Porto face different rental pressures from smaller Portuguese cities. Remote workers should compare reliable internet, long-term rental contracts, access to services and whether an address meets the needs of the immigration application.",
+      "Include deposits, utilities, transportation, private healthcare during any entitlement gap, tax administration and possible travel to residence appointments when forecasting the first months."
+    ],
+    "expensiveCities": [
+      "Central Lisbon",
+      "Popular Porto neighbourhoods",
+      "High-demand coastal districts"
+    ],
+    "affordableCities": [
+      "Selected Braga neighbourhoods",
+      "Coimbra districts with verified rentals",
+      "Inland locations with suitable connectivity"
+    ],
+    "averageRent": "Check current permitted long-term rental listings and the documentation required to demonstrate address.",
+    "monthlyExpenses": "Compare after-tax remote or local income with housing, utilities, travel and Portuguese administration costs.",
+    "companiesOverview": [
+      "Research Portugal-based technology teams, engineering firms, renewable-energy companies and multilingual service centres if seeking local employment.",
+      "For the remote-worker route the decisive relationship is normally with a qualifying entity outside Portugal; clarify location policy, payroll, income evidence and any professional-service contract before relocating."
+    ],
+    "companies": [
+      "Portugal-based software and engineering employers",
+      "Renewable-energy and research companies",
+      "Multilingual business-services teams",
+      "Overseas employers accepting legally compliant international remote work"
+    ],
+    "jobsOverview": [
+      "Separate two research tracks: local Portuguese roles that may support a qualifying residence process, and existing foreign employment or consulting relationships that might satisfy the remote-work route.",
+      "Local wages and housing costs must be compared honestly. A remote salary denominated in another currency may create tax or exchange-rate risks; it is not automatically a migration advantage."
+    ],
+    "sectors": [
+      "Remote professional services",
+      "Local software and IT",
+      "Renewable energy",
+      "Engineering and research",
+      "Shared business services"
+    ],
+    "demandJobs": [
+      "Remote Software Developer",
+      "Local Cloud Engineer",
+      "Renewable Energy Engineer",
+      "Multilingual Service Specialist",
+      "Independent Digital Consultant"
+    ],
+    "workingHours": "Local contracts follow Portuguese employment law; qualifying overseas remote arrangements require their own contractual review.",
+    "probation": "Check local employment-contract conditions; foreign employment contracts may involve different legal treatment.",
+    "pto": "Portuguese statutory leave is relevant to local employment; remote foreign contracts require separate analysis.",
+    "publicHolidays": "Holiday treatment depends on the legal employment relationship and applicable country rules.",
+    "unemployment": "Access to Portuguese unemployment protection depends on social-insurance history and qualifying status.",
+    "benefits": [
+      "Local social-security enrolment where applicable",
+      "Statutory leave for covered local employment",
+      "Private cover or remote-work allowance if agreed",
+      "Professional accountant support where needed"
+    ],
+    "salariesOverview": [
+      "Portugal-based salaries and independently earned overseas income are not interchangeable metrics. Calculate take-home pay based on the actual employment structure, tax treatment and social contributions.",
+      "A remote worker should document stable qualifying income and account for currency fluctuations; current consular requirements, not a generic salary guide, determine immigration eligibility."
+    ],
+    "averageSalary": "Compare actual local job offers or verified remote-income evidence; no universal digital-nomad salary applies to every residence route.",
+    "minimumWage": "Portugal publishes a statutory minimum wage, but remote residence eligibility uses different proof and income requirements.",
+    "highestPayingJobs": [
+      "Senior Remote Software Architect",
+      "Engineering Director",
+      "Lead Research Specialist",
+      "Senior Cybersecurity Consultant",
+      "Renewable Energy Project Lead"
+    ],
+    "salaryCities": [
+      "Lisbon",
+      "Porto",
+      "Braga"
+    ],
+    "payFrequency": "Local employment contracts usually specify monthly salary and legally relevant additional payments; remote contracts vary.",
+    "relocationOverview": [
+      "Secure documentary proof of accommodation, review local healthcare registration rules and plan for AIMA appointments or other administrative deadlines.",
+      "Households should verify family-reunification procedures, schooling and their own source of income; remote-work status does not remove those requirements."
+    ],
+    "relocationCompanies": [
+      "Local long-term-rental and tenancy support",
+      "Portugal-based fiscal and residence-document advisers",
+      "International moving and storage providers"
+    ],
+    "healthcareOverview": [
+      "Foreign residents with valid Portuguese residence permits may register for healthcare through the Serviço Nacional de Saúde (SNS) under the applicable conditions. Confirm how and when to obtain the SNS user number and arrange any necessary interim coverage."
+    ],
+    "healthInsuranceTypes": [
+      "Portuguese SNS access where eligible",
+      "Temporary private cover during transition",
+      "Supplementary private family coverage if desired"
+    ],
+    "privateHealthCost": "Request quotes suited to residence, household size and pre-existing coverage; SNS registration has its own requirements.",
+    "expatInsurance": "Verify current SNS registration and lawful private or bridging cover instead of assuming remote-worker status itself provides insurance.",
+    "citiesOverview": "Lisbon has international services and technology activity; Porto has business and engineering teams; Braga and Coimbra combine smaller-city options with education or technology, while Faro has a different tourism-oriented market. For remote workers, check rental availability and infrastructure rather than only headline regional costs.",
+    "popularCities": [
+      "Lisbon",
+      "Porto",
+      "Braga",
+      "Coimbra",
+      "Faro"
+    ]
+  },
+  {
+    "name": "Spain",
+    "slug": "spain",
+    "flag": "🇪🇸",
+    "region": "Europe",
+    "primaryVisa": "International telework / highly qualified professional routes",
+    "priority": "Next",
+    "shortDescription": "A country offering separate international-teleworking and locally employed professional pathways, with regional job markets and tax obligations to compare.",
+    "popularRoles": [
+      "Remote Software Engineer",
+      "Independent IT Consultant",
+      "Data Engineer",
+      "Product Manager",
+      "Renewable Energy Engineer"
+    ],
+    "keyCities": [
+      "Madrid",
+      "Barcelona",
+      "Valencia",
+      "Málaga",
+      "Seville"
+    ],
+    "capital": "Madrid",
+    "currency": "Euro (EUR)",
+    "languages": "Spanish is the principal national language; co-official regional languages and workplace English may be relevant depending on location.",
+    "overview": [
+      "Spain contains very different employment and relocation markets: Madrid is a large corporate centre, Barcelona hosts technology and business services, and Valencia, Málaga and other cities have distinctive housing and career profiles.",
+      "Non-EU professionals can research locally employed highly qualified routes or Spain's specific international teleworking framework. The latter is intended for eligible work or professional services carried out remotely for organisations outside Spain; the applicable rules distinguish employment from self-employment.",
+      "Immigration permission and tax treatment must be planned together, but they are not the same decision. Remote workers should verify their employment relationship, qualifying evidence, social-security position and the tax treatment associated with residing in Spain."
+    ],
+    "facts": [
+      "Spain's international telework framework applies to qualifying remote work for businesses established outside Spain.",
+      "Under the telework law, rules differ between ordinary employees and independent professionals with some Spanish clients.",
+      "Long-term residence is a separate process and does not follow automatically from a telework visa or permit."
+    ],
+    "visaOverview": [
+      "The international teleworking framework is administered by Spain's UGE for eligible third-country remote workers serving organisations outside Spain using telecommunications tools. It specifies documentation for the applicant and family members and is distinct from ordinary local employment.",
+      "The statutory framework distinguishes remote employment for foreign organisations from independent professional activity; eligible independent professionals may have limited Spain-based client activity under the legal conditions. Verify the current law and the exact relationship rather than applying a blanket assumption to all freelancers.",
+      "People offered local employment in Spain should research the separate highly qualified professional, EU Blue Card or ordinary work-permit routes where applicable. Residence extensions and long-term residence have independent rules."
+    ],
+    "visaTypes": [
+      "International telework visa for an eligible worker living abroad",
+      "International telework residence authorisation for eligible applicants",
+      "Highly qualified professional or EU Blue Card where eligible for Spanish employment",
+      "Long-term residence after separately meeting the legal criteria"
+    ],
+    "taxOverview": [
+      "Spanish tax residence and personal-income taxation depend on presence, circumstances and the source of income. National and autonomous-community factors can affect the calculation; obtaining a digital-nomad residence authorisation is not a blanket tax exemption.",
+      "Any special inbound worker tax treatment is separately assessed by the tax authorities and depends on individual eligibility and formal steps. Independent professionals should check local registration and social-security obligations."
+    ],
+    "taxTypes": [
+      "Personal income tax (IRPF) or applicable non-resident tax rules",
+      "Social-security contributions depending on employment structure",
+      "VAT where relevant to professional activity and consumption",
+      "Autonomous-community effects and applicable tax treaties"
+    ],
+    "taxYear": "Calendar year; Agencia Tributaria provides current income-tax instructions.",
+    "incomeTax": "Personal tax treatment depends on residence, autonomous community, income type and eligibility for any special regime.",
+    "costOverview": [
+      "Central Madrid and Barcelona can have very different housing prices from secondary neighbourhoods or cities such as Valencia and Seville. Compare access to the real workplace, residency-friendly rental documentation and local transport.",
+      "For international remote workers, check internet reliability at a specific property, deposits, local registration obligations, healthcare and possible dual-country travel or tax-compliance expenses."
+    ],
+    "expensiveCities": [
+      "Central Madrid",
+      "Central Barcelona",
+      "Popular coastal districts in major metros"
+    ],
+    "affordableCities": [
+      "Selected Valencia neighbourhoods",
+      "Selected Seville districts",
+      "Commuter locations with documented rental options"
+    ],
+    "averageRent": "Check current local residential listings and tenancy conditions, not tourism accommodation prices.",
+    "monthlyExpenses": "Model local rent, tax and social insurance alongside remote or Spain-based income and family needs.",
+    "companiesOverview": [
+      "Research Spain-based enterprise-software teams, telecommunications suppliers, renewable-energy developers, financial services and regional technology firms when planning locally employed migration.",
+      "For international teleworking, the primary relationship is generally with a company outside Spain, so distinguish a remote-work-authorising employer from a Spanish entity hiring under a different immigration scheme."
+    ],
+    "companies": [
+      "Madrid-based corporate and finance employers",
+      "Barcelona technology and industrial companies",
+      "Renewable-energy engineering groups",
+      "Overseas employers providing qualifying remote arrangements"
+    ],
+    "jobsOverview": [
+      "Build separate application strategies for Spanish domestic professional vacancies and legally compatible overseas remote work. A local job advertisement cannot automatically be used as evidence for an international telework visa.",
+      "Assess local language requirements, contract structure and employer willingness to support the appropriate Spanish route. Some employers permit short remote visits but will not support a long-term cross-border work arrangement."
+    ],
+    "sectors": [
+      "International remote professional services",
+      "Enterprise software",
+      "Renewable energy",
+      "Telecommunications",
+      "Finance and engineering"
+    ],
+    "demandJobs": [
+      "Remote Software Engineer",
+      "Local Product Engineer",
+      "Renewable Energy Specialist",
+      "Data Engineer",
+      "Senior IT Consultant"
+    ],
+    "workingHours": "Spanish local employment is regulated by local law and applicable collective agreements; overseas remote contracts need separate analysis.",
+    "probation": "Local contract and applicable collective agreement set terms; remote overseas employment may operate differently.",
+    "pto": "Spanish statutory paid leave applies to covered local employees; check overseas arrangements separately.",
+    "publicHolidays": "National and regional public holidays affect local employees; remote contract treatment varies.",
+    "unemployment": "Benefit entitlement depends on actual contributions, work classification and residence circumstances.",
+    "benefits": [
+      "Statutory leave and social-security coverage for local roles",
+      "Possible employer-sponsored relocation for specialist hires",
+      "Remote-work equipment or home-office budgets where agreed",
+      "Specialist tax or immigration advice when appropriate"
+    ],
+    "salariesOverview": [
+      "Do not treat Spanish local salaries and overseas remote income as equivalent. For a telework application, rely on the current UGE/consular income and documentation requirements tied to the applicant's situation.",
+      "For local professional offers, compare annual pay, deductions, city rent and the legal sponsorship route rather than an unsourced countrywide gross salary average."
+    ],
+    "averageSalary": "Compare local-sector offers or documented overseas remote compensation; immigration and tax treatment are separate.",
+    "minimumWage": "Spain maintains a national minimum wage; international telework financial proof follows separate criteria.",
+    "highestPayingJobs": [
+      "Principal Cloud Architect",
+      "Senior Remote Product Engineer",
+      "Renewable Energy Programme Director",
+      "Engineering Lead",
+      "Finance Technology Director"
+    ],
+    "salaryCities": [
+      "Madrid",
+      "Barcelona",
+      "Valencia",
+      "Málaga"
+    ],
+    "payFrequency": "Local salary may include contractually/statutorily relevant extra payments; overseas remote arrangements differ.",
+    "relocationOverview": [
+      "International teleworkers should prepare evidence of existing work or contracts, income, qualifying activity and appropriate residence and social-insurance arrangements before relocating.",
+      "Families should verify the UGE or consular requirements for each dependent, municipal registration, school admission and healthcare access for the actual residence status."
+    ],
+    "relocationCompanies": [
+      "Spanish rental and municipal-registration advisers",
+      "Cross-border tax and social-insurance professionals",
+      "International moving and temporary-housing providers"
+    ],
+    "healthcareOverview": [
+      "Healthcare eligibility for newcomers depends on the residence and social-security position. Spain's public system is organised through regional services, and international teleworkers should check applicable social-insurance or private-cover requirements before arrival."
+    ],
+    "healthInsuranceTypes": [
+      "Regional public healthcare when eligible",
+      "Required health cover where the residence route demands it",
+      "Supplemental private family coverage if chosen"
+    ],
+    "privateHealthCost": "Check the precise insurance evidence required by the selected visa or residence route and quote coverage accordingly.",
+    "expatInsurance": "Never assume that an ordinary travel policy satisfies the documentary health-insurance requirements of a Spanish telework application.",
+    "citiesOverview": "Madrid is a national corporate centre; Barcelona has international technology and research, Valencia and Málaga include growing professional communities, and Seville has a different regional market. Rentals, regional taxes, local language and job availability should be compared individually.",
+    "popularCities": [
+      "Madrid",
+      "Barcelona",
+      "Valencia",
+      "Málaga",
+      "Seville"
+    ]
   }
 ] as const;
 
