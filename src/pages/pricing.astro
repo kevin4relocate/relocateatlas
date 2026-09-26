@@ -5,23 +5,12 @@ import Footer from '../components/Footer.astro';
 import CTA from '../components/CTA.astro';
 import { SITE } from '../data';
 
-const productJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'Relocate Works Weekly Sponsor Job Intelligence',
-  description: 'Weekly sponsor-friendly job intelligence for international candidates across high-demand industries.',
-  brand: { '@type': 'Brand', name: 'Relocate Works' },
-  offers: [
-    { '@type': 'Offer', price: '9', priceCurrency: 'USD', name: 'Monthly Access', availability: 'https://schema.org/InStock' },
-    { '@type': 'Offer', price: '49', priceCurrency: 'USD', name: 'Founding Yearly Access', availability: 'https://schema.org/InStock' }
-  ]
-};
+
 ---
 <BaseLayout
   title="Pricing — $9/month or $49/year Founding Access | Relocate Works"
   description="Relocate Works founding pricing: $9/month or $49/year for weekly sponsor-friendly job intelligence, direct apply links, sponsorship evidence, and practical planning notes."
   canonicalPath="/pricing"
-  structuredData={productJsonLd}
 >
   <Header />
   <main>
