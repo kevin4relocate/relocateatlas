@@ -450,3 +450,7 @@ body.mobile-menu-open { position:static!important; width:auto; overflow:hidden!i
 .rw-settlement-official { display:inline-flex; align-items:center; flex-wrap:wrap; gap:13px; margin-top:15px; padding:12px 16px; border-radius:8px; background:#e5f2df; border:1px solid #d0e5c8; color:#24573e; font-size:.88rem; font-weight:850; }
 .rw-settlement-official:hover { background:#d8ebd1; color:#174b33; }
 @media (max-width:740px) { .rw-settlement-stages {grid-template-columns:1fr;} }
+
+
+/* Keep the expanded 14-country desktop menu usable on smaller-height laptops. */
+.rw-mega-menu { max-height: min(76dvh, 650px); overflow-y: auto; overscroll-behavior: contain; }
