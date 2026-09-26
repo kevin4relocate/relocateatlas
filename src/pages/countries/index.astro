@@ -38,8 +38,8 @@ const nextCountries = countries.filter((country) => country.priority === 'Next')
     <section class="section">
       <div class="container">
         <div class="section-heading">
-          <div><span class="mini-eyebrow">Expansion markets</span><h2>Next countries to monitor</h2></div>
-          <p>These destinations are also important for global candidates and are included in the resource library.</p>
+          <div><span class="mini-eyebrow">More destinations</span><h2>Explore five more country guides</h2></div>
+          <p>Our guides for Singapore, Ireland, the Netherlands, Denmark and Japan are available now alongside the five launch-focus countries.</p>
         </div>
         <div class="grid-3">{nextCountries.map((country) => <CountryCard {...country} />)}</div>
       </div>

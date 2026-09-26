@@ -150,9 +150,9 @@ const nextCountries = countries.filter((country) => country.priority === 'Next')
         </div>
         <div class="next-market-panel">
           <div>
-            <span class="mini-eyebrow">Next markets</span>
-            <h3>Expanding after launch</h3>
-            <p>Singapore, Ireland, Netherlands, Denmark, and Japan are prepared as next-market country guides.</p>
+            <span class="mini-eyebrow">More destinations</span>
+            <h3>Five more country guides available</h3>
+            <p>Explore our existing guides for Singapore, Ireland, the Netherlands, Denmark and Japan, including visa, tax and relocation planning information.</p>
           </div>
           <div class="market-pills">
             {nextCountries.map((country) => <a href={`/countries/${country.slug}`}>{country.flag} {country.name}</a>)}

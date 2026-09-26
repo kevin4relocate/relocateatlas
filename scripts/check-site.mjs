@@ -70,7 +70,8 @@ for (const slug of ['australia','new-zealand','united-kingdom','germany','canada
   const file = join(root, 'countries', slug, 'index.html');
   const txt = pages.get(file);
   if (!txt) errors.push('Country guide not generated: ' + slug);
-  else if (!txt.includes('Official starting points') || !txt.includes('September 2026')) errors.push('Country guide missing editorial notes: ' + slug);
+  else if (!txt.includes('Official starting points')) errors.push('Country guide missing official references: ' + slug);
+  else if (txt.includes('Editorial edition: September 2026')) errors.push('Country guide contains obsolete editorial edition notice: ' + slug);
 }
 const blogFiles = htmlFiles.filter((path) => path.includes('/blog/') && path !== join(root,'blog','index.html'));
 if (blogFiles.length !== 9) errors.push('Expected 9 unique blog article pages, found ' + blogFiles.length);
@@ -82,6 +83,7 @@ for (const file of blogFiles) {
 }
 const home = pages.get(join(root,'index.html')) || '';
 if (home.includes('"SearchAction"')) errors.push('Homepage still advertises nonexistent /search in structured data');
+if (home.includes('Expanding after launch') || home.includes('prepared as next-market country guides')) errors.push('Homepage implies already available guides are not yet launched');
 if (home.includes('Sponsor Confidence') || home.includes('8.2/10')) errors.push('Homepage still shows fictitious job scores');
 mkdirSync(resolve('reports'), { recursive: true });
 writeFileSync(resolve('reports', 'external-links.txt'), [...external].sort().join('\n') + '\n');
