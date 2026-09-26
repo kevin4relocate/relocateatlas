@@ -22,9 +22,10 @@ const settlement = settlementNotes[country.slug];
 if (!editorial || !settlement) throw new Error('Country editorial or residence note missing: ' + country.slug);
 
 const relatedPosts = blogPosts.slice(0, 3);
-const relatedCountries = countries
-  .filter((item) => item.slug !== country.slug)
-  .slice(0, 3);
+const relatedCountries = [
+  ...countries.filter((item) => item.slug !== country.slug && item.region === country.region),
+  ...countries.filter((item) => item.slug !== country.slug && item.region !== country.region)
+].slice(0, 3);
 
 const guideNav = [
   ['overview', 'Overview'],
