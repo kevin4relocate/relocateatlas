@@ -562,3 +562,25 @@ body.mobile-menu-open { position:static!important; width:auto; overflow:hidden!i
 .rw-footer-socials a:hover,.rw-footer-col a:hover,.rw-footer-bottom a:hover {color:#dbeafe;}
 .rw-settlement-official {color:#1d4ed8;background:#eff6ff;border-color:#bfdbfe;}
 .rw-settlement-official:hover {background:#dbeafe;color:#1e40af;}
+
+
+/* The legacy two-column .section-heading grid was squeezing a heading with
+   only one child into 45% of its container on the Weekly Jobs page.
+   Give that headline the full width of the evidence cards below it. */
+.weekly-evidence-section { padding-block: clamp(48px, 5vw, 72px); }
+.weekly-evidence-section > .container.narrow { max-width: 1060px; }
+.weekly-evidence-heading { display: block; margin-bottom: 30px; }
+.weekly-evidence-heading > div { width: 100%; max-width: 900px; min-width: 0; }
+.weekly-evidence-heading h2 {
+  max-width: 900px;
+  margin: 14px 0 0;
+  font-size: clamp(2.15rem, 3.25vw, 3.25rem);
+  line-height: 1.12;
+  text-wrap: balance;
+  overflow-wrap: normal;
+}
+@media (max-width: 640px) {
+  .weekly-evidence-section { padding-block: 42px; }
+  .weekly-evidence-heading { margin-bottom: 24px; }
+  .weekly-evidence-heading h2 { font-size: clamp(2rem, 8vw, 2.7rem); }
+}
