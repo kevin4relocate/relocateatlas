@@ -3,6 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTA from '../../components/CTA.astro';
+import TopicLinks from '../../components/TopicLinks.astro';
+import CountryGuideHero from '../../components/CountryGuideHero.astro';
 import { SITE, countries, blogPosts } from '../../data';
 import { countryEditorial } from '../../countryEditorial';
 
@@ -34,6 +36,15 @@ const guideNav = [
   ['cities', 'Cities'],
   ['planning', 'Moving checklist'],
   ['official-sources', 'Official sources']
+];
+
+const quickTopics = [
+  { icon: '◈', eyebrow: 'Immigration', title: 'Visa pathways', description: 'Work authorization and routes to research.', href: '#visas' },
+  { icon: '⌁', eyebrow: 'Finances', title: 'Taxes', description: 'Tax systems, deductions and take-home context.', href: '#taxes' },
+  { icon: '⌂', eyebrow: 'Everyday life', title: 'Living costs', description: 'Housing, transport and setting-up expenses.', href: '#cost' },
+  { icon: '◇', eyebrow: 'Career', title: 'Job-market context', description: 'Relevant sectors and employer considerations.', href: '#jobs' },
+  { icon: '◉', eyebrow: 'Settling in', title: 'Healthcare', description: 'Medical coverage and initial arrangements.', href: '#healthcare' },
+  { icon: '↗', eyebrow: 'Verify', title: 'Official sources', description: 'Government starting points for your research.', href: '#official-sources' }
 ];
 
 const canonicalPath = `/countries/${country.slug}`;
@@ -119,45 +130,23 @@ const itemListJsonLd = {
 >
   <Header />
 
-  <main>
-    <section class="page-hero country-hero country-hero-compact">
-      <div class="container country-hero-stack">
-        <div class="country-hero-copy">
-          <span class="eyebrow">{country.flag} Moving to {country.name}</span>
-          <h1>Moving to {country.name}: visa, jobs, tax, salary, and living-cost guide.</h1>
-          <p class="lead">{country.shortDescription}</p>
-
-          <div class="hero-actions compact-actions">
-            <a class="button" href={`/jobs/${country.slug}`}>Understand the job market</a>
-            <a class="button-ghost" href={`/visas/${country.slug}`}>Visa overview</a>
-            <a class="button-ghost" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Weekly jobs on Substack ↗</a>
-          </div>
-        </div>
-
-        <aside class="quick-facts-compact" aria-label={`${country.name} quick facts`}>
-          <div class="quick-facts-title">
-            <strong>{country.name} quick facts</strong>
-            <span>Useful basics before reading the full guide.</span>
-          </div>
-
-          <dl class="fact-list fact-list-compact">
-            <div><dt>Capital</dt><dd>{country.capital}</dd></div>
-            <div><dt>Currency</dt><dd>{country.currency}</dd></div>
-            <div><dt>Language</dt><dd>{country.languages}</dd></div>
-            <div><dt>Main pathway</dt><dd>{country.primaryVisa}</dd></div>
-          </dl>
-        </aside>
+  <main class="rw-main rw-country-guide-page">
+    <CountryGuideHero country={country} editorial={editorial} />
+    <section class="rw-country-toc" aria-label="Guide topics">
+      <div class="container">
+        <div class="rw-section-head rw-toc-head"><div><span class="rw-kicker">EXPLORE THE GUIDE</span><h2>What would you like to understand?</h2></div><a class="rw-text-link" href="#overview">Read the full guide <span aria-hidden="true">↓</span></a></div>
+        <TopicLinks items={quickTopics} label={country.name + ' guide topics'} />
       </div>
     </section>
 
-    <section class="section section-white guide-section">
+    <section class="section section-white guide-section rw-guide-section">
       <div class="container guide-layout">
-        <aside class="guide-sidebar" aria-label="Country guide navigation">
+        <aside class="guide-sidebar rw-guide-sidebar" aria-label="Country guide navigation">
           <strong>{country.name} Guide</strong>
           {guideNav.map(([id, label]) => <a href={`#${id}`}>{label}</a>)}
         </aside>
 
-        <article class="guide-content">
+        <article class="guide-content rw-guide-content">
           <section id="overview" class="content-block">
             <span class="mini-eyebrow">Country Overview</span>
             <h2>{country.name} overview</h2>
