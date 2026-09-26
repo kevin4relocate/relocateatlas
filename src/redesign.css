@@ -417,3 +417,21 @@ body.mobile-menu-open { position:static!important; width:auto; overflow:hidden!i
   html { scroll-behavior:auto; }
   .rw-main a, .rw-header a, .rw-footer a { transition:none; }
 }
+
+
+/* Unified informational CTA used on legacy and redesigned pages. */
+.rw-shared-cta { position:relative; overflow:hidden; padding:65px 0; background:linear-gradient(123deg,#184438,#10342d); color:#e8f4e5; }
+.rw-shared-cta::after { content:''; pointer-events:none; position:absolute; width:430px; height:430px; border:1px solid rgba(227,244,194,.17); border-radius:50%; right:-120px; top:-170px; box-shadow:0 0 0 55px rgba(218,239,192,.035),0 0 0 116px rgba(218,239,192,.025); }
+.rw-shared-cta-inner { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; gap:40px; }
+.rw-shared-cta-kicker { color:#dcee98; letter-spacing:.14em; font-size:.72rem; font-weight:900; }
+.rw-shared-cta h2 { margin:14px 0 16px; max-width:700px; color:#fff; font-size:clamp(2.25rem,3.7vw,3.5rem); letter-spacing:-.05em; line-height:1.08; }
+.rw-shared-cta h2 em { font-family:Georgia,'Times New Roman',serif; color:#dcee98; font-weight:500; }
+.rw-shared-cta p { max-width:680px; color:#d0e1d4; font-size:.96rem; line-height:1.75; }
+.rw-shared-cta-actions { display:grid; justify-items:start; gap:19px; flex-shrink:0; }
+.rw-shared-cta-link { color:#e7f3d4; border-bottom:1px solid rgba(213,243,210,.65); padding-bottom:5px; font-size:.86rem; font-weight:830; }
+.rw-shared-cta-link:hover { color:#fff; }
+@media(max-width:780px) {
+  .rw-shared-cta { padding:56px 0; }
+  .rw-shared-cta-inner { display:grid; }
+  .rw-shared-cta-actions { display:flex; flex-wrap:wrap; align-items:center; }
+}
