@@ -1,0 +1,38 @@
+name: Relocate Works website quality
+
+on:
+  push:
+    branches:
+      - main
+      - 'fix/**'
+      - 'improve/**'
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Astro site
+        run: npm run build
+      - name: Audit static routes and editorial pages
+        run: npm run check:site
+      - name: Save external links for editorial review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: external-links-review
+          path: reports/external-links.txt
+          if-no-files-found: ignore
