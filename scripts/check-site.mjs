@@ -106,38 +106,50 @@ else if (/Sponsor Score|82%|Sponsor Confidence/i.test(readFileSync(ogImageFile, 
 // The phase 1/2 layout must not silently introduce an unrelated green brand.
 // Preserve the original navy / royal-blue / teal tokens and original favicon.
 const redesignCss = readFileSync(resolve('src/redesign.css'), 'utf8');
-if (!/--rw-forest:\s*#102a43/i.test(redesignCss)
-  || !/--rw-primary:\s*#2563eb/i.test(redesignCss)
-  || !/--rw-teal:\s*#14b8a6/i.test(redesignCss)
-  || !/--rw-sage:\s*#2dd4bf/i.test(redesignCss)) {
-  errors.push('Redesign colors no longer match original Relocate Works blue/teal identity');
+if (!/--rw-forest:\s*#102a43/i.test(redesignCss) ||
+    !/--rw-primary:\s*#2563eb/i.test(redesignCss) ||
+    !/--rw-teal:\s*#2563eb/i.test(redesignCss) ||
+    !/--rw-sage:\s*#60a5fa/i.test(redesignCss)) {
+  errors.push('Redesigned site does not use the requested navy/royal-blue/light-blue palette');
 }
-if (/#12352f|#dcee98|#163c33|#f4f5ee/i.test(redesignCss)) {
-  errors.push('Previous green redesign color remains in the active stylesheet');
+if (/#12352f|#dcee98|#0f766e|#14b8a6|#2dd4bf|#99f6e4|#5eead4|#ccfbf1/i.test(redesignCss)) {
+  errors.push('Green/teal visual accents remain in redesigned pages');
 }
 if (!/\.rw-hero\s*\{background:linear-gradient\(165deg,#fff 0%,#f8fafc 40%,#eff6ff 100%\)/i.test(redesignCss)) {
-  errors.push('Original light blue homepage hero treatment was removed');
+  errors.push('Light blue homepage hero composition was removed');
 }
-const faviconSource = readFileSync(resolve(root, 'favicon.svg'), 'utf8');
-if (!/#2DD4BF/i.test(faviconSource) || !/#2563EB/i.test(faviconSource)) {
-  errors.push('Original blue-to-teal Relocate Works favicon was replaced');
+if (!/\.rw-main \.rw-kicker \{color:#1d4ed8;\}/.test(redesignCss) ||
+    !/\.rw-menu-label \{color:#1d4ed8;\}/.test(redesignCss)) {
+  errors.push('Eyebrow or country dropdown heading is no longer royal blue');
 }
-const manifest = JSON.parse(readFileSync(resolve(root, 'site.webmanifest'), 'utf8'));
+const headerSource = readFileSync(resolve('src/components/Header.astro'), 'utf8');
+const footerSource = readFileSync(resolve('src/components/Footer.astro'), 'utf8');
+if (!headerSource.includes('src="/brand-mark-blue.svg"') ||
+    !footerSource.includes('src="/brand-mark-blue.svg"')) {
+  errors.push('Header or footer still references an old cached green logo');
+}
+const logoSource = readFileSync(resolve(root, 'brand-mark-blue.svg'), 'utf8');
+const faviconSource = readFileSync(resolve(root, 'favicon-blue.svg'), 'utf8');
+if ([logoSource,faviconSource].some(asset => !/#3B82F6/i.test(asset) || !/#1D4ED8/i.test(asset) || /#2DD4BF|#0f766e/i.test(asset))) {
+  errors.push('New blue brand assets are missing or contain green accents');
+}
+const htmlHead = pages.get(join(root,'index.html')) || '';
+if (!htmlHead.includes('favicon-blue.svg')) errors.push('Document still points at old favicon URL');
+const manifest = JSON.parse(readFileSync(resolve(root,'site.webmanifest'),'utf8'));
 if (manifest.theme_color?.toUpperCase() !== '#102A43' || manifest.background_color?.toUpperCase() !== '#F8FAFC') {
-  errors.push('App manifest no longer uses the original blue/cloud palette');
+  errors.push('Browser colors do not match blue/cloud palette');
 }
-if (existsSync(ogImageFile) && (!/#2563eb/i.test(readFileSync(ogImageFile, 'utf8'))
-  || !/#2dd4bf/i.test(readFileSync(ogImageFile, 'utf8')))) {
-  errors.push('Social preview artwork does not use the original blue/teal colors');
+if (existsSync(ogImageFile) && (!/#2563eb/i.test(readFileSync(ogImageFile,'utf8')) ||
+    /#0f766e|#2dd4bf/i.test(readFileSync(ogImageFile,'utf8')))) {
+  errors.push('Social-preview text still contains old green accents');
 }
-
 
 /* Phase 1 redesign smoke checks: no invented search route or dead-end design navigation. */
 const countryDirectory = pages.get(join(root, 'countries', 'index.html')) || '';
 const guideDirectory = pages.get(join(root, 'guides', 'index.html')) || '';
 if (!guideDirectory.includes('THE RELOCATION LIBRARY') || !guideDirectory.includes('rw-topic-grid')) errors.push('Redesigned relocation guides directory missing');
 if (!countryDirectory.includes('data-country-search') || !countryDirectory.includes('data-country-filters')) errors.push('Destination search or region filter missing');
-if ((countryDirectory.match(/<div\b[^>]*\bdata-country-result(?=[\s=>])/g) || []).length < countrySlugs.length) errors.push('Country directory does not expose all 10 filterable guide cards');
+if ((countryDirectory.match(/<div\b[^>]*\bdata-country-result(?=[\s=>])/g) || []).length < countrySlugs.length) errors.push('Country directory does not expose all filterable guide cards');
 if (!home.includes('action="/countries"') || !home.includes('name="q"')) errors.push('Homepage country search is not wired to the directory');
 if (!home.includes('rw-newsletter-section') || !home.includes('rw-hero')) errors.push('Redesigned homepage sections missing');
 
