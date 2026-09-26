@@ -6,9 +6,12 @@ import CTA from './CTA.astro';
 import CountryResourceNav from './CountryResourceNav.astro';
 import { SITE, resourceSections, blogPosts } from '../data';
 import { countryEditorial } from '../countryEditorial';
+import { settlementNotes } from '../settlementEditorial';
 
 const { country, sectionSlug } = Astro.props;
 const editorial = countryEditorial[country.slug];
+const settlement = settlementNotes[country.slug];
+if (!editorial || !settlement) throw new Error('Country references missing for: ' + country.slug);
 
 const section = resourceSections.find((item) => item.slug === sectionSlug);
 if (!section) throw new Error(`Unknown resource section: ${sectionSlug}`);
@@ -790,6 +793,16 @@ const itemListJsonLd = {
                     </tbody>
                   </table>
                 </div>
+              </section>
+
+              <section class="content-block compact-content-block rw-settlement-block">
+                <span class="mini-eyebrow">After the initial permit</span>
+                <h2>Work authorisation and long-term residence are different</h2>
+                <p>{settlement.entry}</p>
+                <p>{settlement.nextStep}</p>
+                <h3>Verify these separate requirements</h3>
+                <ul class="check-list">{settlement.verify.map((item) => <li>{item}</li>)}</ul>
+                <p><a class="inline-link" href={settlement.sourceUrl} target="_blank" rel="noopener noreferrer">{settlement.sourceLabel} ↗</a></p>
               </section>
 
               <section class="content-block compact-content-block">
