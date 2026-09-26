@@ -46,7 +46,7 @@ const topics = [
             <div class="rw-plan-card-body">
               <div class="rw-plan-card-label">FROM CURIOUS TO PREPARED</div>
               <h2>A better plan<br />for the big move.</h2>
-              <div class="rw-plan-step"><span>01</span><div><strong>Choose a destination</strong><small>Explore ten country guides</small></div><span aria-hidden="true">↗</span></div>
+              <div class="rw-plan-step"><span>01</span><div><strong>Choose a destination</strong><small>Explore our country guides</small></div><span aria-hidden="true">↗</span></div>
               <div class="rw-plan-step"><span>02</span><div><strong>Understand your route</strong><small>Visas, careers and financial context</small></div><span aria-hidden="true">↗</span></div>
               <div class="rw-plan-step"><span>03</span><div><strong>Prepare for arrival</strong><small>Housing, healthcare and next steps</small></div><span aria-hidden="true">↗</span></div>
             </div>
@@ -56,8 +56,8 @@ const topics = [
         </div>
       </div>
       <div class="container rw-hero-foot">
-        <span><strong>10</strong> country guides</span><span aria-hidden="true" class="rw-foot-divider"></span>
-        <span><strong>06</strong> career sectors</span><span aria-hidden="true" class="rw-foot-divider"></span>
+        <span><strong>{countries.length}</strong> country guides</span><span aria-hidden="true" class="rw-foot-divider"></span>
+        <span><strong>{industries.length.toString().padStart(2, '0')}</strong> career sectors</span><span aria-hidden="true" class="rw-foot-divider"></span>
         <span><strong>Free</strong> relocation library</span>
       </div>
     </section>
@@ -66,7 +66,7 @@ const topics = [
       <div class="container">
         <div class="rw-section-head">
           <div><span class="rw-kicker">DESTINATIONS, MADE CLEARER</span><h2>Where could your next chapter take you?</h2></div>
-          <div class="rw-head-side"><p>Start with the possibilities. Explore visa routes, salary context and the realities of day-to-day life.</p><a class="rw-text-link" href="/countries">All 10 country guides <span aria-hidden="true">↗</span></a></div>
+          <div class="rw-head-side"><p>Start with the possibilities. Explore visa routes, salary context and the realities of day-to-day life.</p><a class="rw-text-link" href="/countries">All {countries.length} country guides <span aria-hidden="true">↗</span></a></div>
         </div>
         <div class="rw-countries-grid">
           {featured.map((country) => <CountryCard {...country} />)}
