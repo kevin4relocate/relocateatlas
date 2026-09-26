@@ -1669,6 +1669,327 @@ export const countries = [
       "Kyoto",
       "Fukuoka"
     ]
+  },
+  {
+    "name": "Sweden",
+    "slug": "sweden",
+    "flag": "🇸🇪",
+    "region": "Europe",
+    "primaryVisa": "Employer-sponsored work permit / EU Blue Card",
+    "priority": "Next",
+    "shortDescription": "A northern European destination for international specialists in engineering, technology and life sciences, with employer-led work permits and separate long-term residence rules.",
+    "popularRoles": [
+      "Software Engineer",
+      "Embedded Systems Engineer",
+      "Data Scientist",
+      "Battery Systems Engineer",
+      "Research Specialist"
+    ],
+    "keyCities": [
+      "Stockholm",
+      "Gothenburg",
+      "Malmö",
+      "Uppsala",
+      "Lund"
+    ],
+    "capital": "Stockholm",
+    "currency": "Swedish Krona (SEK)",
+    "languages": "Swedish is the main public language; some international technology, research and engineering teams work partly in English.",
+    "overview": [
+      "Sweden has distinct technology and industrial clusters: Stockholm supports product software, fintech and services; Gothenburg is associated with automotive and engineering companies; Malmö and Lund combine cross-border links, universities and specialist research.",
+      "Non-EU/EEA professionals commonly start with an employer-supported Swedish work permit. A separate EU Blue Card route applies to sufficiently qualified employment with the necessary contract duration and salary; the Swedish Migration Agency publishes the current thresholds and insurance requirements.",
+      "International candidates should compare gross pay against Swedish tax, union or collective-agreement conditions where applicable, local housing access and language expectations. Work permission is not an automatic permanent residence award."
+    ],
+    "facts": [
+      "Standard work permits and EU Blue Cards have different remuneration and eligibility requirements.",
+      "Long-term settlement rules depend on the specific permit, residence history and self-support conditions.",
+      "Some jobs are English-speaking; many public-service and regulated professions require Swedish."
+    ],
+    "visaOverview": [
+      "A standard employee work permit normally requires a genuine qualifying offer, suitable remuneration and employer compliance with the Swedish Migration Agency's current rules. New 2026 requirements and transition arrangements make old salary figures especially unsuitable for current applications.",
+      "The Swedish EU Blue Card is designed for highly qualified employment: the official guidance sets higher education or relevant experience, a qualifying employment contract, the salary floor and insurance conditions. Blue Card holders should check job-change notification rules.",
+      "Certain work-permit holders can later apply for permanent residence when extending a permit after the necessary qualifying years, employment history, self-support and other conditions. Do not assume that a new work permit or a Blue Card itself guarantees settlement."
+    ],
+    "visaTypes": [
+      "Employee work permit supported by a qualifying employer",
+      "EU Blue Card for highly qualified employment under its own rules",
+      "Intra-corporate transfer for qualifying assignments",
+      "Permanent residence subject to residence, work and financial conditions"
+    ],
+    "taxOverview": [
+      "Swedish take-home pay depends on municipal income tax, state income-tax thresholds where applicable and the individual's circumstances. Check salary calculators with the municipality where you expect to live.",
+      "If staying long term, population registration with Skatteverket and a personal identity number can be central to banking and everyday administration; separate conditions apply to shorter stays."
+    ],
+    "taxTypes": [
+      "Municipal income tax",
+      "State income tax where applicable",
+      "Employer social-security charges and relevant pension arrangements",
+      "VAT on consumption"
+    ],
+    "taxYear": "Calendar year; consult Skatteverket for tax residency and final annual assessment.",
+    "incomeTax": "Municipal and, when applicable, state taxes; use current Skatteverket rules and your municipality.",
+    "costOverview": [
+      "Stockholm's private rental market can involve limited immediate availability, so verify lawful rental options and commute before signing an employment contract. Gothenburg, Malmö and university towns have different neighbourhood and transit trade-offs.",
+      "Budget for temporary accommodation, possible rental deposits, seasonal clothing, transit, insurance and the cost of relocating household items."
+    ],
+    "expensiveCities": [
+      "Central Stockholm",
+      "High-demand Stockholm commuter districts",
+      "Central Gothenburg"
+    ],
+    "affordableCities": [
+      "Select Malmö outer districts",
+      "Specific commuter towns with verified rail access",
+      "Residential areas outside prime city centres"
+    ],
+    "averageRent": "Research current local rentals and the distinction between first-hand and lawful second-hand contracts.",
+    "monthlyExpenses": "Model income after municipal tax, rent, public transport, household costs and first-month housing arrangements.",
+    "companiesOverview": [
+      "Research Swedish technology firms, industrial and automotive engineering businesses, battery and energy technology manufacturers, telecommunications suppliers and university research groups.",
+      "For each specific vacancy, ask whether the employer will assist with the correct work-permit process; an English-language listing does not confirm overseas eligibility."
+    ],
+    "companies": [
+      "Technology product and fintech employers",
+      "Automotive and industrial engineering groups",
+      "Telecommunications and energy technology producers",
+      "Research universities and life-sciences teams"
+    ],
+    "jobsOverview": [
+      "Match the actual duties, written remuneration and employment terms to a current Swedish work-permit or Blue Card route rather than choosing the route based only on the job title.",
+      "Technical roles may accept English in some teams, but client-facing, healthcare and regulated roles frequently need Swedish or professional licensing."
+    ],
+    "sectors": [
+      "Product technology",
+      "Automotive and industrial engineering",
+      "Energy and battery technology",
+      "Telecommunications",
+      "Life sciences and research"
+    ],
+    "demandJobs": [
+      "Backend Engineer",
+      "Embedded Systems Engineer",
+      "Data Scientist",
+      "Electrification Engineer",
+      "Research Scientist"
+    ],
+    "workingHours": "Standard full-time schedules are often around 40 hours; contract and collective agreements may affect the arrangement.",
+    "probation": "Verify probation clauses and any collective agreement against Swedish employment law.",
+    "pto": "Annual-leave entitlements are governed by Swedish law and relevant agreements.",
+    "publicHolidays": "Holiday and overtime arrangements vary with the contract and collective agreement.",
+    "unemployment": "Check union-related unemployment funds and your residence/qualifying history before assuming eligibility.",
+    "benefits": [
+      "Occupational pension where applicable",
+      "Statutory paid leave",
+      "Flexible-working arrangements if agreed",
+      "Relocation and Swedish-language support if explicitly offered"
+    ],
+    "salariesOverview": [
+      "Swedish EU Blue Card and standard work-permit salary criteria must be distinguished from typical gross salaries. Use the current official work-permit tables and candidate-specific offer.",
+      "Review monthly after-tax pay using the intended municipality, pension arrangement and actual rent; Sweden is not one uniform housing market."
+    ],
+    "averageSalary": "Use employer offers and Swedish occupation statistics; national averages cannot prove visa eligibility.",
+    "minimumWage": "Sweden has no single nationwide statutory minimum wage; collective agreements and immigration criteria are distinct.",
+    "highestPayingJobs": [
+      "Engineering Director",
+      "Principal Software Architect",
+      "Specialist Physician",
+      "Senior Research Director",
+      "Product Technology Lead"
+    ],
+    "salaryCities": [
+      "Stockholm",
+      "Gothenburg",
+      "Malmö"
+    ],
+    "payFrequency": "Typically monthly according to contract.",
+    "relocationOverview": [
+      "Arrange a lawful temporary address, plan population-registration eligibility and bank access, and confirm the insurance expected for your particular permit and stay.",
+      "Families should research local schooling, Swedish-language integration, nursery availability and partner work conditions separately."
+    ],
+    "relocationCompanies": [
+      "Sweden-experienced relocation and rental advisers",
+      "International shipping and storage providers",
+      "Employer-contracted immigration administration partners"
+    ],
+    "healthcareOverview": [
+      "Access to Swedish healthcare and applicable fees depends on residence registration and individual circumstances. Regional healthcare guidance, not a generic private-policy claim, should guide your plan; arrange transitional cover when required."
+    ],
+    "healthInsuranceTypes": [
+      "Regional healthcare for eligible residents",
+      "Work-permit insurance arrangements where required",
+      "Temporary cover where residency eligibility has not started"
+    ],
+    "privateHealthCost": "Verify resident eligibility and employer arrangements before requesting optional private-policy quotes.",
+    "expatInsurance": "Confirm permit-related insurance and temporary cover while registration is pending.",
+    "citiesOverview": "Stockholm combines technology and finance, Gothenburg is associated with mobility and engineering, Malmö has cross-border business links, while Uppsala and Lund include major research and university communities. Swedish ability and commuting should be checked against each employer.",
+    "popularCities": [
+      "Stockholm",
+      "Gothenburg",
+      "Malmö",
+      "Uppsala",
+      "Lund"
+    ]
+  },
+  {
+    "name": "Finland",
+    "slug": "finland",
+    "flag": "🇫🇮",
+    "region": "Europe",
+    "primaryVisa": "Specialist residence permit / EU Blue Card",
+    "priority": "Next",
+    "shortDescription": "A specialist-employment and research destination with defined work-based permits, Finnish or Swedish integration considerations and revised permanent-residence paths.",
+    "popularRoles": [
+      "Software Developer",
+      "Cybersecurity Specialist",
+      "Embedded Systems Engineer",
+      "Automation Engineer",
+      "Research Scientist"
+    ],
+    "keyCities": [
+      "Helsinki",
+      "Espoo",
+      "Tampere",
+      "Turku",
+      "Oulu"
+    ],
+    "capital": "Helsinki",
+    "currency": "Euro (EUR)",
+    "languages": "Finnish and Swedish are official languages; English is used in some international technology and research workplaces.",
+    "overview": [
+      "Finland's Helsinki–Espoo region houses many technology and research teams, Tampere and Oulu include embedded systems and industrial software clusters, and Turku has marine, pharmaceutical and university activity.",
+      "The Finnish Immigration Service's Specialist residence permit can suit confirmed expert employment with required remuneration and specialist qualifications or experience. Finland also operates an EU Blue Card route with separate eligibility tests. Neither route is a substitute for first obtaining an eligible job offer.",
+      "Under the permanent-residence rules in force from January 2026, applicants choose among distinct paths with different residence periods, work history and language or qualification conditions. Applicants should not rely on historical assumptions that four years' stay alone automatically qualifies."
+    ],
+    "facts": [
+      "Finland's specialist permit requires a confirmed job and the current specialist salary requirement.",
+      "Permanent-residence applications from 8 January 2026 follow route-specific residence and integration conditions.",
+      "Healthcare and social benefits depend on residence status, municipality-of-residence and other conditions."
+    ],
+    "visaOverview": [
+      "The Specialist permit applies to confirmed employment requiring special expertise and the Finnish Immigration Service's current salary threshold. A qualifying higher education degree or sufficient equivalent expertise and a real Finnish employer are central; many applicants make the first application from abroad.",
+      "The EU Blue Card is an alternative for qualifying highly skilled employment subject to its own contract and salary conditions. Check which route the exact offer meets rather than treating the two as interchangeable.",
+      "Permanent residence follows one of Migri's current application paths, which may include work-history, language and residence requirements. Starting in January 2026, routes differ; the initial specialist permit is not automatic settlement."
+    ],
+    "visaTypes": [
+      "Specialist residence permit for confirmed high-skill work",
+      "EU Blue Card with separate employment and pay conditions",
+      "Other residence permits for employed persons where appropriate",
+      "Permanent residence under the selected post-January-2026 path"
+    ],
+    "taxOverview": [
+      "Finland normally uses a tax card to set payroll withholding, with the treatment of overseas arrivals depending on length of stay and individual tax residence. A local personal identity code may be necessary to obtain the relevant card.",
+      "Take-home pay should include pension and social contributions where applicable, while housing and winter utility costs vary across the Helsinki region and other cities."
+    ],
+    "taxTypes": [
+      "Earned-income taxation and tax-card withholding",
+      "Municipal and state tax components",
+      "Pension and applicable insurance contributions",
+      "VAT on relevant consumer purchases"
+    ],
+    "taxYear": "Calendar year; Vero issues tax cards and annual pre-completed tax returns.",
+    "incomeTax": "Personal circumstances, length of stay and tax-card details determine the rate; verify with Vero.",
+    "costOverview": [
+      "Helsinki and Espoo have varied housing and transit prices by district; Tampere, Turku and Oulu require city-specific comparisons. Confirm the workplace's physical location and the realities of winter commutes.",
+      "Budget for refundable housing deposits where applicable, temporary lodging, warm clothing, transit, utility costs and necessary administrative registrations."
+    ],
+    "expensiveCities": [
+      "Central Helsinki",
+      "Central Espoo near major business centres",
+      "Prime Helsinki waterfront districts"
+    ],
+    "affordableCities": [
+      "Selected Tampere residential areas",
+      "Turku commuter neighbourhoods",
+      "Oulu districts with reliable bus links"
+    ],
+    "averageRent": "Compare current actual rental listings, lease rules and heating inclusions by city.",
+    "monthlyExpenses": "Include winter utilities, rent, public transport, insurance and the timing of any residence-based benefits.",
+    "companiesOverview": [
+      "Research enterprise-software teams, telecommunications and embedded-systems businesses, industrial automation employers, health technology and university laboratories.",
+      "Use the exact offer to verify specialist duties and current income requirements; an international brand name is not itself a residence permit."
+    ],
+    "companies": [
+      "Enterprise software and cloud employers",
+      "Telecommunications and embedded-systems firms",
+      "Industrial automation manufacturers",
+      "Research institutes and universities"
+    ],
+    "jobsOverview": [
+      "Evidence of genuinely specialist duties and adequate pay matters for the Specialist permit. Ask recruiters to confirm the legal employing entity, fixed monthly remuneration and which immigration route they intend to support.",
+      "Public-sector and regulated professions may require Finnish or Swedish language skills and recognition of qualifications; an English-speaking technology team is not representative of all sectors."
+    ],
+    "sectors": [
+      "Enterprise software and cybersecurity",
+      "Embedded systems",
+      "Industrial automation",
+      "Health technology",
+      "Scientific research"
+    ],
+    "demandJobs": [
+      "Cybersecurity Engineer",
+      "Embedded Developer",
+      "Industrial Automation Engineer",
+      "Data Engineer",
+      "Research Specialist"
+    ],
+    "workingHours": "Full-time hours commonly depend on the Employment Contracts Act and relevant collective agreement.",
+    "probation": "Check the probation clause against Finnish contract law and any collective agreement.",
+    "pto": "Annual leave accrues according to Finnish law and the applicable employment terms.",
+    "publicHolidays": "Holiday pay and work scheduling depend on the contract and applicable agreement.",
+    "unemployment": "Unemployment-fund membership and Kela residence or employment rules affect benefit access.",
+    "benefits": [
+      "Occupational healthcare provided by employer where required",
+      "Annual leave",
+      "Applicable earnings-related pension participation",
+      "Possible family or relocation allowances when contracted"
+    ],
+    "salariesOverview": [
+      "Check a confirmed gross monthly salary against Migri's current Specialist or EU Blue Card requirements. Do not substitute an average Finnish technology salary for the immigration test.",
+      "Estimate net pay with a valid tax card and the exact city and family circumstances. Employer occupational healthcare is not equivalent to universal access to every residence-based benefit."
+    ],
+    "averageSalary": "Use role-specific published compensation or offer terms; immigration pay thresholds are separate.",
+    "minimumWage": "Finland does not set a universal national statutory minimum wage; sector collective agreements matter.",
+    "highestPayingJobs": [
+      "Senior Software Architect",
+      "Technology Research Director",
+      "Engineering Manager",
+      "Specialist Physician",
+      "Principal Cybersecurity Architect"
+    ],
+    "salaryCities": [
+      "Helsinki",
+      "Espoo",
+      "Tampere",
+      "Oulu"
+    ],
+    "payFrequency": "Usually monthly for salaried employment; check the contract.",
+    "relocationOverview": [
+      "Prepare employment and residence documents, arrange a local address and personal identity code registration, and determine whether a municipality of residence can be assigned.",
+      "Accompanying families should check daycare or school language provision and how healthcare and social-benefit eligibility are assessed for each person."
+    ],
+    "relocationCompanies": [
+      "Finland-focused housing and arrival services",
+      "International movers with Finnish delivery partners",
+      "Employer-provided registration or settling-in advisers"
+    ],
+    "healthcareOverview": [
+      "Public healthcare generally depends on municipality-of-residence status and other entitlement rules. Employers also provide occupational healthcare for employees, but family coverage and specialist services are separate questions."
+    ],
+    "healthInsuranceTypes": [
+      "Municipal public healthcare for those eligible",
+      "Employer occupational healthcare",
+      "Private supplemental or bridging insurance if needed"
+    ],
+    "privateHealthCost": "Confirm public and occupational entitlement before obtaining optional supplemental quotes.",
+    "expatInsurance": "Arrange any needed transitional health cover until residence-based eligibility is resolved.",
+    "citiesOverview": "Helsinki and Espoo offer many professional technology and research roles; Tampere has industrial and software companies; Turku has maritime and life-sciences activity; Oulu has wireless and embedded expertise. Check the workplace and local language context.",
+    "popularCities": [
+      "Helsinki",
+      "Espoo",
+      "Tampere",
+      "Turku",
+      "Oulu"
+    ]
   }
 ] as const;
 
