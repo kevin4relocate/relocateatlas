@@ -16,7 +16,7 @@ const topics = [
   { icon: '◉', eyebrow: 'Moving abroad', title: 'Relocation services', description: 'Navigate the logistics of finding housing and settling into a new place.', href: '/relocation-companies' }
 ];
 ---
-<BaseLayout title="Relocate Works | Plan Your Move Abroad with Confidence" description="Independent destination guides covering visas, work, salaries, taxes and daily life across ten countries. Dated international job roundups are published separately on Substack." canonicalPath="/">
+<BaseLayout title="Relocate Works | Plan Your Move Abroad with Confidence" description={`Independent destination guides covering visas, work, salaries, taxes and everyday life across ${countries.length} countries. Dated international job roundups are published separately on Substack.`} canonicalPath="/">
   <Header />
   <main class="rw-main">
     <section class="rw-hero">
