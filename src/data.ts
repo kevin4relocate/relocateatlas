@@ -2204,6 +2204,7 @@ export const blogPosts = [
     "slug": "how-to-find-visa-sponsor-jobs-abroad",
     "description": "A practical guide to finding visa sponsor jobs, checking employer signals, and avoiding roles that do not support international candidates.",
     "date": "2026-06-28",
+    "updated": "2026-09-26",
     "category": "Job Search"
   },
   {
@@ -2211,6 +2212,7 @@ export const blogPosts = [
     "slug": "must-have-right-to-work-meaning",
     "description": "Learn why this phrase matters when applying for international jobs and how it affects visa sponsorship chances.",
     "date": "2026-06-28",
+    "updated": "2026-09-26",
     "category": "Visa Basics"
   },
   {
@@ -2218,6 +2220,7 @@ export const blogPosts = [
     "slug": "best-countries-for-qa-engineers-to-relocate",
     "description": "A starter overview of countries that may offer strong relocation opportunities for QA Engineers and Software Testers.",
     "date": "2026-06-28",
+    "updated": "2026-09-26",
     "category": "Career Guides"
   },
   {
@@ -2225,6 +2228,7 @@ export const blogPosts = [
     "slug": "how-relocate-works-reviews-sponsor-friendly-jobs",
     "description": "A clear look at the AI-assisted and human-reviewed process used to evaluate sponsor signals, risk phrases, and job quality.",
     "date": "2026-06-28",
+    "updated": "2026-09-26",
     "category": "Methodology"
   },
   {
@@ -2232,6 +2236,7 @@ export const blogPosts = [
     "slug": "australia-visa-sponsor-jobs-what-to-check-first",
     "description": "Key signals to review when looking for Australia employer-sponsored jobs, including role fit, salary context, and company credibility.",
     "date": "2026-06-28",
+    "updated": "2026-09-26",
     "category": "Country Guide"
   },
   {
@@ -2239,6 +2244,7 @@ export const blogPosts = [
     "slug": "uk-skilled-worker-sponsor-jobs-checklist",
     "description": "A practical checklist for identifying stronger UK Skilled Worker job opportunities and avoiding weak sponsorship signals.",
     "date": "2026-06-28",
+    "updated": "2026-09-26",
     "category": "Country Guide"
   },
 
@@ -2247,6 +2253,7 @@ export const blogPosts = [
     "slug": "healthcare-visa-sponsor-jobs-what-to-check",
     "description": "A practical checklist for nurses, care workers, healthcare assistants, and allied health candidates researching sponsor-friendly jobs abroad.",
     "date": "2026-06-28",
+    "updated": "2026-09-26",
     "category": "Industry Guide"
   },
   {
@@ -2254,6 +2261,7 @@ export const blogPosts = [
     "slug": "engineering-skilled-trade-jobs-abroad-requirements",
     "description": "Understand qualification, licensing, trade assessment, and employer sponsorship risks for engineering and skilled trade relocation.",
     "date": "2026-06-28",
+    "updated": "2026-09-26",
     "category": "Industry Guide"
   },
   {
@@ -2261,6 +2269,7 @@ export const blogPosts = [
     "slug": "how-to-ask-recruiters-about-visa-sponsorship",
     "description": "A simple approach to asking about sponsorship without hurting your application or wasting time on unsuitable jobs.",
     "date": "2026-06-28",
+    "updated": "2026-09-26",
     "category": "Application Tips"
   },
 ] as const;
