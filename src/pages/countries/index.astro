@@ -6,14 +6,14 @@ import CountryCard from '../../components/CountryCard.astro';
 import { countries } from '../../data';
 const regions = ['All destinations', ...new Set(countries.map((country) => country.region))];
 ---
-<BaseLayout title="Explore 10 Country Relocation Guides | Relocate Works" description="Browse free relocation planning guides for ten international destinations. Explore visas, salaries, tax, living costs and employment context by country." canonicalPath="/countries">
+<BaseLayout title={'Explore ' + countries.length + ' Country Relocation Guides | Relocate Works'} description="Browse free relocation planning guides for international destinations. Explore visas, salaries, tax, living costs and employment context by country." canonicalPath="/countries">
   <Header />
   <main class="rw-main">
     <section class="rw-page-intro rw-country-index-intro">
       <div class="container">
         <nav class="rw-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Countries</span></nav>
         <div class="rw-country-index-lead">
-          <div><span class="rw-kicker">YOUR NEXT DESTINATION</span><h1>Find somewhere that <em>fits your future.</em></h1><p class="rw-lead">Explore our ten destination guides. Start with a country you know, or discover the options through visas, career context and everyday living.</p></div>
+          <div><span class="rw-kicker">YOUR NEXT DESTINATION</span><h1>Find somewhere that <em>fits your future.</em></h1><p class="rw-lead">Explore our destination guides. Start with a country you know, or discover the options through visas, career context and everyday living.</p></div>
           <div class="rw-index-side-note" aria-label="What the guides cover"><span>IN EVERY COUNTRY GUIDE</span><div>Visa routes <span>↗</span></div><div>Salary &amp; tax context <span>↗</span></div><div>Living &amp; settling in <span>↗</span></div></div>
         </div>
       </div>
@@ -33,7 +33,7 @@ const regions = ['All destinations', ...new Set(countries.map((country) => count
             </div>
           </div>
         </div>
-        <div class="rw-listing-meta"><h2>All destinations</h2><output aria-live="polite" aria-atomic="true" data-country-result-count>10 guides</output></div>
+        <div class="rw-listing-meta"><h2>All destinations</h2><output aria-live="polite" aria-atomic="true" data-country-result-count>{countries.length} guides</output></div>
         <div class="rw-countries-grid rw-all-countries-grid">
           {countries.map((country) => <div class="rw-country-result" data-country-result data-region={country.region} data-search-text={[country.name, country.region, country.primaryVisa, ...country.keyCities, ...country.popularRoles].join(' ').toLowerCase()}><CountryCard {...country} /></div>)}
         </div>
