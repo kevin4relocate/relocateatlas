@@ -1,14 +1,23 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#0B1220"/>
-  <circle cx="1020" cy="90" r="260" fill="#2563EB" fill-opacity="0.28"/>
-  <circle cx="130" cy="520" r="260" fill="#14B8A6" fill-opacity="0.22"/>
-  <path d="M105 130H1095V500H105V130Z" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.12"/>
-  <text x="105" y="220" fill="white" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="800">Relocate Works</text>
-  <text x="108" y="292" fill="#BAE6FD" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600">Weekly visa sponsor jobs and relocation guides</text>
-  <text x="108" y="362" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="28">AI-assisted. Human-reviewed. Built for global candidates.</text>
-  <rect x="108" y="420" width="285" height="56" rx="28" fill="#2DD4BF"/>
-  <text x="139" y="458" fill="#06211D" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Subscribe on Substack</text>
-  <rect x="832" y="330" width="250" height="92" rx="24" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.18"/>
-  <text x="860" y="365" fill="white" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Sponsor Score</text>
-  <text x="860" y="405" fill="#2DD4BF" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900">82%</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs><radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1082 55) rotate(129) scale(785 980)"><stop stop-color="#3e775b"/><stop offset="1" stop-color="#12352f"/></radialGradient></defs>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <circle cx="1015" cy="315" r="285" stroke="#dcee98" stroke-opacity=".22" stroke-width="2"/>
+  <circle cx="1015" cy="315" r="220" stroke="#dcee98" stroke-opacity=".24" stroke-dasharray="5 13"/>
+  <circle cx="1015" cy="315" r="150" stroke="#dcee98" stroke-opacity=".20"/>
+  <rect x="75" y="74" width="52" height="52" rx="15" fill="#dcee98"/>
+  <text x="101" y="108" text-anchor="middle" fill="#12352f" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="21" letter-spacing="-2">RW</text>
+  <text x="145" y="108" fill="#f4faeb" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="31" letter-spacing="-1.6">Relocate Works.</text>
+  <text x="78" y="212" fill="#dcee98" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="17" letter-spacing="4">INDEPENDENT RELOCATION RESEARCH</text>
+  <text x="73" y="310" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="72" letter-spacing="-3">Your next chapter.</text>
+  <text x="73" y="394" fill="#dcee98" font-family="Georgia,serif" font-style="italic" font-size="72" letter-spacing="-3">A clearer picture.</text>
+  <text x="78" y="459" fill="#dceadd" font-family="Arial,Helvetica,sans-serif" font-size="25">Explore countries, visas, work and everyday life abroad.</text>
+  <rect x="77" y="506" width="630" height="1" fill="#e0f0d7" fill-opacity=".28"/>
+  <text x="78" y="545" fill="#d1e8c8" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700">relocateworks.com</text>
+  <rect x="882" y="218" width="250" height="191" rx="20" fill="#f7f9ee"/>
+  <text x="908" y="254" fill="#557b60" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="15" letter-spacing="1.5">PLAN THE MOVE</text>
+  <text x="906" y="308" fill="#254f3b" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700">01  Destinations</text>
+  <path d="M908 328H1108" stroke="#d9e7d3"/>
+  <text x="906" y="352" fill="#254f3b" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700">02  Visa routes</text>
+  <path d="M908 372H1108" stroke="#d9e7d3"/>
+  <text x="906" y="396" fill="#254f3b" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700">03  Living costs</text>
 </svg>
