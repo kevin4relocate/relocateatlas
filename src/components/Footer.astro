@@ -1,127 +1,52 @@
 ---
 import { SITE, countries } from '../data';
-
 const year = new Date().getFullYear();
-
-// Chỉ lấy 5 nước phổ biến nhất để footer không bị quá dài
-const popularCountries = countries.filter((country) => country.priority === 'Launch').slice(0, 5);
-
+const destinations = countries.filter((country) => country.priority === 'Launch');
+const guideLinks = [
+  { href: '/guides', label: 'All relocation guides' },
+  { href: '/visas', label: 'Visas & residence' },
+  { href: '/salaries', label: 'Salaries' },
+  { href: '/taxes', label: 'Taxes' },
+  { href: '/cost-of-living', label: 'Living costs' }
+];
 const exploreLinks = [
-  { href: '/countries', label: 'Countries' },
-  { href: '/visa-sponsor-jobs', label: 'Visa Sponsor Jobs' },
+  { href: '/countries', label: 'All countries' },
   { href: '/industries', label: 'Industries' },
-  { href: '/jobs/free-preview', label: 'Weekly Newsletter' },
-  { href: '/pricing', label: 'Pricing' }
-];
-
-const resourceLinks = [
-  { href: '/visas', label: 'Visa Guides' },
-  { href: '/jobs', label: 'Job Guides' },
-  { href: '/salaries', label: 'Salary Guides' },
-  { href: '/taxes', label: 'Tax Guides' },
-  { href: '/cost-of-living', label: 'Cost of Living' }
-];
-
-const companyLinks = [
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/privacy', label: 'Privacy Policy' },
-  { href: '/terms', label: 'Terms' },
-  { href: '/disclaimer', label: 'Disclaimer' }
+  { href: '/jobs', label: 'Job-market guides' },
+  { href: '/blog', label: 'Insights & articles' },
+  { href: '/jobs/free-preview', label: 'Weekly job newsletter' }
 ];
 ---
-<footer class="footer footer-clean">
-  <div class="container footer-clean-grid">
-    
-    <!-- Cột 1: Brand Info -->
-    <div class="footer-clean-brand">
-      <a class="logo" href="/" aria-label="Relocate Works home">
-        <img
-          class="logo-mark"
-          src="/favicon.svg"
-          width="40"
-          height="40"
-          alt=""
-          aria-hidden="true"
-        />
-        <span>Relocate Works</span>
+<footer class="rw-footer">
+  <div class="container rw-footer-top">
+    <div class="rw-footer-brand">
+      <a class="rw-brand rw-brand-inverse" href="/" aria-label="Relocate Works home">
+        <img src="/favicon.svg" width="42" height="42" alt="" aria-hidden="true" />
+        <span class="rw-brand-wordmark">Relocate <strong>Works.</strong></span>
       </a>
-
-      <p>
-        Visa sponsor job intelligence, country guides, industry requirements, salary context,
-        tax basics, and relocation planning for global candidates.
-      </p>
-
-      <div class="footer-mini-badges" aria-label="Relocate Works principles">
-        <span>AI-assisted</span>
-        <span>Human-reviewed</span>
-        <span>Research only</span>
-      </div>
-
-      <div class="footer-social-compact" aria-label="Relocate Works social links">
-        <a href={SITE.linkedinUrl} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href={SITE.facebookUrl} target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Substack</a>
+      <p>Useful country research for people planning life and work abroad. Explore the guide library here; dated job roundups are published separately on Substack.</p>
+      <div class="rw-footer-socials">
+        <a href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Substack ↗</a>
+        <a href={SITE.linkedinUrl} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
       </div>
     </div>
-
-    <!-- Cột 2: Explore -->
-    <div class="footer-links-group">
-      <h3>Explore</h3>
-      <div class="footer-links">
-        {exploreLinks.map((item) => <a href={item.href}>{item.label}</a>)}
-      </div>
+    <div class="rw-footer-col">
+      <h2>Explore</h2>
+      {exploreLinks.map((item) => <a href={item.href}>{item.label}</a>)}
     </div>
-
-    <!-- Cột 3: Resources -->
-    <div class="footer-links-group">
-      <h3>Resources</h3>
-      <div class="footer-links">
-        {resourceLinks.map((item) => <a href={item.href}>{item.label}</a>)}
-      </div>
+    <div class="rw-footer-col">
+      <h2>Plan your move</h2>
+      {guideLinks.map((item) => <a href={item.href}>{item.label}</a>)}
     </div>
-
-    <!-- Cột 4: Top Countries -->
-    <div class="footer-links-group">
-      <h3>Top Countries</h3>
-      <div class="footer-links">
-        {popularCountries.map((country) => (
-          <a href={`/countries/${country.slug}`}>
-            <span aria-hidden="true">{country.flag}</span> {country.name}
-          </a>
-        ))}
-      </div>
-    </div>
-
-    <!-- Cột 5: Company -->
-    <div class="footer-links-group">
-      <h3>Company</h3>
-      <div class="footer-links">
-        {companyLinks.map((item) => <a href={item.href}>{item.label}</a>)}
-      </div>
+    <div class="rw-footer-col">
+      <h2>Destinations</h2>
+      {destinations.map((country) => <a href={'/countries/' + country.slug}>{country.flag} {country.name}</a>)}
+      <a href="/countries">More destinations →</a>
     </div>
   </div>
-
-  <!-- Box Call To Action -->
-  <div class="container footer-cta-row">
-    <div>
-      <strong>Get weekly sponsor-friendly jobs.</strong>
-      <span>$9/month or $49/year founding price for early members.</span>
-    </div>
-
-    <a
-      class="button button-small"
-      href={SITE.substackUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Subscribe
-    </a>
-  </div>
-
-  <!-- Bottom Legal -->
-  <div class="container footer-bottom footer-bottom-clean">
-    <p>© {year} Relocate Works. All rights reserved.</p>
-    <p>Relocate Works is not an immigration law firm and does not provide legal immigration advice.</p>
+  <div class="container rw-footer-bottom">
+    <span>© {year} Relocate Works.</span>
+    <span>Independent informational research, not legal immigration advice.</span>
+    <div><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a></div>
   </div>
 </footer>
