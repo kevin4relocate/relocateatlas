@@ -103,6 +103,35 @@ const ogImageFile = resolve(root, 'og-image.svg');
 if (!existsSync(ogImageFile)) errors.push('Editorial social preview image is missing');
 else if (/Sponsor Score|82%|Sponsor Confidence/i.test(readFileSync(ogImageFile, 'utf8'))) errors.push('Social preview still contains fictional sponsorship scoring');
 
+// The phase 1/2 layout must not silently introduce an unrelated green brand.
+// Preserve the original navy / royal-blue / teal tokens and original favicon.
+const redesignCss = readFileSync(resolve('src/redesign.css'), 'utf8');
+if (!/--rw-forest:\s*#102a43/i.test(redesignCss)
+  || !/--rw-primary:\s*#2563eb/i.test(redesignCss)
+  || !/--rw-teal:\s*#14b8a6/i.test(redesignCss)
+  || !/--rw-sage:\s*#2dd4bf/i.test(redesignCss)) {
+  errors.push('Redesign colors no longer match original Relocate Works blue/teal identity');
+}
+if (/#12352f|#dcee98|#163c33|#f4f5ee/i.test(redesignCss)) {
+  errors.push('Previous green redesign color remains in the active stylesheet');
+}
+if (!/\.rw-hero\s*\{background:linear-gradient\(165deg,#fff 0%,#f8fafc 40%,#eff6ff 100%\)/i.test(redesignCss)) {
+  errors.push('Original light blue homepage hero treatment was removed');
+}
+const faviconSource = readFileSync(resolve(root, 'favicon.svg'), 'utf8');
+if (!/#2DD4BF/i.test(faviconSource) || !/#2563EB/i.test(faviconSource)) {
+  errors.push('Original blue-to-teal Relocate Works favicon was replaced');
+}
+const manifest = JSON.parse(readFileSync(resolve(root, 'site.webmanifest'), 'utf8'));
+if (manifest.theme_color?.toUpperCase() !== '#102A43' || manifest.background_color?.toUpperCase() !== '#F8FAFC') {
+  errors.push('App manifest no longer uses the original blue/cloud palette');
+}
+if (existsSync(ogImageFile) && (!/#2563eb/i.test(readFileSync(ogImageFile, 'utf8'))
+  || !/#2dd4bf/i.test(readFileSync(ogImageFile, 'utf8')))) {
+  errors.push('Social preview artwork does not use the original blue/teal colors');
+}
+
+
 /* Phase 1 redesign smoke checks: no invented search route or dead-end design navigation. */
 const countryDirectory = pages.get(join(root, 'countries', 'index.html')) || '';
 const guideDirectory = pages.get(join(root, 'guides', 'index.html')) || '';
