@@ -123,6 +123,17 @@ if (!/\.rw-main \.rw-kicker \{color:#1d4ed8;\}/.test(redesignCss) ||
   errors.push('Eyebrow or country dropdown heading is no longer royal blue');
 }
 const headerSource = readFileSync(resolve('src/components/Header.astro'), 'utf8');
+const homeSource = readFileSync(resolve('src/pages/index.astro'), 'utf8');
+if (!headerSource.includes('<svg class="rw-chevron"') ||
+    headerSource.includes('<span class="rw-chevron"') ||
+    !redesignCss.includes('.rw-nav-details[open] .rw-chevron { transform:rotate(180deg); }')) {
+  errors.push('Countries dropdown does not use its aligned, reversible SVG chevron');
+}
+if (homeSource.includes('rw-visual-note') || homeSource.includes('rw-star-two') ||
+    redesignCss.includes('.rw-visual-note') || redesignCss.includes('.rw-star-two')) {
+  errors.push('Homepage hero still includes overlapping decorative text or a stray floating star');
+}
+
 const footerSource = readFileSync(resolve('src/components/Footer.astro'), 'utf8');
 if (!headerSource.includes('src="/brand-mark-blue.svg"') ||
     !footerSource.includes('src="/brand-mark-blue.svg"')) {

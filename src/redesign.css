@@ -61,7 +61,8 @@ body { background: #fff; color: var(--rw-text); }
 .rw-nav-details { position: relative; }
 .rw-nav-details > summary { cursor: pointer; list-style: none; user-select: none; }
 .rw-nav-details > summary::-webkit-details-marker { display: none; }
-.rw-chevron { font-size: 1.08rem; line-height: 0; margin-top: -4px; }
+.rw-chevron { display:block; width:16px; height:16px; flex:none; margin-left:2px; transition:transform .18s ease; }
+.rw-nav-details[open] .rw-chevron { transform:rotate(180deg); }
 .rw-header-actions { display: inline-flex; align-items: center; gap: 12px; }
 .rw-header-cta { display: inline-flex; align-items: center; gap: 12px; min-height: 43px; padding: 0 17px; border-radius: 10px; background: var(--rw-forest); color: #fff; font-weight: 800; font-size: .85rem; white-space: nowrap; }
 .rw-header-cta:hover { color: #fff; background: #2563eb; }
@@ -112,7 +113,7 @@ body { background: #fff; color: var(--rw-text); }
 .rw-orbit-one { width: 510px; height: 370px; }
 .rw-orbit-two { width: 585px; height: 460px; border-style: dashed; opacity: .55; }
 .rw-visual-star { position:absolute; color: #bfdbfe; font-size: 2.2rem; }
-.rw-star-one { top: 15px; right: 25px; }.rw-star-two { bottom: 62px; left: 8px; }
+.rw-star-one { top: 15px; right: 25px; }
 .rw-plan-card { position: relative; z-index: 2; width: min(100%, 442px); background: #fff; border-radius: 19px; color: var(--rw-deep); transform: rotate(2deg); box-shadow: 0 32px 70px rgba(15,23,42,0.3); overflow: hidden; }
 .rw-plan-card-top, .rw-plan-card-bottom { display:flex; align-items:center; gap:11px; background:#eff6ff; padding:17px 24px; font-size:.68rem; font-weight:900; letter-spacing:.12em; }
 .rw-plan-symbol { background:#102a43; color:#fff; width:24px; height:24px; border-radius:50%; text-align:center; font-size:1.1rem; letter-spacing:0; }
@@ -128,7 +129,7 @@ body { background: #fff; color: var(--rw-text); }
 .rw-plan-step > span:last-child { color:#64748b; }
 .rw-plan-card-bottom { justify-content:space-between; background:#eff6ff; border-top:1px solid #e2e8f0; padding:13px 23px; font-size:.59rem; }
 .rw-plan-card-bottom span:last-child { font-size:1.3rem; letter-spacing:3px; white-space:nowrap; }
-.rw-visual-note { position:absolute; bottom:2px; right:-6px; transform:rotate(-4deg); font: italic 1.05rem Georgia,serif; line-height:1.22; color:#bfdbfe; }
+
 .rw-hero-foot { display:flex; align-items:center; flex-wrap:wrap; gap:25px; min-height:75px; color:#bfdbfe; border-top:1px solid rgba(37,99,235,0.19); font-size:.83rem; }
 .rw-hero-foot strong { color:#eff6ff; font-size:.98rem; margin-right:5px; }
 .rw-foot-divider { width:1px; height:18px; background:rgba(37,99,235,0.27); }
@@ -385,7 +386,6 @@ body.mobile-menu-open { position:static!important; width:auto; overflow:hidden!i
   .rw-plan-card-body { padding:24px 22px 12px; }
   .rw-plan-card-body h2 { font-size:2rem; }
   .rw-visual-orbit { display:none; }
-  .rw-visual-note { display:none; }
   .rw-countries-grid, .rw-topic-grid, .rw-article-grid, .rw-industry-grid { grid-template-columns:1fr; }
   a.country-card.rw-country-card { min-height:332px; }
   .rw-country-index-intro, .rw-page-intro { padding-bottom:54px; }
@@ -416,6 +416,7 @@ body.mobile-menu-open { position:static!important; width:auto; overflow:hidden!i
   .rw-plan-card-bottom span:last-child { letter-spacing:0; font-size:1rem; }
 }
 @media (prefers-reduced-motion:reduce) {
+  .rw-chevron {transition:none;}
   html { scroll-behavior:auto; }
   .rw-main a, .rw-header a, .rw-footer a { transition:none; }
 }
@@ -496,7 +497,7 @@ body.mobile-menu-open { position:static!important; width:auto; overflow:hidden!i
 .rw-visual-orbit {border-color:rgba(37,99,235,.24);}
 .rw-plan-card {box-shadow:0 32px 70px rgba(15,23,42,.15);}
 .rw-plan-symbol {background:#2563eb;color:#fff;}
-.rw-visual-star,.rw-visual-note,.rw-plan-card-label {color:#1d4ed8;}
+.rw-visual-star,.rw-plan-card-label {color:#1d4ed8;}
 .rw-plan-step>span:first-child,.rw-topic-icon,.rw-industry-icon {background:#eff6ff;color:#2563eb;}
 .rw-hero-foot {color:#64748b;border-top-color:#dbeafe;}
 .rw-hero-foot strong {color:#0b1220;}
