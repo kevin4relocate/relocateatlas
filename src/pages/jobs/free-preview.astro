@@ -2,171 +2,95 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import CTA from '../../components/CTA.astro';
-import { SITE } from '../../data';
+import { SITE, countries } from '../../data';
 
-const sampleJobs = [
-  {
-    flag: '🇦🇺', country: 'Australia', title: 'QA Engineer', industry: 'Tech, QA, Data & Cloud', location: 'Sydney', workMode: 'Hybrid', signal: 'Skills in Demand pathway likely', confidence: '78%', score: '8.2/10',
-    why: 'Suitable for QA candidates with API testing, fintech, regression testing, and cross-functional product experience.',
-    risk: 'Confirm visa support with the recruiter before investing too much time.'
-  },
-  {
-    flag: '🇬🇧', country: 'United Kingdom', title: 'Registered Nurse', industry: 'Healthcare & Care', location: 'Manchester', workMode: 'On-site', signal: 'Skilled Worker / Health route signal', confidence: '84%', score: '8.6/10',
-    why: 'Healthcare roles can be strong relocation candidates when the employer is eligible and the candidate meets registration requirements.',
-    risk: 'Registration, English proof, salary, and sponsor license details must be verified.'
-  },
-  {
-    flag: '🇩🇪', country: 'Germany', title: 'Data Engineer', industry: 'Tech, QA, Data & Cloud', location: 'Berlin', workMode: 'Hybrid', signal: 'EU Blue Card relevant profile', confidence: '73%', score: '7.9/10',
-    why: 'Good fit for candidates with data pipeline, cloud warehouse, SQL, Python, and analytics engineering experience.',
-    risk: 'Some teams require German language or EU work authorization. Check the job description carefully.'
-  },
-  {
-    flag: '🇨🇦', country: 'Canada', title: 'Civil Engineer', industry: 'Engineering & Skilled Trades', location: 'Toronto', workMode: 'On-site', signal: 'Skilled occupation and employer support possible', confidence: '69%', score: '7.6/10',
-    why: 'Engineering roles may match shortage demand when the candidate has strong project experience and qualification documentation.',
-    risk: 'Licensing, provincial rules, and credential recognition may apply.'
-  },
-  {
-    flag: '🇳🇿', country: 'New Zealand', title: 'Early Childhood Teacher', industry: 'Education & Teaching', location: 'Auckland', workMode: 'On-site', signal: 'Accredited employer signal', confidence: '76%', score: '8.0/10',
-    why: 'Education roles can be relocation-friendly when the candidate has the correct qualification and teacher registration pathway.',
-    risk: 'Teacher registration and document assessment can take time.'
-  },
-  {
-    flag: '🇮🇪', country: 'Ireland', title: 'Accountant', industry: 'Finance, Accounting & Audit', location: 'Dublin', workMode: 'Hybrid', signal: 'Critical skills / finance demand signal', confidence: '65%', score: '7.2/10',
-    why: 'Useful for candidates with audit, reporting, compliance, or multinational finance experience.',
-    risk: 'Some roles require local standards knowledge or existing EU work rights.'
-  },
-  {
-    flag: '🇳🇱', country: 'Netherlands', title: 'Backend Engineer', industry: 'Tech, QA, Data & Cloud', location: 'Amsterdam', workMode: 'Hybrid', signal: 'Highly Skilled Migrant relevant', confidence: '80%', score: '8.4/10',
-    why: 'Strong match for experienced backend candidates with cloud, API, distributed systems, and product engineering experience.',
-    risk: 'Check whether the salary meets local highly skilled migrant thresholds.'
-  },
-  {
-    flag: '🇯🇵', country: 'Japan', title: 'Automation QA Engineer', industry: 'Tech, QA, Data & Cloud', location: 'Tokyo', workMode: 'Hybrid', signal: 'Skilled professional route possible', confidence: '62%', score: '7.0/10',
-    why: 'Relevant for candidates with automation frameworks, mobile testing, gaming, SaaS, or product QA experience.',
-    risk: 'Japanese language may be required for many teams; sponsorship language must be confirmed.'
-  }
-];
-
-const faqJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'Is the free job preview the full paid list?', acceptedAnswer: { '@type': 'Answer', text: 'No. The free preview shows sample jobs and the format of Relocate Works job intelligence. Paid members unlock the full weekly list with direct apply links and more detailed notes.' } },
-    { '@type': 'Question', name: 'How should candidates use Relocate Works job research?', acceptedAnswer: { '@type': 'Answer', text: 'Relocate Works helps candidates research sponsor-friendly opportunities faster. Final eligibility, visa support, and hiring decisions depend on each employer and official immigration rules.' } },
-    { '@type': 'Question', name: 'What do paid members receive?', acceptedAnswer: { '@type': 'Answer', text: 'Paid members receive the full weekly sponsor-friendly job list, direct apply links, sponsor status, sponsor confidence notes, relocation scores, salary notes when available, visa pathway notes, practical planning notes, and application guidance.' } }
-  ]
-};
+const launchCountries = countries.filter((country) => country.priority === 'Launch');
+const otherCountries = countries.filter((country) => country.priority === 'Next');
 ---
 <BaseLayout
-  title="Free Visa Sponsor Job Preview — Sample Weekly Job Intelligence | Relocate Works"
-  description="View a free sample of Relocate Works weekly sponsor-friendly job intelligence across tech, healthcare, engineering, finance, education, hospitality, and skilled roles."
+  title="Weekly Relocation Jobs Newsletter on Substack | Relocate Works"
+  description="Learn how Relocate Works researches weekly international relocation opportunities and publishes confirmed and potential support signals on Substack. The website itself is an informational relocation resource."
   canonicalPath="/jobs/free-preview"
-  structuredData={faqJsonLd}
 >
   <Header />
   <main>
-    <section class="page-hero page-hero-gradient compact-hero free-preview-hero">
+    <section class="page-hero page-hero-gradient compact-hero">
       <div class="container narrow">
-        <span class="eyebrow">Free preview</span>
-        <h1>See what a Relocate Works weekly job preview looks like.</h1>
-        <p class="lead">
-          This page shows the type of sponsor-friendly job intelligence readers can expect before upgrading: country breakdowns, industry context, sponsor signals, relocation scores, and practical planning notes.
-        </p>
+        <span class="eyebrow">Relocate Works newsletter</span>
+        <h1>Weekly relocation job updates are published on Substack.</h1>
+        <p class="lead">This website is a free relocation information library. It does not host a live job board, show active vacancies or accept applications. Read our Substack newsletter for dated job roundups and links to employers' original advertisements.</p>
         <div class="hero-actions compact-actions">
-          <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Get Weekly Sponsor Jobs</a>
-          <a class="button-ghost" href="#sample-jobs">See sample jobs</a>
+          <a class="button button-large" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Read the newsletter on Substack ↗</a>
+          <a class="button-ghost button-large" href="/countries">Explore country guides</a>
         </div>
       </div>
     </section>
 
     <section class="section section-white">
-      <div class="container split-feature">
-        <div class="content-block">
-          <span class="mini-eyebrow">Sample weekly breakdown</span>
-          <h2>What readers see before the full paid list.</h2>
-          <p>
-            A weekly preview should quickly tell readers what was found, which countries are active, which industries have opportunities, and what kind of roles are worth checking.
-          </p>
-          <div class="data-strip preview-data-strip">
-            <div><strong>82</strong><span>sample jobs reviewed</span></div>
-            <div><strong>10</strong><span>countries covered</span></div>
-            <div><strong>6</strong><span>industry groups</span></div>
+      <div class="container narrow">
+        <div class="section-heading">
+          <div>
+            <span class="mini-eyebrow">How to interpret the newsletter</span>
+            <h2>Understand the evidence, not a sponsorship score.</h2>
           </div>
         </div>
-        <div class="content-block">
-          <span class="mini-eyebrow">Example breakdown</span>
-          <h2>This week’s sample mix</h2>
-          <div class="preview-breakdown-grid">
-            <div><strong>By country</strong><span>Australia 14 · UK 12 · Germany 10 · Canada 9 · New Zealand 7 · More countries 30</span></div>
-            <div><strong>By industry</strong><span>Tech 24 · Healthcare 15 · Engineering 12 · Finance 8 · Education 7 · Skilled roles 16</span></div>
+        <div class="process-grid">
+          <div class="process-card">
+            <span class="icon-circle">1</span>
+            <h3>Confirmed support</h3>
+            <p>The specific vacancy explicitly states that visa, work-permit or international relocation support is available. The newsletter identifies exactly which type is advertised. This is not a guarantee of an offer or visa.</p>
+          </div>
+          <div class="process-card">
+            <span class="icon-circle">2</span>
+            <h3>Potential support</h3>
+            <p>Evidence suggests the employer has international-hiring capacity, but support for the individual vacancy has not been confirmed. Ask the recruiter before relying on sponsorship.</p>
+          </div>
+          <div class="process-card">
+            <span class="icon-circle">3</span>
+            <h3>Check before applying</h3>
+            <p>Vacancies and visa rules can change quickly. Reopen the original employer listing, confirm the job is still available, and review current official rules for your personal circumstances.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="sample-jobs" class="section">
+    <section class="section">
       <div class="container">
         <div class="section-heading centered">
-          <span class="mini-eyebrow">Sample job cards</span>
-          <h2>Free readers see examples. Paid members unlock the full list.</h2>
-          <p>These are example cards showing the format. Replace them with real weekly jobs when you publish on Substack.</p>
+          <span class="mini-eyebrow">Ten destination markets</span>
+          <h2>Explore relocation planning by country</h2>
+          <p>Choose a country to learn about visas, tax, salaries, healthcare, living costs and working life. Individual weekly job postings remain on Substack.</p>
         </div>
-        <div class="sample-job-grid">
-          {sampleJobs.map((job) => (
-            <article class="sample-job-card">
-              <div class="sample-job-top">
-                <span class="sample-flag">{job.flag}</span>
-                <div><strong>{job.country} — {job.title}</strong><span>{job.industry}</span></div>
-              </div>
-              <div class="sample-job-meta">{job.location} · {job.workMode}</div>
-              <div class="signal-pill">{job.signal}</div>
-              <div class="score-grid compact-score-grid">
-                <div class="score-box"><div class="score-label">Sponsor confidence</div><div class="score-value">{job.confidence}</div></div>
-                <div class="score-box"><div class="score-label">Relocation score</div><div class="score-value">{job.score}</div></div>
-              </div>
-              <p><strong>Why it matters:</strong> {job.why}</p>
-              <p class="risk-note"><strong>Risk note:</strong> {job.risk}</p>
-            </article>
+        <h3>Launch countries</h3>
+        <div class="grid-3">
+          {launchCountries.map((country) => (
+            <a class="country-card" href={`/countries/${country.slug}`}>
+              <div class="country-top"><span class="flag">{country.flag}</span><h3>{country.name}</h3></div>
+              <p>{country.shortDescription}</p>
+              <span class="country-link">Read relocation guide →</span>
+            </a>
+          ))}
+        </div>
+        <h3>More countries</h3>
+        <div class="grid-3">
+          {otherCountries.map((country) => (
+            <a class="country-card" href={`/countries/${country.slug}`}>
+              <div class="country-top"><span class="flag">{country.flag}</span><h3>{country.name}</h3></div>
+              <p>{country.shortDescription}</p>
+              <span class="country-link">Read relocation guide →</span>
+            </a>
           ))}
         </div>
       </div>
     </section>
 
     <section class="section section-white">
-      <div class="container two-column-feature">
-        <div class="content-block">
-          <span class="mini-eyebrow">Free vs paid</span>
-          <h2>What is included?</h2>
-          <div class="feature-list">
-            <div><strong>Free preview</strong><span>5–10 sample jobs, country breakdown, industry breakdown, and general relocation tips.</span></div>
-            <div><strong>Paid monthly</strong><span>$9/month for the full weekly sponsor-friendly job intelligence list.</span></div>
-            <div><strong>Founding yearly</strong><span>$49/year for early members preparing to apply abroad over the next 6–12 months.</span></div>
-          </div>
-        </div>
-        <div class="content-block warning-block">
-          <span class="mini-eyebrow">How to use this research</span>
-          <h2>Use the list to prioritize better applications.</h2>
-          <p>Relocate Works helps you research sponsor-friendly opportunities faster. Final eligibility, visa support, and hiring decisions depend on each employer and official immigration rules.</p>
-          <p>Use each job card as a starting point: check the official apply page, confirm current requirements, and tailor your CV before applying.</p>
-          <a class="inline-link" href="/terms">Read subscription terms →</a>
-        </div>
+      <div class="container narrow">
+        <h2>Read the latest weekly edition</h2>
+        <p>We publish job roundups on Substack, not on this website. Our guides help you understand the destination and prepare questions about a prospective offer.</p>
+        <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Open Relocate Works on Substack ↗</a>
       </div>
     </section>
-
-    <section class="section">
-      <div class="container pricing-preview free-preview-pricing">
-        <span class="badge badge-success">Special founding price</span>
-        <h2>Unlock the full weekly list.</h2>
-        <p>Start with the free preview, then upgrade on Substack when you want the full list with direct apply links, sponsor confidence, relocation scores, practical planning notes, salary notes when available, and application guidance.</p>
-        <div class="pricing-mini-grid">
-          <div><strong>$9/month</strong><span>Monthly access</span></div>
-          <div><strong>$49/year</strong><span>Founding yearly access</span></div>
-        </div>
-        <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe on Substack</a>
-      </div>
-    </section>
-    <CTA />
   </main>
   <Footer />
 </BaseLayout>

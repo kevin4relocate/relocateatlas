@@ -5,8 +5,10 @@ import Footer from './Footer.astro';
 import CTA from './CTA.astro';
 import CountryResourceNav from './CountryResourceNav.astro';
 import { SITE, resourceSections, blogPosts } from '../data';
+import { countryEditorial } from '../countryEditorial';
 
 const { country, sectionSlug } = Astro.props;
+const editorial = countryEditorial[country.slug];
 
 const section = resourceSections.find((item) => item.slug === sectionSlug);
 if (!section) throw new Error(`Unknown resource section: ${sectionSlug}`);
@@ -836,7 +838,7 @@ const itemListJsonLd = {
               <section class="content-block compact-content-block">
                 <span class="mini-eyebrow">Market signals</span>
                 <h2>Where sponsor-friendly jobs may appear</h2>
-                <p>In {country.name}, stronger relocation opportunities usually appear in sectors where skills are scarce, employers hire internationally, and the role is senior or specialized enough to justify sponsorship effort.</p>
+                <p>In {country.name}, international employment opportunities can appear in sectors where skills are scarce, employers hire internationally, and the role is senior or specialized enough to justify sponsorship effort.</p>
 
                 <div class="info-grid two">
                   <div class="info-tile"><strong>Common sectors</strong><span>{country.sectors.join(', ')}</span></div>
@@ -909,7 +911,7 @@ const itemListJsonLd = {
           <section class="content-block cta-panel inline-substack-cta improved-inline-cta">
             <span class="mini-eyebrow">Weekly job intelligence</span>
             <h2>Want sponsor-friendly jobs for {country.name} and other countries?</h2>
-            <p>Relocate Works publishes free previews and paid weekly sponsor-friendly job intelligence through Substack. Paid members get full lists with direct apply links, sponsor signals, relocation scores, salary notes when available, and practical planning notes.</p>
+            <p>Relocate Works publishes free previews and paid weekly sponsor-friendly job intelligence through Substack. The newsletter publishes dated listings and evidence notes; this website provides background information and does not host live vacancies.</p>
 
             <div class="pricing-mini-grid">
               <div><strong>$9/month</strong><span>Monthly access</span></div>
@@ -918,8 +920,23 @@ const itemListJsonLd = {
 
             <div class="cta-actions-spaced">
               <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe on Substack</a>
-              <a class="button-light" href="/jobs/free-preview">View free job preview</a>
+              <a class="button-light" href="/jobs/free-preview">About the newsletter</a>
             </div>
+          </section>
+
+          <section class="content-block compact-content-block">
+            <span class="mini-eyebrow">Official starting points</span>
+            <h2>Check the current rules for {country.name}</h2>
+            <p>These government sites are starting points for verifying immigration, tax and healthcare rules. The guidance on Relocate Works is general information, not immigration or tax advice. Check official requirements for your circumstances before acting.</p>
+            <div class="info-grid two">
+              {Object.values(editorial.resources).map((source) => (
+                <div class="info-tile">
+                  <strong><a class="inline-link" href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></strong>
+                  <span>{source.detail}</span>
+                </div>
+              ))}
+            </div>
+            <p class="note">Editorial edition: September 2026. Rules, salary thresholds, taxes and costs can change; verify current figures independently.</p>
           </section>
 
           <section class="content-block compact-content-block">

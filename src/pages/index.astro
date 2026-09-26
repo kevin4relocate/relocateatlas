@@ -9,8 +9,8 @@ const launchCountries = countries.filter((country) => country.priority === 'Laun
 const nextCountries = countries.filter((country) => country.priority === 'Next');
 ---
 <BaseLayout
-  title="Relocate Works — Weekly Visa Sponsor Jobs and Relocation Guides"
-  description="Relocate Works helps international candidates discover visa sponsor jobs across high-demand global industries, compare countries, and prepare smarter relocation applications."
+  title="Relocate Works — Country Guides, Visa Information and Relocation Planning"
+  description="Explore practical relocation information about visas, countries, salaries, taxes and cost of living. Weekly job roundups are published separately on Substack."
   canonicalPath="/"
 >
   <Header />
@@ -19,23 +19,23 @@ const nextCountries = countries.filter((country) => country.priority === 'Next')
       <div class="hero-visual-bg" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">🌍 AI-assisted, human-reviewed relocation job intelligence</span>
-          <h1>Find sponsor-friendly jobs with country, visa, and industry context.</h1>
+          <span class="eyebrow">🌍 Independent relocation information for international movers</span>
+          <h1>Understand your next country before you move.</h1>
           <p class="lead">
-            Relocate Works helps international candidates discover sponsor-friendly jobs across tech, healthcare, engineering, finance, education, hospitality, and other skilled industries.
+            Explore country and industry guides covering visa routes, taxes, salaries, healthcare and practical relocation preparation. Our separate Substack newsletter shares weekly international job leads.
           </p>
           <div class="hero-actions">
-            <a class="button button-large" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Get Weekly Sponsor Jobs</a>
-            <a class="button-ghost button-large" href="/jobs/free-preview">View Free Job Preview</a>
+            <a class="button button-large" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Read Weekly Jobs on Substack</a>
+            <a class="button-ghost button-large" href="/jobs/free-preview">About Our Newsletter</a>
           </div>
           <div class="trust-row" aria-label="Relocate Works features">
             <span>Weekly job research</span>
-            <span>Sponsor signals</span>
+            <span>Understand sponsorship terms</span>
             <span>Country guides</span>
           </div>
         </div>
 
-        <div class="hero-dashboard" aria-label="Relocate Works sample dashboard preview">
+        <div class="hero-dashboard" aria-label="Relocate Works relocation planning topics">
           <div class="dashboard-topbar">
             <span></span>
             <span></span>
@@ -43,29 +43,17 @@ const nextCountries = countries.filter((country) => country.priority === 'Next')
             <strong>Weekly Sponsor Jobs</strong>
           </div>
           <div class="dashboard-card featured-job">
-            <div class="job-card-header">
-              <span class="badge badge-success">Sponsor-friendly sample</span>
-              <strong>🇦🇺 Australia</strong>
-            </div>
-            <div class="job-title">QA Engineer — FinTech Platform</div>
-            <p class="job-meta">Sydney · Hybrid · Skills in Demand pathway likely</p>
-            <div class="score-grid">
-              <div class="score-box">
-                <div class="score-label">Sponsor Confidence</div>
-                <div class="score-value">78%</div>
-              </div>
-              <div class="score-box">
-                <div class="score-label">Relocation Score</div>
-                <div class="score-value">8.2/10</div>
-              </div>
-            </div>
+            <div class="job-card-header"><span class="badge badge-success">Free relocation guides</span><strong>10 destinations</strong></div>
+            <h2>Plan with country-specific information</h2>
+            <p class="job-meta">Visa pathways · Taxes · Salaries · Living costs</p>
+            <p>Browse our destination guides and use the official source links to confirm current requirements for your situation.</p>
+            <p><a class="inline-link" href="/countries">Explore all country guides →</a></p>
           </div>
           <div class="mini-job-list">
-            <div class="mini-job"><span>🇬🇧</span><strong>Backend Engineer</strong><em>Skilled Worker likely</em></div>
-            <div class="mini-job"><span>🇩🇪</span><strong>Data Engineer</strong><em>EU Blue Card signal</em></div>
-            <div class="mini-job"><span>🇳🇿</span><strong>Software Tester</strong><em>Accredited employer</em></div>
+            <div class="mini-job"><span>🌐</span><strong>Visa &amp; immigration</strong><em>Official starting points</em></div>
+            <div class="mini-job"><span>💰</span><strong>Salary &amp; taxes</strong><em>Plan your budget</em></div>
+            <div class="mini-job"><span>🏥</span><strong>Healthcare &amp; settling in</strong><em>Prepare your move</em></div>
           </div>
-         
         </div>
       </div>
     </section>
@@ -97,7 +85,7 @@ const nextCountries = countries.filter((country) => country.priority === 'Next')
           <span class="mini-eyebrow">The workflow</span>
           <h2>How Relocate Works works</h2>
           <p>
-            We combine AI-assisted research with human review to reduce job search noise and highlight better relocation opportunities.
+            Use our free country and industry guides to plan your international move; find weekly, dated job leads separately on Substack.
           </p>
         </div>
         <div class="process-grid">
@@ -114,7 +102,7 @@ const nextCountries = countries.filter((country) => country.priority === 'Next')
           <div class="process-card">
             <span class="icon-circle">3</span>
             <h3>Publish weekly insights</h3>
-            <p>Subscribers receive free previews and future paid job lists through the Relocate Works Substack publication.</p>
+            <p>Weekly job leads, when available, are published separately in dated posts on our Substack newsletter.</p>
           </div>
         </div>
       </div>
@@ -190,7 +178,7 @@ const nextCountries = countries.filter((country) => country.priority === 'Next')
         <div class="comparison-card">
           <div class="comparison-row muted"><span>Raw job board</span><span>Relocate Works</span></div>
           <div class="comparison-row"><span>Job title only</span><strong>Visa signal + country context</strong></div>
-          <div class="comparison-row"><span>Unclear sponsorship</span><strong>Sponsor confidence note</strong></div>
+          <div class="comparison-row"><span>Unclear sponsorship</span><strong>Employer support definitions</strong></div>
           <div class="comparison-row"><span>Hours of searching</span><strong>Weekly curated preview</strong></div>
           <div class="comparison-row"><span>Generic results</span><strong>Relocation-focused roles</strong></div>
         </div>
@@ -216,7 +204,7 @@ const nextCountries = countries.filter((country) => country.priority === 'Next')
             <p>Each role is summarized so readers can quickly understand the company, location, role type, and relocation signal.</p>
           </div>
           <div class="card card-hover">
-            <h3>Sponsor confidence notes</h3>
+            <h3>Sponsorship definitions</h3>
             <p>We separate confirmed, likely, unknown, and poor sponsor signals so candidates can apply with more context.</p>
           </div>
           <div class="card card-hover">
@@ -233,7 +221,7 @@ const nextCountries = countries.filter((country) => country.priority === 'Next')
         <div class="section-heading centered">
           <span class="mini-eyebrow">Relocation resource library</span>
           <h2>More than a job list: compare the full move.</h2>
-          <p>Relocate Works is structured like a relocation portal, with practical sections for countries, visas, taxes, salaries, cost of living, relocation companies, and jobs.</p>
+          <p>Relocate Works is an informational relocation library covering countries, visas, taxes, salaries, living costs and job-market guidance. Current vacancies are published exclusively on Substack.</p>
         </div>
         <div class="resource-grid">
           <a class="resource-card" href="/countries"><strong>Countries</strong><span>Compare top destinations and relocation readiness.</span></a>

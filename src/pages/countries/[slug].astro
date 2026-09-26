@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTA from '../../components/CTA.astro';
 import { SITE, countries, blogPosts } from '../../data';
+import { countryEditorial } from '../../countryEditorial';
 
 export function getStaticPaths() {
   return countries.map((country) => ({
@@ -13,6 +14,7 @@ export function getStaticPaths() {
 }
 
 const { country } = Astro.props;
+const editorial = countryEditorial[country.slug];
 
 const relatedPosts = blogPosts.slice(0, 3);
 const relatedCountries = countries
@@ -29,7 +31,9 @@ const guideNav = [
   ['salaries', 'Salaries'],
   ['relocation', 'Relocation Companies'],
   ['healthcare', 'Healthcare & Insurance'],
-  ['cities', 'Cities']
+  ['cities', 'Cities'],
+  ['planning', 'Moving checklist'],
+  ['official-sources', 'Official sources']
 ];
 
 const canonicalPath = `/countries/${country.slug}`;
@@ -122,11 +126,12 @@ const itemListJsonLd = {
           <span class="eyebrow">{country.flag} Moving to {country.name}</span>
           <h1>Moving to {country.name}: visa, jobs, tax, salary, and living-cost guide.</h1>
           <p class="lead">{country.shortDescription}</p>
+          <p class="note">Editorial edition: September 2026. This website offers relocation information, not a live job board. Check official sources for rules in force on your application date.</p>
 
           <div class="hero-actions compact-actions">
-            <a class="button" href={`/jobs/${country.slug}`}>Explore jobs</a>
+            <a class="button" href={`/jobs/${country.slug}`}>Understand the job market</a>
             <a class="button-ghost" href={`/visas/${country.slug}`}>Visa overview</a>
-            <a class="button-ghost" href="/jobs/free-preview">Free job preview</a>
+            <a class="button-ghost" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Weekly jobs on Substack ↗</a>
           </div>
         </div>
 
@@ -158,6 +163,7 @@ const itemListJsonLd = {
             <span class="mini-eyebrow">Country Overview</span>
             <h2>{country.name} overview</h2>
             {country.overview.map((paragraph) => <p>{paragraph}</p>)}
+            <div class="callout-box"><strong>What to examine first</strong><p>{editorial.focus}</p></div>
 
             <div class="info-grid">
               {country.facts.map((fact) => (
@@ -215,10 +221,13 @@ const itemListJsonLd = {
 
               <div class="callout-box">
                 <strong>Relocate Works note</strong>
-                <p>We classify jobs as Confirmed, Likely, Unknown, or Not Suitable based on public sponsor signals and manual review.</p>
+                <p>Our Substack newsletter distinguishes opportunities with job-specific support statements (Confirmed) from roles with employer-level international-hiring evidence only (Potential). Neither label guarantees sponsorship or visa approval.</p>
               </div>
             </div>
 
+            <h3>Before you rely on a work pathway</h3>
+            <ul>{editorial.visaChecklist.map((item) => <li>{item}</li>)}</ul>
+            <p><a class="inline-link" href={editorial.resources.immigration.url} target="_blank" rel="noopener noreferrer">Official immigration guidance ↗</a></p>
             <a class="inline-link" href={`/visas/${country.slug}`}>Explore {country.name} visa guide →</a>
           </section>
 
@@ -235,6 +244,9 @@ const itemListJsonLd = {
             <h3>Types of taxes to understand</h3>
             <ul>{country.taxTypes.map((item) => <li>{item}</li>)}</ul>
 
+            <h3>Plan your take-home income</h3>
+            <ul>{editorial.moneyChecklist.map((item) => <li>{item}</li>)}</ul>
+            <p><a class="inline-link" href={editorial.resources.tax.url} target="_blank" rel="noopener noreferrer">Official tax information ↗</a></p>
             <a class="inline-link" href={`/taxes/${country.slug}`}>Learn about taxes in {country.name} →</a>
           </section>
 
@@ -255,7 +267,8 @@ const itemListJsonLd = {
 
           <section id="companies" class="content-block">
             <span class="mini-eyebrow">International Companies</span>
-            <h2>International companies hiring in {country.name}</h2>
+            <h2>International companies to research in {country.name}</h2>
+            <p>These are illustrative employers and market context, not a statement that any company has an open vacancy or will sponsor your application. The weekly verified job roundup is published only on Substack.</p>
             {country.companiesOverview.map((paragraph) => <p>{paragraph}</p>)}
 
             <div class="company-grid">
@@ -265,7 +278,8 @@ const itemListJsonLd = {
 
           <section id="jobs" class="content-block">
             <span class="mini-eyebrow">Jobs</span>
-            <h2>Jobs in {country.name}</h2>
+            <h2>Understanding work opportunities in {country.name}</h2>
+            <p>This is a country-level hiring guide rather than a live vacancies page. For dated openings and individual application links, read the latest Relocate Works post on Substack.</p>
             {country.jobsOverview.map((paragraph) => <p>{paragraph}</p>)}
 
             <div class="info-grid two">
@@ -277,7 +291,8 @@ const itemListJsonLd = {
               <div class="info-tile"><strong>Common benefits</strong><span>{country.benefits.join(', ')}</span></div>
             </div>
 
-            <a class="inline-link" href={`/jobs/${country.slug}`}>Explore sponsor-friendly job research →</a>
+            <a class="inline-link" href={`/jobs/${country.slug}`}>Read job-search guidance →</a>
+            <p><a class="inline-link" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Read the weekly relocation jobs newsletter on Substack ↗</a></p>
           </section>
 
           <section id="salaries" class="content-block">
@@ -316,6 +331,9 @@ const itemListJsonLd = {
               <div class="info-tile"><strong>Private insurance cost</strong><span>{country.privateHealthCost}</span></div>
               <div class="info-tile"><strong>Expat insurance note</strong><span>{country.expatInsurance}</span></div>
             </div>
+            <h3>Healthcare planning before arrival</h3>
+            <p>{editorial.arrivalChecklist[0]}</p>
+            <p><a class="inline-link" href={editorial.resources.healthcare.url} target="_blank" rel="noopener noreferrer">Official healthcare starting point ↗</a></p>
           </section>
 
           <section id="cities" class="content-block">
@@ -331,6 +349,31 @@ const itemListJsonLd = {
                 </div>
               ))}
             </div>
+          </section>
+
+          <section id="planning" class="content-block">
+            <span class="mini-eyebrow">Practical checklist</span>
+            <h2>Plan the move to {country.name}</h2>
+            <p>Use this country-specific checklist after confirming your immigration route and before making non-refundable commitments.</p>
+            <ul class="check-list">{editorial.arrivalChecklist.slice(1).map((item) => <li>{item}</li>)}</ul>
+            <h3>Relocating with family</h3>
+            <p>{editorial.familyNote}</p>
+            <p><a class="inline-link" href={editorial.resources.education.url} target="_blank" rel="noopener noreferrer">Official education starting point ↗</a></p>
+          </section>
+
+          <section id="official-sources" class="content-block">
+            <span class="mini-eyebrow">Evidence and next steps</span>
+            <h2>Official starting points for {country.name}</h2>
+            <p>These government resources are linked so you can verify the current rules for your own visa, income, family and destination. Relocate Works provides general planning information; official requirements may change at any time. No immigration, tax or job outcome is guaranteed.</p>
+            <div class="info-grid two">
+              {Object.values(editorial.resources).map((resource) => (
+                <div class="info-tile">
+                  <strong><a class="inline-link" href={resource.url} target="_blank" rel="noopener noreferrer">{resource.label} ↗</a></strong>
+                  <span>{resource.detail}</span>
+                </div>
+              ))}
+            </div>
+            <p class="note">Editorial edition: September 2026. These are official reference links, not an assurance that all referenced thresholds and rules remain unchanged. Always check the linked page before applying or relocating.</p>
           </section>
 
           <section class="content-block">
