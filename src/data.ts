@@ -1,8 +1,8 @@
 export const SITE = {
   "name": "Relocate Works",
   "url": "https://relocateworks.com",
-  "title": "Relocate Works — Visa Sponsor Jobs, Country Guides and Relocation Intelligence",
-  "description": "Relocate Works helps international candidates compare countries, understand visa sponsor jobs, review salaries, taxes, cost of living, and plan relocation abroad.",
+  "title": "Relocate Works — Country Guides, Visas and Relocation Research",
+  "description": "Independent destination guides, visa research, salary and tax context, living costs, and practical planning for moving abroad.",
   "substackUrl": "https://relocateworks.substack.com",
   "email": "hello@relocateworks.com",
   "linkedinUrl": "https://linkedin.com/company/relocate-works/",
