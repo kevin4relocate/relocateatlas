@@ -167,6 +167,18 @@ if (existsSync(ogImageFile) && (!/#2563eb/i.test(readFileSync(ogImageFile,'utf8'
 }
 
 /* Phase 1 redesign smoke checks: no invented search route or dead-end design navigation. */
+// A single field-level focus ring prevents the native search input outline
+// from crossing into the submit button when the user types a destination.
+const countrySearchCssChecks = [
+  ['field-level focus ring', /\.rw-country-search-field:focus-within\s*\{[^}]*border-color:#2563eb;[^}]*box-shadow:0 0 0 3px rgba\(37,99,235,\.15\);/],
+  ['remove nested input focus outline', /\.rw-main \.rw-country-search-field input:focus-visible\s*\{\s*outline:none; box-shadow:none;/],
+  ['prevent search button shrinking', /\.rw-country-search-field button\s*\{\s*flex:0 0 auto;[^}]*white-space:nowrap;/],
+  ['preserve distinct submit keyboard focus', /\.rw-main \.rw-country-search-field button:focus-visible\s*\{\s*outline:2px solid #1e40af;/]
+];
+for (const [label, pattern] of countrySearchCssChecks) {
+  if (!pattern.test(redesignCss)) errors.push('Country search ' + label + ' missing');
+}
+
 const countryDirectory = pages.get(join(root, 'countries', 'index.html')) || '';
 const guideDirectory = pages.get(join(root, 'guides', 'index.html')) || '';
 if (!guideDirectory.includes('THE RELOCATION LIBRARY') || !guideDirectory.includes('rw-topic-grid')) errors.push('Redesigned relocation guides directory missing');

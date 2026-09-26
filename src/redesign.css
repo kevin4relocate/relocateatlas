@@ -226,10 +226,35 @@ a.country-card.rw-country-card:hover { transform:translateY(-5px); box-shadow:va
 .rw-country-filter-panel { display:grid; gap:24px; background:#eff6ff; border:1px solid #eff6ff; border-radius:19px; padding:23px 26px; margin-bottom:30px; }
 .rw-country-search-form { display:grid; gap:10px; }
 .rw-country-search-form > label { font-size:.84rem; font-weight:870; color:#1e40af; }
-.rw-country-search-field { display:flex; align-items:center; padding:5px; border:1px solid #eff6ff; border-radius:10px; background:#fff; }
-.rw-country-search-field > span { font-size:2.05rem; color:#64748b; padding:0 12px; line-height:.9; }
-.rw-country-search-field input { flex:1; min-width:0; border:0; outline-offset:5px; font:inherit; font-size:.94rem; padding:10px 0; color:#1e293b; }
-.rw-country-search-field button { cursor:pointer; border:0; border-radius:8px; background:#2563eb; color:#fff; padding:12px 22px; font-weight:840; }
+.rw-country-search-field {
+  display:flex; align-items:center; gap:10px; min-width:0;
+  padding:6px; border:1px solid #cbd5e1; border-radius:11px; background:#fff;
+  transition:border-color .18s ease, box-shadow .18s ease;
+}
+.rw-country-search-field:focus-within {
+  border-color:#2563eb;
+  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+.rw-country-search-field > span {
+  flex:0 0 auto; font-size:2.05rem; color:#64748b; padding:0 8px; line-height:.9;
+}
+.rw-country-search-field input {
+  flex:1 1 auto; min-width:0; width:100%; border:0; border-radius:0;
+  outline:0; box-shadow:none; background:transparent;
+  font:inherit; font-size:.94rem; padding:10px 0; color:#1e293b;
+}
+/* The entire field, not the input alone, is the visible keyboard focus target. */
+.rw-main .rw-country-search-field input:focus-visible {
+  outline:none; box-shadow:none;
+}
+.rw-country-search-field button {
+  flex:0 0 auto; position:relative; white-space:nowrap; cursor:pointer;
+  border:0; border-radius:8px; background:#2563eb; color:#fff;
+  padding:12px 22px; font-weight:840;
+}
+.rw-main .rw-country-search-field button:focus-visible {
+  outline:2px solid #1e40af; outline-offset:-3px;
+}
 .rw-country-search-field button:hover { background:#2563eb; }
 .rw-country-filter-row { display:flex; align-items:center; flex-wrap:wrap; gap:19px; }
 .rw-filter-label { font-size:.7rem; font-weight:900; color:#64748b; letter-spacing:.1em; white-space:nowrap; }
@@ -396,6 +421,8 @@ body.mobile-menu-open { position:static!important; width:auto; overflow:hidden!i
   .rw-country-filter-panel { padding:16px; }
   .rw-country-filter-row { display:block; }
   .rw-region-filters { margin-top:12px; }
+  .rw-country-search-field { gap:6px; }
+  .rw-country-search-field > span { padding:0 5px; }
   .rw-country-search-field input { font-size:.84rem; }
   .rw-country-search-field button { padding:12px; font-size:.79rem; }
   .rw-country-detail-hero { padding-bottom:38px; }
