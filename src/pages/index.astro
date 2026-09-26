@@ -3,262 +3,126 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CountryCard from '../components/CountryCard.astro';
-import CTA from '../components/CTA.astro';
+import TopicLinks from '../components/TopicLinks.astro';
 import { SITE, countries, industries, blogPosts } from '../data';
-const launchCountries = countries.filter((country) => country.priority === 'Launch');
-const nextCountries = countries.filter((country) => country.priority === 'Next');
+
+const featured = countries.slice(0, 6);
+const topics = [
+  { icon: '◈', eyebrow: 'Immigration', title: 'Visas & residence', description: 'Identify routes and questions to check with official immigration sources.', href: '/visas' },
+  { icon: '▣', eyebrow: 'Career planning', title: 'Salary research', description: 'Put gross pay, tax and regional salary context into perspective.', href: '/salaries' },
+  { icon: '⌁', eyebrow: 'Your finances', title: 'Taxes', description: 'Start researching income tax, payroll and your potential take-home pay.', href: '/taxes' },
+  { icon: '⌂', eyebrow: 'Everyday life', title: 'Cost of living', description: 'Explore housing, travel and settlement costs before making a move.', href: '/cost-of-living' },
+  { icon: '◇', eyebrow: 'Career planning', title: 'Job-market guides', description: 'Understand opportunities and work-rights language in your destination.', href: '/jobs' },
+  { icon: '◉', eyebrow: 'Moving abroad', title: 'Relocation services', description: 'Navigate the logistics of finding housing and settling into a new place.', href: '/relocation-companies' }
+];
 ---
-<BaseLayout
-  title="Relocate Works — Country Guides, Visa Information and Relocation Planning"
-  description="Explore practical relocation information about visas, countries, salaries, taxes and cost of living. Weekly job roundups are published separately on Substack."
-  canonicalPath="/"
->
+<BaseLayout title="Relocate Works | Plan Your Move Abroad with Confidence" description="Independent destination guides covering visas, work, salaries, taxes and daily life across ten countries. Dated international job roundups are published separately on Substack." canonicalPath="/">
   <Header />
-  <main>
-    <section class="hero hero-premium">
-      <div class="hero-visual-bg" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">🌍 Independent relocation information for international movers</span>
-          <h1>Understand your next country before you move.</h1>
-          <p class="lead">
-            Explore country and industry guides covering visa routes, taxes, salaries, healthcare and practical relocation preparation. Our separate Substack newsletter shares weekly international job leads.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-large" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Read Weekly Jobs on Substack</a>
-            <a class="button-ghost button-large" href="/jobs/free-preview">About Our Newsletter</a>
-          </div>
-          <div class="trust-row" aria-label="Relocate Works features">
-            <span>Weekly job research</span>
-            <span>Understand sponsorship terms</span>
-            <span>Country guides</span>
+  <main class="rw-main">
+    <section class="rw-hero">
+      <div class="container rw-hero-layout">
+        <div class="rw-hero-copy">
+          <span class="rw-kicker rw-kicker-light"><span class="rw-kicker-dot"></span> INDEPENDENT RELOCATION RESEARCH</span>
+          <h1>Your next chapter starts with <em>a clearer picture.</em></h1>
+          <p class="rw-hero-lead">Explore destinations, understand visa routes and compare the practical details of moving abroad. One calm place to start planning a life somewhere new.</p>
+          <form class="rw-hero-search" method="GET" action="/countries" role="search">
+            <label class="sr-only" for="hero-country-search">Search countries, cities or career sectors</label>
+            <span class="rw-search-icon" aria-hidden="true">⌕</span>
+            <input id="hero-country-search" name="q" type="search" placeholder="Search a country, city or career sector" autocomplete="off" />
+            <button type="submit">Explore <span aria-hidden="true">→</span></button>
+          </form>
+          <div class="rw-hero-quicklinks">
+            <span>Popular destinations</span>
+            {countries.slice(0, 4).map((country) => <a href={'/countries/' + country.slug}>{country.flag} {country.name}</a>)}
           </div>
         </div>
-
-        <div class="hero-dashboard" aria-label="Relocate Works relocation planning topics">
-          <div class="dashboard-topbar">
-            <span></span>
-            <span></span>
-            <span></span>
-            <strong>Weekly Sponsor Jobs</strong>
+        <div class="rw-hero-visual" aria-label="Three steps to planning an international move">
+          <div class="rw-visual-orbit rw-orbit-one" aria-hidden="true"></div>
+          <div class="rw-visual-orbit rw-orbit-two" aria-hidden="true"></div>
+          <div class="rw-visual-star rw-star-one" aria-hidden="true">✧</div>
+          <div class="rw-visual-star rw-star-two" aria-hidden="true">✦</div>
+          <div class="rw-plan-card">
+            <div class="rw-plan-card-top"><span class="rw-plan-symbol">↗</span><span>YOUR RELOCATION FIELD GUIDE</span><span class="rw-plan-dots" aria-hidden="true">● ● ●</span></div>
+            <div class="rw-plan-card-body">
+              <div class="rw-plan-card-label">FROM CURIOUS TO PREPARED</div>
+              <h2>A better plan<br />for the big move.</h2>
+              <div class="rw-plan-step"><span>01</span><div><strong>Choose a destination</strong><small>Explore our country guides</small></div><span aria-hidden="true">↗</span></div>
+              <div class="rw-plan-step"><span>02</span><div><strong>Understand your route</strong><small>Visas, careers and financial context</small></div><span aria-hidden="true">↗</span></div>
+              <div class="rw-plan-step"><span>03</span><div><strong>Prepare for arrival</strong><small>Housing, healthcare and next steps</small></div><span aria-hidden="true">↗</span></div>
+            </div>
+            <div class="rw-plan-card-bottom"><span>DESTINATIONS TO EXPLORE</span><span aria-hidden="true">🇦🇺 🇳🇿 🇩🇪 🇨🇦 🇸🇬</span></div>
           </div>
-          <div class="dashboard-card featured-job">
-            <div class="job-card-header"><span class="badge badge-success">Free relocation guides</span><strong>10 destinations</strong></div>
-            <h2>Plan with country-specific information</h2>
-            <p class="job-meta">Visa pathways · Taxes · Salaries · Living costs</p>
-            <p>Browse our destination guides and use the official source links to confirm current requirements for your situation.</p>
-            <p><a class="inline-link" href="/countries">Explore all country guides →</a></p>
-          </div>
-          <div class="mini-job-list">
-            <div class="mini-job"><span>🌐</span><strong>Visa &amp; immigration</strong><em>Official starting points</em></div>
-            <div class="mini-job"><span>💰</span><strong>Salary &amp; taxes</strong><em>Plan your budget</em></div>
-            <div class="mini-job"><span>🏥</span><strong>Healthcare &amp; settling in</strong><em>Prepare your move</em></div>
-          </div>
+          <span class="rw-visual-note">Explore the possibilities.<br /><strong>Plan with the details.</strong></span>
         </div>
+      </div>
+      <div class="container rw-hero-foot">
+        <span><strong>{countries.length}</strong> country guides</span><span aria-hidden="true" class="rw-foot-divider"></span>
+        <span><strong>{industries.length.toString().padStart(2, '0')}</strong> career sectors</span><span aria-hidden="true" class="rw-foot-divider"></span>
+        <span><strong>Free</strong> relocation library</span>
       </div>
     </section>
 
-    <section class="stats-strip" aria-label="Relocate Works launch focus">
-      <div class="container stats-grid">
-        <div>
-          <strong>10</strong>
-          <span>target countries</span>
-        </div>
-        <div>
-          <strong>5</strong>
-          <span>launch markets first</span>
-        </div>
-        <div>
-          <strong>Weekly</strong>
-          <span>Substack job previews</span>
-        </div>
-        <div>
-          <strong>Human</strong>
-          <span>review before publishing</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="rw-section rw-destinations-section">
       <div class="container">
-        <div class="section-heading centered">
-          <span class="mini-eyebrow">The workflow</span>
-          <h2>How Relocate Works works</h2>
-          <p>
-            Use our free country and industry guides to plan your international move; find weekly, dated job leads separately on Substack.
-          </p>
+        <div class="rw-section-head">
+          <div><span class="rw-kicker">DESTINATIONS, MADE CLEARER</span><h2>Where could your next chapter take you?</h2></div>
+          <div class="rw-head-side"><p>Start with the possibilities. Explore visa routes, salary context and the realities of day-to-day life.</p><a class="rw-text-link" href="/countries">All {countries.length} country guides <span aria-hidden="true">↗</span></a></div>
         </div>
-        <div class="process-grid">
-          <div class="process-card">
-            <span class="icon-circle">1</span>
-            <h3>Search public job sources</h3>
-            <p>We look for visa sponsorship, relocation support, work permit support, and international hiring signals across public job sources.</p>
-          </div>
-          <div class="process-card">
-            <span class="icon-circle">2</span>
-            <h3>Analyze sponsor signals</h3>
-            <p>Each selected role is reviewed for visa keywords, employer quality, salary context, location, and risk phrases.</p>
-          </div>
-          <div class="process-card">
-            <span class="icon-circle">3</span>
-            <h3>Publish weekly insights</h3>
-            <p>Weekly job leads, when available, are published separately in dated posts on our Substack newsletter.</p>
-          </div>
+        <div class="rw-countries-grid">
+          {featured.map((country) => <CountryCard {...country} />)}
         </div>
+        <div class="rw-section-footer-link"><a href="/countries">Explore every destination <span aria-hidden="true">→</span></a><span>Australia · New Zealand · United Kingdom · Germany · Canada and more</span></div>
       </div>
     </section>
 
-
-
-    <section class="section section-white">
+    <section class="rw-section rw-section-cream">
       <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="mini-eyebrow">New: industry guides</span>
-            <h2>Relocation is not only for tech candidates.</h2>
-          </div>
-          <p>
-            Relocate Works covers multiple high-demand industries so candidates can understand what roles, documents, qualifications, and risks apply to their own profession.
-          </p>
+        <div class="rw-section-head"><div><span class="rw-kicker">THE PRACTICAL DETAILS</span><h2>Good decisions begin with good questions.</h2></div><p>Explore the topics that shape a relocation decision before committing to a move.</p></div>
+        <TopicLinks items={topics} />
+      </div>
+    </section>
+
+    <section class="rw-section">
+      <div class="container rw-editorial-split">
+        <div class="rw-editorial-copy">
+          <span class="rw-kicker">WHY RELOCATE WORKS EXISTS</span>
+          <h2>Less guesswork.<br /><em>More perspective.</em></h2>
+          <p>Moving countries is a collection of decisions, not a single application. We bring together practical research on employment, immigration and everyday life, so you can approach each step with more context.</p>
+          <a class="rw-text-link" href="/about">Our approach <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="industry-grid compact-industry-grid">
-          {industries.map((industry) => (
-            <a class="industry-card compact" href={`/industries/${industry.slug}`}>
-              <div class="industry-icon">{industry.icon}</div>
-              <h3>{industry.shortName}</h3>
-              <p>{industry.description}</p>
-              <strong>Explore requirements →</strong>
-            </a>
-          ))}
+        <div class="rw-editorial-points">
+          <div><span>01 /</span><div><h3>Built around your destination</h3><p>Find related visa, salary, tax, housing and settlement topics from one country starting point.</p></div></div>
+          <div><span>02 /</span><div><h3>Official links, where they matter</h3><p>Each destination guide includes government starting points so you can verify rules for your own circumstances.</p></div></div>
+          <div><span>03 /</span><div><h3>Information and opportunities, separated</h3><p>Read free relocation guidance here; explore dated job research through our separate Substack publication.</p></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section section-white">
+    <section class="rw-newsletter-section">
+      <div class="container rw-newsletter-inner">
+        <div class="rw-newsletter-decor" aria-hidden="true">✳</div>
+        <div class="rw-newsletter-copy"><span class="rw-kicker rw-kicker-light">THE WEEKLY RELOCATION LETTER</span><h2>Research the move.<br /><em>Discover the opportunities.</em></h2><p>Weekly international job research and original employer application links are published separately on Substack. This website is the free research library.</p><div class="rw-newsletter-actions"><a class="rw-btn rw-btn-light" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Read the newsletter <span aria-hidden="true">↗</span></a><a class="rw-newsletter-secondary" href="/jobs/free-preview">How it works <span aria-hidden="true">→</span></a></div></div>
+        <div class="rw-newsletter-aside"><span>YOUR RESEARCH COMPANION</span><div>Better informed.<br />Better prepared.</div><span aria-hidden="true">↗</span></div>
+      </div>
+    </section>
+
+    <section class="rw-section rw-industry-section">
       <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="mini-eyebrow">Launch focus</span>
-            <h2>Top relocation countries</h2>
-          </div>
-          <p>
-            We start with countries that are popular among international candidates and have clearer skilled migration or employer-sponsored work routes.
-          </p>
-        </div>
-        <div class="grid-3">
-          {launchCountries.map((country) => <CountryCard {...country} />)}
-        </div>
-        <div class="next-market-panel">
-          <div>
-            <span class="mini-eyebrow">More destinations</span>
-            <h3>Five more country guides available</h3>
-            <p>Explore our existing guides for Singapore, Ireland, the Netherlands, Denmark and Japan, including visa, tax and relocation planning information.</p>
-          </div>
-          <div class="market-pills">
-            {nextCountries.map((country) => <a href={`/countries/${country.slug}`}>{country.flag} {country.name}</a>)}
-          </div>
+        <div class="rw-section-head"><div><span class="rw-kicker">YOUR CAREER, YOUR PATH</span><h2>Relocation looks different for everyone.</h2></div><div class="rw-head-side"><p>Understand career-specific requirements, documents and international hiring context.</p><a class="rw-text-link" href="/industries">View all industries <span aria-hidden="true">↗</span></a></div></div>
+        <div class="rw-industry-grid">
+          {industries.map((industry) => <a class="rw-industry-card" href={'/industries/' + industry.slug}><span class="rw-industry-icon" aria-hidden="true">{industry.icon}</span><div><h3>{industry.shortName}</h3><p>{industry.description}</p></div><span aria-hidden="true" class="rw-industry-arrow">↗</span></a>)}
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container split-feature">
-        <div>
-          <span class="mini-eyebrow">Why it matters</span>
-          <h2>Most job boards are not built for international candidates.</h2>
-          <p class="feature-lead">
-            A job can look attractive, but still be a poor option if the company does not support work permits, relocation, or international applicants. Relocate Works adds context before you spend time applying.
-          </p>
-          <div class="feature-list">
-            <div><strong>Filter weak signals</strong><span>We avoid jobs that clearly say no sponsorship, local candidates only, or existing work rights required.</span></div>
-            <div><strong>Add visa context</strong><span>We classify sponsor signals as confirmed, likely, unknown, or unsuitable.</span></div>
-            <div><strong>Save research time</strong><span>Weekly previews help candidates focus on stronger relocation opportunities.</span></div>
-          </div>
-        </div>
-        <div class="comparison-card">
-          <div class="comparison-row muted"><span>Raw job board</span><span>Relocate Works</span></div>
-          <div class="comparison-row"><span>Job title only</span><strong>Visa signal + country context</strong></div>
-          <div class="comparison-row"><span>Unclear sponsorship</span><strong>Employer support definitions</strong></div>
-          <div class="comparison-row"><span>Hours of searching</span><strong>Weekly curated preview</strong></div>
-          <div class="comparison-row"><span>Generic results</span><strong>Relocation-focused roles</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-white">
+    <section class="rw-section rw-section-cream rw-articles-section">
       <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="mini-eyebrow">Weekly value</span>
-            <h2>What you get every week</h2>
-          </div>
-          <p>Relocate Works is designed for candidates who do not want to waste hours filtering job posts that do not support international applicants.</p>
-        </div>
-        <div class="grid-2">
-          <div class="card card-hover">
-            <h3>Weekly sponsor-friendly jobs</h3>
-            <p>Curated opportunities across Australia, New Zealand, the UK, Germany, Canada, and more countries as the list expands.</p>
-          </div>
-          <div class="card card-hover">
-            <h3>Short job summaries</h3>
-            <p>Each role is summarized so readers can quickly understand the company, location, role type, and relocation signal.</p>
-          </div>
-          <div class="card card-hover">
-            <h3>Sponsorship definitions</h3>
-            <p>We separate confirmed, likely, unknown, and poor sponsor signals so candidates can apply with more context.</p>
-          </div>
-          <div class="card card-hover">
-            <h3>Practical relocation guides</h3>
-            <p>Free guides cover country selection, visa basics, salary expectations, cost of living, and application strategy.</p>
-          </div>
+        <div class="rw-section-head"><div><span class="rw-kicker">FROM THE LIBRARY</span><h2>Start with a little more insight.</h2></div><a class="rw-text-link" href="/blog">Explore all articles <span aria-hidden="true">↗</span></a></div>
+        <div class="rw-article-grid">
+          {blogPosts.slice(0, 3).map((post) => <a class="rw-article-card" href={'/blog/' + post.slug}><span class="rw-article-label">{post.category}</span><h3>{post.title}</h3><p>{post.description}</p><span class="rw-article-more">Read article <span aria-hidden="true">↗</span></span></a>)}
         </div>
       </div>
     </section>
-
-
-    <section class="section section-white">
-      <div class="container">
-        <div class="section-heading centered">
-          <span class="mini-eyebrow">Relocation resource library</span>
-          <h2>More than a job list: compare the full move.</h2>
-          <p>Relocate Works is an informational relocation library covering countries, visas, taxes, salaries, living costs and job-market guidance. Current vacancies are published exclusively on Substack.</p>
-        </div>
-        <div class="resource-grid">
-          <a class="resource-card" href="/countries"><strong>Countries</strong><span>Compare top destinations and relocation readiness.</span></a>
-          <a class="resource-card" href="/industries"><strong>Industries</strong><span>See requirements, missing skills, and roles by profession.</span></a>
-          <a class="resource-card" href="/visas"><strong>Visas</strong><span>Review employer-sponsored and skilled work routes.</span></a>
-          <a class="resource-card" href="/taxes"><strong>Taxes</strong><span>Understand take-home pay basics before moving.</span></a>
-          <a class="resource-card" href="/salaries"><strong>Salaries</strong><span>Compare salary context by market and role.</span></a>
-          <a class="resource-card" href="/cost-of-living"><strong>Cost of Living</strong><span>Plan rent, transport, insurance, and setup costs.</span></a>
-          <a class="resource-card" href="/relocation-companies"><strong>Relocation Companies</strong><span>Find services that support housing, shipping, and settling in.</span></a>
-          <a class="resource-card" href="/jobs"><strong>Jobs</strong><span>Research sponsor-friendly job markets and roles.</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="mini-eyebrow">Latest guides</span>
-            <h2>Start with practical relocation research</h2>
-          </div>
-          <p>Learn how to evaluate sponsor-friendly jobs, avoid weak postings, and choose stronger target countries.</p>
-        </div>
-        <div class="grid-3">
-          {blogPosts.slice(0, 3).map((post) => (
-            <a class="article-card" href={`/blog/${post.slug}`}>
-              <div class="article-meta">{post.category} · {post.date}</div>
-              <h3>{post.title}</h3>
-              <p>{post.description}</p>
-              <span>Read guide →</span>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <CTA />
   </main>
   <Footer />
 </BaseLayout>

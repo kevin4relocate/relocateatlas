@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import TopicLinks from '../../components/TopicLinks.astro';
+import { SITE } from '../../data';
+
+const guides = [
+  { icon: '◈', eyebrow: 'Immigration', title: 'Visa & residence', description: 'Understand work authorization, employer support and questions to verify before applying.', href: '/visas' },
+  { icon: '▣', eyebrow: 'Money', title: 'Salaries & take-home pay', description: 'Read salary context alongside deductions and destination-specific expectations.', href: '/salaries' },
+  { icon: '⌁', eyebrow: 'Money', title: 'Taxes', description: 'Learn the starting points for income tax, payroll and tax residency research.', href: '/taxes' },
+  { icon: '⌂', eyebrow: 'Everyday life', title: 'Cost of living', description: 'Plan housing, transportation, recurring expenses and the first weeks after arrival.', href: '/cost-of-living' },
+  { icon: '◇', eyebrow: 'Career', title: 'Job-market research', description: 'Explore hiring context by country. Dated vacancies are published separately on Substack.', href: '/jobs' },
+  { icon: '◉', eyebrow: 'Practical', title: 'Relocation services', description: 'Plan moving, housing support and the logistics involved in relocating internationally.', href: '/relocation-companies' }
+];
+---
+<BaseLayout title="Relocation Guides: Visas, Salaries, Taxes & Moving | Relocate Works" description="Explore free international relocation research: visa routes, jobs-market guidance, salaries, tax, living costs and practical moving resources." canonicalPath="/guides">
+  <Header />
+  <main class="rw-main">
+    <section class="rw-page-intro">
+      <div class="container">
+        <nav class="rw-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Relocation guides</span></nav>
+        <div class="rw-intro-copy">
+          <span class="rw-kicker">THE RELOCATION LIBRARY</span>
+          <h1>The details that make a move work.</h1>
+          <p class="rw-lead">A destination is more than a job offer. Explore each part of an international move with practical guides and links to official starting points.</p>
+        </div>
+      </div>
+    </section>
+    <section class="rw-section">
+      <div class="container">
+        <div class="rw-section-head"><div><span class="rw-kicker">EXPLORE BY TOPIC</span><h2>What would you like to understand?</h2></div><p>Choose a topic, then select the country that matters to you.</p></div>
+        <TopicLinks items={guides} />
+      </div>
+    </section>
+    <section class="rw-wide-band">
+      <div class="container rw-wide-band-inner">
+        <div><span class="rw-kicker">PREFER A DESTINATION FIRST?</span><h2>Explore the country library.</h2><p>Find visas, costs, healthcare and settlement planning together in one place.</p></div>
+        <a class="rw-btn rw-btn-primary" href="/countries">View all countries <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="rw-section rw-section-cream">
+      <div class="container rw-newsletter-slab">
+        <div><span class="rw-kicker">SEPARATE WEEKLY PUBLICATION</span><h2>Research first. Then explore opportunities.</h2><p>Job roundups and original employer application links are published through our separate Substack newsletter, not as live vacancies on this website.</p></div>
+        <a class="rw-btn rw-btn-dark" href={SITE.substackUrl} rel="noopener noreferrer" target="_blank">Read weekly jobs <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

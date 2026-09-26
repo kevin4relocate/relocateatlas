@@ -3,48 +3,89 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CountryCard from '../../components/CountryCard.astro';
-import CTA from '../../components/CTA.astro';
 import { countries } from '../../data';
-const launchCountries = countries.filter((country) => country.priority === 'Launch');
-const nextCountries = countries.filter((country) => country.priority === 'Next');
+const regions = ['All destinations', ...new Set(countries.map((country) => country.region))];
 ---
-<BaseLayout
-  title="Countries for Visa Sponsor Jobs and Relocation | Relocate Works"
-  description="Compare top relocation countries by visas, taxes, cost of living, salaries, jobs, healthcare, cities, and relocation companies."
-  canonicalPath="/countries"
->
+<BaseLayout title={'Explore ' + countries.length + ' Country Relocation Guides | Relocate Works'} description="Browse free relocation planning guides for international destinations. Explore visas, salaries, tax, living costs and employment context by country." canonicalPath="/countries">
   <Header />
-  <main>
-    <section class="page-hero page-hero-gradient">
-      <div class="container narrow">
-        <span class="eyebrow">🌍 Countries</span>
-        <h1>Compare countries before you apply for jobs abroad.</h1>
-        <p class="lead">
-          Each country guide includes visa pathways, taxes, salaries, cost of living, companies hiring, job sectors, relocation companies, healthcare, and key cities.
-        </p>
+  <main class="rw-main">
+    <section class="rw-page-intro rw-country-index-intro">
+      <div class="container">
+        <nav class="rw-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Countries</span></nav>
+        <div class="rw-country-index-lead">
+          <div><span class="rw-kicker">YOUR NEXT DESTINATION</span><h1>Find somewhere that <em>fits your future.</em></h1><p class="rw-lead">Explore our destination guides. Start with a country you know, or discover the options through visas, career context and everyday living.</p></div>
+          <div class="rw-index-side-note" aria-label="What the guides cover"><span>IN EVERY COUNTRY GUIDE</span><div>Visa routes <span>↗</span></div><div>Salary &amp; tax context <span>↗</span></div><div>Living &amp; settling in <span>↗</span></div></div>
+        </div>
       </div>
     </section>
 
-    <section class="section section-white">
+    <section class="rw-section rw-country-index-section">
       <div class="container">
-        <div class="section-heading">
-          <div><span class="mini-eyebrow">Start here</span><h2>Launch focus countries</h2></div>
-          <p>These markets are prioritized for weekly sponsor-friendly job research and deeper relocation guides.</p>
+        <div class="rw-country-filter-panel">
+          <form action="/countries" method="GET" role="search" class="rw-country-search-form" data-country-search-form>
+            <label for="country-search">Find your destination</label>
+            <div class="rw-country-search-field"><span aria-hidden="true">⌕</span><input type="search" id="country-search" name="q" data-country-search placeholder="Search a country, city or career sector" autocomplete="off" /><button type="submit">Search →</button></div>
+          </form>
+          <div class="rw-country-filter-row">
+            <span class="rw-filter-label">FILTER BY REGION</span>
+            <div class="rw-region-filters" role="group" aria-label="Filter countries by region" data-country-filters>
+              {regions.map((region, index) => <button type="button" data-region={index === 0 ? 'all' : region} aria-pressed={index === 0 ? 'true' : 'false'} class:list={['rw-filter-btn', { 'is-active': index === 0 }]}>{region}</button>)}
+            </div>
+          </div>
         </div>
-        <div class="grid-3">{launchCountries.map((country) => <CountryCard {...country} />)}</div>
+        <div class="rw-listing-meta"><h2>All destinations</h2><output aria-live="polite" aria-atomic="true" data-country-result-count>{countries.length} guides</output></div>
+        <div class="rw-countries-grid rw-all-countries-grid">
+          {countries.map((country) => <div class="rw-country-result" data-country-result data-region={country.region} data-search-text={[country.name, country.region, country.primaryVisa, ...country.keyCities, ...country.popularRoles].join(' ').toLowerCase()}><CountryCard {...country} /></div>)}
+        </div>
+        <div class="rw-no-results" data-no-country-results hidden><h3>No destinations matched that search.</h3><p>Try another country, region, city or career field.</p><button type="button" data-country-reset>Clear filters</button></div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div><span class="mini-eyebrow">More destinations</span><h2>Explore five more country guides</h2></div>
-          <p>Our guides for Singapore, Ireland, the Netherlands, Denmark and Japan are available now alongside the five launch-focus countries.</p>
-        </div>
-        <div class="grid-3">{nextCountries.map((country) => <CountryCard {...country} />)}</div>
+    <section class="rw-wide-band">
+      <div class="container rw-wide-band-inner">
+        <div><span class="rw-kicker">PREPARING THE MOVE</span><h2>Explore the details, not just the destination.</h2><p>Use our dedicated guides to understand visas, salaries, taxes and cost-of-living considerations.</p></div>
+        <a class="rw-btn rw-btn-primary" href="/guides">Explore relocation guides <span aria-hidden="true">↗</span></a>
       </div>
     </section>
-    <CTA />
   </main>
   <Footer />
 </BaseLayout>
+
+<script>
+  const setupDestinationFilters = () => {
+    const input = document.querySelector<HTMLInputElement>('[data-country-search]');
+    const tiles = Array.from(document.querySelectorAll<HTMLElement>('[data-country-result]'));
+    const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-country-filters] [data-region]'));
+    const count = document.querySelector<HTMLOutputElement>('[data-country-result-count]');
+    const empty = document.querySelector<HTMLElement>('[data-no-country-results]');
+    const reset = document.querySelector<HTMLButtonElement>('[data-country-reset]');
+    if (!input || !count || !empty || input.dataset.ready === 'true') return;
+    input.dataset.ready = 'true';
+    let region = 'all';
+    const render = () => {
+      const query = input.value.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      let found = 0;
+      tiles.forEach((tile) => {
+        const text = (tile.dataset.searchText || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        const visible = (region === 'all' || tile.dataset.region === region) && (!query || text.includes(query));
+        tile.hidden = !visible;
+        if (visible) found++;
+      });
+      count.textContent = found + (found === 1 ? ' guide' : ' guides');
+      empty.hidden = found !== 0;
+      buttons.forEach((button) => {
+        const active = button.dataset.region === region;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+    };
+    const original = new URLSearchParams(location.search).get('q');
+    if (original) input.value = original;
+    input.addEventListener('input', render);
+    buttons.forEach((button) => button.addEventListener('click', () => { region = button.dataset.region || 'all'; render(); }));
+    reset?.addEventListener('click', () => { region = 'all'; input.value = ''; window.history.replaceState(null, '', location.pathname); render(); input.focus(); });
+    render();
+  };
+  setupDestinationFilters();
+  document.addEventListener('astro:page-load', setupDestinationFilters);
+</script>

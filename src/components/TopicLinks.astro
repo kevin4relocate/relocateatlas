@@ -1,0 +1,18 @@
+---
+type Item = { eyebrow?: string; title: string; description: string; href: string; icon: string; };
+type Props = { items: Item[]; label?: string; };
+const { items, label = 'Explore relocation topics' } = Astro.props;
+---
+<div class="rw-topic-grid" aria-label={label}>
+  {items.map((item) => (
+    <a class="rw-topic-card" href={item.href}>
+      <div class="rw-topic-icon" aria-hidden="true">{item.icon}</div>
+      <div>
+        {item.eyebrow && <span class="rw-topic-eyebrow">{item.eyebrow}</span>}
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+      </div>
+      <span class="rw-topic-arrow" aria-hidden="true">↗</span>
+    </a>
+  ))}
+</div>

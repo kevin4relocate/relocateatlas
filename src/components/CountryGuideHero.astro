@@ -1,0 +1,34 @@
+---
+import type { Country } from '../data';
+import type { CountryEditorial } from '../countryEditorial';
+type Props = { country: Country; editorial: CountryEditorial; };
+const { country, editorial } = Astro.props;
+---
+<section class="rw-country-detail-hero">
+  <div class="container">
+    <nav class="rw-breadcrumb rw-breadcrumb-light" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/countries">Countries</a><span aria-hidden="true">/</span><span aria-current="page">{country.name}</span></nav>
+    <div class="rw-country-hero-grid">
+      <div class="rw-country-hero-copy">
+        <div class="rw-country-title-flag" aria-hidden="true">{country.flag}</div>
+        <span class="rw-kicker rw-kicker-light">COUNTRY FIELD GUIDE · {country.region.toUpperCase()}</span>
+        <h1>Moving to <em>{country.name}.</em><br />Start with the full picture.</h1>
+        <p>{country.shortDescription}</p>
+        <div class="rw-country-hero-actions">
+          <a class="rw-btn rw-btn-light" href="#visas">Explore visa pathways <span aria-hidden="true">↓</span></a>
+          <a class="rw-hero-plain-link" href="#cost">Understand living costs <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <aside class="rw-country-glance" aria-label={country.name + ' essential information'}>
+        <div class="rw-country-glance-header"><span>THE ESSENTIALS</span><span aria-hidden="true">↗</span></div>
+        <h2>{country.name}<br />at a glance.</h2>
+        <dl>
+          <div><dt>Capital</dt><dd>{country.capital}</dd></div>
+          <div><dt>Currency</dt><dd>{country.currency}</dd></div>
+          <div><dt>Language context</dt><dd>{country.languages}</dd></div>
+          <div><dt>Work route to research</dt><dd>{country.primaryVisa}</dd></div>
+        </dl>
+        <a href={editorial.resources.immigration.url} target="_blank" rel="noopener noreferrer">Official immigration guidance <span aria-hidden="true">↗</span></a>
+      </aside>
+    </div>
+  </div>
+</section>

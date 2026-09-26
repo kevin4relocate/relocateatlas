@@ -1,57 +1,16 @@
 ---
 import { SITE } from '../data';
 ---
-<section class="section cta-section">
-  <div class="container">
-    <div class="cta-band">
-
-      <div>
-
-        <span class="mini-eyebrow">
-          Weekly relocation intelligence
-        </span>
-
-        <h2>
-          Explore relocation guides and weekly job insights.
-        </h2>
-
-        <p>
-          Every week, Relocate Works researches sponsor-friendly jobs,
-          compares countries, highlights relocation signals,
-          and explains why a role may—or may not—be worth your time.
-
-          Save hours of searching and focus on better opportunities.
-        </p>
-
-        <div class="trust-row">
-          <span>Weekly updates</span>
-          <span>AI-assisted research</span>
-          <span>Human-reviewed</span>
-          <span>Founding price</span>
-        </div>
-
-      </div>
-
-      <div class="cta-actions">
-
-        <a
-          class="button button-light"
-          href={SITE.substackUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Subscribe on Substack
-        </a>
-
-        <a
-          class="button-text-light"
-          href="/jobs/free-preview"
-        >
-          About the Newsletter
-        </a>
-
-      </div>
-
+<section class="rw-shared-cta">
+  <div class="container rw-shared-cta-inner">
+    <div>
+      <span class="rw-shared-cta-kicker">A MORE INFORMED WAY TO MOVE</span>
+      <h2>Wherever you're headed,<br /><em>start with a clearer plan.</em></h2>
+      <p>Explore our free destination guides, then turn to the separate Substack newsletter for dated international job research and original employer application links.</p>
+    </div>
+    <div class="rw-shared-cta-actions">
+      <a class="rw-btn rw-btn-light" href="/countries">Explore country guides <span aria-hidden="true">↗</span></a>
+      <a class="rw-shared-cta-link" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Read weekly jobs on Substack <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>

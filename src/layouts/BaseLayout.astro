@@ -1,5 +1,6 @@
 ---
 import '../styles.css';
+import '../redesign.css';
 import { SITE } from '../data';
 
 type Props = {
@@ -99,7 +100,7 @@ const jsonLdGraph = [
     <link rel="canonical" href={canonicalUrl} />
     <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
 
-    <meta name="theme-color" content="#102A43" />
+    <meta name="theme-color" content="#12352F" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
 
@@ -281,7 +282,7 @@ const unlockBodyScroll = () => {
             if (isOpen) {
               lockBodyScroll();
               mobileMenu.scrollTop = 0;
-              const firstMenuLink = mobileMenu.querySelector('a');
+              const firstMenuLink = mobileMenu.querySelector('button, a');
               if (firstMenuLink) firstMenuLink.focus();
             } else {
               unlockBodyScroll();
@@ -294,7 +295,7 @@ const unlockBodyScroll = () => {
           });
 
           mobileMenu.addEventListener('click', (event) => {
-            if (event.target.closest('a')) setOpen(false);
+            if (event.target.closest('a, [data-rw-menu-close]')) setOpen(false);
           });
 
           document.addEventListener('keydown', (event) => {

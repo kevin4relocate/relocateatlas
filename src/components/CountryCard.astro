@@ -3,28 +3,30 @@ type Props = {
   flag: string;
   name: string;
   slug: string;
+  region?: string;
   primaryVisa: string;
   shortDescription: string;
-  popularRoles?: string[];
+  popularRoles?: readonly string[];
   priority?: 'Launch' | 'Next';
 };
-const { flag, name, slug, primaryVisa, shortDescription, popularRoles = [], priority = 'Launch' } = Astro.props;
+const { flag, name, slug, region = '', primaryVisa, shortDescription, popularRoles = [] } = Astro.props;
 ---
-<a class="country-card" href={`/countries/${slug}`}>
-  <div class="country-card-glow" aria-hidden="true"></div>
-  <div class="country-top">
-    <span class="flag" aria-hidden="true">{flag}</span>
-    <div>
-      <div class="country-label">{priority === 'Launch' ? 'Launch focus' : 'More destinations'}</div>
-      <h3>{name}</h3>
-    </div>
+<a class="country-card rw-country-card" href={'/countries/' + slug}>
+  <div class="rw-country-card-top">
+    <span class="rw-flag" aria-hidden="true">{flag}</span>
+    <span class="rw-country-region">{region || 'Destination guide'}</span>
+    <span class="rw-country-arrow" aria-hidden="true">↗</span>
   </div>
-  <p class="country-visa">{primaryVisa}</p>
-  <p>{shortDescription}</p>
+  <h3>{name}</h3>
+  <p class="rw-country-description">{shortDescription}</p>
+  <div class="rw-country-card-bottom">
+    <span class="rw-card-label">Visa route to research</span>
+    <strong>{primaryVisa}</strong>
+  </div>
   {popularRoles.length > 0 && (
-    <div class="tags" aria-label={`${name} popular roles`}>
-      {popularRoles.slice(0, 3).map((role) => <span class="tag">{role}</span>)}
+    <div class="rw-country-roles" aria-label={name + ' example career sectors'}>
+      {popularRoles.slice(0, 2).map((role) => <span>{role}</span>)}
     </div>
   )}
-  <span class="country-link">View guide →</span>
+  <span class="rw-country-view">Explore country guide <span aria-hidden="true">→</span></span>
 </a>
