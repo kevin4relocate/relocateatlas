@@ -5,23 +5,12 @@ import Footer from '../components/Footer.astro';
 import CTA from '../components/CTA.astro';
 import { SITE, countries, industries } from '../data';
 const launchCountries = countries.filter((country) => country.priority === 'Launch');
-const productJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'Relocate Works Weekly Sponsor Job Intelligence',
-  description: 'Weekly sponsor-friendly job lists with direct apply links, support evidence, practical planning notes, and application guidance for international candidates.',
-  brand: { '@type': 'Brand', name: 'Relocate Works' },
-  offers: [
-    { '@type': 'Offer', price: '9', priceCurrency: 'USD', name: 'Monthly Access', availability: 'https://schema.org/InStock' },
-    { '@type': 'Offer', price: '49', priceCurrency: 'USD', name: 'Founding Yearly Access', availability: 'https://schema.org/InStock' }
-  ]
-};
+
 ---
 <BaseLayout
   title="Visa Sponsor Jobs — Weekly Multi-Industry Job Intelligence | Relocate Works"
   description="Subscribe to Relocate Works for weekly visa sponsor jobs across tech, healthcare, engineering, finance, education, hospitality, and skilled roles. Founding price: $9/month or $49/year."
   canonicalPath="/visa-sponsor-jobs"
-  structuredData={productJsonLd}
 >
   <Header />
   <main>
