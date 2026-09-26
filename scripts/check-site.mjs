@@ -179,6 +179,17 @@ for (const [label, pattern] of countrySearchCssChecks) {
   if (!pattern.test(redesignCss)) errors.push('Country search ' + label + ' missing');
 }
 
+// Weekly Jobs evidence heading has one content column. The general two-column
+// section-heading grid previously compressed it into five uneven lines.
+const weeklyJobs = pages.get(join(root, 'jobs', 'free-preview', 'index.html')) || '';
+if (!weeklyJobs.includes('weekly-evidence-section') || !weeklyJobs.includes('weekly-evidence-heading')) {
+  errors.push('Weekly Jobs evidence heading lacks its full-width layout hook');
+}
+if (!/\.weekly-evidence-heading\s*\{\s*display:\s*block;/.test(redesignCss) ||
+    !/\.weekly-evidence-heading\s+h2\s*\{[^}]*text-wrap:\s*balance;/.test(redesignCss)) {
+  errors.push('Weekly Jobs evidence headline has reverted to narrow two-column wrapping');
+}
+
 const countryDirectory = pages.get(join(root, 'countries', 'index.html')) || '';
 const guideDirectory = pages.get(join(root, 'guides', 'index.html')) || '';
 if (!guideDirectory.includes('THE RELOCATION LIBRARY') || !guideDirectory.includes('rw-topic-grid')) errors.push('Redesigned relocation guides directory missing');
