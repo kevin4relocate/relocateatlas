@@ -23,7 +23,7 @@ function walk(dir) {
 walk(root);
 
 const pages = new Map(htmlFiles.map((file) => [file, readFileSync(file, 'utf8')]));
-const readHref = (text) => text.match(/\\bhref\\s*=\\s*(["'])(.*?)\\1/is)?.[2] ?? null;
+const readHref = (text) => text.match(/\bhref\s*=\s*(["'])(.*?)\1/is)?.[2] ?? null;
 const decodeHtml = (value) => value.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#39;', "'");
 const checkLocal = (urlPath) => {
   const local = decodeURIComponent(urlPath);
