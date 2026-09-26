@@ -261,9 +261,9 @@ const itemListJsonLd = {
             {country.costOverview.map((paragraph) => <p>{paragraph}</p>)}
 
             <div class="info-grid two">
-              <div class="info-tile"><strong>Most expensive cities</strong><span>{country.expensiveCities.join(', ')}</span></div>
-              <div class="info-tile"><strong>More affordable options</strong><span>{country.affordableCities.join(', ')}</span></div>
-              <div class="info-tile"><strong>Average rent note</strong><span>{country.averageRent}</span></div>
+              <div class="info-tile"><strong>Locations where housing needs extra research</strong><span>{country.expensiveCities.join(', ')}</span></div>
+              <div class="info-tile"><strong>Other locations to compare</strong><span>{country.affordableCities.join(', ')}</span></div>
+              <div class="info-tile"><strong>Housing research</strong><span>{country.averageRent}</span></div>
               <div class="info-tile"><strong>Monthly expenses</strong><span>{country.monthlyExpenses}</span></div>
             </div>
 
@@ -343,7 +343,7 @@ const itemListJsonLd = {
 
           <section id="cities" class="content-block">
             <span class="mini-eyebrow">Cities</span>
-            <h2>Best cities for relocation in {country.name}</h2>
+            <h2>Cities and regions to explore in {country.name}</h2>
             <p>{country.citiesOverview}</p>
 
             <div class="city-grid">
