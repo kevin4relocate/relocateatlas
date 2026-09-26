@@ -162,7 +162,7 @@ export const countryEditorial: Record<string, CountryEditorial> = {
     familyNote: 'Partner and child pass eligibility is not identical across work-pass categories and depends on current salary and other rules.',
     resources: {
       immigration: { label: 'Ministry of Manpower — Employment Pass eligibility', url: 'https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility', detail: 'Official current salary and COMPASS criteria.' },
-      tax: { label: 'Inland Revenue Authority of Singapore — individual income tax', url: 'https://www.iras.gov.sg/taxes/individual-income-tax', detail: 'Tax residency and individual tax guidance.' },
+      tax: { label: 'Inland Revenue Authority of Singapore — individual income tax', url: 'https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax', detail: 'Tax residency and individual tax guidance.' },
       healthcare: { label: 'Singapore Ministry of Health', url: 'https://www.moh.gov.sg/', detail: 'Healthcare-system information; confirm employer insurance benefits separately.' },
       education: { label: 'Singapore Ministry of Education', url: 'https://www.moe.gov.sg/', detail: 'School admissions, international students and education information.' }
     }
@@ -211,7 +211,7 @@ export const countryEditorial: Record<string, CountryEditorial> = {
     resources: {
       immigration: { label: 'IND — highly skilled migrant', url: 'https://ind.nl/en/residence-permits/work/highly-skilled-migrant', detail: 'Official route requirements and recognised-sponsor obligations.' },
       tax: { label: 'Dutch Tax Administration — individuals', url: 'https://www.belastingdienst.nl/wps/wcm/connect/en/individuals/individuals', detail: 'Income tax, tax residence and official guidance.' },
-      healthcare: { label: 'Government of the Netherlands — health insurance', url: 'https://www.government.nl/topics/health-insurance', detail: 'Health insurance duties and coverage information.' },
+      healthcare: { label: 'Government of the Netherlands — health insurance', url: 'https://www.government.nl/themes/family-health-and-care/health-insurance', detail: 'Health insurance duties and coverage information.' },
       education: { label: 'Government of the Netherlands — education', url: 'https://www.government.nl/topics/education', detail: 'School system and admissions starting point.' }
     }
   },
