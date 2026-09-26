@@ -106,6 +106,17 @@ else if (/Sponsor Score|82%|Sponsor Confidence/i.test(readFileSync(ogImageFile, 
 // The phase 1/2 layout must not silently introduce an unrelated green brand.
 // Preserve the original navy / royal-blue / teal tokens and original favicon.
 const redesignCss = readFileSync(resolve('src/redesign.css'), 'utf8');
+
+const compactSpacingChecks = [
+  ['Desktop section spacing', /\.rw-section\s*\{\s*padding:\s*clamp\(48px,\s*5\.2vw,\s*76px\)\s+0;/],
+  ['Section heading spacing', /\.rw-section-head\s*\{[^}]*margin-bottom:\s*26px;/],
+  ['Newsletter section spacing', /\.rw-newsletter-inner\s*\{[^}]*padding:\s*clamp\(48px,5vw,72px\)\s+0;/],
+  ['Mobile section spacing', /@media\s*\(max-width:620px\)\s*\{[\s\S]*?\.rw-section\s*\{\s*padding:\s*42px\s+0;/]
+];
+for (const [label, pattern] of compactSpacingChecks) {
+  if (!pattern.test(redesignCss)) errors.push(label + ' has unexpectedly reverted to oversized spacing');
+}
+
 if (!/--rw-forest:\s*#102a43/i.test(redesignCss) ||
     !/--rw-primary:\s*#2563eb/i.test(redesignCss) ||
     !/--rw-teal:\s*#2563eb/i.test(redesignCss) ||
