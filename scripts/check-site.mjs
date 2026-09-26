@@ -3,8 +3,8 @@
  * Checks local navigation targets and same-page anchor references in generated HTML.
  * Live external URL monitoring is a separate editorial task; HTTP 200 != open vacancy.
  */
-import { existsSync, readFileSync, readdirSync, mkdirSync, writeFileSync } from 'node:fs';
-import { resolve, relative, dirname, join, extname } from 'node:path';
+import { existsSync, readFileSync, readdirSync, mkdirSync, writeFileSync, statSync } from 'node:fs';
+import { resolve, relative, join, extname } from 'node:path';
 
 const root = resolve('dist');
 if (!existsSync(root)) throw new Error('Run npm run build first; dist/ is missing');
@@ -23,19 +23,16 @@ function walk(dir) {
 walk(root);
 
 const pages = new Map(htmlFiles.map((file) => [file, readFileSync(file, 'utf8')]));
-const readAttribute = (text, attribute) => {
-  const m = text.match(new RegExp('\\b' + attribute + '\\s*=\\s*(["\\\'])(.*?)\\1', 'is'));
-  return m?.[2] || null;
-};
+const readHref = (text) => text.match(/\\bhref\\s*=\\s*(["'])(.*?)\\1/is)?.[2] ?? null;
 const decodeHtml = (value) => value.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#39;', "'");
 const checkLocal = (urlPath) => {
   const local = decodeURIComponent(urlPath);
   const clean = local.replace(/^\//, '');
   const direct = resolve(root, clean);
-  const variants = [direct, join(direct, 'index.html')];
+  const variants = [join(direct, 'index.html'), direct];
   if (local === '/') variants.push(join(root, 'index.html'));
   if (extname(local) === '') variants.push(resolve(root, clean + '.html'));
-  return variants.find((p) => existsSync(p));
+  return variants.find((p) => existsSync(p) && statSync(p).isFile());
 };
 const checkIds = (file, fragment) => {
   const html = pages.get(file) ?? (existsSync(file) && extname(file) === '.html' ? readFileSync(file, 'utf8') : null);
@@ -52,7 +49,7 @@ for (const [file, html] of pages) {
   const descriptionTag = html.match(/<meta\b[^>]*\bname=["']description["'][^>]*>/i)?.[0];
   if (!descriptionTag) warnings.push('Missing meta description: ' + relative(root, file));
   for (const anchor of html.matchAll(/<a\b[^>]*>/gi)) {
-    const href = readAttribute(anchor[0], 'href');
+    const href = readHref(anchor[0]);
     if (!href) continue;
     const decoded = decodeHtml(href);
     if (/^(?:mailto:|tel:|sms:|javascript:|data:)/i.test(decoded)) continue;
