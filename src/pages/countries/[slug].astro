@@ -7,6 +7,7 @@ import TopicLinks from '../../components/TopicLinks.astro';
 import CountryGuideHero from '../../components/CountryGuideHero.astro';
 import { SITE, countries, blogPosts } from '../../data';
 import { countryEditorial } from '../../countryEditorial';
+import { settlementNotes } from '../../settlementEditorial';
 
 export function getStaticPaths() {
   return countries.map((country) => ({
@@ -17,15 +18,19 @@ export function getStaticPaths() {
 
 const { country } = Astro.props;
 const editorial = countryEditorial[country.slug];
+const settlement = settlementNotes[country.slug];
+if (!editorial || !settlement) throw new Error('Country editorial or residence note missing: ' + country.slug);
 
 const relatedPosts = blogPosts.slice(0, 3);
-const relatedCountries = countries
-  .filter((item) => item.slug !== country.slug)
-  .slice(0, 3);
+const relatedCountries = [
+  ...countries.filter((item) => item.slug !== country.slug && item.region === country.region),
+  ...countries.filter((item) => item.slug !== country.slug && item.region !== country.region)
+].slice(0, 3);
 
 const guideNav = [
   ['overview', 'Overview'],
   ['visas', 'Visas/Immigration'],
+  ['residence', 'Residence pathways'],
   ['taxes', 'Taxes'],
   ['cost', 'Cost of Living'],
   ['companies', 'Companies Hiring'],
@@ -43,7 +48,7 @@ const quickTopics = [
   { icon: '⌁', eyebrow: 'Finances', title: 'Taxes', description: 'Tax systems, deductions and take-home context.', href: '#taxes' },
   { icon: '⌂', eyebrow: 'Everyday life', title: 'Living costs', description: 'Housing, transport and setting-up expenses.', href: '#cost' },
   { icon: '◇', eyebrow: 'Career', title: 'Job-market context', description: 'Relevant sectors and employer considerations.', href: '#jobs' },
-  { icon: '◉', eyebrow: 'Settling in', title: 'Healthcare', description: 'Medical coverage and initial arrangements.', href: '#healthcare' },
+  { icon: '◉', eyebrow: 'Long-term plan', title: 'Residence pathways', description: 'What comes after initial work authorisation.', href: '#residence' },
   { icon: '↗', eyebrow: 'Verify', title: 'Official sources', description: 'Government starting points for your research.', href: '#official-sources' }
 ];
 
@@ -219,6 +224,19 @@ const itemListJsonLd = {
             <a class="inline-link" href={`/visas/${country.slug}`}>Explore {country.name} visa guide →</a>
           </section>
 
+          <section id="residence" class="content-block rw-settlement-block">
+            <span class="mini-eyebrow">Long-term relocation planning</span>
+            <h2>From permission to work to residence in {country.name}</h2>
+            <p>Being allowed to work and qualifying for permanent or long-term residence are separate legal questions. The steps below identify what to research for this destination; they are not an assessment of your individual eligibility.</p>
+            <div class="rw-settlement-stages">
+              <div class="rw-settlement-stage"><span aria-hidden="true">01 /</span><div><h3>Your starting permission</h3><p>{settlement.entry}</p></div></div>
+              <div class="rw-settlement-stage"><span aria-hidden="true">02 /</span><div><h3>What comes next</h3><p>{settlement.nextStep}</p></div></div>
+            </div>
+            <h3>Conditions to verify before planning around this route</h3>
+            <ul class="check-list">{settlement.verify.map((item) => <li>{item}</li>)}</ul>
+            <a class="rw-settlement-official" href={settlement.sourceUrl} target="_blank" rel="noopener noreferrer">{settlement.sourceLabel} <span aria-hidden="true">↗</span></a>
+          </section>
+
           <section id="taxes" class="content-block">
             <span class="mini-eyebrow">Taxes</span>
             <h2>Taxes in {country.name}</h2>
@@ -244,9 +262,9 @@ const itemListJsonLd = {
             {country.costOverview.map((paragraph) => <p>{paragraph}</p>)}
 
             <div class="info-grid two">
-              <div class="info-tile"><strong>Most expensive cities</strong><span>{country.expensiveCities.join(', ')}</span></div>
-              <div class="info-tile"><strong>More affordable options</strong><span>{country.affordableCities.join(', ')}</span></div>
-              <div class="info-tile"><strong>Average rent note</strong><span>{country.averageRent}</span></div>
+              <div class="info-tile"><strong>Locations where housing needs extra research</strong><span>{country.expensiveCities.join(', ')}</span></div>
+              <div class="info-tile"><strong>Other locations to compare</strong><span>{country.affordableCities.join(', ')}</span></div>
+              <div class="info-tile"><strong>Housing research</strong><span>{country.averageRent}</span></div>
               <div class="info-tile"><strong>Monthly expenses</strong><span>{country.monthlyExpenses}</span></div>
             </div>
 
@@ -326,7 +344,7 @@ const itemListJsonLd = {
 
           <section id="cities" class="content-block">
             <span class="mini-eyebrow">Cities</span>
-            <h2>Best cities for relocation in {country.name}</h2>
+            <h2>Cities and regions to explore in {country.name}</h2>
             <p>{country.citiesOverview}</p>
 
             <div class="city-grid">

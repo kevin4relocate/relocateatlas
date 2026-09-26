@@ -262,5 +262,102 @@ export const countryEditorial: Record<string, CountryEditorial> = {
       healthcare: { label: 'Ministry of Health, Labour and Welfare (English)', url: 'https://www.mhlw.go.jp/english/', detail: 'Official health, labour and social-insurance starting point.' },
       education: { label: 'Ministry of Education (English)', url: 'https://www.mext.go.jp/en/', detail: 'National education information; municipal school rules may differ.' }
     }
+  },
+  sweden: {
+    focus: 'Distinguish the ordinary employer-supported work permit from the EU Blue Card. Compare the specific offer with the Swedish Migration Agency’s current 2026 salary and insurance requirements before choosing a route.',
+    visaChecklist: [
+      'Ask the employer which Swedish immigration route will be used, who initiates the process and whether the written offer meets the applicable salary rules.',
+      'For an EU Blue Card, check the specific education or experience evidence, qualifying contract, salary requirement and medical insurance rules.',
+      'For a long-term settlement plan, inspect the separate permanent-residence conditions for the exact work-permit category, not just the initial permit duration.'
+    ],
+    moneyChecklist: [
+      'Model net pay using the municipality where you plan to live and check current Skatteverket guidance for newcomers.',
+      'Compare actual lawful rental availability, commuting and winter household costs before committing to a city.'
+    ],
+    arrivalChecklist: [
+      'Check population-registration eligibility and what is needed for a Swedish personal identity or coordination number.',
+      'Arrange any required insurance cover and confirm when regional healthcare entitlement begins.',
+      'For children, investigate municipal preschool or school allocation and Swedish-language support.'
+    ],
+    familyNote: 'Family accompanying a work-permit or Blue Card holder should check their own application documents, self-support conditions where applicable, and the timing of schooling and healthcare enrolment.',
+    resources: {
+      immigration: { label: 'Swedish Migration Agency — EU Blue Cards', url: 'https://www.migrationsverket.se/en/you-want-to-apply/work/employee-or-self-employed/eu-blue-cards.html', detail: 'Official Blue Card eligibility and current remuneration rules; use the agency’s employee-work-permit guidance for the ordinary route.' },
+      tax: { label: 'Swedish Tax Agency — moving to Sweden', url: 'https://www.skatteverket.se/servicelankar/otherlanguages/inenglishengelska/individualsandemployees/movingtosweden.4.7be5268414bea064694c40c.html', detail: 'Population registration and tax-administration starting points for newcomers.' },
+      healthcare: { label: '1177 — healthcare information in English', url: 'https://www.1177.se/en/other-languages/other-languages/', detail: 'Regional healthcare guidance and where to seek help.' },
+      education: { label: 'Swedish National Agency for Education', url: 'https://www.skolverket.se/', detail: 'National education starting point; school placement is handled locally.' }
+    }
+  },
+  finland: {
+    focus: 'Verify whether confirmed expert employment qualifies under Migri’s Specialist permit or a distinct EU Blue Card route. Finland’s permanent-residence system changed for applications submitted from January 2026.',
+    visaChecklist: [
+      'Obtain the employer’s confirmed offer and check the actual specialist duties, current gross monthly salary requirement and supporting qualification or experience evidence.',
+      'Compare the Specialist permit with an EU Blue Card using Migri’s route-specific guidance before filing.',
+      'If permanent residence is important, review Migri’s newer separate application paths and their residence, employment and language requirements.'
+    ],
+    moneyChecklist: [
+      'Request a Finnish tax card or obtain the correct arrival instructions from Vero; residence length and overseas income can change the calculation.',
+      'Include winter utilities, actual rent, commuting and any employer pension or insurance deductions in the budget.'
+    ],
+    arrivalChecklist: [
+      'Plan the residence-permit identification steps and Finnish personal identity code, then check municipality-of-residence registration.',
+      'Ask the employer what occupational healthcare includes and whether family members meet public healthcare eligibility rules.',
+      'Research Finnish-, Swedish- or English-language school options with the municipality if children will accompany you.'
+    ],
+    familyNote: 'Specialist employment, family residence permits, healthcare eligibility and school placement are separate decisions. Examine family income and documents under the current Migri rules.',
+    resources: {
+      immigration: { label: 'Finnish Immigration Service — Specialist permit', url: 'https://migri.fi/en/specialist', detail: 'Confirmed-job, salary and specialist-evidence requirements; consult separate Migri permanent-residence guidance for settlement.' },
+      tax: { label: 'Finnish Tax Administration — work in Finland', url: 'https://www.vero.fi/en/individuals/tax-cards-and-tax-returns/arriving_in_finland/work_in_finland/', detail: 'Tax cards, identity codes and rules for overseas arrivals.' },
+      healthcare: { label: 'InfoFinland — health services', url: 'https://infofinland.fi/health/health-services-in-finland', detail: 'Public and occupational healthcare, municipality-of-residence considerations.' },
+      education: { label: 'Finnish National Agency for Education', url: 'https://www.oph.fi/en/education-system', detail: 'How Finnish preschool, schools and higher education are organised.' }
+    }
+  },
+  portugal: {
+    focus: 'Choose the correct Portugal residence route: locally employed work and remote professional activity performed for entities outside Portugal are different immigration and tax cases.',
+    visaChecklist: [
+      'If working remotely for an overseas entity, check the current Portuguese consular visa requirements and AIMA’s remote-work residence-permit documents.',
+      'Confirm whether your employment or service relationship, evidence of income and duration meet the actual remote-work rules; a tourist entry or a generic foreign pay slip is not automatically sufficient.',
+      'For local jobs, research the separate employment residence route rather than assuming a digital-nomad permit covers ordinary Portuguese employment.'
+    ],
+    moneyChecklist: [
+      'Review Portuguese tax-residence exposure, personal-income tax and cross-border social-security obligations for the exact work arrangement.',
+      'Compare actual long-term housing, utility and first-month costs by city; do not rely on short-stay tourism prices.'
+    ],
+    arrivalChecklist: [
+      'Plan residence appointments and documentation, a Portuguese tax identification number where needed, and a qualifying registered accommodation address.',
+      'Check SNS registration and any bridging insurance requirements after residence status is established.',
+      'For accompanying family, investigate reunification, school placement and proof-of-income requirements separately.'
+    ],
+    familyNote: 'Remote-worker residence permission does not automatically establish eligibility for every family member, provide public healthcare immediately or resolve overseas employer payroll requirements.',
+    resources: {
+      immigration: { label: 'AIMA — remote professional activity residence permit', url: 'https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-o-exercicio-de-atividade-profissional-prestada-de-forma-remota-com-visto-de-residencia-para-o-exe', detail: 'Official remote-worker residence documentation after obtaining the appropriate residence visa.' },
+      tax: { label: 'Autoridade Tributária — Portal das Finanças', url: 'https://info.portaldasfinancas.gov.pt/', detail: 'Official Portuguese income-tax and individual tax-account starting point.' },
+      healthcare: { label: 'Portugal government — register at a health centre', url: 'https://www.gov.pt/servicos/inscrever-se-no-centro-de-saude', detail: 'Official SNS registration process and supporting documents.' },
+      education: { label: 'Portuguese public services portal', url: 'https://www.gov.pt/en', detail: 'Government starting point for education and school-related services.' }
+    }
+  },
+  spain: {
+    focus: 'Compare Spain’s international teleworking framework with employment by a Spanish company. Remote-employee and independent-professional activity have different legal conditions and tax implications.',
+    visaChecklist: [
+      'If teleworking for an overseas business, compare your employment or independent contract with the current UGE guidance and statutory documentation requirements.',
+      'Check the limits and rules applicable to any Spain-based clients or activity; ordinary remote employees and independent professionals are not treated identically.',
+      'If offered a Spanish position, examine the separate highly qualified or work residence category rather than reusing foreign teleworking assumptions.'
+    ],
+    moneyChecklist: [
+      'Research Agencia Tributaria’s tax-residence rules, applicable personal-income tax and the independent conditions of any special inbound-worker regime.',
+      'Compare actual long-term Madrid, Barcelona and regional housing costs, registration requirements and local transport.'
+    ],
+    arrivalChecklist: [
+      'Plan the appropriate entry visa or residence-authorisation process and local registration obligations without assuming a short tourist stay confers work rights.',
+      'Determine healthcare and social-insurance responsibilities for the actual remote or Spanish employment structure.',
+      'For accompanying family, prepare the separate documentation and investigate regional education arrangements.'
+    ],
+    familyNote: 'Applicants and dependants have separate documentary and insurance questions. Immigration authorisation and any special tax treatment must each be established independently.',
+    resources: {
+      immigration: { label: 'Spain government UGE — international teleworkers', url: 'https://www.inclusion.gob.es/en/web/unidadgrandesempresas/teletrabajadores', detail: 'Official international teleworking route; the English translation may be automated, so compare the original Spanish wording for legal details.' },
+      tax: { label: 'Agencia Tributaria — personal income tax', url: 'https://sede.agenciatributaria.gob.es/Sede/en_gb/irpf.html', detail: 'Official Spanish personal-income-tax guidance and annual procedures.' },
+      healthcare: { label: 'Spanish Ministry of Health', url: 'https://www.sanidad.gob.es/en/', detail: 'National health-system starting point; access is administered through applicable regional services and entitlement rules.' },
+      education: { label: 'Spanish Ministry of Education', url: 'https://www.educacionfpydeportes.gob.es/', detail: 'Government education starting point; school administration varies by autonomous community.' }
+    }
   }
+
 };

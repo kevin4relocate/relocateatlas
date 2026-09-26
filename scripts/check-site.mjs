@@ -66,7 +66,20 @@ for (const [file, html] of pages) {
     }
   }
 }
-for (const slug of ['australia','new-zealand','united-kingdom','germany','canada','singapore','ireland','netherlands','denmark','japan']) {
+// Keep the audit synchronised with the single source of country data.
+const countryDataSource = readFileSync(resolve('src/data.ts'), 'utf8');
+const countryDataMatch = countryDataSource.match(/export const countries = (\[[\s\S]*?\]) as const;/);
+if (!countryDataMatch) throw new Error('Cannot parse source country data for route QA');
+const marketData = JSON.parse(countryDataMatch[1]);
+const countrySlugs = marketData.map((market) => market.slug);
+if (marketData.length !== 14 || new Set(countrySlugs).size !== marketData.length) {
+  errors.push('Expected 14 unique destination guides, found ' + marketData.length);
+}
+const newCountrySlugs = ['sweden','finland','portugal','spain'];
+const refreshedCountrySlugs = ['singapore','ireland','netherlands','denmark','japan'];
+const expandedCountrySlugs = [...refreshedCountrySlugs, ...newCountrySlugs];
+
+for (const slug of countrySlugs) {
   const file = join(root, 'countries', slug, 'index.html');
   const txt = pages.get(file);
   if (!txt) errors.push('Country guide not generated: ' + slug);
@@ -95,12 +108,25 @@ const countryDirectory = pages.get(join(root, 'countries', 'index.html')) || '';
 const guideDirectory = pages.get(join(root, 'guides', 'index.html')) || '';
 if (!guideDirectory.includes('THE RELOCATION LIBRARY') || !guideDirectory.includes('rw-topic-grid')) errors.push('Redesigned relocation guides directory missing');
 if (!countryDirectory.includes('data-country-search') || !countryDirectory.includes('data-country-filters')) errors.push('Destination search or region filter missing');
-if ((countryDirectory.match(/<div\b[^>]*\bdata-country-result(?=[\s=>])/g) || []).length < 10) errors.push('Country directory does not expose all 10 filterable guide cards');
+if ((countryDirectory.match(/<div\b[^>]*\bdata-country-result(?=[\s=>])/g) || []).length < countrySlugs.length) errors.push('Country directory does not expose all 10 filterable guide cards');
 if (!home.includes('action="/countries"') || !home.includes('name="q"')) errors.push('Homepage country search is not wired to the directory');
 if (!home.includes('rw-newsletter-section') || !home.includes('rw-hero')) errors.push('Redesigned homepage sections missing');
-for (const slug of ['australia','new-zealand','united-kingdom','germany','canada','singapore','ireland','netherlands','denmark','japan']) {
+
+// All nine expanded markets must have generated topic routes and evidence-first money research.
+for (const slug of expandedCountrySlugs) {
+  for (const topic of ['visas','taxes','salaries','cost-of-living','jobs','relocation-companies']) {
+    const doc = pages.get(join(root,topic,slug,'index.html'));
+    if (!doc) errors.push('Expanded market resource route missing: ' + topic + '/' + slug);
+    else if (topic === 'visas' && !doc.includes('Work authorisation and long-term residence are different')) errors.push('Residence research missing from visa guide: ' + slug);
+    else if (topic === 'salaries' && !doc.includes('No unsourced role-level pay numbers')) errors.push('Expanded country still relies on legacy salary range template: ' + slug);
+    else if (topic === 'cost-of-living' && !doc.includes('These are research tasks')) errors.push('Expanded country still relies on historical rent figures: ' + slug);
+  }
+}
+
+for (const slug of countrySlugs) {
   const txt = pages.get(join(root,'countries',slug,'index.html')) || '';
   if (!txt.includes('rw-country-detail-hero') || !txt.includes('rw-country-toc')) errors.push('Destination detail redesign missing: ' + slug);
+  if (!txt.includes('id="residence"') || !txt.includes('rw-settlement-stages')) errors.push('Country residence pathway missing: ' + slug);
 }
 
 mkdirSync(resolve('reports'), { recursive: true });

@@ -882,7 +882,7 @@ export const countries = [
     "region": "Asia",
     "primaryVisa": "Employment Pass / S Pass",
     "priority": "Next",
-    "shortDescription": "A regional business hub for experienced professionals in technology, finance, data, product, cybersecurity, and leadership roles.",
+    "shortDescription": "A compact regional headquarters market where international professionals must distinguish Employment Pass eligibility, employer demand and the significant cost of private housing.",
     "popularRoles": [
       "Software Engineer",
       "Product Manager",
@@ -895,134 +895,137 @@ export const countries = [
     ],
     "capital": "Singapore",
     "currency": "Singapore Dollar (SGD)",
-    "languages": "English may be used in some international roles; local language ability can significantly expand options.",
+    "languages": "English is a working language in many professional settings; Mandarin, Malay and Tamil are also official languages.",
     "overview": [
-      "Singapore is a compact but highly competitive market. It is attractive for candidates in tech, finance, product, data, cybersecurity, gaming, and regional management. The country has strong multinational employers and regional headquarters, but candidates must pay close attention to work pass requirements and salary expectations.",
-      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
-      "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
+      "Singapore is a city-state rather than a collection of competing regional markets. Employers in regional technology, financial services, supply chains, pharmaceuticals and professional services recruit for Singapore-based teams, but the existence of a multinational office is not evidence that a specific vacancy accepts overseas applicants.",
+      "Foreign professionals commonly investigate the Employment Pass. Eligibility depends on the offered fixed salary, which rises with age and differs in financial services, and generally on the COMPASS assessment. The separate S Pass serves qualifying associate professionals and technicians and introduces employer quota and levy considerations.",
+      "Relocation planning should start with a complete compensation package: apartment choice, dependants' eligibility, medical cover, employer support and the travel cost of visiting family. Permanent residence is a separate discretionary application, not an automatic outcome of years holding a work pass."
     ],
     "facts": [
-      "Important market for skilled candidates",
-      "Employer and role fit matter more than raw job volume",
-      "Language expectations should be checked carefully"
+      "Work authorization normally requires an employer-applied pass before employment begins.",
+      "Employment Pass and S Pass have different qualification, pay and employer rules.",
+      "Permanent residence is a separate assessment by Singapore's Immigration & Checkpoints Authority."
     ],
     "visaOverview": [
-      "Singapore has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "An Employment Pass application normally starts with the hiring employer, who should assess the candidate against the applicable salary and COMPASS rules. The official age-based salary schedules matter: do not judge eligibility by a single advertised minimum or assume the same requirement for financial-sector employers.",
+      "S Pass applications are subject to a distinct salary schedule plus employer quota and levy rules. A company's willingness to consider a foreign candidate does not establish that it can obtain the right pass for the offered role.",
+      "Employment Pass or S Pass holders may be among those eligible to apply for permanent residence, but there is no fixed employment period or employer promise guaranteeing approval."
     ],
     "visaTypes": [
-      "Employment Pass / S Pass",
-      "Specialist or skilled worker routes where applicable",
-      "Graduate or local-study routes where applicable",
-      "Intra-company transfer or multinational routes where applicable"
+      "Employment Pass: professionals, managers and executives subject to pay and usually COMPASS",
+      "S Pass: qualifying associate professional and technical roles, with quota/levy rules",
+      "Intra-company transfer considerations for suitable multinational assignments",
+      "Permanent residence: separately assessed by ICA, not a work-pass entitlement"
     ],
     "taxOverview": [
-      "Singapore has tax and social contribution rules that affect take-home salary. Newcomers should understand tax residency, payroll deductions, and any mandatory contributions before judging an offer.",
-      "Salary should always be evaluated together with rent, transport, health insurance, and relocation costs."
+      "Singapore's personal income tax treatment depends on residency and the type and duration of income. Compare offers using take-home pay rather than treating the headline income-tax rate as the entire budget.",
+      "Central Provident Fund contributions ordinarily differ between Singapore citizens or permanent residents and foreign work-pass holders. Check your category before adding or subtracting CPF in a salary calculator, and factor in GST on consumption."
     ],
     "taxTypes": [
-      "Income tax",
-      "Social security or mandatory contributions",
-      "Value-added or goods/services tax",
-      "Local or municipal taxes where applicable"
+      "Personal income tax and tax residency",
+      "CPF contributions where legally applicable",
+      "Goods and Services Tax (GST)",
+      "Foreign-income and double-tax questions where relevant"
     ],
-    "taxYear": "Usually calendar year or country-specific fiscal year.",
-    "incomeTax": "Progressive or structured tax rules depending on residency and income.",
+    "taxYear": "Calendar year; individual income tax is assessed on the preceding year's income.",
+    "incomeTax": "Resident progressive rates; non-resident treatment differs. Refer to IRAS for current bands.",
     "costOverview": [
-      "Cost of living in Singapore varies by city and lifestyle. Capital or major business hubs are usually more expensive, while secondary cities can offer a better salary-to-cost balance.",
-      "Candidates should plan for rent deposits, temporary accommodation, transport, phone/internet, health insurance, and first-month setup."
+      "Singapore has one major employment market but significant neighbourhood-level variation in rental cost. Proximity to MRT lines, school locations and the terms of any housing allowance can be more useful than a generic city-to-city comparison.",
+      "Budget for rental deposits, agent arrangements where applicable, utilities, everyday hawker-food versus restaurant spending, transport, insurance and the potential cost of international schooling for accompanying children."
     ],
     "expensiveCities": [
-      "Singapore"
+      "Central Area",
+      "Marina Bay / Downtown",
+      "Prime central residential districts"
     ],
     "affordableCities": [
-      "Singapore"
+      "Suburban HDB rental areas where eligible",
+      "Neighbourhoods farther from the Central Area",
+      "Housing near useful MRT interchange stations"
     ],
-    "averageRent": "Varies significantly by city, property type, and distance from business centers.",
-    "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
+    "averageRent": "Compare current approved HDB or private-rental listings by flat type, legal eligibility and MRT access.",
+    "monthlyExpenses": "Model rent separately from everyday spending; dependent schooling can materially change the budget.",
     "companiesOverview": [
-      "Singapore has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "Research Singapore roles through direct career pages of banks, cloud infrastructure providers, logistics operators, technology product teams and pharmaceutical manufacturers with a genuine local employing entity.",
+      "Check whether the specific opening accepts overseas applicants and whether the employer will submit a work-pass application; a Singapore office or established foreign workforce is not the same as position-specific sponsorship."
     ],
     "companies": [
-      "Global technology employers",
-      "Consulting firms",
-      "Financial services companies",
-      "Healthcare organizations",
-      "Manufacturing or engineering employers"
+      "Regional technology headquarters",
+      "Financial services and fintech employers",
+      "Pharmaceutical and advanced-manufacturing employers",
+      "Logistics and supply-chain operators"
     ],
     "jobsOverview": [
-      "The best job strategy for Singapore is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "Cross-border hiring needs to pass both a commercial and an immigration test: interview readiness and the employer's willingness to apply for an appropriate pass. Request an explicit answer about overseas applicants before committing to multiple interview rounds.",
+      "Financial regulation, clinical roles and some client-facing jobs may require local credentials or additional language skills. Compare the salary against MOM's requirements for the candidate's age and sector."
     ],
     "sectors": [
-      "Technology",
-      "Finance",
-      "Engineering",
-      "Healthcare",
-      "Consulting",
-      "Data and AI"
+      "Regional technology and cloud",
+      "Financial services and fintech",
+      "Advanced manufacturing",
+      "Logistics and supply chain",
+      "Cybersecurity and data"
     ],
     "demandJobs": [
-      "Software Engineer",
+      "Regional Software Engineer",
+      "Cybersecurity Specialist",
       "Product Manager",
-      "Data Scientist",
-      "Security Engineer",
-      "Finance Analyst"
+      "Financial Risk Analyst",
+      "Supply Chain Analyst"
     ],
-    "workingHours": "Full-time schedules vary by role and local labor rules.",
-    "probation": "Probation terms vary by employer and contract.",
-    "pto": "Paid leave depends on local law and company policy.",
-    "publicHolidays": "Country-specific holidays apply.",
-    "unemployment": "Use official labor market sources for current data.",
+    "workingHours": "Check the offer and Singapore's Employment Act coverage; managerial and executive roles may have different protections.",
+    "probation": "Contractual; check termination notice, probation and whether the employer covers pass-related expenses.",
+    "pto": "Statutory and contractual leave depends on Employment Act coverage and length of service.",
+    "publicHolidays": "Public holiday entitlements depend on legal coverage and employment terms.",
+    "unemployment": "Singapore does not offer a general unemployment-insurance assumption for incoming foreign work-pass holders.",
     "benefits": [
-      "Paid leave",
-      "Health or social insurance support",
-      "Relocation support where offered",
-      "Hybrid work in some roles",
-      "Professional development"
+      "Employer medical coverage where provided",
+      "Paid leave and flexible work if contracted",
+      "Housing or temporary accommodation where negotiated",
+      "Repatriation terms if offered"
     ],
     "salariesOverview": [
-      "Salaries in Singapore vary strongly by role, employer, city, and seniority. International candidates should compare gross salary, tax, contributions, rent, and relocation costs before deciding.",
-      "Senior technical roles usually have stronger relocation potential than generic entry-level roles."
+      "Use fixed monthly salary, not a discretionary bonus, when the relevant MOM work-pass requirement calls for fixed pay. The threshold may increase with age and is scheduled to change, so check the application-date table.",
+      "Annual compensation packages can combine a thirteenth-month payment, bonuses and equity, but housing costs and medical cover often determine practical purchasing power for international hires."
     ],
-    "averageSalary": "Varies by city, industry, and seniority.",
-    "minimumWage": "Check official sources because rules vary and may change.",
+    "averageSalary": "Obtain current age-, sector- and role-specific compensation data; annual averages are not work-pass eligibility thresholds.",
+    "minimumWage": "No general national minimum wage for every occupation; work-pass minimum salaries are distinct eligibility tests.",
     "highestPayingJobs": [
-      "Engineering Manager",
-      "Software Architect",
-      "Cloud Engineer",
-      "Data Lead",
-      "Specialist Consultant"
+      "Regional Engineering Director",
+      "Principal Cloud Architect",
+      "Risk Director",
+      "Senior Security Architect",
+      "Regional Product Lead"
     ],
     "salaryCities": [
-      "Singapore"
+      "Singapore (compare districts, not cities)"
     ],
-    "payFrequency": "Usually monthly or country-specific payroll frequency.",
+    "payFrequency": "Typically monthly for salaried employees; clarify variable payments in the contract.",
     "relocationOverview": [
-      "Relocation companies in Singapore can support housing search, moving goods, arrival administration, local registration, schooling, and settling-in services. Employer packages vary widely."
+      "Prioritise temporary accommodation and lawful long-term housing arrangements; lease eligibility, deposit, inventory and commuting conditions deserve attention before an overseas household shipment.",
+      "For accompanying family, ask the employer about dependant passes and the exact education and medical benefits included in a relocation package."
     ],
     "relocationCompanies": [
-      "Santa Fe Relocation",
-      "Crown Relocations",
-      "Sanelo",
-      "Asian Tigers Group",
-      "Local relocation providers"
+      "International shipping and storage providers with Singapore operations",
+      "Local rental agents and tenancy support",
+      "Corporate mobility and family-settling services"
     ],
     "healthcareOverview": [
-      "Healthcare and insurance rules in Singapore depend on visa status, residency, employer benefits, and local systems. Candidates should confirm coverage before arrival."
+      "Employment Pass holders and many foreign residents need to plan medical insurance separately from the public subsidy assumptions applicable to Singapore citizens and permanent residents. Verify actual employer medical benefits and dependant cover before arrival."
     ],
     "healthInsuranceTypes": [
-      "Public healthcare eligibility where applicable",
-      "Private health insurance",
-      "Employer-provided benefits",
-      "Travel or arrival insurance"
+      "Employer medical insurance where contracted",
+      "Private individual and dependant coverage",
+      "Travel cover for the period before local policies take effect"
     ],
-    "privateHealthCost": "Depends on status, age, and cover level.",
-    "expatInsurance": "Arrange suitable cover before arrival if public access is not immediate.",
-    "citiesOverview": "Key relocation cities in Singapore include Singapore. Candidates should compare job density, salary level, rent, commute, language requirements, and long-term settlement options.",
+    "privateHealthCost": "Request an age-, coverage- and family-specific insurer quote; do not assume access to citizen-level subsidies.",
+    "expatInsurance": "Check policy exclusions, waiting periods, hospital coverage and dependant eligibility.",
+    "citiesOverview": "Singapore is a single city-state. Compare Central Area access, neighbourhood rental markets, commuting on MRT/bus and family schooling rather than ranking other cities.",
     "popularCities": [
-      "Singapore"
+      "Central Singapore",
+      "East Singapore",
+      "West Singapore",
+      "North-East Singapore"
     ]
   },
   {
@@ -1032,7 +1035,7 @@ export const countries = [
     "region": "Europe",
     "primaryVisa": "Critical Skills Employment Permit",
     "priority": "Next",
-    "shortDescription": "An English-speaking EU market with strong demand in tech, pharma, finance, healthcare, and multinational operations.",
+    "shortDescription": "An English-speaking EU career market with Critical Skills permits, technology and life-sciences employers, and housing availability as a major relocation variable.",
     "popularRoles": [
       "Software Engineer",
       "Data Engineer",
@@ -1048,137 +1051,136 @@ export const countries = [
     ],
     "capital": "Dublin",
     "currency": "Euro (EUR)",
-    "languages": "English may be used in some international roles; local language ability can significantly expand options.",
+    "languages": "English is the everyday working language in many international teams; Irish is also an official language.",
     "overview": [
-      "Ireland is a strong relocation market for experienced professionals who want an English-speaking EU destination. The country is especially attractive for technology, cloud, data, cybersecurity, pharmaceuticals, finance, healthcare, and shared services roles.",
-      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
-      "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
+      "Ireland is a European destination for people seeking English-language roles in software, cloud infrastructure, pharmaceuticals, medical technology, international finance and shared services. Dublin hosts many headquarters teams, while Cork, Galway and Limerick have distinct life-sciences, engineering and service-sector ecosystems.",
+      "The Critical Skills Employment Permit is occupation- and remuneration-dependent; a vacancy at a well-known multinational does not automatically qualify. The General Employment Permit has different rules, and non-EEA nationals must also understand their entry-visa and Irish registration obligations.",
+      "Housing research is essential. Compare available rentals and commuting capacity before accepting an offer. After qualifying employment, some workers can seek Stamp 4 permission; this is a valuable change in work rights but not the same as permanent residence or citizenship."
     ],
     "facts": [
-      "Important market for skilled candidates",
-      "Employer and role fit matter more than raw job volume",
-      "Language expectations should be checked carefully"
+      "Critical Skills and General Employment Permits follow different occupation and salary tests.",
+      "Some Critical Skills permit holders may qualify for a Stamp 4 upgrade after the qualifying employment period.",
+      "Rental supply and access to transport should be researched alongside salary offers."
     ],
     "visaOverview": [
-      "Ireland has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "Critical Skills Employment Permits apply to specified occupations and remuneration categories; check the current Critical Skills Occupations List, the offered contract, salary and employer details before relying on a recruiter description.",
+      "The General Employment Permit has different occupation restrictions and, where applicable, labour-market steps. A permit does not remove a visa requirement for every nationality: entry visas and registration should be checked separately.",
+      "Under current Irish Immigration Service guidance, qualifying Critical Skills workers may apply for a Stamp 4 upgrade after 21 months of qualifying employment. Stamp 4 changes employment-permit requirements; it should not be represented as automatic permanent residence."
     ],
     "visaTypes": [
-      "Critical Skills Employment Permit",
-      "Specialist or skilled worker routes where applicable",
-      "Graduate or local-study routes where applicable",
-      "Intra-company transfer or multinational routes where applicable"
+      "Critical Skills Employment Permit (occupation and remuneration conditions)",
+      "General Employment Permit (separate eligibility and labour-market conditions)",
+      "Researcher Hosting Agreement where applicable",
+      "Stamp 4 employment-based upgrade when qualifying conditions are met"
     ],
     "taxOverview": [
-      "Ireland has tax and social contribution rules that affect take-home salary. Newcomers should understand tax residency, payroll deductions, and any mandatory contributions before judging an offer.",
-      "Salary should always be evaluated together with rent, transport, health insurance, and relocation costs."
+      "Irish payroll typically involves PAYE income tax, Universal Social Charge and Pay Related Social Insurance. The correct take-home pay estimate depends on income, tax credits, personal status and applicable payroll deductions.",
+      "Do not compare a Dublin offer with another city only on gross annual salary. Rent, commuter costs and access to childcare can significantly change what remains after tax."
     ],
     "taxTypes": [
-      "Income tax",
-      "Social security or mandatory contributions",
-      "Value-added or goods/services tax",
-      "Local or municipal taxes where applicable"
+      "PAYE income tax and tax credits",
+      "Universal Social Charge (USC)",
+      "Pay Related Social Insurance (PRSI)",
+      "VAT on relevant consumer purchases"
     ],
-    "taxYear": "Usually calendar year or country-specific fiscal year.",
-    "incomeTax": "Progressive or structured tax rules depending on residency and income.",
+    "taxYear": "Calendar year; check Revenue for current PAYE rules and tax credits.",
+    "incomeTax": "PAYE bands, USC and PRSI must be calculated together using Revenue's current guidance.",
     "costOverview": [
-      "Cost of living in Ireland varies by city and lifestyle. Capital or major business hubs are usually more expensive, while secondary cities can offer a better salary-to-cost balance.",
-      "Candidates should plan for rent deposits, temporary accommodation, transport, phone/internet, health insurance, and first-month setup."
+      "Dublin offers many international roles but competition for rentals makes early housing research essential. Short-term accommodation while inspecting homes can materially raise the first-month budget.",
+      "Cork, Galway and Limerick have different employment clusters and rental markets; commute options, furnished-versus-unfurnished tenancy and household size should guide comparisons."
     ],
     "expensiveCities": [
       "Dublin",
-      "Cork"
+      "Central Cork",
+      "Popular university and technology districts"
     ],
     "affordableCities": [
-      "Cork",
-      "Galway",
-      "Limerick"
+      "Selected commuter towns with verified transport links",
+      "Regional neighbourhoods in Limerick",
+      "Properties outside prime city centres"
     ],
-    "averageRent": "Varies significantly by city, property type, and distance from business centers.",
-    "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
+    "averageRent": "Check current RTB and advertised local rentals; historical average asking rents may understate your actual move-in budget.",
+    "monthlyExpenses": "Estimate temporary lodging, deposit, childcare and commuting as separate items; rental availability is not guaranteed.",
     "companiesOverview": [
-      "Ireland has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "Technology platforms, cloud and data-centre operators, pharmaceuticals, medtech manufacturers and multinational financial services have Irish operations. Their hiring rules differ by entity and by vacancy.",
+      "Research the exact employer and permit-eligible occupation, then ask whether the role's contract length and salary support the relevant permit."
     ],
     "companies": [
-      "Global technology employers",
-      "Consulting firms",
-      "Financial services companies",
-      "Healthcare organizations",
-      "Manufacturing or engineering employers"
+      "Technology and cloud employers",
+      "Pharmaceutical and medical-device producers",
+      "International financial services",
+      "Research universities and hospitals"
     ],
     "jobsOverview": [
-      "The best job strategy for Ireland is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "Occupation classification matters more than a job title alone: the permit decision depends on the duties and the relevant occupation list or restrictions. Gather a duty-based CV and qualifications where required.",
+      "Request the employer's written position on handling the work-permit application and on any separate entry-visa, family or relocation assistance."
     ],
     "sectors": [
-      "Technology",
-      "Finance",
+      "Technology and cloud",
+      "Pharmaceuticals and medtech",
+      "Financial services",
       "Engineering",
-      "Healthcare",
-      "Consulting",
-      "Data and AI"
+      "Research and healthcare"
     ],
     "demandJobs": [
-      "Software Engineer",
-      "Data Engineer",
       "Cloud Engineer",
-      "QA Engineer",
-      "Financial Analyst"
+      "Software Developer",
+      "Process Engineer",
+      "Clinical Research Specialist",
+      "Risk Analyst"
     ],
-    "workingHours": "Full-time schedules vary by role and local labor rules.",
-    "probation": "Probation terms vary by employer and contract.",
-    "pto": "Paid leave depends on local law and company policy.",
-    "publicHolidays": "Country-specific holidays apply.",
-    "unemployment": "Use official labor market sources for current data.",
+    "workingHours": "Check Working Time Act rules and exemptions and the hours actually stated in the contract.",
+    "probation": "Probation and termination notice depend on contract and Irish employment legislation.",
+    "pto": "Check statutory annual leave and public-holiday entitlements for your work pattern.",
+    "publicHolidays": "Public holiday arrangements and entitlements vary by work pattern.",
+    "unemployment": "Check residence and PRSI eligibility before assuming unemployment benefits apply.",
     "benefits": [
-      "Paid leave",
-      "Health or social insurance support",
-      "Relocation support where offered",
-      "Hybrid work in some roles",
-      "Professional development"
+      "Pension participation depending on employer and law",
+      "Employer private health insurance where offered",
+      "Paid annual leave",
+      "Commuter or relocation assistance where contracted"
     ],
     "salariesOverview": [
-      "Salaries in Ireland vary strongly by role, employer, city, and seniority. International candidates should compare gross salary, tax, contributions, rent, and relocation costs before deciding.",
-      "Senior technical roles usually have stronger relocation potential than generic entry-level roles."
+      "Compare base annual salary against current employment-permit remuneration requirements for the precise occupation; a job described as 'critical' in an advertisement is not proof it qualifies.",
+      "Assess pension contributions and annual bonuses separately, then research the rent actually available in the intended city."
     ],
-    "averageSalary": "Varies by city, industry, and seniority.",
-    "minimumWage": "Check official sources because rules vary and may change.",
+    "averageSalary": "Use current occupation-specific offers and labour-market sources; a national average is not representative of Dublin housing affordability.",
+    "minimumWage": "Check current Irish national minimum wage and specific exemptions; permit routes may have separate salary rules.",
     "highestPayingJobs": [
-      "Engineering Manager",
-      "Software Architect",
-      "Cloud Engineer",
-      "Data Lead",
-      "Specialist Consultant"
+      "Cloud Engineering Lead",
+      "Senior Pharmaceutical Engineer",
+      "Principal Software Engineer",
+      "Finance Risk Lead",
+      "Specialist Medical Consultant"
     ],
     "salaryCities": [
       "Dublin",
       "Cork",
-      "Galway"
+      "Galway",
+      "Limerick"
     ],
-    "payFrequency": "Usually monthly or country-specific payroll frequency.",
+    "payFrequency": "Generally monthly or fortnightly according to contract.",
     "relocationOverview": [
-      "Relocation companies in Ireland can support housing search, moving goods, arrival administration, local registration, schooling, and settling-in services. Employer packages vary widely."
+      "Before planning shipment, confirm whether your employer provides temporary housing and whether a suitable long-term tenancy is actually obtainable near the workplace.",
+      "Families should investigate school places, catchment realities, healthcare eligibility and partner work rights independently of the primary employment permit."
     ],
     "relocationCompanies": [
-      "Santa Fe Relocation",
-      "Crown Relocations",
-      "Sanelo",
-      "Asian Tigers Group",
-      "Local relocation providers"
+      "International movers with Irish delivery partners",
+      "Temporary housing and letting services",
+      "Employer-contracted mobility and settling-in advisers"
     ],
     "healthcareOverview": [
-      "Healthcare and insurance rules in Ireland depend on visa status, residency, employer benefits, and local systems. Candidates should confirm coverage before arrival."
+      "Irish public healthcare access and fees depend on ordinary residence and the service required; some newcomers arrange private insurance to address their own needs or an employer's benefit package. Verify eligibility and GP availability in the proposed area."
     ],
     "healthInsuranceTypes": [
-      "Public healthcare eligibility where applicable",
+      "HSE public-health services subject to eligibility",
       "Private health insurance",
-      "Employer-provided benefits",
-      "Travel or arrival insurance"
+      "Employer-sponsored cover where offered",
+      "Travel or initial bridging cover"
     ],
-    "privateHealthCost": "Depends on status, age, and cover level.",
-    "expatInsurance": "Arrange suitable cover before arrival if public access is not immediate.",
-    "citiesOverview": "Key relocation cities in Ireland include Dublin, Cork, Galway, Limerick. Candidates should compare job density, salary level, rent, commute, language requirements, and long-term settlement options.",
+    "privateHealthCost": "Compare the actual policy's coverage, waiting rules and family pricing; do not assume employer insurance.",
+    "expatInsurance": "Check GP availability and HSE service eligibility before relying on private insurance alone.",
+    "citiesOverview": "Dublin is a multinational technology and financial centre; Cork has life-sciences and technology clusters, while Galway and Limerick offer different medical-technology, university and regional employment mixes. Match rent and transport to the specific job site.",
     "popularCities": [
       "Dublin",
       "Cork",
@@ -1193,7 +1195,7 @@ export const countries = [
     "region": "Europe",
     "primaryVisa": "Highly Skilled Migrant route",
     "priority": "Next",
-    "shortDescription": "A strong market for highly skilled professionals, English-speaking tech roles, and employers recognized for international hiring.",
+    "shortDescription": "A Dutch and international professional market where recognised sponsorship, salary requirements and mandatory healthcare cover shape the move.",
     "popularRoles": [
       "Software Engineer",
       "Data Analyst",
@@ -1210,137 +1212,135 @@ export const countries = [
     ],
     "capital": "Amsterdam",
     "currency": "Euro (EUR)",
-    "languages": "English may be used in some international roles; local language ability can significantly expand options.",
+    "languages": "Dutch is the main national language; English is widely used in certain international technology and research workplaces.",
     "overview": [
-      "The Netherlands is known for international teams, strong English usage in many professional environments, and a recognized sponsor concept for highly skilled migrants. It is a good market for tech, data, product, design, engineering, logistics, and research roles.",
-      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
-      "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
+      "The Netherlands has several distinct employment clusters: Amsterdam's financial and software employers, Eindhoven's high-tech and semiconductor ecosystem, Rotterdam's logistics and port-linked activity, and research or public institutions around Utrecht and The Hague.",
+      "The Highly Skilled Migrant route depends on an employer recognised by the Dutch immigration authority IND, an eligible contract and the applicable income and market-rate requirements. Recognition of the employer should be verified on IND's register, not assumed from an international company name.",
+      "Moving includes registering with a municipality, arranging appropriate health insurance and understanding the local housing market. A Dutch residence permit for work is not automatic permanent residence; IND applies separate residence and integration conditions."
     ],
     "facts": [
-      "Important market for skilled candidates",
-      "Employer and role fit matter more than raw job volume",
-      "Language expectations should be checked carefully"
+      "Only an IND-recognised sponsor can apply for the usual Highly Skilled Migrant permit.",
+      "Employees living or working in the Netherlands generally need to check mandatory Dutch basic health insurance rules.",
+      "Permanent residence has separate continuous-residence and other IND requirements."
     ],
     "visaOverview": [
-      "Netherlands has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "For the Highly Skilled Migrant permit, IND requires an employment contract with a recognised sponsor, age- and circumstance-dependent income requirements, and pay aligned with the market rate. Search the public sponsor register before treating a vacancy as an immigration pathway.",
+      "The EU Blue Card and intra-company-transfer routes have their own tests; they should not be described as interchangeable with recognised-sponsor applications.",
+      "IND's permanent-residence route generally requires qualifying continuous residence and other conditions; determine whether your residence purpose and absences count before treating an initial work permit as a settlement plan."
     ],
     "visaTypes": [
-      "Highly Skilled Migrant route",
-      "Specialist or skilled worker routes where applicable",
-      "Graduate or local-study routes where applicable",
-      "Intra-company transfer or multinational routes where applicable"
+      "Highly Skilled Migrant through an IND-recognised sponsor",
+      "EU Blue Card under its own education and pay rules",
+      "Intra-corporate transfer for eligible international assignments",
+      "Permanent residence after meeting IND's applicable conditions"
     ],
     "taxOverview": [
-      "Netherlands has tax and social contribution rules that affect take-home salary. Newcomers should understand tax residency, payroll deductions, and any mandatory contributions before judging an offer.",
-      "Salary should always be evaluated together with rent, transport, health insurance, and relocation costs."
+      "Dutch payroll withholding and final income tax depend on residence, taxable income and any applicable deductions or credits. Social-insurance obligations and pension arrangements can affect net compensation.",
+      "The expatriate tax facility is not a standard benefit of every international hire. Check whether an employer will apply and whether your own case meets the current Dutch tax authority's conditions."
     ],
     "taxTypes": [
-      "Income tax",
-      "Social security or mandatory contributions",
-      "Value-added or goods/services tax",
-      "Local or municipal taxes where applicable"
+      "Personal income tax and payroll withholding",
+      "National insurance and pension contributions where applicable",
+      "VAT on goods and services",
+      "Eligibility-dependent expatriate tax facility"
     ],
-    "taxYear": "Usually calendar year or country-specific fiscal year.",
-    "incomeTax": "Progressive or structured tax rules depending on residency and income.",
+    "taxYear": "Calendar year; consult the Dutch Tax Administration for current rates and residency treatment.",
+    "incomeTax": "Progressive income-tax and social-insurance treatment; check current Belastingdienst calculators and circumstances.",
     "costOverview": [
-      "Cost of living in Netherlands varies by city and lifestyle. Capital or major business hubs are usually more expensive, while secondary cities can offer a better salary-to-cost balance.",
-      "Candidates should plan for rent deposits, temporary accommodation, transport, phone/internet, health insurance, and first-month setup."
+      "Amsterdam and parts of Utrecht have competitive rental markets; Eindhoven's technology employers attract demand around specific industrial campuses. Compare property availability, commute and utilities rather than assuming a smaller city is always affordable.",
+      "Plan for security deposits, temporary housing, municipal taxes, electricity or heating arrangements, compulsory health-insurance premiums and transport cards or bicycles."
     ],
     "expensiveCities": [
-      "Amsterdam",
-      "Eindhoven"
+      "Central Amsterdam",
+      "Utrecht centre",
+      "High-demand neighbourhoods around Eindhoven"
     ],
     "affordableCities": [
-      "Rotterdam",
-      "Utrecht",
-      "The Hague"
+      "Specific Rotterdam districts",
+      "Commuter towns with direct train access",
+      "Neighbourhoods beyond prime centres"
     ],
-    "averageRent": "Varies significantly by city, property type, and distance from business centers.",
-    "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
+    "averageRent": "Research current neighbourhood listings, legal tenancy conditions and accommodation availability; avoid relying on national averages.",
+    "monthlyExpenses": "Include compulsory basic health-insurance premiums, municipal charges and housing deposits.",
     "companiesOverview": [
-      "Netherlands has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "International employers exist in chip manufacturing, logistics, software, fintech, renewable technology and research, with geographic specialisation across Dutch regions.",
+      "Check the IND sponsor register against the employing legal entity and confirm whether the position meets the current income requirement for your age and residence category."
     ],
     "companies": [
-      "Global technology employers",
-      "Consulting firms",
-      "Financial services companies",
-      "Healthcare organizations",
-      "Manufacturing or engineering employers"
+      "Semiconductor and advanced-manufacturing employers",
+      "Port logistics and supply-chain businesses",
+      "International software and fintech teams",
+      "Universities and research organisations"
     ],
     "jobsOverview": [
-      "The best job strategy for Netherlands is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "The employer's legal IND-recognition status matters for the Highly Skilled Migrant route. Recruitment agencies or multinational brand names do not automatically establish that the contracting entity can sponsor.",
+      "Qualification, role duties, age-related income requirements and language expectations should be examined alongside actual vacancy text."
     ],
     "sectors": [
-      "Technology",
-      "Finance",
-      "Engineering",
-      "Healthcare",
-      "Consulting",
-      "Data and AI"
+      "Semiconductor and advanced manufacturing",
+      "Technology and fintech",
+      "Logistics and port services",
+      "Research and engineering",
+      "Energy transition"
     ],
     "demandJobs": [
-      "Software Engineer",
-      "Data Analyst",
-      "DevOps Engineer",
-      "Product Designer",
-      "Security Engineer"
+      "Embedded Software Engineer",
+      "Cloud Engineer",
+      "Semiconductor Process Engineer",
+      "Supply Chain Analyst",
+      "Research Engineer"
     ],
-    "workingHours": "Full-time schedules vary by role and local labor rules.",
-    "probation": "Probation terms vary by employer and contract.",
-    "pto": "Paid leave depends on local law and company policy.",
-    "publicHolidays": "Country-specific holidays apply.",
-    "unemployment": "Use official labor market sources for current data.",
+    "workingHours": "Check applicable working-time rules, collective agreements and the actual contract.",
+    "probation": "Probation is controlled by Dutch employment law and the contract type; confirm the proposed clause.",
+    "pto": "Check statutory holiday entitlement, any collective agreement and holiday allowance terms.",
+    "publicHolidays": "Holiday rights can depend on the employment contract and collective agreement.",
+    "unemployment": "Social-insurance eligibility and residence status should be checked for the individual case.",
     "benefits": [
-      "Paid leave",
-      "Health or social insurance support",
-      "Relocation support where offered",
-      "Hybrid work in some roles",
-      "Professional development"
+      "Holiday allowance subject to contract and law",
+      "Employer pension where applicable",
+      "Public transport or bicycle schemes where offered",
+      "Relocation support if explicitly contracted"
     ],
     "salariesOverview": [
-      "Salaries in Netherlands vary strongly by role, employer, city, and seniority. International candidates should compare gross salary, tax, contributions, rent, and relocation costs before deciding.",
-      "Senior technical roles usually have stronger relocation potential than generic entry-level roles."
+      "An offer used for a Highly Skilled Migrant application must meet the correct IND income category and market-rate requirement; distinguish qualifying fixed pay from conditional bonuses.",
+      "Holiday allowance and pension contributions can change the comparison between two quoted annual salaries. Expatriate tax benefits, if applicable, are assessed separately."
     ],
-    "averageSalary": "Varies by city, industry, and seniority.",
-    "minimumWage": "Check official sources because rules vary and may change.",
+    "averageSalary": "Compare current sector- and seniority-specific gross offers; IND immigration thresholds are not average salaries.",
+    "minimumWage": "Check the current statutory Dutch hourly minimum and applicable rules; HSM eligibility uses a separate IND income threshold.",
     "highestPayingJobs": [
+      "Principal Embedded Engineer",
+      "Senior Semiconductor Architect",
       "Engineering Manager",
-      "Software Architect",
-      "Cloud Engineer",
-      "Data Lead",
-      "Specialist Consultant"
+      "Finance Technology Lead",
+      "Research Director"
     ],
     "salaryCities": [
       "Amsterdam",
       "Eindhoven",
-      "Rotterdam"
+      "Rotterdam",
+      "Utrecht"
     ],
-    "payFrequency": "Usually monthly or country-specific payroll frequency.",
+    "payFrequency": "Often monthly; check holiday allowance and bonus payment terms.",
     "relocationOverview": [
-      "Relocation companies in Netherlands can support housing search, moving goods, arrival administration, local registration, schooling, and settling-in services. Employer packages vary widely."
+      "Arrange municipal registration, a suitable rental property and mandatory health-insurance decisions soon after arrival; employers may offer a relocation agent but terms differ.",
+      "Families should check partner residence/work rules, local school admissions and international-school availability by municipality."
     ],
     "relocationCompanies": [
-      "Santa Fe Relocation",
-      "Crown Relocations",
-      "Sanelo",
-      "Asian Tigers Group",
-      "Local relocation providers"
+      "Housing and tenancy advisers experienced in Dutch municipalities",
+      "International transport and storage operators",
+      "Employer-appointed relocation and registration services"
     ],
     "healthcareOverview": [
-      "Healthcare and insurance rules in Netherlands depend on visa status, residency, employer benefits, and local systems. Candidates should confirm coverage before arrival."
+      "People who live or work in the Netherlands generally must investigate mandatory basic Dutch health insurance. Registration and coverage timing are important, while international students, temporary stays and cross-border arrangements can follow different rules."
     ],
     "healthInsuranceTypes": [
-      "Public healthcare eligibility where applicable",
-      "Private health insurance",
-      "Employer-provided benefits",
-      "Travel or arrival insurance"
+      "Mandatory basic Dutch health insurance where applicable",
+      "Supplementary dental or extended private coverage",
+      "Temporary transition cover if legally appropriate"
     ],
-    "privateHealthCost": "Depends on status, age, and cover level.",
-    "expatInsurance": "Arrange suitable cover before arrival if public access is not immediate.",
-    "citiesOverview": "Key relocation cities in Netherlands include Amsterdam, Eindhoven, Rotterdam, Utrecht, The Hague. Candidates should compare job density, salary level, rent, commute, language requirements, and long-term settlement options.",
+    "privateHealthCost": "Request a current Dutch basic-insurance premium quote and consider the mandatory deductible and any supplements.",
+    "expatInsurance": "A generic travel or expat policy does not necessarily replace legally required Dutch basic insurance.",
+    "citiesOverview": "Amsterdam combines finance and software; Eindhoven is important for deep tech and manufacturing; Rotterdam centres on port-linked logistics; Utrecht and The Hague have other business, research and institutional opportunities. Commute options and housing availability matter across regions.",
     "popularCities": [
       "Amsterdam",
       "Eindhoven",
@@ -1356,7 +1356,7 @@ export const countries = [
     "region": "Europe",
     "primaryVisa": "Positive List / Pay Limit Scheme",
     "priority": "Next",
-    "shortDescription": "A quality-of-life destination with opportunities in shortage occupations, engineering, healthcare, technology, and science.",
+    "shortDescription": "A northern European market for specialist employment, with Positive List and Pay Limit routes, Danish workplace standards and relocation administration to understand.",
     "popularRoles": [
       "Software Engineer",
       "Mechanical Engineer",
@@ -1372,137 +1372,135 @@ export const countries = [
     ],
     "capital": "Copenhagen",
     "currency": "Danish Krone (DKK)",
-    "languages": "English may be used in some international roles; local language ability can significantly expand options.",
+    "languages": "Danish is the primary public language; English is used by some international technology, science and business teams.",
     "overview": [
-      "Denmark is a smaller but attractive market for candidates who value quality of life, stable institutions, and highly skilled work. It can be relevant for technology, engineering, healthcare, life sciences, renewable energy, and research roles.",
-      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
-      "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
+      "Denmark has internationally oriented employers in renewable energy, pharmaceutical manufacturing, engineering, maritime logistics and enterprise technology. Copenhagen hosts many headquarters functions, while Aarhus, Odense and Aalborg offer distinctive university, robotics and industrial networks.",
+      "Denmark's Positive List applies to occupations explicitly named on the current list, with job-specific education or authorisation requirements. The Pay Limit Scheme instead examines a qualifying salary and other employment conditions. Neither a general skills shortage claim nor a high salary from an unrelated market proves eligibility.",
+      "Moving involves finding a rental property, arranging a CPR number and tax card when eligible, and determining when local healthcare coverage starts. Prospective long-term residents should study Denmark's separate permanent-residence rules, which include substantial additional conditions."
     ],
     "facts": [
-      "Important market for skilled candidates",
-      "Employer and role fit matter more than raw job volume",
-      "Language expectations should be checked carefully"
+      "Positive List eligibility must match the current occupation, education and any regional restriction.",
+      "Pay Limit Scheme remuneration thresholds are revised; confirm the relevant application-date amount.",
+      "Permanent residence is separate from a work permit and can require language, employment and integration conditions."
     ],
     "visaOverview": [
-      "Denmark has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "The Positive List for People with a Higher Education allows qualifying foreign professionals with an offer in an officially listed shortage occupation to apply for a residence and work permit; both the correct occupation and a relevant qualifying education matter.",
+      "The Pay Limit Scheme focuses on a qualifying high-salary offer. It does not require a specified academic degree but the offered salary and the rest of the contract must meet SIRI's conditions. Schemes, remuneration floors and processing requirements should be rechecked before filing.",
+      "Danish work authorisation is normally tied to the specific role; changing employment may require a new application. Permanent residence follows a different process and additional employment, language and integration tests."
     ],
     "visaTypes": [
-      "Positive List / Pay Limit Scheme",
-      "Specialist or skilled worker routes where applicable",
-      "Graduate or local-study routes where applicable",
-      "Intra-company transfer or multinational routes where applicable"
+      "Positive List for People with a Higher Education",
+      "Positive List for Skilled Work if occupation and experience align",
+      "Pay Limit Scheme where the offered pay reaches the current threshold",
+      "Permanent residence: separate application with residence and integration conditions"
     ],
     "taxOverview": [
-      "Denmark has tax and social contribution rules that affect take-home salary. Newcomers should understand tax residency, payroll deductions, and any mandatory contributions before judging an offer.",
-      "Salary should always be evaluated together with rent, transport, health insurance, and relocation costs."
+      "Danish employment income can involve state, municipal and labour-market taxes. Tax residence and the tax card influence withholding; some internationally recruited workers may qualify for specific schemes, but those cannot be assumed.",
+      "Ask for a locally calculated net-pay estimate that accounts for pension contributions and the municipality of residence. Employer salary packages should also be checked against Danish standards and any applicable collective agreement."
     ],
     "taxTypes": [
-      "Income tax",
-      "Social security or mandatory contributions",
-      "Value-added or goods/services tax",
-      "Local or municipal taxes where applicable"
+      "State and municipal income taxes",
+      "Labour market contributions",
+      "Employee and employer pension contributions",
+      "Value Added Tax on consumption"
     ],
-    "taxYear": "Usually calendar year or country-specific fiscal year.",
-    "incomeTax": "Progressive or structured tax rules depending on residency and income.",
+    "taxYear": "Calendar year; the Danish tax agency issues a tax assessment and tax card.",
+    "incomeTax": "State, municipal and labour-market taxes apply according to circumstances; confirm with Skattestyrelsen.",
     "costOverview": [
-      "Cost of living in Denmark varies by city and lifestyle. Capital or major business hubs are usually more expensive, while secondary cities can offer a better salary-to-cost balance.",
-      "Candidates should plan for rent deposits, temporary accommodation, transport, phone/internet, health insurance, and first-month setup."
+      "Copenhagen housing costs depend heavily on district and transit access. Aarhus, Odense and Aalborg have different rental and commuting conditions; compare your actual worksite and public transport rather than relying on nationwide averages.",
+      "Budget for deposit and prepaid rent where contractually and legally applicable, apartment furnishings, local transport, winter expenses and family childcare arrangements."
     ],
     "expensiveCities": [
-      "Copenhagen",
-      "Aarhus"
+      "Central Copenhagen",
+      "Central Aarhus",
+      "Prime commuter areas around Copenhagen"
     ],
     "affordableCities": [
-      "Aarhus",
-      "Odense",
-      "Aalborg"
+      "Selected Odense neighbourhoods",
+      "Aalborg neighbourhoods outside the centre",
+      "Commuter towns when transport works"
     ],
-    "averageRent": "Varies significantly by city, property type, and distance from business centers.",
-    "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
+    "averageRent": "Inspect current Danish listings and legal deposit/prepaid-rent terms for the exact area.",
+    "monthlyExpenses": "Include housing deposit, pension deductions, heating, transport and winter household costs.",
     "companiesOverview": [
-      "Denmark has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "Research direct vacancies at renewable-energy developers, life-sciences manufacturers, maritime businesses, enterprise-software firms, hospitals and universities; the suitable work scheme depends on the exact job.",
+      "An occupation on Denmark's Positive List can change as the list is updated. Confirm the listing and role requirements at the application date and ensure pay and employment terms meet Danish standards."
     ],
     "companies": [
-      "Global technology employers",
-      "Consulting firms",
-      "Financial services companies",
-      "Healthcare organizations",
-      "Manufacturing or engineering employers"
+      "Renewable-energy and industrial-technology employers",
+      "Pharmaceutical and life-sciences producers",
+      "Maritime and logistics groups",
+      "Research universities and hospitals"
     ],
     "jobsOverview": [
-      "The best job strategy for Denmark is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "Check each opening against the current Positive List if using that route; a related job title does not automatically satisfy the occupation, education or region-specific listing.",
+      "For the Pay Limit Scheme, compare the written annual remuneration with the current minimum and make sure Danish employment-standard requirements are satisfied."
     ],
     "sectors": [
-      "Technology",
-      "Finance",
-      "Engineering",
-      "Healthcare",
-      "Consulting",
-      "Data and AI"
+      "Renewable energy",
+      "Pharmaceuticals and biotech",
+      "Industrial engineering and robotics",
+      "Maritime logistics",
+      "Enterprise software"
     ],
     "demandJobs": [
-      "Software Engineer",
-      "Mechanical Engineer",
-      "Data Engineer",
-      "Healthcare Specialist",
-      "Automation Engineer"
+      "Automation Engineer",
+      "Renewable Energy Engineer",
+      "Bioprocess Specialist",
+      "Enterprise Software Developer",
+      "Research Specialist"
     ],
-    "workingHours": "Full-time schedules vary by role and local labor rules.",
-    "probation": "Probation terms vary by employer and contract.",
-    "pto": "Paid leave depends on local law and company policy.",
-    "publicHolidays": "Country-specific holidays apply.",
-    "unemployment": "Use official labor market sources for current data.",
+    "workingHours": "Contract and collective agreement matter; Denmark's standard working week is often 37 hours but varies.",
+    "probation": "Confirm contract and any applicable collective agreement on probation and dismissal terms.",
+    "pto": "Holiday rights are governed by the Danish Holiday Act and contract/collective agreements.",
+    "publicHolidays": "Public-holiday pay and days off may depend on employment terms.",
+    "unemployment": "Unemployment insurance is not automatic for every migrant; check voluntary fund membership and eligibility.",
     "benefits": [
-      "Paid leave",
-      "Health or social insurance support",
-      "Relocation support where offered",
-      "Hybrid work in some roles",
-      "Professional development"
+      "Pension contributions where applicable",
+      "Paid holiday under applicable rules",
+      "Workplace flexibility if agreed",
+      "Relocation or language support where contracted"
     ],
     "salariesOverview": [
-      "Salaries in Denmark vary strongly by role, employer, city, and seniority. International candidates should compare gross salary, tax, contributions, rent, and relocation costs before deciding.",
-      "Senior technical roles usually have stronger relocation potential than generic entry-level roles."
+      "Evaluate an offer in Danish kroner against the current Pay Limit threshold only when that scheme is relevant. For Positive List positions, check customary Danish pay and contract terms in the relevant sector.",
+      "Gross-to-net estimates should include municipal tax, labour-market contributions and pension arrangements; private relocation packages should be evaluated separately."
     ],
-    "averageSalary": "Varies by city, industry, and seniority.",
-    "minimumWage": "Check official sources because rules vary and may change.",
+    "averageSalary": "Use position-specific Danish statistics or offers; do not equate immigration salary floors with market averages.",
+    "minimumWage": "Denmark has no single statutory national minimum wage; collective agreements and customary employment standards matter.",
     "highestPayingJobs": [
-      "Engineering Manager",
-      "Software Architect",
-      "Cloud Engineer",
-      "Data Lead",
-      "Specialist Consultant"
+      "Engineering Director",
+      "Pharmaceutical Manufacturing Lead",
+      "Senior Cloud Architect",
+      "Renewable Energy Programme Lead",
+      "Specialist Physician"
     ],
     "salaryCities": [
       "Copenhagen",
       "Aarhus",
-      "Odense"
+      "Odense",
+      "Aalborg"
     ],
-    "payFrequency": "Usually monthly or country-specific payroll frequency.",
+    "payFrequency": "Usually monthly in salaried roles; check pension and holiday-pay treatment.",
     "relocationOverview": [
-      "Relocation companies in Denmark can support housing search, moving goods, arrival administration, local registration, schooling, and settling-in services. Employer packages vary widely."
+      "Plan CPR registration, local address documentation, banking and a tax card around your permit and actual arrival. The order of steps may vary with residence status.",
+      "Families should research school or daycare availability, language support and partner residence/work rights before accepting a relocation offer."
     ],
     "relocationCompanies": [
-      "Santa Fe Relocation",
-      "Crown Relocations",
-      "Sanelo",
-      "Asian Tigers Group",
-      "Local relocation providers"
+      "International movers with Danish delivery partners",
+      "Local rental and residence-registration assistance",
+      "Employer-contracted family settling services"
     ],
     "healthcareOverview": [
-      "Healthcare and insurance rules in Denmark depend on visa status, residency, employer benefits, and local systems. Candidates should confirm coverage before arrival."
+      "Access to Denmark's public healthcare system for eligible residents generally follows registration and issuance of a health insurance card. Coverage timing and requirements differ for temporary visitors and some cross-border workers; arrange necessary interim cover if required."
     ],
     "healthInsuranceTypes": [
-      "Public healthcare eligibility where applicable",
-      "Private health insurance",
-      "Employer-provided benefits",
-      "Travel or arrival insurance"
+      "Public resident healthcare where eligible",
+      "Travel/bridging cover until entitlement starts",
+      "Supplemental private services if preferred"
     ],
-    "privateHealthCost": "Depends on status, age, and cover level.",
-    "expatInsurance": "Arrange suitable cover before arrival if public access is not immediate.",
-    "citiesOverview": "Key relocation cities in Denmark include Copenhagen, Aarhus, Odense, Aalborg. Candidates should compare job density, salary level, rent, commute, language requirements, and long-term settlement options.",
+    "privateHealthCost": "Check public eligibility first and price any desired supplemental coverage separately.",
+    "expatInsurance": "Validate coverage until municipal registration and local health entitlements are effective.",
+    "citiesOverview": "Copenhagen offers headquarters and life-sciences employment; Aarhus is a university and engineering centre; Odense has robotics and automation firms; Aalborg is relevant for engineering, technology and research. Housing, transit and language requirements differ.",
     "popularCities": [
       "Copenhagen",
       "Aarhus",
@@ -1517,7 +1515,7 @@ export const countries = [
     "region": "Asia",
     "primaryVisa": "Highly Skilled Professional / Engineer visa routes",
     "priority": "Next",
-    "shortDescription": "A growing relocation market for technology, gaming, engineering, research, and specialized skilled candidates, with language fit as a key factor.",
+    "shortDescription": "A technology, manufacturing and research destination where the correct residence status, Japanese-language expectations and local registration matter.",
     "popularRoles": [
       "Software Engineer",
       "Game Developer",
@@ -1534,143 +1532,784 @@ export const countries = [
     ],
     "capital": "Tokyo",
     "currency": "Japanese Yen (JPY)",
-    "languages": "English may be used in some international roles; local language ability can significantly expand options.",
+    "languages": "Japanese is the main language of administration and most workplaces; some international technology and research teams use English.",
     "overview": [
-      "Japan can be attractive for candidates in technology, gaming, embedded systems, manufacturing, robotics, research, hospitality, and specialized skilled work. The opportunity level depends heavily on role type, Japanese language requirements, employer support, and visa category.",
-      "Relocate Works includes this market because it can offer meaningful opportunities for international candidates when the employer, role, salary, and work permit pathway align.",
-      "Candidates should treat all country pages as a research starting point and verify official visa details before applying."
+      "Japan is not one uniform hiring market. Tokyo and Yokohama host international business and software teams, Osaka has commercial and industrial employers, Kyoto includes research and specialist manufacturing, and Fukuoka has a growing technology ecosystem.",
+      "Foreign professionals often research the Engineer/Specialist in Humanities/International Services status when their work fits that category and they have the right qualifications or experience. The points-based Highly Skilled Professional status is a separate category with its own scoring and activity rules; neither can be assumed from a generic 'IT job' label.",
+      "Before moving, understand the Certificate of Eligibility process where applicable, municipal residence registration, health insurance and pension enrolment, and language requirements for work and everyday life. Permanent residence is a separate application with different rules."
     ],
     "facts": [
-      "Important market for skilled candidates",
-      "Employer and role fit matter more than raw job volume",
-      "Language expectations should be checked carefully"
+      "A suitable residence status must match the actual contracted duties, not just the English job title.",
+      "Japanese-language expectations can vary sharply between international and domestic employers.",
+      "Newcomers generally need to complete municipal registration and applicable insurance/pension steps."
     ],
     "visaOverview": [
-      "Japan has work authorization routes that may be relevant for skilled foreign professionals, but the employer and job requirements matter. Candidates should look for clear work permit support, relocation language, international hiring behavior, and realistic salary requirements.",
-      "Relocate Works marks jobs by sponsor status and confidence so readers can prioritize stronger opportunities."
+      "Engineer/Specialist in Humanities/International Services may fit eligible software, engineering and certain business roles under a contract with an organisation in Japan. Education, professional experience and role duties must be checked against Japan's current immigration criteria.",
+      "Highly Skilled Professional is a separate points-based framework, with points based on factors such as qualifications, income, professional background and other eligible measures. The points category must align with the intended activities.",
+      "Permanent residence is not automatic. The usual residence-duration framework has exceptions for certain highly skilled categories, subject to the full immigration rules and compliance history."
     ],
     "visaTypes": [
-      "Highly Skilled Professional / Engineer visa routes",
-      "Specialist or skilled worker routes where applicable",
-      "Graduate or local-study routes where applicable",
-      "Intra-company transfer or multinational routes where applicable"
+      "Engineer/Specialist in Humanities/International Services",
+      "Highly Skilled Professional for eligible points-based applicants",
+      "Intra-company Transferee for qualifying group transfers",
+      "Permanent residence by separate immigration application"
     ],
     "taxOverview": [
-      "Japan has tax and social contribution rules that affect take-home salary. Newcomers should understand tax residency, payroll deductions, and any mandatory contributions before judging an offer.",
-      "Salary should always be evaluated together with rent, transport, health insurance, and relocation costs."
+      "Japanese employment can involve national income tax, local inhabitant/resident tax and social-insurance deductions. Some local resident-tax bills reflect preceding-year income, so a salary calculator and first-year take-home assumptions may diverge.",
+      "Tax treatment depends on resident and non-resident classifications as well as international income arrangements. Check your employer's payroll, social-insurance enrolment and the tax authority's guidance before accepting a net-pay estimate."
     ],
     "taxTypes": [
-      "Income tax",
-      "Social security or mandatory contributions",
-      "Value-added or goods/services tax",
-      "Local or municipal taxes where applicable"
+      "National individual income tax",
+      "Local inhabitant/resident tax",
+      "Health and pension social-insurance contributions",
+      "Consumption tax on purchases"
     ],
-    "taxYear": "Usually calendar year or country-specific fiscal year.",
-    "incomeTax": "Progressive or structured tax rules depending on residency and income.",
+    "taxYear": "Calendar year for individual income tax; municipal resident tax commonly references previous-year income.",
+    "incomeTax": "National and local taxes plus social insurance; residency status and prior-year income can affect take-home pay.",
     "costOverview": [
-      "Cost of living in Japan varies by city and lifestyle. Capital or major business hubs are usually more expensive, while secondary cities can offer a better salary-to-cost balance.",
-      "Candidates should plan for rent deposits, temporary accommodation, transport, phone/internet, health insurance, and first-month setup."
+      "Central Tokyo housing and commute choices vary by rail line and station access; Osaka, Fukuoka and other cities have distinct markets. Compare door-to-door commute and lease conditions rather than focusing only on an advertised apartment rent.",
+      "Initial rent, deposits, key money where applicable, guarantor arrangements, furnishing, moving and administrative setup can significantly increase relocation costs."
     ],
     "expensiveCities": [
-      "Tokyo",
-      "Osaka"
+      "Central Tokyo",
+      "Premium Yokohama commuter districts",
+      "Selected central Osaka locations"
     ],
     "affordableCities": [
-      "Kyoto",
-      "Fukuoka",
-      "Yokohama"
+      "Districts farther from central Tokyo stations",
+      "Selected Fukuoka neighbourhoods",
+      "Commuter towns with workable rail links"
     ],
-    "averageRent": "Varies significantly by city, property type, and distance from business centers.",
-    "monthlyExpenses": "Plan conservatively for housing, food, transport, utilities, insurance, and settlement costs.",
+    "averageRent": "Check current station-level local listings and all move-in fees, not just monthly advertised rent.",
+    "monthlyExpenses": "Allow for initial lease payments, national and local taxes, transport, health insurance and pension.",
     "companiesOverview": [
-      "Japan has local and multinational employers in technology, finance, consulting, manufacturing, healthcare, and professional services depending on the market.",
-      "Relocate Works looks for official career pages, international teams, relocation language, and roles that match skilled work permit expectations."
+      "Evaluate employers with Japanese payroll and immigration-document experience, including product software companies, electronics and precision manufacturers, game developers and research institutions.",
+      "Ask who prepares Certificate of Eligibility documentation when needed and whether a role requires business-level Japanese. An English-language job post is not evidence of immigration support."
     ],
     "companies": [
-      "Global technology employers",
-      "Consulting firms",
-      "Financial services companies",
-      "Healthcare organizations",
-      "Manufacturing or engineering employers"
+      "Software and digital-product companies",
+      "Automotive and precision-manufacturing firms",
+      "Games and interactive entertainment studios",
+      "Research laboratories and universities"
     ],
     "jobsOverview": [
-      "The best job strategy for Japan is to focus on roles where your experience is specific, in demand, and difficult to replace locally.",
-      "Relocate Works filters out weak leads such as roles requiring existing local work rights or local-only candidates."
+      "Check whether the duties and qualifications match the proposed Japanese residence status and whether the employer supports the necessary immigration procedure. Local language expectations may be a decisive factor beyond technical skill.",
+      "Evaluate base salary, overtime expectations, bonuses, commuter allowance and the practical commute from affordable housing."
     ],
     "sectors": [
-      "Technology",
-      "Finance",
-      "Engineering",
-      "Healthcare",
-      "Consulting",
-      "Data and AI"
+      "Product software and games",
+      "Precision manufacturing",
+      "Automotive and robotics",
+      "Scientific research",
+      "Enterprise technology"
     ],
     "demandJobs": [
-      "Software Engineer",
+      "Embedded Software Engineer",
       "Game Developer",
-      "Data Engineer",
-      "Product Manager",
-      "Mechanical Engineer"
+      "Robotics Engineer",
+      "Cloud Platform Engineer",
+      "Research Scientist"
     ],
-    "workingHours": "Full-time schedules vary by role and local labor rules.",
-    "probation": "Probation terms vary by employer and contract.",
-    "pto": "Paid leave depends on local law and company policy.",
-    "publicHolidays": "Country-specific holidays apply.",
-    "unemployment": "Use official labor market sources for current data.",
+    "workingHours": "Check the contract, Japanese Labour Standards Act and actual overtime culture at the specific employer.",
+    "probation": "Contractual and subject to Japanese labour-law protections; clarify termination and relocation-clawback terms.",
+    "pto": "Annual paid-leave rights depend on tenure and working pattern under Japanese labour law.",
+    "publicHolidays": "Public-holiday working conditions depend on the contract and workplace calendar.",
+    "unemployment": "Employment-insurance participation and benefit eligibility depend on your actual employment circumstances.",
     "benefits": [
-      "Paid leave",
-      "Health or social insurance support",
-      "Relocation support where offered",
-      "Hybrid work in some roles",
-      "Professional development"
+      "Commuter allowance where offered",
+      "Social-insurance enrolment where required",
+      "Relocation or temporary housing where negotiated",
+      "Language-study assistance if contracted"
     ],
     "salariesOverview": [
-      "Salaries in Japan vary strongly by role, employer, city, and seniority. International candidates should compare gross salary, tax, contributions, rent, and relocation costs before deciding.",
-      "Senior technical roles usually have stronger relocation potential than generic entry-level roles."
+      "Compare gross base salary, bonus structure, overtime pay, commuter allowance and social deductions before converting a Japanese offer into another currency.",
+      "National and municipal tax timing can change take-home pay after the first year. Check whether the role offers financial or administrative support for international relocation."
     ],
-    "averageSalary": "Varies by city, industry, and seniority.",
-    "minimumWage": "Check official sources because rules vary and may change.",
+    "averageSalary": "Research role- and city-specific employer offers; avoid using one national mean as the market rate for every speciality.",
+    "minimumWage": "Prefecture-based minimum wages apply and change; check the current official rate for the workplace.",
     "highestPayingJobs": [
-      "Engineering Manager",
-      "Software Architect",
-      "Cloud Engineer",
-      "Data Lead",
-      "Specialist Consultant"
+      "Principal Software Architect",
+      "Senior Robotics Researcher",
+      "Engineering Director",
+      "Quantitative Technology Lead",
+      "Specialist Medical Professional"
     ],
     "salaryCities": [
       "Tokyo",
+      "Yokohama",
       "Osaka",
-      "Kyoto"
+      "Fukuoka"
     ],
-    "payFrequency": "Usually monthly or country-specific payroll frequency.",
+    "payFrequency": "Typically monthly salary with contract-dependent bonuses.",
     "relocationOverview": [
-      "Relocation companies in Japan can support housing search, moving goods, arrival administration, local registration, schooling, and settling-in services. Employer packages vary widely."
+      "Arrange entry documentation, initial housing, residence-card and municipal registration procedures, bank account setup and necessary health-insurance or pension enrolment.",
+      "Families should check dependent status, schooling options and the difference between local and international education costs."
     ],
     "relocationCompanies": [
-      "Santa Fe Relocation",
-      "Crown Relocations",
-      "Sanelo",
-      "Asian Tigers Group",
-      "Local relocation providers"
+      "Japan-specialist moving and storage companies",
+      "Local lease and guarantor service providers",
+      "Employer-appointed immigration and housing advisers"
     ],
     "healthcareOverview": [
-      "Healthcare and insurance rules in Japan depend on visa status, residency, employer benefits, and local systems. Candidates should confirm coverage before arrival."
+      "Eligible employed residents generally participate in employee health insurance or other applicable public coverage, while other residents may need to enrol in National Health Insurance. Confirm the right arrangement and any waiting or bridging cover with your employer and municipality."
     ],
     "healthInsuranceTypes": [
-      "Public healthcare eligibility where applicable",
-      "Private health insurance",
-      "Employer-provided benefits",
-      "Travel or arrival insurance"
+      "Employees' Health Insurance where required",
+      "National Health Insurance where applicable",
+      "Optional private supplementary coverage",
+      "Travel/bridging cover before enrolment"
     ],
-    "privateHealthCost": "Depends on status, age, and cover level.",
-    "expatInsurance": "Arrange suitable cover before arrival if public access is not immediate.",
-    "citiesOverview": "Key relocation cities in Japan include Tokyo, Osaka, Kyoto, Fukuoka, Yokohama. Candidates should compare job density, salary level, rent, commute, language requirements, and long-term settlement options.",
+    "privateHealthCost": "Public contribution and any supplemental insurance depend on employment, municipality and coverage.",
+    "expatInsurance": "Check public registration and dependent enrolment rather than assuming private expat cover is the normal default.",
+    "citiesOverview": "Tokyo has broad international business opportunities; Yokohama offers connected industrial and technology roles; Osaka has corporate and manufacturing activity; Kyoto offers research and precision-industry teams; Fukuoka has a different technology and regional business ecosystem. Check Japanese-language requirements at company level.",
     "popularCities": [
       "Tokyo",
+      "Yokohama",
       "Osaka",
       "Kyoto",
-      "Fukuoka",
-      "Yokohama"
+      "Fukuoka"
+    ]
+  },
+  {
+    "name": "Sweden",
+    "slug": "sweden",
+    "flag": "🇸🇪",
+    "region": "Europe",
+    "primaryVisa": "Employer-sponsored work permit / EU Blue Card",
+    "priority": "Next",
+    "shortDescription": "A northern European destination for international specialists in engineering, technology and life sciences, with employer-led work permits and separate long-term residence rules.",
+    "popularRoles": [
+      "Software Engineer",
+      "Embedded Systems Engineer",
+      "Data Scientist",
+      "Battery Systems Engineer",
+      "Research Specialist"
+    ],
+    "keyCities": [
+      "Stockholm",
+      "Gothenburg",
+      "Malmö",
+      "Uppsala",
+      "Lund"
+    ],
+    "capital": "Stockholm",
+    "currency": "Swedish Krona (SEK)",
+    "languages": "Swedish is the main public language; some international technology, research and engineering teams work partly in English.",
+    "overview": [
+      "Sweden has distinct technology and industrial clusters: Stockholm supports product software, fintech and services; Gothenburg is associated with automotive and engineering companies; Malmö and Lund combine cross-border links, universities and specialist research.",
+      "Non-EU/EEA professionals commonly start with an employer-supported Swedish work permit. A separate EU Blue Card route applies to sufficiently qualified employment with the necessary contract duration and salary; the Swedish Migration Agency publishes the current thresholds and insurance requirements.",
+      "International candidates should compare gross pay against Swedish tax, union or collective-agreement conditions where applicable, local housing access and language expectations. Work permission is not an automatic permanent residence award."
+    ],
+    "facts": [
+      "Standard work permits and EU Blue Cards have different remuneration and eligibility requirements.",
+      "Long-term settlement rules depend on the specific permit, residence history and self-support conditions.",
+      "Some jobs are English-speaking; many public-service and regulated professions require Swedish."
+    ],
+    "visaOverview": [
+      "A standard employee work permit normally requires a genuine qualifying offer, suitable remuneration and employer compliance with the Swedish Migration Agency's current rules. New 2026 requirements and transition arrangements make old salary figures especially unsuitable for current applications.",
+      "The Swedish EU Blue Card is designed for highly qualified employment: the official guidance sets higher education or relevant experience, a qualifying employment contract, the salary floor and insurance conditions. Blue Card holders should check job-change notification rules.",
+      "Certain work-permit holders can later apply for permanent residence when extending a permit after the necessary qualifying years, employment history, self-support and other conditions. Do not assume that a new work permit or a Blue Card itself guarantees settlement."
+    ],
+    "visaTypes": [
+      "Employee work permit supported by a qualifying employer",
+      "EU Blue Card for highly qualified employment under its own rules",
+      "Intra-corporate transfer for qualifying assignments",
+      "Permanent residence subject to residence, work and financial conditions"
+    ],
+    "taxOverview": [
+      "Swedish take-home pay depends on municipal income tax, state income-tax thresholds where applicable and the individual's circumstances. Check salary calculators with the municipality where you expect to live.",
+      "If staying long term, population registration with Skatteverket and a personal identity number can be central to banking and everyday administration; separate conditions apply to shorter stays."
+    ],
+    "taxTypes": [
+      "Municipal income tax",
+      "State income tax where applicable",
+      "Employer social-security charges and relevant pension arrangements",
+      "VAT on consumption"
+    ],
+    "taxYear": "Calendar year; consult Skatteverket for tax residency and final annual assessment.",
+    "incomeTax": "Municipal and, when applicable, state taxes; use current Skatteverket rules and your municipality.",
+    "costOverview": [
+      "Stockholm's private rental market can involve limited immediate availability, so verify lawful rental options and commute before signing an employment contract. Gothenburg, Malmö and university towns have different neighbourhood and transit trade-offs.",
+      "Budget for temporary accommodation, possible rental deposits, seasonal clothing, transit, insurance and the cost of relocating household items."
+    ],
+    "expensiveCities": [
+      "Central Stockholm",
+      "High-demand Stockholm commuter districts",
+      "Central Gothenburg"
+    ],
+    "affordableCities": [
+      "Select Malmö outer districts",
+      "Specific commuter towns with verified rail access",
+      "Residential areas outside prime city centres"
+    ],
+    "averageRent": "Research current local rentals and the distinction between first-hand and lawful second-hand contracts.",
+    "monthlyExpenses": "Model income after municipal tax, rent, public transport, household costs and first-month housing arrangements.",
+    "companiesOverview": [
+      "Research Swedish technology firms, industrial and automotive engineering businesses, battery and energy technology manufacturers, telecommunications suppliers and university research groups.",
+      "For each specific vacancy, ask whether the employer will assist with the correct work-permit process; an English-language listing does not confirm overseas eligibility."
+    ],
+    "companies": [
+      "Technology product and fintech employers",
+      "Automotive and industrial engineering groups",
+      "Telecommunications and energy technology producers",
+      "Research universities and life-sciences teams"
+    ],
+    "jobsOverview": [
+      "Match the actual duties, written remuneration and employment terms to a current Swedish work-permit or Blue Card route rather than choosing the route based only on the job title.",
+      "Technical roles may accept English in some teams, but client-facing, healthcare and regulated roles frequently need Swedish or professional licensing."
+    ],
+    "sectors": [
+      "Product technology",
+      "Automotive and industrial engineering",
+      "Energy and battery technology",
+      "Telecommunications",
+      "Life sciences and research"
+    ],
+    "demandJobs": [
+      "Backend Engineer",
+      "Embedded Systems Engineer",
+      "Data Scientist",
+      "Electrification Engineer",
+      "Research Scientist"
+    ],
+    "workingHours": "Standard full-time schedules are often around 40 hours; contract and collective agreements may affect the arrangement.",
+    "probation": "Verify probation clauses and any collective agreement against Swedish employment law.",
+    "pto": "Annual-leave entitlements are governed by Swedish law and relevant agreements.",
+    "publicHolidays": "Holiday and overtime arrangements vary with the contract and collective agreement.",
+    "unemployment": "Check union-related unemployment funds and your residence/qualifying history before assuming eligibility.",
+    "benefits": [
+      "Occupational pension where applicable",
+      "Statutory paid leave",
+      "Flexible-working arrangements if agreed",
+      "Relocation and Swedish-language support if explicitly offered"
+    ],
+    "salariesOverview": [
+      "Swedish EU Blue Card and standard work-permit salary criteria must be distinguished from typical gross salaries. Use the current official work-permit tables and candidate-specific offer.",
+      "Review monthly after-tax pay using the intended municipality, pension arrangement and actual rent; Sweden is not one uniform housing market."
+    ],
+    "averageSalary": "Use employer offers and Swedish occupation statistics; national averages cannot prove visa eligibility.",
+    "minimumWage": "Sweden has no single nationwide statutory minimum wage; collective agreements and immigration criteria are distinct.",
+    "highestPayingJobs": [
+      "Engineering Director",
+      "Principal Software Architect",
+      "Specialist Physician",
+      "Senior Research Director",
+      "Product Technology Lead"
+    ],
+    "salaryCities": [
+      "Stockholm",
+      "Gothenburg",
+      "Malmö"
+    ],
+    "payFrequency": "Typically monthly according to contract.",
+    "relocationOverview": [
+      "Arrange a lawful temporary address, plan population-registration eligibility and bank access, and confirm the insurance expected for your particular permit and stay.",
+      "Families should research local schooling, Swedish-language integration, nursery availability and partner work conditions separately."
+    ],
+    "relocationCompanies": [
+      "Sweden-experienced relocation and rental advisers",
+      "International shipping and storage providers",
+      "Employer-contracted immigration administration partners"
+    ],
+    "healthcareOverview": [
+      "Access to Swedish healthcare and applicable fees depends on residence registration and individual circumstances. Regional healthcare guidance, not a generic private-policy claim, should guide your plan; arrange transitional cover when required."
+    ],
+    "healthInsuranceTypes": [
+      "Regional healthcare for eligible residents",
+      "Work-permit insurance arrangements where required",
+      "Temporary cover where residency eligibility has not started"
+    ],
+    "privateHealthCost": "Verify resident eligibility and employer arrangements before requesting optional private-policy quotes.",
+    "expatInsurance": "Confirm permit-related insurance and temporary cover while registration is pending.",
+    "citiesOverview": "Stockholm combines technology and finance, Gothenburg is associated with mobility and engineering, Malmö has cross-border business links, while Uppsala and Lund include major research and university communities. Swedish ability and commuting should be checked against each employer.",
+    "popularCities": [
+      "Stockholm",
+      "Gothenburg",
+      "Malmö",
+      "Uppsala",
+      "Lund"
+    ]
+  },
+  {
+    "name": "Finland",
+    "slug": "finland",
+    "flag": "🇫🇮",
+    "region": "Europe",
+    "primaryVisa": "Specialist residence permit / EU Blue Card",
+    "priority": "Next",
+    "shortDescription": "A specialist-employment and research destination with defined work-based permits, Finnish or Swedish integration considerations and revised permanent-residence paths.",
+    "popularRoles": [
+      "Software Developer",
+      "Cybersecurity Specialist",
+      "Embedded Systems Engineer",
+      "Automation Engineer",
+      "Research Scientist"
+    ],
+    "keyCities": [
+      "Helsinki",
+      "Espoo",
+      "Tampere",
+      "Turku",
+      "Oulu"
+    ],
+    "capital": "Helsinki",
+    "currency": "Euro (EUR)",
+    "languages": "Finnish and Swedish are official languages; English is used in some international technology and research workplaces.",
+    "overview": [
+      "Finland's Helsinki–Espoo region houses many technology and research teams, Tampere and Oulu include embedded systems and industrial software clusters, and Turku has marine, pharmaceutical and university activity.",
+      "The Finnish Immigration Service's Specialist residence permit can suit confirmed expert employment with required remuneration and specialist qualifications or experience. Finland also operates an EU Blue Card route with separate eligibility tests. Neither route is a substitute for first obtaining an eligible job offer.",
+      "Under the permanent-residence rules in force from January 2026, applicants choose among distinct paths with different residence periods, work history and language or qualification conditions. Applicants should not rely on historical assumptions that four years' stay alone automatically qualifies."
+    ],
+    "facts": [
+      "Finland's specialist permit requires a confirmed job and the current specialist salary requirement.",
+      "Permanent-residence applications from 8 January 2026 follow route-specific residence and integration conditions.",
+      "Healthcare and social benefits depend on residence status, municipality-of-residence and other conditions."
+    ],
+    "visaOverview": [
+      "The Specialist permit applies to confirmed employment requiring special expertise and the Finnish Immigration Service's current salary threshold. A qualifying higher education degree or sufficient equivalent expertise and a real Finnish employer are central; many applicants make the first application from abroad.",
+      "The EU Blue Card is an alternative for qualifying highly skilled employment subject to its own contract and salary conditions. Check which route the exact offer meets rather than treating the two as interchangeable.",
+      "Permanent residence follows one of Migri's current application paths, which may include work-history, language and residence requirements. Starting in January 2026, routes differ; the initial specialist permit is not automatic settlement."
+    ],
+    "visaTypes": [
+      "Specialist residence permit for confirmed high-skill work",
+      "EU Blue Card with separate employment and pay conditions",
+      "Other residence permits for employed persons where appropriate",
+      "Permanent residence under the selected post-January-2026 path"
+    ],
+    "taxOverview": [
+      "Finland normally uses a tax card to set payroll withholding, with the treatment of overseas arrivals depending on length of stay and individual tax residence. A local personal identity code may be necessary to obtain the relevant card.",
+      "Take-home pay should include pension and social contributions where applicable, while housing and winter utility costs vary across the Helsinki region and other cities."
+    ],
+    "taxTypes": [
+      "Earned-income taxation and tax-card withholding",
+      "Municipal and state tax components",
+      "Pension and applicable insurance contributions",
+      "VAT on relevant consumer purchases"
+    ],
+    "taxYear": "Calendar year; Vero issues tax cards and annual pre-completed tax returns.",
+    "incomeTax": "Personal circumstances, length of stay and tax-card details determine the rate; verify with Vero.",
+    "costOverview": [
+      "Helsinki and Espoo have varied housing and transit prices by district; Tampere, Turku and Oulu require city-specific comparisons. Confirm the workplace's physical location and the realities of winter commutes.",
+      "Budget for refundable housing deposits where applicable, temporary lodging, warm clothing, transit, utility costs and necessary administrative registrations."
+    ],
+    "expensiveCities": [
+      "Central Helsinki",
+      "Central Espoo near major business centres",
+      "Prime Helsinki waterfront districts"
+    ],
+    "affordableCities": [
+      "Selected Tampere residential areas",
+      "Turku commuter neighbourhoods",
+      "Oulu districts with reliable bus links"
+    ],
+    "averageRent": "Compare current actual rental listings, lease rules and heating inclusions by city.",
+    "monthlyExpenses": "Include winter utilities, rent, public transport, insurance and the timing of any residence-based benefits.",
+    "companiesOverview": [
+      "Research enterprise-software teams, telecommunications and embedded-systems businesses, industrial automation employers, health technology and university laboratories.",
+      "Use the exact offer to verify specialist duties and current income requirements; an international brand name is not itself a residence permit."
+    ],
+    "companies": [
+      "Enterprise software and cloud employers",
+      "Telecommunications and embedded-systems firms",
+      "Industrial automation manufacturers",
+      "Research institutes and universities"
+    ],
+    "jobsOverview": [
+      "Evidence of genuinely specialist duties and adequate pay matters for the Specialist permit. Ask recruiters to confirm the legal employing entity, fixed monthly remuneration and which immigration route they intend to support.",
+      "Public-sector and regulated professions may require Finnish or Swedish language skills and recognition of qualifications; an English-speaking technology team is not representative of all sectors."
+    ],
+    "sectors": [
+      "Enterprise software and cybersecurity",
+      "Embedded systems",
+      "Industrial automation",
+      "Health technology",
+      "Scientific research"
+    ],
+    "demandJobs": [
+      "Cybersecurity Engineer",
+      "Embedded Developer",
+      "Industrial Automation Engineer",
+      "Data Engineer",
+      "Research Specialist"
+    ],
+    "workingHours": "Full-time hours commonly depend on the Employment Contracts Act and relevant collective agreement.",
+    "probation": "Check the probation clause against Finnish contract law and any collective agreement.",
+    "pto": "Annual leave accrues according to Finnish law and the applicable employment terms.",
+    "publicHolidays": "Holiday pay and work scheduling depend on the contract and applicable agreement.",
+    "unemployment": "Unemployment-fund membership and Kela residence or employment rules affect benefit access.",
+    "benefits": [
+      "Occupational healthcare provided by employer where required",
+      "Annual leave",
+      "Applicable earnings-related pension participation",
+      "Possible family or relocation allowances when contracted"
+    ],
+    "salariesOverview": [
+      "Check a confirmed gross monthly salary against Migri's current Specialist or EU Blue Card requirements. Do not substitute an average Finnish technology salary for the immigration test.",
+      "Estimate net pay with a valid tax card and the exact city and family circumstances. Employer occupational healthcare is not equivalent to universal access to every residence-based benefit."
+    ],
+    "averageSalary": "Use role-specific published compensation or offer terms; immigration pay thresholds are separate.",
+    "minimumWage": "Finland does not set a universal national statutory minimum wage; sector collective agreements matter.",
+    "highestPayingJobs": [
+      "Senior Software Architect",
+      "Technology Research Director",
+      "Engineering Manager",
+      "Specialist Physician",
+      "Principal Cybersecurity Architect"
+    ],
+    "salaryCities": [
+      "Helsinki",
+      "Espoo",
+      "Tampere",
+      "Oulu"
+    ],
+    "payFrequency": "Usually monthly for salaried employment; check the contract.",
+    "relocationOverview": [
+      "Prepare employment and residence documents, arrange a local address and personal identity code registration, and determine whether a municipality of residence can be assigned.",
+      "Accompanying families should check daycare or school language provision and how healthcare and social-benefit eligibility are assessed for each person."
+    ],
+    "relocationCompanies": [
+      "Finland-focused housing and arrival services",
+      "International movers with Finnish delivery partners",
+      "Employer-provided registration or settling-in advisers"
+    ],
+    "healthcareOverview": [
+      "Public healthcare generally depends on municipality-of-residence status and other entitlement rules. Employers also provide occupational healthcare for employees, but family coverage and specialist services are separate questions."
+    ],
+    "healthInsuranceTypes": [
+      "Municipal public healthcare for those eligible",
+      "Employer occupational healthcare",
+      "Private supplemental or bridging insurance if needed"
+    ],
+    "privateHealthCost": "Confirm public and occupational entitlement before obtaining optional supplemental quotes.",
+    "expatInsurance": "Arrange any needed transitional health cover until residence-based eligibility is resolved.",
+    "citiesOverview": "Helsinki and Espoo offer many professional technology and research roles; Tampere has industrial and software companies; Turku has maritime and life-sciences activity; Oulu has wireless and embedded expertise. Check the workplace and local language context.",
+    "popularCities": [
+      "Helsinki",
+      "Espoo",
+      "Tampere",
+      "Turku",
+      "Oulu"
+    ]
+  },
+  {
+    "name": "Portugal",
+    "slug": "portugal",
+    "flag": "🇵🇹",
+    "region": "Europe",
+    "primaryVisa": "Residence route for remote work / employer-led residence visa",
+    "priority": "Next",
+    "shortDescription": "A destination with separate routes for locally employed workers and qualifying people performing remote work for entities outside Portugal.",
+    "popularRoles": [
+      "Remote Software Engineer",
+      "Independent Design Consultant",
+      "Product Specialist",
+      "Cloud Engineer",
+      "Renewable Energy Engineer"
+    ],
+    "keyCities": [
+      "Lisbon",
+      "Porto",
+      "Braga",
+      "Coimbra",
+      "Faro"
+    ],
+    "capital": "Lisbon",
+    "currency": "Euro (EUR)",
+    "languages": "Portuguese is the official language; English is used in some international technology and tourism-related environments.",
+    "overview": [
+      "Portugal serves several different relocation profiles. Lisbon and Porto host international employers, research and professional-services teams, while other cities appeal to people bringing a stable, eligible remote income and seeking a different cost structure.",
+      "People hired locally should research the relevant employer-supported work and residence procedures. Remote employees or independent professionals providing services for entities outside Portugal may qualify for a separate remote-work residence-visa route, often called the digital-nomad route. A tourist stay or an employer merely permitting work from abroad is not proof of immigration compliance.",
+      "Residence-card appointments and other administrative processes can take time; build a realistic housing and document plan before moving. Portuguese tax residence, overseas employer payroll and social-security obligations require individual advice, especially for remote workers."
+    ],
+    "facts": [
+      "The remote-work residence route and Portuguese local-employment procedures have different evidence requirements.",
+      "Maintaining foreign-source remote work and demonstrating the qualifying relationship or income are central to the remote route.",
+      "Long-term residence is a distinct legal process; obtaining a remote-work residence permit does not guarantee permanent residence."
+    ],
+    "visaOverview": [
+      "Portugal's AIMA publishes a dedicated residence-permit route for a person undertaking professional activity remotely for an entity outside Portuguese territory after obtaining the appropriate residence visa. Applicants must check current evidence of the employment or service relationship and all consular steps.",
+      "Local employment has separate visa and residence procedures; a Portuguese job offer does not automatically satisfy the remote-worker route, and the remote route should not be advertised as a work visa for open-ended Portuguese employment.",
+      "Permanent or long-term residence requires a separate application with legally prescribed residence and other conditions. Check the actual current residence rules and processing arrangements rather than using a generic five-year promise."
+    ],
+    "visaTypes": [
+      "Residence visa and AIMA residence permit for remote work outside Portugal",
+      "Residence visa and permit based on qualifying local employment",
+      "Other qualifying entrepreneurial or professional categories",
+      "Permanent/long-term residence when separate conditions are satisfied"
+    ],
+    "taxOverview": [
+      "Remote residence permission and tax residence are different legal concepts. Time in Portugal, household circumstances, source of income and any applicable tax treaty can change how Portuguese personal-income tax and overseas earnings are treated.",
+      "Independent professionals should investigate the local registration, VAT and social-security implications of their precise activity; an employer's agreement to remote work does not settle its payroll obligations."
+    ],
+    "taxTypes": [
+      "Portuguese personal income tax (IRS)",
+      "Social security contributions depending on work arrangement",
+      "VAT where relevant to services and consumption",
+      "Foreign income and treaty considerations"
+    ],
+    "taxYear": "Calendar year; consult Autoridade Tributária e Aduaneira for income tax and activity registration.",
+    "incomeTax": "Income-tax rates and special regimes depend on status and income; do not assume a blanket digital-nomad tax exemption.",
+    "costOverview": [
+      "Lisbon and Porto face different rental pressures from smaller Portuguese cities. Remote workers should compare reliable internet, long-term rental contracts, access to services and whether an address meets the needs of the immigration application.",
+      "Include deposits, utilities, transportation, private healthcare during any entitlement gap, tax administration and possible travel to residence appointments when forecasting the first months."
+    ],
+    "expensiveCities": [
+      "Central Lisbon",
+      "Popular Porto neighbourhoods",
+      "High-demand coastal districts"
+    ],
+    "affordableCities": [
+      "Selected Braga neighbourhoods",
+      "Coimbra districts with verified rentals",
+      "Inland locations with suitable connectivity"
+    ],
+    "averageRent": "Check current permitted long-term rental listings and the documentation required to demonstrate address.",
+    "monthlyExpenses": "Compare after-tax remote or local income with housing, utilities, travel and Portuguese administration costs.",
+    "companiesOverview": [
+      "Research Portugal-based technology teams, engineering firms, renewable-energy companies and multilingual service centres if seeking local employment.",
+      "For the remote-worker route the decisive relationship is normally with a qualifying entity outside Portugal; clarify location policy, payroll, income evidence and any professional-service contract before relocating."
+    ],
+    "companies": [
+      "Portugal-based software and engineering employers",
+      "Renewable-energy and research companies",
+      "Multilingual business-services teams",
+      "Overseas employers accepting legally compliant international remote work"
+    ],
+    "jobsOverview": [
+      "Separate two research tracks: local Portuguese roles that may support a qualifying residence process, and existing foreign employment or consulting relationships that might satisfy the remote-work route.",
+      "Local wages and housing costs must be compared honestly. A remote salary denominated in another currency may create tax or exchange-rate risks; it is not automatically a migration advantage."
+    ],
+    "sectors": [
+      "Remote professional services",
+      "Local software and IT",
+      "Renewable energy",
+      "Engineering and research",
+      "Shared business services"
+    ],
+    "demandJobs": [
+      "Remote Software Developer",
+      "Local Cloud Engineer",
+      "Renewable Energy Engineer",
+      "Multilingual Service Specialist",
+      "Independent Digital Consultant"
+    ],
+    "workingHours": "Local contracts follow Portuguese employment law; qualifying overseas remote arrangements require their own contractual review.",
+    "probation": "Check local employment-contract conditions; foreign employment contracts may involve different legal treatment.",
+    "pto": "Portuguese statutory leave is relevant to local employment; remote foreign contracts require separate analysis.",
+    "publicHolidays": "Holiday treatment depends on the legal employment relationship and applicable country rules.",
+    "unemployment": "Access to Portuguese unemployment protection depends on social-insurance history and qualifying status.",
+    "benefits": [
+      "Local social-security enrolment where applicable",
+      "Statutory leave for covered local employment",
+      "Private cover or remote-work allowance if agreed",
+      "Professional accountant support where needed"
+    ],
+    "salariesOverview": [
+      "Portugal-based salaries and independently earned overseas income are not interchangeable metrics. Calculate take-home pay based on the actual employment structure, tax treatment and social contributions.",
+      "A remote worker should document stable qualifying income and account for currency fluctuations; current consular requirements, not a generic salary guide, determine immigration eligibility."
+    ],
+    "averageSalary": "Compare actual local job offers or verified remote-income evidence; no universal digital-nomad salary applies to every residence route.",
+    "minimumWage": "Portugal publishes a statutory minimum wage, but remote residence eligibility uses different proof and income requirements.",
+    "highestPayingJobs": [
+      "Senior Remote Software Architect",
+      "Engineering Director",
+      "Lead Research Specialist",
+      "Senior Cybersecurity Consultant",
+      "Renewable Energy Project Lead"
+    ],
+    "salaryCities": [
+      "Lisbon",
+      "Porto",
+      "Braga"
+    ],
+    "payFrequency": "Local employment contracts usually specify monthly salary and legally relevant additional payments; remote contracts vary.",
+    "relocationOverview": [
+      "Secure documentary proof of accommodation, review local healthcare registration rules and plan for AIMA appointments or other administrative deadlines.",
+      "Households should verify family-reunification procedures, schooling and their own source of income; remote-work status does not remove those requirements."
+    ],
+    "relocationCompanies": [
+      "Local long-term-rental and tenancy support",
+      "Portugal-based fiscal and residence-document advisers",
+      "International moving and storage providers"
+    ],
+    "healthcareOverview": [
+      "Foreign residents with valid Portuguese residence permits may register for healthcare through the Serviço Nacional de Saúde (SNS) under the applicable conditions. Confirm how and when to obtain the SNS user number and arrange any necessary interim coverage."
+    ],
+    "healthInsuranceTypes": [
+      "Portuguese SNS access where eligible",
+      "Temporary private cover during transition",
+      "Supplementary private family coverage if desired"
+    ],
+    "privateHealthCost": "Request quotes suited to residence, household size and pre-existing coverage; SNS registration has its own requirements.",
+    "expatInsurance": "Verify current SNS registration and lawful private or bridging cover instead of assuming remote-worker status itself provides insurance.",
+    "citiesOverview": "Lisbon has international services and technology activity; Porto has business and engineering teams; Braga and Coimbra combine smaller-city options with education or technology, while Faro has a different tourism-oriented market. For remote workers, check rental availability and infrastructure rather than only headline regional costs.",
+    "popularCities": [
+      "Lisbon",
+      "Porto",
+      "Braga",
+      "Coimbra",
+      "Faro"
+    ]
+  },
+  {
+    "name": "Spain",
+    "slug": "spain",
+    "flag": "🇪🇸",
+    "region": "Europe",
+    "primaryVisa": "International telework / highly qualified professional routes",
+    "priority": "Next",
+    "shortDescription": "A country offering separate international-teleworking and locally employed professional pathways, with regional job markets and tax obligations to compare.",
+    "popularRoles": [
+      "Remote Software Engineer",
+      "Independent IT Consultant",
+      "Data Engineer",
+      "Product Manager",
+      "Renewable Energy Engineer"
+    ],
+    "keyCities": [
+      "Madrid",
+      "Barcelona",
+      "Valencia",
+      "Málaga",
+      "Seville"
+    ],
+    "capital": "Madrid",
+    "currency": "Euro (EUR)",
+    "languages": "Spanish is the principal national language; co-official regional languages and workplace English may be relevant depending on location.",
+    "overview": [
+      "Spain contains very different employment and relocation markets: Madrid is a large corporate centre, Barcelona hosts technology and business services, and Valencia, Málaga and other cities have distinctive housing and career profiles.",
+      "Non-EU professionals can research locally employed highly qualified routes or Spain's specific international teleworking framework. The latter is intended for eligible work or professional services carried out remotely for organisations outside Spain; the applicable rules distinguish employment from self-employment.",
+      "Immigration permission and tax treatment must be planned together, but they are not the same decision. Remote workers should verify their employment relationship, qualifying evidence, social-security position and the tax treatment associated with residing in Spain."
+    ],
+    "facts": [
+      "Spain's international telework framework applies to qualifying remote work for businesses established outside Spain.",
+      "Under the telework law, rules differ between ordinary employees and independent professionals with some Spanish clients.",
+      "Long-term residence is a separate process and does not follow automatically from a telework visa or permit."
+    ],
+    "visaOverview": [
+      "The international teleworking framework is administered by Spain's UGE for eligible third-country remote workers serving organisations outside Spain using telecommunications tools. It specifies documentation for the applicant and family members and is distinct from ordinary local employment.",
+      "The statutory framework distinguishes remote employment for foreign organisations from independent professional activity; eligible independent professionals may have limited Spain-based client activity under the legal conditions. Verify the current law and the exact relationship rather than applying a blanket assumption to all freelancers.",
+      "People offered local employment in Spain should research the separate highly qualified professional, EU Blue Card or ordinary work-permit routes where applicable. Residence extensions and long-term residence have independent rules."
+    ],
+    "visaTypes": [
+      "International telework visa for an eligible worker living abroad",
+      "International telework residence authorisation for eligible applicants",
+      "Highly qualified professional or EU Blue Card where eligible for Spanish employment",
+      "Long-term residence after separately meeting the legal criteria"
+    ],
+    "taxOverview": [
+      "Spanish tax residence and personal-income taxation depend on presence, circumstances and the source of income. National and autonomous-community factors can affect the calculation; obtaining a digital-nomad residence authorisation is not a blanket tax exemption.",
+      "Any special inbound worker tax treatment is separately assessed by the tax authorities and depends on individual eligibility and formal steps. Independent professionals should check local registration and social-security obligations."
+    ],
+    "taxTypes": [
+      "Personal income tax (IRPF) or applicable non-resident tax rules",
+      "Social-security contributions depending on employment structure",
+      "VAT where relevant to professional activity and consumption",
+      "Autonomous-community effects and applicable tax treaties"
+    ],
+    "taxYear": "Calendar year; Agencia Tributaria provides current income-tax instructions.",
+    "incomeTax": "Personal tax treatment depends on residence, autonomous community, income type and eligibility for any special regime.",
+    "costOverview": [
+      "Central Madrid and Barcelona can have very different housing prices from secondary neighbourhoods or cities such as Valencia and Seville. Compare access to the real workplace, residency-friendly rental documentation and local transport.",
+      "For international remote workers, check internet reliability at a specific property, deposits, local registration obligations, healthcare and possible dual-country travel or tax-compliance expenses."
+    ],
+    "expensiveCities": [
+      "Central Madrid",
+      "Central Barcelona",
+      "Popular coastal districts in major metros"
+    ],
+    "affordableCities": [
+      "Selected Valencia neighbourhoods",
+      "Selected Seville districts",
+      "Commuter locations with documented rental options"
+    ],
+    "averageRent": "Check current local residential listings and tenancy conditions, not tourism accommodation prices.",
+    "monthlyExpenses": "Model local rent, tax and social insurance alongside remote or Spain-based income and family needs.",
+    "companiesOverview": [
+      "Research Spain-based enterprise-software teams, telecommunications suppliers, renewable-energy developers, financial services and regional technology firms when planning locally employed migration.",
+      "For international teleworking, the primary relationship is generally with a company outside Spain, so distinguish a remote-work-authorising employer from a Spanish entity hiring under a different immigration scheme."
+    ],
+    "companies": [
+      "Madrid-based corporate and finance employers",
+      "Barcelona technology and industrial companies",
+      "Renewable-energy engineering groups",
+      "Overseas employers providing qualifying remote arrangements"
+    ],
+    "jobsOverview": [
+      "Build separate application strategies for Spanish domestic professional vacancies and legally compatible overseas remote work. A local job advertisement cannot automatically be used as evidence for an international telework visa.",
+      "Assess local language requirements, contract structure and employer willingness to support the appropriate Spanish route. Some employers permit short remote visits but will not support a long-term cross-border work arrangement."
+    ],
+    "sectors": [
+      "International remote professional services",
+      "Enterprise software",
+      "Renewable energy",
+      "Telecommunications",
+      "Finance and engineering"
+    ],
+    "demandJobs": [
+      "Remote Software Engineer",
+      "Local Product Engineer",
+      "Renewable Energy Specialist",
+      "Data Engineer",
+      "Senior IT Consultant"
+    ],
+    "workingHours": "Spanish local employment is regulated by local law and applicable collective agreements; overseas remote contracts need separate analysis.",
+    "probation": "Local contract and applicable collective agreement set terms; remote overseas employment may operate differently.",
+    "pto": "Spanish statutory paid leave applies to covered local employees; check overseas arrangements separately.",
+    "publicHolidays": "National and regional public holidays affect local employees; remote contract treatment varies.",
+    "unemployment": "Benefit entitlement depends on actual contributions, work classification and residence circumstances.",
+    "benefits": [
+      "Statutory leave and social-security coverage for local roles",
+      "Possible employer-sponsored relocation for specialist hires",
+      "Remote-work equipment or home-office budgets where agreed",
+      "Specialist tax or immigration advice when appropriate"
+    ],
+    "salariesOverview": [
+      "Do not treat Spanish local salaries and overseas remote income as equivalent. For a telework application, rely on the current UGE/consular income and documentation requirements tied to the applicant's situation.",
+      "For local professional offers, compare annual pay, deductions, city rent and the legal sponsorship route rather than an unsourced countrywide gross salary average."
+    ],
+    "averageSalary": "Compare local-sector offers or documented overseas remote compensation; immigration and tax treatment are separate.",
+    "minimumWage": "Spain maintains a national minimum wage; international telework financial proof follows separate criteria.",
+    "highestPayingJobs": [
+      "Principal Cloud Architect",
+      "Senior Remote Product Engineer",
+      "Renewable Energy Programme Director",
+      "Engineering Lead",
+      "Finance Technology Director"
+    ],
+    "salaryCities": [
+      "Madrid",
+      "Barcelona",
+      "Valencia",
+      "Málaga"
+    ],
+    "payFrequency": "Local salary may include contractually/statutorily relevant extra payments; overseas remote arrangements differ.",
+    "relocationOverview": [
+      "International teleworkers should prepare evidence of existing work or contracts, income, qualifying activity and appropriate residence and social-insurance arrangements before relocating.",
+      "Families should verify the UGE or consular requirements for each dependent, municipal registration, school admission and healthcare access for the actual residence status."
+    ],
+    "relocationCompanies": [
+      "Spanish rental and municipal-registration advisers",
+      "Cross-border tax and social-insurance professionals",
+      "International moving and temporary-housing providers"
+    ],
+    "healthcareOverview": [
+      "Healthcare eligibility for newcomers depends on the residence and social-security position. Spain's public system is organised through regional services, and international teleworkers should check applicable social-insurance or private-cover requirements before arrival."
+    ],
+    "healthInsuranceTypes": [
+      "Regional public healthcare when eligible",
+      "Required health cover where the residence route demands it",
+      "Supplemental private family coverage if chosen"
+    ],
+    "privateHealthCost": "Check the precise insurance evidence required by the selected visa or residence route and quote coverage accordingly.",
+    "expatInsurance": "Never assume that an ordinary travel policy satisfies the documentary health-insurance requirements of a Spanish telework application.",
+    "citiesOverview": "Madrid is a national corporate centre; Barcelona has international technology and research, Valencia and Málaga include growing professional communities, and Seville has a different regional market. Rentals, regional taxes, local language and job availability should be compared individually.",
+    "popularCities": [
+      "Madrid",
+      "Barcelona",
+      "Valencia",
+      "Málaga",
+      "Seville"
     ]
   }
 ] as const;
