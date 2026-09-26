@@ -86,6 +86,10 @@ if (home.includes('"SearchAction"')) errors.push('Homepage still advertises none
 if (home.includes('Expanding after launch') || home.includes('prepared as next-market country guides')) errors.push('Homepage implies already available guides are not yet launched');
 if (home.includes('Sponsor Confidence') || home.includes('8.2/10')) errors.push('Homepage still shows fictitious job scores');
 
+const ogImageFile = resolve(root, 'og-image.svg');
+if (!existsSync(ogImageFile)) errors.push('Editorial social preview image is missing');
+else if (/Sponsor Score|82%|Sponsor Confidence/i.test(readFileSync(ogImageFile, 'utf8'))) errors.push('Social preview still contains fictional sponsorship scoring');
+
 /* Phase 1 redesign smoke checks: no invented search route or dead-end design navigation. */
 const countryDirectory = pages.get(join(root, 'countries', 'index.html')) || '';
 const guideDirectory = pages.get(join(root, 'guides', 'index.html')) || '';
