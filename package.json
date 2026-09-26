@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check:site": "node scripts/check-site.mjs"
+    "check:site": "node scripts/check-site.mjs",
+    "check:external": "node scripts/check-external-links.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "latest",
