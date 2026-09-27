@@ -190,6 +190,35 @@ if (!/\.weekly-evidence-heading\s*\{\s*display:\s*block;/.test(redesignCss) ||
   errors.push('Weekly Jobs evidence headline has reverted to narrow two-column wrapping');
 }
 
+// Weekly Jobs must work as an uncluttered Substack landing, not repeat
+// all 14 country cards or leave the subscribe CTA cramped against text.
+const weeklyLandingSource = readFileSync(resolve('src/pages/jobs/free-preview.astro'), 'utf8');
+if (!headerSource.includes("const isWeeklyLanding = path === '/jobs/free-preview';") ||
+    !headerSource.includes('isWeeklyLanding ? "Subscribe" : "Read the newsletter"') ||
+    !headerSource.includes('rw-header-weekly')) {
+  errors.push('Weekly Jobs header has lost the contextual Subscribe CTA');
+}
+if (!weeklyJobs.includes('Subscribe on Substack') ||
+    !weeklyJobs.includes('href="#how-we-research"') ||
+    !weeklyJobs.includes('rw-weekly-bottom-actions')) {
+  errors.push('Weekly Jobs landing is missing its primary or closing subscriber action');
+}
+if (!weeklyLandingSource.includes("const featuredCountries = countries.filter") ||
+    weeklyLandingSource.includes('otherCountries.map(') ||
+    !weeklyJobs.includes('Browse all 14 country guides')) {
+  errors.push('Weekly Jobs guide links no longer use the compact featured-country treatment');
+}
+if (!/\.weekly-evidence-section > \.container\.narrow \{ max-width: 1160px; \}/.test(redesignCss) ||
+    !/\.weekly-evidence-heading h2\s*\{[^}]*font-size:\s*clamp\(2\.1rem,\s*2\.65vw,\s*2\.75rem\)/.test(redesignCss)) {
+  errors.push('Weekly Jobs evidence title has regressed to oversized narrow-column wrapping');
+}
+if (!/\.rw-weekly-bottom-actions\s*\{\s*display:grid;justify-items:start;gap:19px;/.test(redesignCss)) {
+  errors.push('Weekly Jobs closing subscription button is no longer spaced from supporting content');
+}
+if (!/\.rw-header\.rw-header-weekly \.rw-header-cta\s*\{[^}]*display:inline-flex;/.test(redesignCss)) {
+  errors.push('Weekly Jobs subscribe control disappeared from mobile navigation');
+}
+
 const countryDirectory = pages.get(join(root, 'countries', 'index.html')) || '';
 const guideDirectory = pages.get(join(root, 'guides', 'index.html')) || '';
 if (!guideDirectory.includes('THE RELOCATION LIBRARY') || !guideDirectory.includes('rw-topic-grid')) errors.push('Redesigned relocation guides directory missing');
