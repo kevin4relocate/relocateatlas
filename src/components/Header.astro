@@ -3,13 +3,14 @@ import { SITE, countries } from '../data';
 const featured = countries.filter((country) => country.priority === 'Launch');
 const more = countries.filter((country) => country.priority !== 'Launch');
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isWeeklyLanding = path === '/jobs/free-preview';
 const navItems = [
   { href: '/guides', label: 'Relocation guides', active: path === '/guides' || ['/visas','/taxes','/salaries','/cost-of-living','/relocation-companies','/jobs'].some((p) => path === p || path.startsWith(p + '/')) && path !== '/jobs/free-preview' },
   { href: '/industries', label: 'Industries', active: path.startsWith('/industries') },
   { href: '/jobs/free-preview', label: 'Weekly jobs', active: path === '/jobs/free-preview' || path === '/visa-sponsor-jobs' }
 ];
 ---
-<header class="site-header rw-header">
+<header class:list={['site-header', 'rw-header', { 'rw-header-weekly': isWeeklyLanding }]}>
   <div class="container rw-header-inner">
     <a class="rw-brand" href="/" aria-label="Relocate Works home">
       <img src="/brand-mark-blue.svg" width="42" height="42" alt="" aria-hidden="true" />
@@ -36,7 +37,7 @@ const navItems = [
       {navItems.map((item) => <a class:list={['rw-nav-link', { 'rw-current': item.active }]} href={item.href} aria-current={item.active ? 'page' : undefined}>{item.label}</a>)}
     </nav>
     <div class="rw-header-actions">
-      <a class="rw-header-cta" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Read the newsletter <span aria-hidden="true">↗</span></a>
+      <a class="rw-header-cta" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer" aria-label={isWeeklyLanding ? "Subscribe to Relocate Works Weekly Jobs on Substack" : "Read the Relocate Works newsletter on Substack"}>{isWeeklyLanding ? "Subscribe" : "Read the newsletter"} <span aria-hidden="true">↗</span></a>
       <button class="mobile-menu-button rw-menu-toggle" type="button" data-mobile-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
         <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
@@ -68,7 +69,7 @@ const navItems = [
         <a href="/visas">Visas</a><a href="/salaries">Salaries</a><a href="/taxes">Taxes</a><a href="/cost-of-living">Living costs</a>
       </div>
     </div>
-    <a class="rw-btn rw-btn-primary rw-mobile-substack" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Read weekly jobs on Substack <span aria-hidden="true">↗</span></a>
+    <a class="rw-btn rw-btn-primary rw-mobile-substack" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">{isWeeklyLanding ? "Subscribe to Weekly Jobs" : "Read weekly jobs on Substack"} <span aria-hidden="true">↗</span></a>
   </div>
 </div>
 
