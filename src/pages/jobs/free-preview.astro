@@ -4,8 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE, countries } from '../../data';
 
-const launchCountries = countries.filter((country) => country.priority === 'Launch');
-const otherCountries = countries.filter((country) => country.priority === 'Next');
+const featuredCountries = countries.filter((country) => country.priority === 'Launch');
 ---
 <BaseLayout
   title="Weekly Relocation Jobs Newsletter on Substack | Relocate Works"
@@ -13,25 +12,35 @@ const otherCountries = countries.filter((country) => country.priority === 'Next'
   canonicalPath="/jobs/free-preview"
 >
   <Header />
-  <main>
-    <section class="page-hero page-hero-gradient compact-hero">
-      <div class="container narrow">
-        <span class="eyebrow">Relocate Works newsletter</span>
-        <h1>Weekly relocation job updates are published on Substack.</h1>
-        <p class="lead">This website is a free relocation information library. It does not host a live job board, show active vacancies or accept applications. Read our Substack newsletter for dated job roundups and links to employers' original advertisements.</p>
-        <div class="hero-actions compact-actions">
-          <a class="button button-large" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Read the newsletter on Substack ↗</a>
-          <a class="button-ghost button-large" href="/countries">Explore country guides</a>
+  <main class="rw-main rw-weekly-page">
+    <section class="rw-weekly-hero" aria-labelledby="weekly-page-title">
+      <div class="container rw-weekly-hero-grid">
+        <div class="rw-weekly-hero-content">
+          <span class="rw-kicker"><span class="rw-kicker-dot" aria-hidden="true"></span> RELOCATE WORKS WEEKLY JOBS</span>
+          <h1 id="weekly-page-title">Find international opportunities with <em>better evidence.</em></h1>
+          <p>Get weekly research on international vacancies, with original employer links and clear distinctions between confirmed assistance and potential opportunities.</p>
+          <div class="rw-weekly-hero-actions">
+            <a class="rw-btn rw-btn-primary" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe on Substack <span aria-hidden="true">↗</span></a>
+            <a class="rw-weekly-text-link" href="#how-we-research">How we review jobs <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="rw-weekly-editorial-note">Job roundups and application links are published on Substack. This site remains a free relocation research library.</p>
+        </div>
+        <div class="rw-weekly-benefit-panel" aria-label="Inside the weekly newsletter">
+          <span class="rw-weekly-panel-label">WHAT'S INSIDE</span>
+          <div><span class="rw-weekly-benefit-icon" aria-hidden="true">01</span><div><strong>Original job links</strong><p>Go straight to the employer's advertised opportunity when available.</p></div></div>
+          <div><span class="rw-weekly-benefit-icon" aria-hidden="true">02</span><div><strong>Clear support evidence</strong><p>See what a vacancy confirms—and what still needs checking.</p></div></div>
+          <div><span class="rw-weekly-benefit-icon" aria-hidden="true">03</span><div><strong>Practical research notes</strong><p>Read relevant eligibility and relocation considerations.</p></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section section-white weekly-evidence-section">
+    <section class="section section-white weekly-evidence-section" id="how-we-research" aria-labelledby="weekly-evidence-title">
       <div class="container narrow">
         <div class="section-heading weekly-evidence-heading">
           <div>
             <span class="mini-eyebrow">How to interpret the newsletter</span>
-            <h2>Understand the evidence, not a sponsorship score.</h2>
+            <h2 id="weekly-evidence-title">Understand the evidence, not a sponsorship score.</h2>
+            <p class="rw-weekly-evidence-intro">Our labels distinguish what a specific vacancy explicitly offers from employer-level signals that still need confirmation.</p>
           </div>
         </div>
         <div class="process-grid">
@@ -54,41 +63,30 @@ const otherCountries = countries.filter((country) => country.priority === 'Next'
       </div>
     </section>
 
-    <section class="section">
+    <section class="rw-weekly-guides" aria-labelledby="weekly-guides-title">
       <div class="container">
-        <div class="section-heading centered">
-          <span class="mini-eyebrow">{countries.length} free destination guides</span>
-          <h2>Explore relocation planning by country</h2>
-          <p>Choose a country to research visas, tax, salaries, healthcare, living costs and working life. Guide-library coverage and the countries featured in each Substack job roundup are separate.</p>
+        <div class="rw-weekly-guides-head">
+          <div><span class="rw-kicker">YOUR NEXT MOVE</span><h2 id="weekly-guides-title">Explore the destination, too.</h2>
+          <p>Use our free country guides to research visa routes, salaries, taxes and everyday life. Guide availability does not imply vacancies in this week's newsletter.</p></div>
+          <a class="rw-weekly-text-link" href="/countries">Browse all {countries.length} country guides <span aria-hidden="true">↗</span></a>
         </div>
-        <h3>Launch countries</h3>
-        <div class="grid-3">
-          {launchCountries.map((country) => (
-            <a class="country-card" href={`/countries/${country.slug}`}>
-              <div class="country-top"><span class="flag">{country.flag}</span><h3>{country.name}</h3></div>
-              <p>{country.shortDescription}</p>
-              <span class="country-link">Read relocation guide →</span>
-            </a>
-          ))}
-        </div>
-        <h3>More countries</h3>
-        <div class="grid-3">
-          {otherCountries.map((country) => (
-            <a class="country-card" href={`/countries/${country.slug}`}>
-              <div class="country-top"><span class="flag">{country.flag}</span><h3>{country.name}</h3></div>
-              <p>{country.shortDescription}</p>
-              <span class="country-link">Read relocation guide →</span>
-            </a>
-          ))}
+        <div class="rw-weekly-guide-links">
+          {featuredCountries.map((country) => <a href={'/countries/' + country.slug} aria-label={'Read the ' + country.name + ' relocation guide'}><span class="rw-weekly-guide-flag" aria-hidden="true">{country.flag}</span><span>{country.name}</span><span aria-hidden="true">↗</span></a>)}
         </div>
       </div>
     </section>
 
-    <section class="section section-white">
-      <div class="container narrow">
-        <h2>Read the latest weekly edition</h2>
-        <p>We publish job roundups on Substack, not on this website. Our guides help you understand the destination and prepare questions about a prospective offer.</p>
-        <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Open Relocate Works on Substack ↗</a>
+    <section class="rw-weekly-bottom-cta" aria-labelledby="weekly-bottom-title">
+      <div class="container rw-weekly-bottom-inner">
+        <div>
+          <span class="rw-kicker">THE WEEKLY RELOCATION LETTER</span>
+          <h2 id="weekly-bottom-title">Get the research in your inbox.</h2>
+          <p>Explore this week's verified research and future editions on our Substack publication.</p>
+        </div>
+        <div class="rw-weekly-bottom-actions">
+          <a class="rw-btn rw-btn-primary" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe on Substack <span aria-hidden="true">↗</span></a>
+          <a class="rw-weekly-text-link" href="/guides">Browse free relocation guides <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
   </main>
