@@ -6,11 +6,11 @@
   <circle cx="1015" cy="315" r="150" stroke="#60a5fa" stroke-opacity=".20"/>
   <rect x="75" y="74" width="52" height="52" rx="15" fill="#60a5fa"/>
   <text x="101" y="108" text-anchor="middle" fill="#0b1220" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="21" letter-spacing="-2">RW</text>
-  <text x="145" y="108" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="31" letter-spacing="-1.6">Relocate Works.</text>
-  <text x="78" y="212" fill="#60a5fa" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="17" letter-spacing="4">INDEPENDENT RELOCATION RESEARCH</text>
+  <text x="145" y="108" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="29" letter-spacing="-1">Relocate Works &amp; Remote AI Works</text>
+  <text x="78" y="212" fill="#60a5fa" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="17" letter-spacing="4">RELOCATION &amp; REMOTE AI OPPORTUNITIES</text>
   <text x="73" y="310" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="72" letter-spacing="-3">Your next chapter.</text>
   <text x="73" y="394" fill="#60a5fa" font-family="Georgia,serif" font-style="italic" font-size="72" letter-spacing="-3">A clearer picture.</text>
-  <text x="78" y="459" fill="#cbd5e1" font-family="Arial,Helvetica,sans-serif" font-size="25">Explore countries, visas, work and everyday life abroad.</text>
+  <text x="78" y="459" fill="#cbd5e1" font-family="Arial,Helvetica,sans-serif" font-size="25">Explore relocation research and remote AI career paths.</text>
   <rect x="77" y="506" width="630" height="1" fill="#cbd5e1" fill-opacity=".28"/>
   <text x="78" y="545" fill="#bfdbfe" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700">relocateworks.com</text>
   <rect x="882" y="218" width="250" height="191" rx="20" fill="#f8fafc"/>
@@ -19,5 +19,5 @@
   <path d="M908 328H1108" stroke="#cbd5e1"/>
   <text x="906" y="352" fill="#102a43" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700">02  Visa routes</text>
   <path d="M908 372H1108" stroke="#cbd5e1"/>
-  <text x="906" y="396" fill="#102a43" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700">03  Living costs</text>
+  <text x="906" y="396" fill="#102a43" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700">03  Remote AI</text>
 </svg>

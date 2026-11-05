@@ -53,3 +53,7 @@ Unresolved/manual:
 - Desktop/mobile browser execution could not run because Chromium is not installed and browser downloads were unavailable. Responsive CSS and semantic/accessibility hooks are implemented, but visual layout, menu/search interaction and keyboard behavior still require a real browser check.
 - Verify permission for commercial referral promotion, exact referral conditions, attribution and brand use before public launch or paid acquisition.
 - No production deployment or merge is included. Any Cloudflare branch-preview behavior is controlled by the repository’s existing external integration.
+
+## Expanded site identity
+
+The site now presents “Relocate Works & Remote AI Works” in the shared masthead/footer, global configuration, homepage SEO, Organization/WebSite JSON-LD, application manifest, RSS and social preview. BaseLayout normalizes page-specific metadata to the expanded brand without replacing guide topics. The homepage introduces both relocation research and remote AI discovery, with a direct AI section CTA. Domain, canonical paths, newsletter destinations and production settings are preserved. Shared branding uses two lines to limit masthead width; real-browser visual QA remains outstanding. Build, site/link checks, all-page brand checks, XML parsing (RSS/social SVG), manifest parsing and diff whitespace checks passed locally.

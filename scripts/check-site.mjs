@@ -277,3 +277,17 @@ for (const path of ['jobs/index.html','jobs/free-preview/index.html','index.html
   if (!pages.get(join(root,path))?.includes('/remote-ai-jobs')) throw new Error('AI navigation missing from ' + path);
 }
 console.log(`AI discovery checks passed for ${aiPaths.length} routes and ${expectedCodes.length} configured referral links.`);
+
+// Shared brand normalization must cover HTML metadata and JSON-LD on every route.
+const brandName = 'Relocate Works & Remote AI Works';
+for (const [file, html] of pages) {
+  const title = decodeHtml(html.match(/<title>(.*?)<\/title>/)?.[1] || '');
+  if (/Relocate Works/.test(title) && !title.includes(brandName)) throw new Error('Old brand in title: ' + file);
+  for (const tag of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    const graph = JSON.parse(tag[1]);
+    if (!graph.some(item => item['@type'] === 'Organization' && item.name === brandName)) throw new Error('Organization brand missing: ' + file);
+  }
+  if (!html.includes('Remote AI Works</span>')) throw new Error('Expanded visible brand missing: ' + file);
+}
+if (!decodeHtml(home).includes('RELOCATION & REMOTE AI OPPORTUNITIES')) throw new Error('Homepage does not communicate both career paths');
+console.log('Expanded site brand checks passed across all built pages.');

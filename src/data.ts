@@ -1,8 +1,8 @@
 export const SITE = {
-  "name": "Relocate Works",
+  "name": "Relocate Works & Remote AI Works",
   "url": "https://relocateworks.com",
-  "title": "Relocate Works — Country Guides, Visas and Relocation Research",
-  "description": "Independent destination guides, visa research, salary and tax context, living costs, and practical planning for moving abroad.",
+  "title": "Relocate Works & Remote AI Works | Global Careers",
+  "description": "Explore relocation guides, visas, salaries and living costs alongside remote AI training, evaluation and specialist career opportunities. Apply through official platforms.",
   "substackUrl": "https://relocateworks.substack.com",
   "email": "hello@relocateworks.com",
   "linkedinUrl": "https://linkedin.com/company/relocate-works/",

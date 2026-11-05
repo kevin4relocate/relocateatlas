@@ -1,6 +1,6 @@
-# Relocate Works
+# Relocate Works & Remote AI Works
 
-Relocate Works is a relocation research website and Substack publication for international candidates researching visa sponsor jobs, relocation-friendly employers, country guides, industries, visas, taxes, salaries, cost of living, relocation companies, and job-search strategy.
+Relocate Works & Remote AI Works is a relocation research website and Substack publication for international candidates researching visa sponsor jobs, relocation-friendly employers, country guides, industries, visas, taxes, salaries, cost of living, relocation companies, and job-search strategy.
 
 Important pages:
 - Home: https://relocateworks.com/
@@ -15,4 +15,7 @@ Important pages:
 - Jobs: https://relocateworks.com/jobs
 - Blog: https://relocateworks.com/blog
 
-Relocate Works is not an immigration law firm, recruiter, employer, or government service. Content is educational and for research only. Always verify visa, job, salary, tax, healthcare, and relocation information with official sources and qualified professionals.
+Relocate Works & Remote AI Works is not an immigration law firm, recruiter, employer, or government service. Content is educational and for research only. Always verify visa, job, salary, tax, healthcare, and relocation information with official sources and qualified professionals.
+
+## Remote AI career discovery
+- https://relocateworks.com/remote-ai-jobs: Independent category guides and disclosed referral links; verify roles and eligibility on official platforms.

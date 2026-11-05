@@ -735,3 +735,8 @@ body.mobile-menu-open { position:static!important; width:auto; overflow:hidden!i
   .rw-weekly-guide-links {grid-template-columns:1fr;}
   .rw-header.rw-header-weekly .rw-brand-wordmark {display:none;}
 }
+
+/* Expanded global-career identity: two lines preserve the compact masthead. */
+.rw-brand-expanded {display:flex;flex-direction:column;gap:3px;line-height:1.1;letter-spacing:-.04em;}
+.rw-brand-secondary {font-size:.72rem;letter-spacing:0;font-weight:750;}
+@media(min-width:1121px){.rw-header-inner{gap:20px}.rw-desktop-nav{gap:18px}}

@@ -16,21 +16,22 @@ const topics = [
   { icon: '◉', eyebrow: 'Moving abroad', title: 'Relocation services', description: 'Navigate the logistics of finding housing and settling into a new place.', href: '/relocation-companies' }
 ];
 ---
-<BaseLayout title="Relocate Works | Plan Your Move Abroad with Confidence" description={`Independent destination guides covering visas, work, salaries, taxes and everyday life across ${countries.length} countries. Dated international job roundups are published separately on Substack.`} canonicalPath="/">
+<BaseLayout title={SITE.title} description={SITE.description} canonicalPath="/">
   <Header />
   <main class="rw-main">
     <section class="rw-hero">
       <div class="container rw-hero-layout">
         <div class="rw-hero-copy">
-          <span class="rw-kicker rw-kicker-light"><span class="rw-kicker-dot"></span> INDEPENDENT RELOCATION RESEARCH</span>
+          <span class="rw-kicker rw-kicker-light"><span class="rw-kicker-dot"></span> RELOCATION & REMOTE AI OPPORTUNITIES</span>
           <h1>Your next chapter starts with <em>a clearer picture.</em></h1>
-          <p class="rw-hero-lead">Explore destinations, understand visa routes and compare the practical details of moving abroad. One calm place to start planning a life somewhere new.</p>
+          <p class="rw-hero-lead">Explore destinations, understand visa routes and compare life abroad. Discover remote AI training and specialist opportunities alongside your relocation research.</p>
           <form class="rw-hero-search" method="GET" action="/countries" role="search">
             <label class="sr-only" for="hero-country-search">Search countries, cities or career sectors</label>
             <span class="rw-search-icon" aria-hidden="true">⌕</span>
             <input id="hero-country-search" name="q" type="search" placeholder="Search a country, city or career sector" autocomplete="off" />
             <button type="submit">Explore <span aria-hidden="true">→</span></button>
           </form>
+          <p><a class="rw-btn rw-btn-primary" href="/remote-ai-jobs">Explore remote AI opportunities <span aria-hidden="true">↗</span></a></p>
           <div class="rw-hero-quicklinks">
             <span>Popular destinations</span>
             {countries.slice(0, 4).map((country) => <a href={'/countries/' + country.slug}>{country.flag} {country.name}</a>)}

@@ -22,11 +22,11 @@ const exploreLinks = [
 <footer class="rw-footer">
   <div class="container rw-footer-top">
     <div class="rw-footer-brand">
-      <a class="rw-brand rw-brand-inverse" href="/" aria-label="Relocate Works home">
+      <a class="rw-brand rw-brand-inverse" href="/" aria-label={`${SITE.name} home`}>
         <img src="/brand-mark-blue.svg" width="42" height="42" alt="" aria-hidden="true" />
-        <span class="rw-brand-wordmark">Relocate <strong>Works.</strong></span>
+        <span class="rw-brand-wordmark rw-brand-expanded"><span>Relocate <strong>Works</strong></span><span class="rw-brand-secondary">&amp; Remote AI Works</span></span>
       </a>
-      <p>Useful country research for people planning life and work abroad. Explore the guide library here; dated job roundups are published separately on Substack.</p>
+      <p>Independent research for global careers: relocation guides and remote AI opportunity discovery. Dated relocation job roundups are published separately on Substack.</p>
       <div class="rw-footer-socials">
         <a href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Substack ↗</a>
         <a href={SITE.linkedinUrl} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
@@ -48,7 +48,7 @@ const exploreLinks = [
     </div>
   </div>
   <div class="container rw-footer-bottom">
-    <span>© {year} Relocate Works.</span>
+    <span>© {year} {SITE.name}.</span>
     <span>Independent informational research, not legal immigration advice.</span>
     <div><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a></div>
   </div>

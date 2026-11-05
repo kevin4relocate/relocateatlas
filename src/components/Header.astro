@@ -13,9 +13,9 @@ const navItems = [
 ---
 <header class:list={['site-header', 'rw-header', { 'rw-header-weekly': isWeeklyLanding }]}>
   <div class="container rw-header-inner">
-    <a class="rw-brand" href="/" aria-label="Relocate Works home">
+    <a class="rw-brand" href="/" aria-label={`${SITE.name} home`}>
       <img src="/brand-mark-blue.svg" width="42" height="42" alt="" aria-hidden="true" />
-      <span class="rw-brand-wordmark">Relocate <strong>Works.</strong></span>
+      <span class="rw-brand-wordmark rw-brand-expanded"><span>Relocate <strong>Works</strong></span><span class="rw-brand-secondary">&amp; Remote AI Works</span></span>
     </a>
     <nav class="rw-desktop-nav" aria-label="Main navigation">
       <details class="rw-nav-details" data-rw-nav-details>
