@@ -5,6 +5,7 @@ const more = countries.filter((country) => country.priority !== 'Launch');
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isWeeklyLanding = path === '/jobs/free-preview';
 const navItems = [
+  { href: '/remote-ai-jobs', label: 'AI Opportunities', active: path.startsWith('/remote-ai-jobs') },
   { href: '/guides', label: 'Relocation guides', active: path === '/guides' || ['/visas','/taxes','/salaries','/cost-of-living','/relocation-companies','/jobs'].some((p) => path === p || path.startsWith(p + '/')) && path !== '/jobs/free-preview' },
   { href: '/industries', label: 'Industries', active: path.startsWith('/industries') },
   { href: '/jobs/free-preview', label: 'Weekly jobs', active: path === '/jobs/free-preview' || path === '/visa-sponsor-jobs' }
@@ -54,6 +55,7 @@ const navItems = [
     <nav aria-label="Mobile navigation">
       <a class="rw-mobile-primary" href="/countries">All countries <span aria-hidden="true">↗</span></a>
       <a class="rw-mobile-primary" href="/guides">Relocation guides <span aria-hidden="true">↗</span></a>
+      <a class="rw-mobile-primary" href="/remote-ai-jobs">AI Opportunities <span aria-hidden="true">↗</span></a>
       <a class="rw-mobile-primary" href="/industries">Industries <span aria-hidden="true">↗</span></a>
       <a class="rw-mobile-primary" href="/jobs/free-preview">Weekly jobs <span aria-hidden="true">↗</span></a>
     </nav>
