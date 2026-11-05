@@ -1,0 +1,19 @@
+---
+import { referralPartners, referralUrl, type AIOpportunity } from '../data/aiOpportunities';
+interface Props { opportunity: AIOpportunity }
+const { opportunity: item } = Astro.props;
+const partner = referralPartners[item.partnerId];
+---
+<article class="ai-card">
+  <span class="ai-label">{partner.name} · {item.employmentClassification ?? 'Check contract type'}</span>
+  <h3>{item.title}</h3><p>{item.description}</p>
+  <dl><dt>Compensation</dt><dd>{item.compensation ? `${item.compensation.currency} ${item.compensation.min}–${item.compensation.max} / ${item.compensation.unit}` : 'Not disclosed'}</dd>
+  <dt>Eligibility</dt><dd>{item.eligibleCountries?.join(', ') || 'Check official eligibility requirements.'}</dd>
+  <dt>Experience</dt><dd>{item.experience ?? 'Check official requirements.'}</dd>
+  <dt>Remote requirements</dt><dd>{item.remoteRequirements ?? 'Check official requirements.'}</dd>
+  <dt>Last verified</dt><dd><time datetime={item.lastVerified}>{item.lastVerified}</time></dd></dl>
+  <ul>{item.qualifications.map(text => <li>{text}</li>)}</ul>
+  <a href={item.originalUrl} target="_blank" rel="noopener noreferrer">View official listing ↗</a>
+  <a class="rw-btn rw-btn-primary" href={referralUrl(item.referralKey, item.partnerId)} target="_blank" rel="sponsored noopener noreferrer">Explore on {partner.name} ↗</a>
+  <small>Referral link; confirm the exact role on the destination.</small>
+</article>

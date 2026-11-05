@@ -1,0 +1,7 @@
+---
+import AIOpportunitiesPage from '../../components/AIOpportunitiesPage.astro';
+import { aiCategories } from '../../data/aiOpportunities';
+export function getStaticPaths() { return aiCategories.map(category => ({ params: { category: category.slug }, props: { category } })); }
+const { category } = Astro.props;
+---
+<AIOpportunitiesPage category={category} />

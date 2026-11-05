@@ -16,8 +16,8 @@ type Props = {
 };
 
 const {
-  title = SITE.title,
-  description = SITE.description,
+  title: suppliedTitle = SITE.title,
+  description: suppliedDescription = SITE.description,
   canonicalPath = '/',
   image = '/og-image.svg',
   noindex = false,
@@ -26,6 +26,11 @@ const {
   publishedDate,
   updatedDate
 } = Astro.props;
+
+// Keep existing page-specific topics while presenting one site identity everywhere.
+const withSiteBrand = (text: string) => text.replace(/Relocate Works(?! & Remote AI Works)/g, SITE.name);
+const title = withSiteBrand(suppliedTitle);
+const description = withSiteBrand(suppliedDescription);
 
 const canonicalUrl = new URL(canonicalPath, SITE.url).toString();
 const imageUrl = new URL(image, SITE.url).toString();
@@ -107,7 +112,7 @@ const jsonLdGraph = [
     <meta property="og:type" content={contentType} />
     {contentType === 'article' && publishedDate && <meta property="article:published_time" content={publishedDate} />}
     {contentType === 'article' && updatedDate && <meta property="article:modified_time" content={updatedDate} />}
-    <link rel="alternate" type="application/rss+xml" title="Relocate Works editorial RSS" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE.name} editorial RSS`} href="/rss.xml" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:title" content={title} />

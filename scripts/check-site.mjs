@@ -250,3 +250,44 @@ console.log(`Checked ${pages.size} built HTML pages and ${checked} internal link
 for (const warning of warnings) console.warn('WARNING: ' + warning);
 for (const error of errors) console.error('ERROR: ' + error);
 if (errors.length) process.exitCode = 1;
+
+// AI discovery pages must stay distinct from verified vacancies and preserve referral attribution.
+const aiSource = readFileSync(resolve('src/data/aiOpportunities.ts'), 'utf8');
+const aiSlugs = [...aiSource.matchAll(/category\('([^']+)'/g)].map(match => match[1]);
+const aiPaths = ['remote-ai-jobs', ...aiSlugs.map(slug => 'remote-ai-jobs/' + slug)];
+const aiTitles = new Set();
+const sitemap = readFileSync(resolve(root, 'sitemap-0.xml'), 'utf8');
+for (const path of aiPaths) {
+  const html = pages.get(join(root, path, 'index.html'));
+  if (!html) throw new Error('AI page missing: ' + path);
+  if ((html.match(/<h1\b/g) || []).length !== 1) throw new Error('AI page must have one H1: ' + path);
+  const title = html.match(/<title>(.*?)<\/title>/)?.[1];
+  if (!title || aiTitles.has(title)) throw new Error('Duplicate or missing AI title: ' + path);
+  aiTitles.add(title);
+  if (!html.includes('https://relocateworks.com/' + path) || !sitemap.includes('https://relocateworks.com/' + path)) throw new Error('AI canonical or sitemap missing: ' + path);
+  if (!html.includes('Independent information. Transparent referrals.') || !html.includes('BreadcrumbList')) throw new Error('AI disclosure or breadcrumbs missing: ' + path);
+  if (html.includes('"@type":"JobPosting"')) throw new Error('Discovery guides must not use JobPosting: ' + path);
+  for (const tag of html.matchAll(/<a\b[^>]*href="https:\/\/t\.mercor\.com\/[^>]+>/g)) {
+    if (!/rel="[^"]*sponsored/.test(tag[0]) || !tag[0].includes('noopener') || !tag[0].includes('noreferrer')) throw new Error('Referral link attributes missing: ' + path);
+  }
+}
+const expectedCodes = ['4sRpZ','LxJlJ','TFrS8','g7ct2','Qt0mR','JVgnY','E3LlQ','wuOOr','7tJpq','NGl8o','62IxC','MIb1m','rZIzD','UqJP0'];
+for (const code of expectedCodes) if (!aiSource.includes('https://t.mercor.com/' + code)) throw new Error('Owner referral code missing: ' + code);
+for (const path of ['jobs/index.html','jobs/free-preview/index.html','index.html']) {
+  if (!pages.get(join(root,path))?.includes('/remote-ai-jobs')) throw new Error('AI navigation missing from ' + path);
+}
+console.log(`AI discovery checks passed for ${aiPaths.length} routes and ${expectedCodes.length} configured referral links.`);
+
+// Shared brand normalization must cover HTML metadata and JSON-LD on every route.
+const brandName = 'Relocate Works & Remote AI Works';
+for (const [file, html] of pages) {
+  const title = decodeHtml(html.match(/<title>(.*?)<\/title>/)?.[1] || '');
+  if (/Relocate Works/.test(title) && !title.includes(brandName)) throw new Error('Old brand in title: ' + file);
+  for (const tag of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    const graph = JSON.parse(tag[1]);
+    if (!graph.some(item => item['@type'] === 'Organization' && item.name === brandName)) throw new Error('Organization brand missing: ' + file);
+  }
+  if (!html.includes('Remote AI Works</span>')) throw new Error('Expanded visible brand missing: ' + file);
+}
+if (!decodeHtml(home).includes('RELOCATION & REMOTE AI OPPORTUNITIES')) throw new Error('Homepage does not communicate both career paths');
+console.log('Expanded site brand checks passed across all built pages.');
