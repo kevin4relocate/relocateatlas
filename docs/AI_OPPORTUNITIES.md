@@ -57,3 +57,11 @@ Unresolved/manual:
 ## Expanded site identity
 
 The site now presents “Relocate Works & Remote AI Works” in the shared masthead/footer, global configuration, homepage SEO, Organization/WebSite JSON-LD, application manifest, RSS and social preview. BaseLayout normalizes page-specific metadata to the expanded brand without replacing guide topics. The homepage introduces both relocation research and remote AI discovery, with a direct AI section CTA. Domain, canonical paths, newsletter destinations and production settings are preserved. Shared branding uses two lines to limit masthead width; real-browser visual QA remains outstanding. Build, site/link checks, all-page brand checks, XML parsing (RSS/social SVG), manifest parsing and diff whitespace checks passed locally.
+
+## Youth Well-being study article — November 6, 2026
+
+Added a research participation article at `/remote-ai-jobs/opportunities/stanford-youth-study-us-parents-kids`, linked from the main AI landing and Research category. Data lives in `src/data/aiStudies.ts`; the owner-provided `OhmJc` referral destination is centralized in the existing partner configuration. This article is intentionally separate from independently verified open job listings and does not use JobPosting schema.
+
+The source is the owner's supplied listing text. The article clearly states $110 total on completion, US parent/guardian plus one child aged 9–13, own smartphone with active SIM, approximately eight weeks, surveys, texts and parental-control app. It does not repeat the hiring count, infer a January year, promise admission, or represent referral bonuses as participant pay. The study-specific completion payment and generic weekly contractor payment language conflict; both the payment conditions and cohort date require official confirmation. Affiliations and availability remain independently unconfirmed because the referral redirect was inaccessible. The page directs families to official consent/assent and privacy information, without collecting child or candidate data.
+
+Validation: Astro production build, existing checks and new study content/discovery/sitemap assertions. Browser visual QA and shortlink redirect verification remain outstanding as documented above. Source/social drafts are not submitted to any social account.
