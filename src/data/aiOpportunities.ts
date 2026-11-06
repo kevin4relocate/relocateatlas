@@ -6,6 +6,7 @@ export const referralPartners = {
     programId: 'mercor-owner-referrals',
     links: {
       general: 'https://t.mercor.com/4sRpZ',
+      stanfordYouthStudy: 'https://t.mercor.com/OhmJc',
       generalApplication: 'https://t.mercor.com/LxJlJ',
       medicine: 'https://t.mercor.com/TFrS8',
       law: 'https://t.mercor.com/g7ct2',

@@ -291,3 +291,17 @@ for (const [file, html] of pages) {
 }
 if (!decodeHtml(home).includes('RELOCATION & REMOTE AI OPPORTUNITIES')) throw new Error('Homepage does not communicate both career paths');
 console.log('Expanded site brand checks passed across all built pages.');
+
+// Research participation has a flat completion fee and must never become an hourly job claim.
+const studyRoute = 'remote-ai-jobs/opportunities/stanford-youth-study-us-parents-kids';
+const studyHtml = pages.get(join(root, studyRoute, 'index.html'));
+if (!studyHtml) throw new Error('Youth study article missing');
+for (const required of ['USD $110 total', 'paid once on completion', 'active SIM', 'January', 'does not specify the year', 'https://t.mercor.com/OhmJc', 'not been independently confirmed']) {
+  if (!studyHtml.includes(required)) throw new Error('Study information missing: ' + required);
+}
+if (studyHtml.includes('"@type":"JobPosting"') || /\$110\s*\/\s*hour/.test(studyHtml)) throw new Error('Research study misrepresented as hourly employment');
+for (const path of ['remote-ai-jobs', 'remote-ai-jobs/research']) {
+  if (!pages.get(join(root, path, 'index.html'))?.includes('/' + studyRoute)) throw new Error('Research study discovery link missing: ' + path);
+}
+if (!sitemap.includes(studyRoute)) throw new Error('Research study absent from sitemap');
+console.log('Youth study accuracy, discovery and sitemap checks passed.');

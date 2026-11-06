@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import ReferralDisclosure from '../../../components/ReferralDisclosure.astro';
+import { stanfordYouthStudy as study } from '../../../data/aiStudies';
+import { referralUrl } from '../../../data/aiOpportunities';
+import { SITE } from '../../../data';
+import '../../../ai-opportunities.css';
+const breadcrumbs = [{ name: 'Home', item: SITE.url }, { name: 'AI Opportunities', item: SITE.url + '/remote-ai-jobs' }, { name: 'Stanford Youth Study', item: SITE.url + study.path }];
+---
+<BaseLayout title="Stanford Youth Study: US Parents & Kids 9–13 | Relocate Works" description={study.description} canonicalPath={study.path} contentType="article" publishedDate={study.publishedDate} structuredData={{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, ...item })) }}>
+  <Header />
+  <main class="ai-main" id="main-content">
+    <section class="ai-hero"><div class="container">
+      <nav class="ai-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/remote-ai-jobs">AI Opportunities</a><span aria-hidden="true">/</span><span aria-current="page">Stanford Youth Study</span></nav>
+      <span class="ai-label">RESEARCH PARTICIPATION · UNITED STATES</span>
+      <h1>Stanford Youth Study: US parents and kids aged 9–13</h1>
+      <p class="ai-lead">Explore a remote research study about smartphones, digital tools and family well-being. The supplied Mercor description names Stanford University as the study lead, in collaboration with Bocconi University.</p>
+      <div class="ai-actions"><a class="rw-btn rw-btn-primary" href={referralUrl(study.referralKey)} target="_blank" rel="sponsored noopener noreferrer">View study on Mercor ↗</a><a href="#eligibility">Check eligibility ↓</a></div>
+      <p class="ai-small">Referral link · Research participation, not an ongoing hourly job · Selection is not guaranteed.</p>
+    </div></section>
+    <div class="container ai-content">
+      <ReferralDisclosure />
+      <section class="ai-section" aria-labelledby="summary"><h2 id="summary">Study at a glance</h2><div class="ai-category-grid">
+        <div class="ai-card"><h3>Compensation</h3><p><strong>USD $110 total</strong>, paid once on completion according to the study-specific description. This is not $110 per hour. Confirm payment conditions before enrolling.</p></div>
+        <div class="ai-card"><h3>Time and format</h3><p>Approximately eight weeks, remotely in the United States. Short online surveys and occasional text-message check-ins; a parental-control app stays installed during the study.</p></div>
+        <div class="ai-card"><h3>Participants</h3><p>One US-based parent or guardian and one child aged 9–13. One participating child per household.</p></div>
+      </div></section>
+      <section id="eligibility" class="ai-section"><h2>Who can take part?</h2><ul>
+        <li>You are a parent or guardian based in the United States.</li>
+        <li>You have a child aged 9–13, and you and your child are willing to participate together.</li>
+        <li>Your child has their own smartphone with an active SIM card and a working phone number.</li>
+        <li>You can install the study’s parental-control app on that phone and keep it installed for the study period.</li>
+        <li>You select only one child from your household.</li>
+      </ul><p>A tablet, Wi-Fi-only device or phone without an active SIM does not meet the device requirement described in the supplied listing.</p></section>
+      <section class="ai-section"><h2>What will you and your child do?</h2><p>Parents complete a few short online surveys and occasional text-message check-ins. The child completes two short online surveys and a few text-message check-ins. The parental-control app remains installed on the child’s phone during the study.</p><p>The description characterizes active participation as light, but does not specify a total number of hours. Review the actual participant materials for the full schedule, app requirements and responsibilities.</p></section>
+      <section class="ai-section"><h2>Confirm the cohort date and payment terms</h2><p><strong>Start date:</strong> the supplied description says January but does not specify the year. We have not inferred a year or an application deadline. Confirm the upcoming cohort, current application status and selection process directly on Mercor.</p><p><strong>Payment:</strong> the study-specific description states a flat $110 payment on completion. The same supplied text includes general contractor language about weekly payments through Stripe or Wise. These statements do not establish a consistent payment schedule for this study; confirm the applicable study agreement and payment conditions before participating.</p><p>The supplied listing also includes general independent-contractor terms, possible project changes, and a statement that H1-B or STEM OPT candidates cannot be supported. Ask Mercor which terms apply to research participants. This study does not imply immigration or visa benefits.</p></section>
+      <section class="ai-section"><h2>Review the participant information before enrolling</h2><p>Because this study involves a child’s phone and an installed app, review the official consent and child assent materials, app permissions, information collected, who can access it, retention, withdrawal process and compensation if participation ends early. The supplied text does not answer these questions.</p><p>Apply through Mercor and use the official study contact for questions. Do not send children’s names, phone numbers, screenshots, survey responses or application documents to Relocate Works or post them in comments. This website does not collect research registrations or study data.</p></section>
+      <section class="ai-section"><h2>Why consider participating?</h2><p>The stated aim is to contribute to research about how smartphones and digital tools affect children and families, with remote participation that may fit around household schedules. Participation is voluntary; evaluate the study materials and your family’s preferences before deciding.</p></section>
+      <section class="ai-section ai-empty"><h2>Read the study details on Mercor</h2><p>Confirm the current cohort, eligibility, consent requirements and payment conditions before submitting an application.</p><a class="rw-btn rw-btn-primary" href={referralUrl(study.referralKey)} target="_blank" rel="sponsored noopener noreferrer">View study on Mercor ↗</a><p class="ai-small">Referral link. Relocate Works is independent of Mercor, Stanford University and Bocconi University. We do not represent the researchers or guarantee acceptance.</p></section>
+      <section class="ai-section"><h2>Source and publication note</h2><p>Published <time datetime={study.publishedDate}>November 6, 2026</time>. Source: {study.informationSource}. The referral shortlink could not be independently resolved in our checking environment; current availability and university affiliations have not been independently confirmed. No participant hiring counts or referral reward amounts are presented as study compensation.</p><p><a href="/remote-ai-jobs/research">Explore research and sciences resources →</a></p></section>
+    </div>
+  </main><Footer />
+</BaseLayout>
