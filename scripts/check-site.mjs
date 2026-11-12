@@ -305,3 +305,11 @@ for (const path of ['remote-ai-jobs', 'remote-ai-jobs/research']) {
 }
 if (!sitemap.includes(studyRoute)) throw new Error('Research study absent from sitemap');
 console.log('Youth study accuracy, discovery and sitemap checks passed.');
+
+const referralAdmin = pages.get(join(root, 'admin/referrals/index.html'));
+if (!referralAdmin?.includes('noindex,nofollow')) throw new Error('Referral admin must be marked noindex');
+if (sitemap.includes('/admin/referrals')) throw new Error('Referral admin must be excluded from sitemap');
+const functionRoutes = JSON.parse(readFileSync(join(root, '_routes.json'), 'utf8'));
+if (!functionRoutes.include.includes('/api/referrals') || !functionRoutes.include.includes('/go/*')) throw new Error('Referral Functions routes missing');
+if (functionRoutes.include.includes('/*')) throw new Error('Static pages must not invoke referral Functions');
+console.log('Referral admin indexing and Function route checks passed.');

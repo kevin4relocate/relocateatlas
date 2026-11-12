@@ -4,5 +4,7 @@ Allow: /
 
 Disallow: /api/
 Disallow: /_astro/
+Disallow: /admin/
+Disallow: /go/
 
 Sitemap: https://relocateworks.com/sitemap-index.xml

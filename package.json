@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "check:site": "node scripts/check-site.mjs",
-    "check:external": "node scripts/check-external-links.mjs"
+    "check:external": "node scripts/check-external-links.mjs",
+    "test:referrals": "node --test scripts/referrals.test.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "latest",
