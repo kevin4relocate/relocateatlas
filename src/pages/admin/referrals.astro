@@ -1,0 +1,559 @@
+---
+import { SITE } from '../../data';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="description" content="Private referral link management for Relocate Works." />
+    <link rel="canonical" href="https://relocateworks.com/admin/referrals" />
+    <link rel="icon" href="/favicon-blue.svg" type="image/svg+xml" />
+    <title>Referral links | {SITE.name} Admin</title>
+  </head>
+  <body>
+    <header class="topbar"><a href="/"><span>Relocate Works &amp;</span><span>Remote AI Works</span></a><span>OWNER WORKSPACE</span><button id="lock" hidden>Lock workspace</button></header>
+    <main>
+      <section class="intro"><p class="eyebrow">REFERRAL LINKS</p><h1>One job. A link you can track.</h1><p>Create short links on your own domain. See which channels bring people to each opportunity.</p></section>
+      <p id="message" role="status" aria-live="polite"></p>
+      <section id="login" class="card login">
+        <p class="eyebrow">PRIVATE MANAGEMENT</p><h2>Unlock your workspace</h2>
+        <p>Enter the admin key configured in Cloudflare. The key is held in this tab’s memory and cleared when you lock or reload.</p>
+        <form id="login-form"><label for="admin-key">Admin key</label><input id="admin-key" type="password" required minlength="32" maxlength="256" autocomplete="off" spellcheck="false" /><button type="submit" class="primary">Unlock workspace</button></form>
+        <p class="muted">First-time setup requires a D1 database and the REFERRAL_ADMIN_TOKEN secret. See the repository’s referral setup guide.</p>
+      </section>
+      <div id="workspace" hidden>
+        <section class="stats" aria-label="Link totals"><div><span>JOBS</span><strong id="job-count">0</strong></div><div><span>RECORDED CLICKS</span><strong id="click-count">0</strong></div><div><span>TODAY · UTC</span><strong id="today-count">0</strong></div></section>
+        <section class="editor-grid">
+          <div class="card"><p class="eyebrow">CREATE OR EDIT</p><h2 id="form-title">Add a job link</h2>
+            <form id="link-form">
+              <label for="job-title">Job title</label><input id="job-title" required maxlength="160" placeholder="Senior Software Engineer — Agentic Coding" />
+              <label for="slug">Short link name</label><div class="slug-input"><span>/go/</span><input id="slug" required minlength="3" maxlength="80" pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="alignerr-agentic-coding" /></div>
+              <label for="destination">Original referral URL</label><textarea id="destination" required maxlength="4096" rows="4" placeholder="Paste the complete Alignerr or Mercor referral URL"></textarea>
+              <p class="muted">All referral parameters are kept in the saved destination.</p>
+              <label class="check"><input id="active" type="checkbox" checked /> Link is active</label>
+              <div class="actions"><button id="save-link" class="primary" type="submit">Create link</button><button id="cancel-edit" type="button" hidden>Cancel edit</button></div>
+            </form>
+          </div>
+          <aside class="card preview"><p class="eyebrow">YOUR SHARE LINKS</p><h2>Copy the link for each channel</h2>
+            <div id="share-links"><p class="muted">Create a link or select a saved job to see its share links.</p></div>
+            <div class="note"><strong>What the numbers mean</strong><p>Counts are redirect requests, with common bots and link previews filtered where identifiable. Repeated visits can count again. They do not measure unique people, applications or accepted referrals.</p><p>Channel labels come from the link’s <code>src</code> value. Use the LinkedIn link in LinkedIn_Post and the Facebook link in Facebook_Post.</p></div>
+          </aside>
+        </section>
+        <section class="card library"><div class="section-head"><div><p class="eyebrow">SAVED JOBS</p><h2>Your link library</h2></div><div class="actions"><button id="refresh">Refresh</button><button id="export">Export CSV</button></div></div>
+          <label for="search" class="sr-only">Search saved jobs</label><input id="search" type="search" placeholder="Search job title or short link name" />
+          <div class="table-scroll"><table><thead><tr><th>Job</th><th>Status</th><th>Total</th><th>LinkedIn</th><th>Facebook</th><th>Website</th><th>Other</th><th>Actions</th></tr></thead><tbody id="jobs"></tbody></table></div>
+          <p id="empty" class="muted">No links yet. Add your first job above.</p>
+        </section>
+      </div>
+    </main>
+    <script>
+      type LinkRecord = { slug: string; title: string; destination: string; active: number; clicks: number; linkedin: number; facebook: number; website: number; other: number; today: number };
+      const element = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+      const input = (id: string) => element<HTMLInputElement>(id);
+      let adminKey = '';
+      let links: LinkRecord[] = [];
+      let editing = false;
+      let selectedSlug = '';
+      const form = element<HTMLFormElement>('link-form');
+
+      function message(text: string, error = false) {
+        const node = element('message');
+        node.textContent = text;
+        node.classList.toggle('error', error);
+      }
+      async function api(method = 'GET', body?: object) {
+        const result = await fetch('/api/referrals', {
+          method,
+          cache: 'no-store',
+          headers: { Authorization: `Bearer ${adminKey}`, 'Content-Type': 'application/json' },
+          body: body ? JSON.stringify(body) : undefined,
+        });
+        const data = await result.json();
+        if (!result.ok) {
+          if (result.status === 401) lockWorkspace();
+          throw new Error(data.error || 'Request failed. Refresh before retrying.');
+        }
+        return data;
+      }
+      function lockWorkspace() {
+        adminKey = '';
+        links = [];
+        selectedSlug = '';
+        element('workspace').hidden = true;
+        element('lock').hidden = true;
+        element('login').hidden = false;
+        element('jobs').replaceChildren();
+        element('share-links').replaceChildren();
+        input('admin-key').value = '';
+        resetForm();
+      }
+      function resetForm() {
+        editing = false;
+        form.reset();
+        delete input('slug').dataset.manual;
+        input('slug').readOnly = false;
+        element('form-title').textContent = 'Add a job link';
+        element('save-link').textContent = 'Create link';
+        element('cancel-edit').hidden = true;
+      }
+      async function copy(text: string) {
+        try { await navigator.clipboard.writeText(text); message('Link copied.'); }
+        catch { message('Clipboard unavailable. Select the link text and copy it manually.', true); }
+      }
+      function shareLinks(slug: string) {
+        selectedSlug = slug;
+        const container = element('share-links');
+        container.replaceChildren();
+        const record = links.find(link => link.slug === slug);
+        const title = document.createElement('p');
+        title.textContent = record?.title || slug;
+        container.append(title);
+        for (const [label, source] of [['General', ''], ['LinkedIn', 'linkedin'], ['Facebook', 'facebook'], ['Website', 'website']]) {
+          const url = new URL(`/go/${slug}`, window.location.origin);
+          if (source) url.searchParams.set('src', source);
+          const row = document.createElement('div');
+          row.className = 'share-row';
+          const name = document.createElement('label');
+          name.textContent = label;
+          const field = document.createElement('input');
+          field.value = url.href;
+          field.readOnly = true;
+          field.setAttribute('aria-label', `${label} share link`);
+          const button = document.createElement('button');
+          button.textContent = 'Copy';
+          button.setAttribute('aria-label', `Copy ${label} link`);
+          button.addEventListener('click', () => copy(url.href));
+          row.append(name, field, button);
+          container.append(row);
+        }
+      }
+      function edit(link: LinkRecord) {
+        editing = true;
+        input('job-title').value = link.title;
+        input('slug').value = link.slug;
+        input('slug').readOnly = true;
+        element<HTMLTextAreaElement>('destination').value = link.destination;
+        input('active').checked = Boolean(link.active);
+        element('form-title').textContent = 'Edit job link';
+        element('save-link').textContent = 'Save changes';
+        element('cancel-edit').hidden = false;
+        shareLinks(link.slug);
+        input('job-title').focus();
+      }
+      function render() {
+        const query = input('search').value.toLowerCase();
+        const filtered = links.filter(link => `${link.title} ${link.slug}`.toLowerCase().includes(query));
+        const tbody = element('jobs');
+        tbody.replaceChildren();
+        for (const link of filtered) {
+          const row = document.createElement('tr');
+          const titleCell = document.createElement('td');
+          const title = document.createElement('strong');
+          const slug = document.createElement('small');
+          title.textContent = link.title;
+          slug.textContent = `/go/${link.slug}`;
+          titleCell.append(title, slug);
+          row.append(titleCell);
+          for (const value of [link.active ? 'Active' : 'Paused', link.clicks, link.linkedin, link.facebook, link.website, link.other]) {
+            const cell = document.createElement('td');
+            cell.textContent = String(value);
+            row.append(cell);
+          }
+          const actions = document.createElement('td');
+          const editButton = document.createElement('button');
+          editButton.textContent = 'Edit';
+          editButton.addEventListener('click', () => edit(link));
+          const copyButton = document.createElement('button');
+          copyButton.textContent = 'Links';
+          copyButton.addEventListener('click', () => shareLinks(link.slug));
+          actions.append(editButton, copyButton);
+          row.append(actions);
+          tbody.append(row);
+        }
+        element('empty').hidden = filtered.length > 0;
+        element('empty').textContent = links.length ? 'No matching jobs.' : 'No links yet. Add your first job above.';
+        element('job-count').textContent = String(links.length);
+        element('click-count').textContent = String(links.reduce((sum, link) => sum + Number(link.clicks), 0));
+        element('today-count').textContent = String(links.reduce((sum, link) => sum + Number(link.today), 0));
+      }
+      async function refresh() {
+        const data = await api();
+        links = data.links;
+        render();
+        if (selectedSlug && links.some(link => link.slug === selectedSlug)) shareLinks(selectedSlug);
+      }
+      element<HTMLFormElement>('login-form').addEventListener('submit', async event => {
+        event.preventDefault();
+        adminKey = input('admin-key').value;
+        try {
+          await refresh();
+          input('admin-key').value = '';
+          element('login').hidden = true;
+          element('workspace').hidden = false;
+          element('lock').hidden = false;
+          message('Workspace unlocked.');
+        } catch (error) { adminKey = ''; message((error as Error).message, true); }
+      });
+      form.addEventListener('submit', async event => {
+        event.preventDefault();
+        const button = element<HTMLButtonElement>('save-link');
+        button.disabled = true;
+        const slug = input('slug').value;
+        try {
+          await api(editing ? 'PATCH' : 'POST', { slug, title: input('job-title').value.trim(), destination: element<HTMLTextAreaElement>('destination').value.trim(), active: input('active').checked });
+          resetForm();
+          await refresh();
+          shareLinks(slug);
+          message('Link saved. Copy a share link on the right.');
+        } catch (error) { message((error as Error).message, true); }
+        finally { button.disabled = false; }
+      });
+      input('job-title').addEventListener('input', () => {
+        if (!editing && !input('slug').dataset.manual) input('slug').value = input('job-title').value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80).replace(/-$/, '');
+      });
+      input('slug').addEventListener('input', () => { input('slug').dataset.manual = 'true'; });
+      element('cancel-edit').addEventListener('click', () => { resetForm(); delete input('slug').dataset.manual; });
+      element('lock').addEventListener('click', () => { lockWorkspace(); message('Workspace locked.'); });
+      element('search').addEventListener('input', render);
+      element('refresh').addEventListener('click', () => refresh().then(() => message('Statistics refreshed.')).catch(error => message(error.message, true)));
+      element('export').addEventListener('click', () => {
+        const cell = (value: unknown) => {
+          let text = String(value ?? '');
+          if (/^[=+@\-\t\r]/.test(text)) text = `'${text}`;
+          return `"${text.replaceAll('"', '""')}"`;
+        };
+        const rows = [['Job_Title', 'Short_URL', 'LinkedIn_URL', 'Facebook_URL', 'Destination', 'Active', 'Clicks', 'LinkedIn', 'Facebook', 'Website', 'Other'], ...links.map(link => {
+          const url = new URL(`/go/${link.slug}`, window.location.origin).href;
+          return [link.title, url, `${url}?src=linkedin`, `${url}?src=facebook`, link.destination, link.active ? 'Yes' : 'No', link.clicks, link.linkedin, link.facebook, link.website, link.other];
+        })];
+        const url = URL.createObjectURL(new Blob(['\uFEFF' + rows.map(row => row.map(cell).join(',')).join('\r\n')], { type: 'text/csv;charset=utf-8' }));
+        const anchor = document.createElement('a');
+        anchor.href = url;
+        anchor.download = 'relocateworks-referral-links.csv';
+        anchor.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+:global(*) {
+  box-sizing:border-box
+}
+:global(body) {
+  margin:0;
+  background:#f4f6f8;
+  color:#183047;
+  font:15px/1.6 Arial,sans-serif
+}
+:global([hidden]) {
+  display:none!important
+}
+.topbar {
+  height:76px;
+  padding:0 max(24px,calc((100% - 1240px)/2));
+  display:flex;
+  align-items:center;
+  gap:24px;
+  background:#fff;
+  border-bottom:1px solid #dbe2e9
+}
+.topbar a {
+  font-size:18px;
+  font-weight:bold;
+  color:#163a59;
+  text-decoration:none;
+  line-height:1.3
+}
+.topbar a span {
+  display:block;
+  font:inherit;
+  letter-spacing:normal;
+  color:inherit
+}
+.topbar span {
+  font-size:10px;
+  letter-spacing:1.8px;
+  color:#617182
+}
+.topbar button {
+  margin-left:auto
+}
+main {
+  max-width:1288px;
+  margin:auto;
+  padding:44px 24px 70px
+}
+.intro {
+  max-width:720px;
+  margin-bottom:26px
+}
+h1 {
+  font-size:clamp(30px,4vw,44px);
+  line-height:1.15;
+  letter-spacing:-1.3px;
+  margin:10px 0 16px
+}
+h2 {
+  font-size:21px;
+  margin:3px 0 16px;
+  line-height:1.3
+}
+p {
+  margin:8px 0 16px
+}
+.eyebrow {
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:2px;
+  color:#287270
+}
+.muted {
+  font-size:13px;
+  color:#617182
+}
+.card {
+  background:#fff;
+  padding:28px;
+  border:1px solid #dbe2e9;
+  border-radius:16px
+}
+.login {
+  max-width:580px
+}
+.login form {
+  display:grid;
+  gap:12px
+}
+.stats {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin:24px 0
+}
+.stats div {
+  background:#173b58;
+  color:white;
+  border-radius:12px;
+  padding:18px 24px
+}
+.stats span {
+  display:block;
+  font-size:10px;
+  letter-spacing:1.5px;
+  color:#bcd0df
+}
+.stats strong {
+  display:block;
+  font-size:30px
+}
+.editor-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px
+}
+.preview {
+  background:#edf4f3
+}
+label {
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  margin:16px 0 6px
+}
+input,textarea {
+  font:inherit;
+  line-height:1.5;
+  width:100%;
+  padding:11px 12px;
+  border:1px solid #b9c9d2;
+  border-radius:7px;
+  color:#183047;
+  background:white
+}
+textarea {
+  resize:vertical;
+  overflow-wrap:anywhere
+}
+input:focus,textarea:focus {
+  outline:2px solid #287270;
+  outline-offset:2px
+}
+input[readonly] {
+  background:#f4f6f8
+}
+.slug-input {
+  display:flex;
+  align-items:center;
+  border:1px solid #b9c9d2;
+  border-radius:7px;
+  overflow:hidden;
+  background:#f4f6f8
+}
+.slug-input span {
+  padding:0 12px;
+  font-size:14px
+}
+.slug-input input {
+  border:none;
+  border-radius:0
+}
+.check {
+  display:flex;
+  align-items:center;
+  gap:10px
+}
+.check input {
+  width:auto
+}
+.actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:16px
+}
+button {
+  font:inherit;
+  font-size:13px;
+  font-weight:600;
+  border:1px solid #b9c9d2;
+  background:#fff;
+  color:#183047;
+  padding:10px 16px;
+  border-radius:7px;
+  cursor:pointer
+}
+button.primary {
+  background:#173b58;
+  color:#fff;
+  border-color:#173b58
+}
+button:hover {
+  filter:brightness(.96)
+}
+button:disabled {
+  opacity:.6;
+  cursor:wait
+}
+.note {
+  border-top:1px solid #c6d9d5;
+  margin-top:28px;
+  padding-top:20px;
+  font-size:13px;
+  color:#405c60
+}
+.share-row {
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:8px;
+  margin-bottom:14px
+}
+.share-row label {
+  grid-column:1/-1;
+  margin:0
+}
+.share-row input {
+  font-size:12px
+}
+.library {
+  margin-top:24px
+}
+.section-head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px
+}
+.section-head .actions {
+  margin:0
+}
+.table-scroll {
+  overflow-x:auto;
+  margin-top:18px
+}
+table {
+  border-collapse:collapse;
+  width:100%;
+  font-size:13px
+}
+th {
+  text-align:left;
+  color:#617182;
+  font-weight:600;
+  padding:12px;
+  border-bottom:2px solid #dbe2e9;
+  white-space:nowrap
+}
+td {
+  padding:16px 12px;
+  border-bottom:1px solid #e6ebf0;
+  vertical-align:middle
+}
+td:first-child {
+  min-width:240px
+}
+td small {
+  display:block;
+  color:#617182;
+  overflow-wrap:anywhere
+}
+td:last-child {
+  min-width:155px
+}
+td button {
+  padding:6px 12px;
+  margin:2px
+}
+.error {
+  background:#fff0ef;
+  border:1px solid #e5b9b3;
+  color:#9b3025;
+  padding:12px;
+  border-radius:8px
+}
+#message:empty {
+  display:none
+}
+.sr-only {
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0)
+}
+@media(max-width:800px) {
+  .editor-grid {
+    grid-template-columns:1fr
+  }
+  .topbar>span {
+    display:none
+  }
+  .topbar {
+    padding:0 20px;
+    gap:12px
+  }
+  .card {
+    padding:20px
+  }
+  .stats {
+    gap:8px
+  }
+  .stats div {
+    padding:14px
+  }
+  .stats strong {
+    font-size:25px
+  }
+  .section-head {
+    align-items:flex-start;
+    flex-direction:column
+  }
+  main {
+    padding:28px 16px 50px
+  }
+}
+</style>

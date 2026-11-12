@@ -27,6 +27,8 @@ jobs:
         run: npm ci
       - name: Build Astro site
         run: npm run build
+      - name: Test referral management and redirects
+        run: npm run test:referrals
       - name: Audit static routes and editorial pages
         run: npm run check:site
       - name: Save external links for editorial review
