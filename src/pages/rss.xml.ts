@@ -1,4 +1,5 @@
-import { SITE, blogPosts } from '../data';
+import { SITE } from '../data';
+import { allPublishedBlogPosts } from '../seoPublished';
 
 const escapeXml = (value: string) =>
   value
@@ -9,7 +10,7 @@ const escapeXml = (value: string) =>
     .replace(/'/g, '&apos;');
 
 export async function GET() {
-  const items = blogPosts
+  const items = allPublishedBlogPosts
     .map((post) => {
       const url = new URL(`/blog/${post.slug}`, SITE.url).toString();
       return `<item>

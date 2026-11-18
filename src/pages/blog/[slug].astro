@@ -3,11 +3,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTA from '../../components/CTA.astro';
-import { blogPosts, SITE } from '../../data';
+import { SITE } from '../../data';
+import { allPublishedBlogPosts, publishedSeoArticles, seoArticlesBySlug } from '../../seoPublished';
 import { blogEditorial } from '../../blogEditorial';
 
 export function getStaticPaths() {
-  return blogPosts.map((post) => ({
+  return allPublishedBlogPosts.map((post) => ({
     params: { slug: post.slug },
     props: { post }
   }));
@@ -15,9 +16,10 @@ export function getStaticPaths() {
 
 const { post } = Astro.props;
 const isSponsorGuide = post.slug === 'how-to-find-visa-sponsor-jobs-abroad';
-const editorial = blogEditorial[post.slug];
+const seoArticle = seoArticlesBySlug.get(post.slug);
+const editorial = blogEditorial[post.slug] ?? seoArticle?.editorial;
 if (!isSponsorGuide && !editorial) throw new Error(`Missing unique blog editorial content: ${post.slug}`);
-const relatedPosts = blogPosts.filter((item) => item.slug !== post.slug).slice(0, 4);
+const relatedPosts = allPublishedBlogPosts.filter((item) => item.slug !== post.slug).slice(0, 4);
 
 const articleJsonLd = {
   '@context': 'https://schema.org',
@@ -81,7 +83,7 @@ const breadcrumbJsonLd = {
   <main>
     <section class="page-hero page-hero-gradient compact-hero blog-hero">
       <div class="container narrow">
-        <span class="eyebrow">{post.category} · Published {post.date} · Editorial revision {post.updated}</span>
+        <span class="eyebrow">{post.category} · Published {post.date} {seoArticle ? '· Check official sources for current rules' : `· Editorial revision ${post.updated}`}</span>
         <h1>{post.title}</h1>
         <p class="lead">{post.description}</p>
       </div>

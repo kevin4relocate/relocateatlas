@@ -11,7 +11,9 @@
     "check:site": "node scripts/check-site.mjs",
     "check:external": "node scripts/check-external-links.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check:features": "node scripts/check-features.mjs"
+    "check:features": "node scripts/check-features.mjs",
+    "check:seo": "node scripts/check-seo.mjs",
+    "release:seo": "node scripts/release-seo.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "latest",

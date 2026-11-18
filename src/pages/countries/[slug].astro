@@ -5,7 +5,8 @@ import Footer from '../../components/Footer.astro';
 import CTA from '../../components/CTA.astro';
 import TopicLinks from '../../components/TopicLinks.astro';
 import CountryGuideHero from '../../components/CountryGuideHero.astro';
-import { SITE, countries, blogPosts } from '../../data';
+import { SITE, countries } from '../../data';
+import { allPublishedBlogPosts } from '../../seoPublished';
 import { countryEditorial } from '../../countryEditorial';
 import { settlementNotes } from '../../settlementEditorial';
 
@@ -21,7 +22,8 @@ const editorial = countryEditorial[country.slug];
 const settlement = settlementNotes[country.slug];
 if (!editorial || !settlement) throw new Error('Country editorial or residence note missing: ' + country.slug);
 
-const relatedPosts = blogPosts.slice(0, 3);
+const relatedPosts = allPublishedBlogPosts.filter(post => post.slug.startsWith(country.slug + '-') || post.slug.includes(country.slug)).slice(0, 3);
+if (relatedPosts.length < 3) relatedPosts.push(...allPublishedBlogPosts.filter(post => !relatedPosts.some(related => related.slug === post.slug)).slice(0, 3 - relatedPosts.length));
 const relatedCountries = [
   ...countries.filter((item) => item.slug !== country.slug && item.region === country.region),
   ...countries.filter((item) => item.slug !== country.slug && item.region !== country.region)

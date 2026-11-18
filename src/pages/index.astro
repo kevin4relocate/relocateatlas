@@ -4,7 +4,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CountryCard from '../components/CountryCard.astro';
 import TopicLinks from '../components/TopicLinks.astro';
-import { SITE, countries, industries, blogPosts } from '../data';
+import { SITE, countries, industries } from '../data';
+import { allPublishedBlogPosts } from '../seoPublished';
 import '../toolkit.css';
 
 const featured = countries.slice(0, 6);
@@ -129,7 +130,7 @@ const topics = [
       <div class="container">
         <div class="rw-section-head"><div><span class="rw-kicker">FROM THE LIBRARY</span><h2>Start with a little more insight.</h2></div><a class="rw-text-link" href="/blog">Explore all articles <span aria-hidden="true">↗</span></a></div>
         <div class="rw-article-grid">
-          {blogPosts.slice(0, 3).map((post) => <a class="rw-article-card" href={'/blog/' + post.slug}><span class="rw-article-label">{post.category}</span><h3>{post.title}</h3><p>{post.description}</p><span class="rw-article-more">Read article <span aria-hidden="true">↗</span></span></a>)}
+          {allPublishedBlogPosts.slice(0, 3).map((post) => <a class="rw-article-card" href={'/blog/' + post.slug}><span class="rw-article-label">{post.category}</span><h3>{post.title}</h3><p>{post.description}</p><span class="rw-article-more">Read article <span aria-hidden="true">↗</span></span></a>)}
         </div>
       </div>
     </section>
