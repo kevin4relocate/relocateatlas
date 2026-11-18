@@ -2,13 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import {countries,industries,blogPosts,resourceSections} from '../data';
+import {countries,industries,resourceSections} from '../data';
+import {allPublishedBlogPosts} from '../seoPublished';
 import {aiCategories} from '../data/aiOpportunities';
 import '../toolkit.css';
 const entries = [
   ...countries.map(c=>({kind:'Country',title:c.name,description:c.shortDescription,path:'/countries/'+c.slug,keywords:[c.region,c.primaryVisa,...c.keyCities,...c.popularRoles].join(' ')})),
   ...industries.map(i=>({kind:'Industry',title:i.name,description:i.description,path:'/industries/'+i.slug,keywords:i.shortName})),
-  ...blogPosts.map(p=>({kind:'Article',title:p.title,description:p.description,path:'/blog/'+p.slug,keywords:p.category})),
+  ...allPublishedBlogPosts.map(p=>({kind:'Article',title:p.title,description:p.description,path:'/blog/'+p.slug,keywords:p.category})),
   ...aiCategories.map(a=>({kind:'Remote AI',title:a.title,description:a.summary,path:'/remote-ai-jobs/'+a.slug,keywords:a.linkScope})),
   ...resourceSections.map(s=>({kind:'Guide',title:s.title,description:s.description,path:'/'+s.slug,keywords:'relocation research'})),
   {kind:'Tool',title:'Compare countries',description:'Compare visa research paths, currencies and cities.',path:'/compare-countries',keywords:'country comparison destination'},
