@@ -1,27 +1,32 @@
-# Relocate Works SEO publication plan — 100 articles
+# Relocate Works editorial calendar — 100 SEO + 200 evergreen guides
 
-- **Total:** 100 fully drafted English articles.
-- **Start:** 2026-11-20 (Asia/Bangkok).
-- **Cadence:** 1 new article every 3 calendar days, through 2027-09-13.
-- **Themes:** 70 country-specific guides (14 countries × 5 specific reader questions); 30 industry guides (6 sectors × 5 distinct career decisions).
-- **Source standard:** Every article has official government/reference links and internal related guides. Sources are research starting points, not verification that an individual is eligible, an employer is hiring or a price is current.
-- **Release state:** src/data/seoRelease.json. Initial published list is empty; no draft pages appear in HTML, sitemap or RSS before their slot.
-- **Editorial queue:** src/data/seoQueue.json. Release sequence and per-article dates are explicit.
-- **Automation:** .github/workflows/publish-seo.yml runs daily 07:17 Asia/Bangkok, releases **at most one** eligible article; if a day is missed it catches up one article per next successful run.
-- **Deployment:** GitHub Actions writes the published manifest to main after build and QA pass. Cloudflare Pages Git integration should then deploy that commit (verify after first scheduled run).
-- **Manual trigger:** workflow_dispatch is available for testing, but it **does not bypass** the date gate. Run \`npm run release:seo -- --dry-run --date=2026-11-20\` to simulate eligibility without publishing.
-- **Review policy:** Sources, legal rules, taxes, salary and employer conditions can change. Recheck official destinations and specifics before relying on these articles, especially on topics published months after drafting. No current-vacancy claims.
-- **Safety:** Never commit unverified pay ranges, invented government requirements or automatically paid applications. Articles can be paused by disabling workflow or removing scheduled release from main.
-- **SEO note:** Publication volume is not an SEO guarantee. Every article must add practical reader value; monitor indexing, thin/repetitive content and search performance rather than publishing variations solely for ranking.
+## Release lanes
 
-## Standard QA
+| Track | Articles | First release (Asia/Bangkok) | Cadence | Final planned date |
+| --- | ---: | --- | --- | --- |
+| Country and industry SEO | 100 | 2026-11-20 | Every 3 days | 2027-09-13 |
+| Practical evergreen relocation | 200 | 2026-11-21 | Every 3 days | 2028-07-10 |
 
-\`\`\`bash
-npm ci
-npm test
-npm run build
-npm run check:site
-npm run check:seo
-\`\`\`
+The original lane is planned on November 20, 23, 26 and every third day afterward. The evergreen lane is planned November 21, 24, 27 and every third day afterward. November 22, 25, 28 and the corresponding third-day slots are intentionally free. No two articles share a scheduled day. A missed run catches up only in its lane and releases at most one article per day.
 
-The QA checks exact count, dates, slug uniqueness, article completeness, source links, internal links and no unintended early exposure. External source URLs can change; use manual editorial verification rather than interpreting automated 403/429 responses as proof they are dead.
+The GitHub Action in .github/workflows/publish-seo.yml checks daily at 07:17 Asia/Bangkok. It commits one release manifest after passing full build and QA. Cloudflare must be connected to main for production deployment. Confirm first runs after scheduling.
+
+## Content
+
+Original SEO queue: src/data/seoQueue.json (100 original country and industry guides). Manifest: src/data/seoRelease.json.
+
+Practical evergreen briefs: four JSON batches in src/data/evergreen/ containing exactly 200 unique titles, specific actions, pitfalls, and intended reader outputs. Content renderer: src/evergreenEditorial.mjs. Manifest: src/data/evergreenRelease.json.
+
+Evergreen categories include international job search, CV, interviewing, offers, documents, flights, airports, baggage, first week, housing, money, health, family and pets, language, work culture, scams, digital setup, daily life, social belonging and long-term plans.
+
+Drafts are excluded from blog routes, homepage, search, sitemap and RSS until the manifest marks them published. A live article uses the actual publication date even if its scheduled slot was missed.
+
+## Editorial and release quality
+
+Every new article has a separate practical topic brief, five sections, a checklist, source starting points and links to related tools or guides. These are practical educational guides, not firsthand relocation testimonials. Reference URLs are broad official sources and should not be presented as verifying every sentence. Review content for repetitiveness, topical relevance, current rules and human usefulness before publication, especially since the queue extends to 2028.
+
+Automated CI validates 300 different titles, slugs and dates; minimum body length; sections; links; and absence of future URLs from HTML, sitemap and RSS. It simulates one release from each lane on adjacent dates. These tests are not a substitute for human editorial review or external link verification.
+
+Run: npm ci && npm test && npm run build && npm run check:site && npm run check:seo
+
+Pause by disabling the scheduled GitHub Action or editing a release manifest. Manual workflow dispatch respects date gates. GitHub Actions may run later than its cron time, and production publishing depends on Cloudflare deployment after each main commit.
