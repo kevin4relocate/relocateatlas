@@ -1,0 +1,952 @@
+[
+  {
+    "cluster": "safety-scams",
+    "category": "Safety and Scams",
+    "title": "Verify a Recruiter Before Sharing Personal Documents",
+    "first": "Compare recruiter contact details with the employer's official published channels",
+    "second": "Ask for a traceable vacancy and normal hiring process",
+    "pitfall": "A fake recruiter may request identity documents before any legitimate interview",
+    "deliverable": "A recruiter verification log",
+    "resources": [
+      [
+        "FTC official guidance on recruitment fraud and job scams",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ],
+      [
+        "FTC guide to rental listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ]
+    ]
+  },
+  {
+    "cluster": "safety-scams",
+    "category": "Safety and Scams",
+    "title": "Spot Job Offers That Ask You to Pay Upfront",
+    "first": "Check whether fees and equipment demands match a genuine company policy",
+    "second": "Verify unfamiliar payment requests directly through official contacts",
+    "pitfall": "A fake cheque or equipment reimbursement story can conceal a scam",
+    "deliverable": "A payment-red-flag checklist",
+    "resources": [
+      [
+        "FTC official guidance on recruitment fraud and job scams",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ],
+      [
+        "FTC guide to rental listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ]
+    ]
+  },
+  {
+    "cluster": "safety-scams",
+    "category": "Safety and Scams",
+    "title": "Avoid Rental Scams When You Cannot Visit in Person",
+    "first": "Arrange reputable verification or an authorised inspection before paying",
+    "second": "Cross-check ownership or management details against independent sources",
+    "pitfall": "Pressure to wire a deposit quickly is a serious warning",
+    "deliverable": "A pre-deposit verification protocol",
+    "resources": [
+      [
+        "FTC official guidance on recruitment fraud and job scams",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ],
+      [
+        "FTC guide to rental listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ]
+    ]
+  },
+  {
+    "cluster": "safety-scams",
+    "category": "Safety and Scams",
+    "title": "Protect Your Passport While Travelling Abroad",
+    "first": "Keep originals secure and share copies only when necessary",
+    "second": "Know how to contact your own embassy or consulate if a passport is lost",
+    "pitfall": "Handing over a passport to an unverified intermediary creates risk",
+    "deliverable": "A passport safety and recovery plan",
+    "resources": [
+      [
+        "FTC official guidance on recruitment fraud and job scams",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ],
+      [
+        "FTC guide to rental listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ]
+    ]
+  },
+  {
+    "cluster": "safety-scams",
+    "category": "Safety and Scams",
+    "title": "Use Public Wi-Fi More Safely During Relocation",
+    "first": "Avoid sensitive account setup on networks you cannot trust",
+    "second": "Keep devices updated and use secure authentication and trusted connectivity",
+    "pitfall": "Automatic connection to a lookalike hotspot can expose accounts",
+    "deliverable": "A first-week device security checklist",
+    "resources": [
+      [
+        "FTC official guidance on recruitment fraud and job scams",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ],
+      [
+        "FTC guide to rental listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ]
+    ]
+  },
+  {
+    "cluster": "safety-scams",
+    "category": "Safety and Scams",
+    "title": "Recognise Fake Immigration or Appointment Websites",
+    "first": "Start from a known official government domain before submitting forms",
+    "second": "Check the complete web address and payment recipient",
+    "pitfall": "Search-result advertisements can lead to expensive unofficial intermediaries",
+    "deliverable": "An official-link bookmarks folder",
+    "resources": [
+      [
+        "FTC official guidance on recruitment fraud and job scams",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ],
+      [
+        "FTC guide to rental listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ]
+    ]
+  },
+  {
+    "cluster": "safety-scams",
+    "category": "Safety and Scams",
+    "title": "Keep Safe During Apartment Viewings Abroad",
+    "first": "Verify the agent and arrange viewings at reasonable times",
+    "second": "Tell a trusted person where you are going and how to reach you",
+    "pitfall": "Visiting an unknown property without basic precautions increases risk",
+    "deliverable": "A viewing safety plan",
+    "resources": [
+      [
+        "FTC official guidance on recruitment fraud and job scams",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ],
+      [
+        "FTC guide to rental listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ]
+    ]
+  },
+  {
+    "cluster": "safety-scams",
+    "category": "Safety and Scams",
+    "title": "Respond to a Lost Wallet in a New Country",
+    "first": "Prioritise cards, identity records and essential travel access",
+    "second": "Use official issuer and police channels where applicable",
+    "pitfall": "Continuing to use compromised payment accounts can worsen losses",
+    "deliverable": "A wallet recovery checklist",
+    "resources": [
+      [
+        "FTC official guidance on recruitment fraud and job scams",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ],
+      [
+        "FTC guide to rental listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ]
+    ]
+  },
+  {
+    "cluster": "safety-scams",
+    "category": "Safety and Scams",
+    "title": "Learn a New City's Emergency Alert System",
+    "first": "Identify official local warnings, weather notices and emergency contacts",
+    "second": "Set up alerts and practise checking a reliable source",
+    "pitfall": "Relying entirely on unofficial neighbourhood rumours may mislead you",
+    "deliverable": "A verified local alert setup",
+    "resources": [
+      [
+        "FTC official guidance on recruitment fraud and job scams",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ],
+      [
+        "FTC guide to rental listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ]
+    ]
+  },
+  {
+    "cluster": "safety-scams",
+    "category": "Safety and Scams",
+    "title": "Avoid Oversharing Your Move on Social Media",
+    "first": "Delay public details of travel dates and your home address",
+    "second": "Review privacy settings and who can access location metadata",
+    "pitfall": "Announcing an empty home or future address can invite misuse",
+    "deliverable": "A safer relocation social-sharing policy",
+    "resources": [
+      [
+        "FTC official guidance on recruitment fraud and job scams",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ],
+      [
+        "FTC guide to rental listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ]
+    ]
+  },
+  {
+    "cluster": "digital-tools",
+    "category": "Digital Setup Abroad",
+    "title": "Prepare Your Phone for the First Day Abroad",
+    "first": "Check unlock status, available eSIM support and network compatibility",
+    "second": "Store offline maps, booking references and key contacts",
+    "pitfall": "A data plan that works on arrival may still lack voice or SMS",
+    "deliverable": "A tested connectivity fallback list",
+    "resources": [
+      [
+        "International travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "UK government foreign travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ]
+    ]
+  },
+  {
+    "cluster": "digital-tools",
+    "category": "Digital Setup Abroad",
+    "title": "Move Two-Factor Authentication to a New Number",
+    "first": "Inventory accounts tied to the old SIM before cancellation",
+    "second": "Add secure recovery methods and test logins from a trusted device",
+    "pitfall": "Losing an old phone number can lock you out of critical accounts",
+    "deliverable": "An account recovery migration checklist",
+    "resources": [
+      [
+        "International travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "UK government foreign travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ]
+    ]
+  },
+  {
+    "cluster": "digital-tools",
+    "category": "Digital Setup Abroad",
+    "title": "Back Up Important Files Before an International Move",
+    "first": "Keep encrypted backups of documents and essential project files",
+    "second": "Test restoration rather than assuming sync alone is sufficient",
+    "pitfall": "A broken laptop in transit can remove access to all original records",
+    "deliverable": "A verified restore checklist",
+    "resources": [
+      [
+        "International travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "UK government foreign travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ]
+    ]
+  },
+  {
+    "cluster": "digital-tools",
+    "category": "Digital Setup Abroad",
+    "title": "Create an Offline Maps Pack for a New City",
+    "first": "Save airport, accommodation, workplace and emergency routes",
+    "second": "Add exact street addresses and local-language names where useful",
+    "pitfall": "A mobile map that needs data cannot help during a connectivity outage",
+    "deliverable": "A compact offline route collection",
+    "resources": [
+      [
+        "International travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "UK government foreign travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ]
+    ]
+  },
+  {
+    "cluster": "digital-tools",
+    "category": "Digital Setup Abroad",
+    "title": "Protect Your Devices When Changing Power Adapters",
+    "first": "Read each device's input voltage and approved charging requirements",
+    "second": "Check the quality and suitability of plug adapters and chargers",
+    "pitfall": "An adapter changes plug shape but not necessarily electrical voltage",
+    "deliverable": "An electronics safety inventory",
+    "resources": [
+      [
+        "International travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "UK government foreign travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ]
+    ]
+  },
+  {
+    "cluster": "digital-tools",
+    "category": "Digital Setup Abroad",
+    "title": "Set Up a Local Digital Identity Where Available",
+    "first": "Research official identity or government portal enrolment rules",
+    "second": "Keep recovery details and use trusted channels",
+    "pitfall": "Third-party sites may pretend to issue official identity credentials",
+    "deliverable": "A legitimate government account setup plan",
+    "resources": [
+      [
+        "International travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "UK government foreign travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ]
+    ]
+  },
+  {
+    "cluster": "digital-tools",
+    "category": "Digital Setup Abroad",
+    "title": "Keep Travel Bookings Accessible Without Email",
+    "first": "Download boarding passes and confirmations to secure offline storage",
+    "second": "Keep paper or separate-device backups when practical",
+    "pitfall": "A lost connection can block reservation details at the counter",
+    "deliverable": "An offline booking packet",
+    "resources": [
+      [
+        "International travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "UK government foreign travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ]
+    ]
+  },
+  {
+    "cluster": "digital-tools",
+    "category": "Digital Setup Abroad",
+    "title": "Manage Passwords While Changing Countries",
+    "first": "Use a reputable password manager and strong unique credentials",
+    "second": "Review recovery access before replacing a device or number",
+    "pitfall": "Storing passwords in unprotected screenshots is risky",
+    "deliverable": "A secure account migration plan",
+    "resources": [
+      [
+        "International travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "UK government foreign travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ]
+    ]
+  },
+  {
+    "cluster": "digital-tools",
+    "category": "Digital Setup Abroad",
+    "title": "Use Translation Tools Without Misunderstanding Legal Terms",
+    "first": "Treat automatic translation as a first-pass comprehension aid",
+    "second": "Seek qualified interpretation for contracts, medical or legal decisions",
+    "pitfall": "A plausible machine translation can miss an important condition",
+    "deliverable": "A translation verification workflow",
+    "resources": [
+      [
+        "International travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "UK government foreign travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ]
+    ]
+  },
+  {
+    "cluster": "digital-tools",
+    "category": "Digital Setup Abroad",
+    "title": "Organise Digital Receipts for an International Move",
+    "first": "Save invoices by transport, housing, paperwork and work expenses",
+    "second": "Record currency, merchant and payment date when available",
+    "pitfall": "Scattered screenshots make reimbursements and returns difficult",
+    "deliverable": "A searchable relocation receipts folder",
+    "resources": [
+      [
+        "International travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "UK government foreign travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ]
+    ]
+  },
+  {
+    "cluster": "daily-life",
+    "category": "Everyday Life Abroad",
+    "title": "Build a Reliable Grocery Shopping Routine Abroad",
+    "first": "Compare nearby stores by accessibility, staples and package sizes",
+    "second": "Track prices of a small regular basket rather than everything in the shop",
+    "pitfall": "Buying imported favourites every day can consume a limited budget",
+    "deliverable": "A reusable weekly grocery list",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "daily-life",
+    "category": "Everyday Life Abroad",
+    "title": "Understand Local Waste Sorting Before Moving In",
+    "first": "Read local council or building instructions for disposal categories",
+    "second": "Learn collection times and rules for bulky items",
+    "pitfall": "Incorrect disposal can cause friction with neighbours or extra fees",
+    "deliverable": "A building-specific recycling reference sheet",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "daily-life",
+    "category": "Everyday Life Abroad",
+    "title": "Choose a Commute That Works in Real Life",
+    "first": "Test realistic departure times and transit reliability",
+    "second": "Include walking, transfers and backup options in the route",
+    "pitfall": "The shortest mapped trip may not be the most dependable",
+    "deliverable": "A commute plan with two alternatives",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "daily-life",
+    "category": "Everyday Life Abroad",
+    "title": "Buy Basic Furniture Without Overspending",
+    "first": "Prioritise sleep, work and safety essentials before decoration",
+    "second": "Compare second-hand options, delivery costs and dimensions",
+    "pitfall": "A bargain sofa may cost more to transport than expected",
+    "deliverable": "A staged furniture purchase plan",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "daily-life",
+    "category": "Everyday Life Abroad",
+    "title": "Learn How Local Pharmacies and Shops Operate",
+    "first": "Check opening hours, service limitations and official health information",
+    "second": "Find nearby alternatives for evenings and weekends",
+    "pitfall": "A pharmacy may not provide the same medicines or services as at home",
+    "deliverable": "A verified neighbourhood services list",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "daily-life",
+    "category": "Everyday Life Abroad",
+    "title": "Set Up a Practical Home Workspace After Moving",
+    "first": "Check seating, light, connectivity and electricity needs",
+    "second": "Make privacy and secure call space part of the setup",
+    "pitfall": "Building an expensive workspace before knowing the home layout is wasteful",
+    "deliverable": "A low-cost functional desk setup",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "daily-life",
+    "category": "Everyday Life Abroad",
+    "title": "Handle Package Deliveries in an Unfamiliar Building",
+    "first": "Learn address formats, buzzer rules and collection points",
+    "second": "Use tracked delivery where useful and protect access details",
+    "pitfall": "Incorrect unit numbers can cause repeated failed deliveries",
+    "deliverable": "A validated shipping-address template",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "daily-life",
+    "category": "Everyday Life Abroad",
+    "title": "Build a Weekly Housekeeping Routine in a New Home",
+    "first": "Identify local cleaning supplies, ventilation and waste practices",
+    "second": "Agree chores with household members and keep maintenance requests documented",
+    "pitfall": "Assuming all surfaces need the same products can damage finishes",
+    "deliverable": "A short house-care schedule",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "daily-life",
+    "category": "Everyday Life Abroad",
+    "title": "Understand Public Transport Payments and Passes",
+    "first": "Compare single fares, weekly passes and employer discounts where applicable",
+    "second": "Check where cards are purchased and how validation works",
+    "pitfall": "An unvalidated ticket may still count as unpaid travel in some systems",
+    "deliverable": "A transport-pass decision chart",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "daily-life",
+    "category": "Everyday Life Abroad",
+    "title": "Get Comfortable With New Food and Meal Options",
+    "first": "Explore affordable local staples while accounting for dietary needs",
+    "second": "Make a few reliable meals with ingredients available nearby",
+    "pitfall": "Trying to recreate every home dish with imports can be costly",
+    "deliverable": "A flexible first-month meal plan",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "social-life",
+    "category": "Community and Belonging",
+    "title": "Make Friends After Moving Abroad as an Adult",
+    "first": "Choose repeat activities where you naturally meet familiar people",
+    "second": "Offer low-pressure invitations and respect differing schedules",
+    "pitfall": "Expecting instant close friendships after one event creates frustration",
+    "deliverable": "A realistic monthly social routine",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "social-life",
+    "category": "Community and Belonging",
+    "title": "Find Community Groups Without Joining Everything",
+    "first": "Choose a few credible hobby, professional or neighbourhood groups",
+    "second": "Attend more than once before judging whether a group fits",
+    "pitfall": "Signing up for too many activities creates stress instead of connection",
+    "deliverable": "A two-group trial plan",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "social-life",
+    "category": "Community and Belonging",
+    "title": "Handle Homesickness Without Isolating Yourself",
+    "first": "Keep meaningful contact with home while building local routines",
+    "second": "Identify supportive people and seek help if distress persists",
+    "pitfall": "Spending all free time on calls back home may slow local adjustment",
+    "deliverable": "A balanced connection schedule",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "social-life",
+    "category": "Community and Belonging",
+    "title": "Celebrate Important Traditions in a New Country",
+    "first": "Plan simple ways to observe familiar holidays and meals",
+    "second": "Invite others respectfully without assuming shared customs",
+    "pitfall": "Giving up every familiar ritual can increase a sense of dislocation",
+    "deliverable": "A personal traditions calendar",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "social-life",
+    "category": "Community and Belonging",
+    "title": "Make the Most of Local Libraries and Community Centres",
+    "first": "Check memberships, learning events, language classes and public resources",
+    "second": "Use official directories and verify eligibility or fees",
+    "pitfall": "Ignoring public spaces can mean missing affordable connections",
+    "deliverable": "A local public-services list",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "social-life",
+    "category": "Community and Belonging",
+    "title": "Volunteer Abroad Without Making Legal Assumptions",
+    "first": "Research legitimate organisations and role requirements",
+    "second": "Check whether your immigration status permits the activity where relevant",
+    "pitfall": "Some volunteering arrangements have legal or insurance implications",
+    "deliverable": "A verified volunteering opportunity record",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "social-life",
+    "category": "Community and Belonging",
+    "title": "Find Professional Mentors in a New Job Market",
+    "first": "Approach people with a specific learning question and respect their time",
+    "second": "Follow up with progress rather than repeated requests for job referrals",
+    "pitfall": "Cold outreach asking immediately for employment can be ineffective",
+    "deliverable": "A thoughtful mentor outreach note",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "social-life",
+    "category": "Community and Belonging",
+    "title": "Join Neighbourhood Activities With Confidence",
+    "first": "Start with public events and straightforward practical interests",
+    "second": "Check event locations, access needs and transport before attending",
+    "pitfall": "Assuming every community event is inclusive or free may lead to surprise",
+    "deliverable": "A first-three-events participation plan",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "social-life",
+    "category": "Community and Belonging",
+    "title": "Build Friendships Across Language Differences",
+    "first": "Use simple communication and check understanding gently",
+    "second": "Show curiosity without putting all translation work on the other person",
+    "pitfall": "Embarrassment over imperfect language can prevent meaningful connection",
+    "deliverable": "A few reliable multilingual conversation habits",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "social-life",
+    "category": "Community and Belonging",
+    "title": "Stay Social During a Remote Job Abroad",
+    "first": "Schedule coworking, exercise or local interest activities outside work",
+    "second": "Create boundaries between online meetings and personal connection",
+    "pitfall": "A busy remote calendar can hide very little in-person contact",
+    "deliverable": "A weekly social balance tracker",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "long-term",
+    "category": "Long-Term Relocation Planning",
+    "title": "Decide Whether to Stay in Your New Country Long-Term",
+    "first": "Review work satisfaction, family wellbeing, costs and legal options separately",
+    "second": "Compare your lived experience with what mattered in your original plan",
+    "pitfall": "A stressful first month may not predict the next five years",
+    "deliverable": "A six-month relocation decision review",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "long-term",
+    "category": "Long-Term Relocation Planning",
+    "title": "Know When It Is Time to Change Apartments Abroad",
+    "first": "Track recurring problems, actual costs and lease restrictions",
+    "second": "Compare moving expenses with benefits before giving notice",
+    "pitfall": "Moving after every frustration may create unnecessary disruption",
+    "deliverable": "A stay-or-move housing worksheet",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "long-term",
+    "category": "Long-Term Relocation Planning",
+    "title": "Prepare for a Job Change While Living Overseas",
+    "first": "Clarify contractual obligations and how work permission might be affected",
+    "second": "Keep employment records and seek appropriate legal guidance where needed",
+    "pitfall": "Assuming a visa automatically transfers to a new employer may be unsafe",
+    "deliverable": "A job-change dependency checklist",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "long-term",
+    "category": "Long-Term Relocation Planning",
+    "title": "Maintain Financial Records Across Countries",
+    "first": "Organise payslips, bank statements and official tax correspondence",
+    "second": "Store date and currency context for major transactions",
+    "pitfall": "Missing records can complicate later tax or housing applications",
+    "deliverable": "A durable cross-border records archive",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "long-term",
+    "category": "Long-Term Relocation Planning",
+    "title": "Build a Career Network After Settling Abroad",
+    "first": "Contribute to professional groups and document your expertise",
+    "second": "Create relationships beyond your current employer",
+    "pitfall": "Depending on one manager for every career opportunity adds risk",
+    "deliverable": "A quarterly network development plan",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "long-term",
+    "category": "Long-Term Relocation Planning",
+    "title": "Plan an International Move to a Second Country",
+    "first": "Review document validity, housing exit and new eligibility independently",
+    "second": "Avoid assuming the second move follows the first country's rules",
+    "pitfall": "Prior experience does not guarantee the next immigration pathway",
+    "deliverable": "A second-country research timeline",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "long-term",
+    "category": "Long-Term Relocation Planning",
+    "title": "Prepare to Return Home After Working Overseas",
+    "first": "Review contract exit, housing, banking and credential records",
+    "second": "Research practical registration and job-market changes at home",
+    "pitfall": "Assuming old accounts and services remain active can delay resettlement",
+    "deliverable": "A return-home transition checklist",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "long-term",
+    "category": "Long-Term Relocation Planning",
+    "title": "Manage Long-Distance Relationships During Relocation",
+    "first": "Agree communication, visits and shared goals with the people involved",
+    "second": "Revisit expectations as jobs and life circumstances change",
+    "pitfall": "Leaving major decisions to unstated assumptions breeds resentment",
+    "deliverable": "A relationship logistics check-in plan",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "long-term",
+    "category": "Long-Term Relocation Planning",
+    "title": "Measure Whether Your Relocation Plan Is Working",
+    "first": "Choose a few indicators of financial, professional and personal stability",
+    "second": "Compare progress quarterly rather than day by day",
+    "pitfall": "Only measuring salary can hide serious wellbeing or family issues",
+    "deliverable": "A balanced relocation review scorecard",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "long-term",
+    "category": "Long-Term Relocation Planning",
+    "title": "Create a Personal Archive of Your Moving Experience",
+    "first": "Record useful lessons, documents and suppliers for the future",
+    "second": "Remove sensitive information before sharing tips publicly",
+    "pitfall": "A polished travel story can leave out the difficult decisions others need",
+    "deliverable": "A private lessons-learned relocation journal",
+    "resources": [
+      [
+        "EURES living and working resources",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning advice",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  }
+]
