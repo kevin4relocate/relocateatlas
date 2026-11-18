@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTA from '../../components/CTA.astro';
-import { blogPosts } from '../../data';
+import { allPublishedBlogPosts } from '../../seoPublished';
 ---
 <BaseLayout
   title="Relocate Works Blog — Visa Sponsor Jobs and Relocation Guides"
@@ -23,7 +23,7 @@ import { blogPosts } from '../../data';
     </section>
     <section class="section">
       <div class="container grid-3">
-        {blogPosts.map((post) => (
+        {allPublishedBlogPosts.map((post) => (
           <a class="article-card" href={`/blog/${post.slug}`}>
             <div class="article-meta">{post.category} · {post.date}</div>
             <h3>{post.title}</h3>

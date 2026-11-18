@@ -87,7 +87,9 @@ for (const slug of countrySlugs) {
   else if (txt.includes('Editorial edition: September 2026')) errors.push('Country guide contains obsolete editorial edition notice: ' + slug);
 }
 const blogFiles = htmlFiles.filter((path) => path.includes('/blog/') && path !== join(root,'blog','index.html'));
-if (blogFiles.length !== 9) errors.push('Expected 9 unique blog article pages, found ' + blogFiles.length);
+const seoRelease = JSON.parse(readFileSync(resolve('src/data/seoRelease.json'), 'utf8'));
+const expectedBlogCount = 9 + seoRelease.published.length;
+if (blogFiles.length !== expectedBlogCount) errors.push('Expected '+expectedBlogCount+' blog article pages, found ' + blogFiles.length);
 for (const file of blogFiles) {
   const txt = pages.get(file);
   if (!txt.includes('2026-09-26') || !txt.includes('Official resources') && !file.includes('how-to-find-visa-sponsor-jobs-abroad')) {
