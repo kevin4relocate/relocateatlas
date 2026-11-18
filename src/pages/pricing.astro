@@ -4,29 +4,31 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CTA from '../components/CTA.astro';
 import { SITE } from '../data';
+import '../toolkit.css';
 
 
 ---
 <BaseLayout
-  title="Pricing — $9/month or $49/year Founding Access | Relocate Works"
-  description="Relocate Works founding pricing: $9/month or $49/year for weekly sponsor-friendly job intelligence, direct apply links, sponsorship evidence, and practical planning notes."
+  title="Relocate Works Newsletter Membership — Plans & Benefits"
+  description="Compare newsletter membership benefits and check current prices and available plans directly on the Relocate Works Substack checkout."
   canonicalPath="/pricing"
 >
   <Header />
   <main>
     <section class="page-hero page-hero-gradient compact-hero pricing-hero">
       <div class="container narrow">
-        <span class="eyebrow">Special founding price</span>
+        <span class="eyebrow">Newsletter membership</span>
         <h1>Explore free relocation guides. Subscribe for weekly jobs on Substack.</h1>
-        <p class="lead">Relocate Works is currently available at a special launch price for early members. Future pricing may increase as country coverage, job volume, and member resources expand.</p>
+        <p class="lead">Review the newsletter benefits below. Current prices, plan availability, taxes and billing terms must be confirmed on Substack before subscribing.</p>
       </div>
     </section>
 
     <section id="pricing" class="section section-white">
+      <div class="container"><p class="rw-tool-warn">Both paid-plan buttons open the same Substack publication. Choose and verify the plan, final charge, renewal terms and benefits there before payment.</p></div>
       <div class="container pricing-grid-full">
         <article class="pricing-card-full">
           <span class="badge badge-blue">Monthly</span>
-          <h2>$9/month</h2>
+          <h2>Monthly option</h2>
           <p>Best for candidates who want to test the full weekly sponsor job intelligence list before committing.</p>
           <ul class="check-list">
             <li>Full weekly sponsor-friendly job list</li>
@@ -35,21 +37,21 @@ import { SITE } from '../data';
             <li>Practical relocation planning notes</li>
             <li>Archive access while subscribed</li>
           </ul>
-          <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Subscribe monthly</a>
+          <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Review monthly options on Substack</a>
         </article>
 
         <article class="pricing-card-full featured-pricing-card">
-          <span class="badge badge-success">Best value · Founding</span>
-          <h2>$49/year</h2>
+          <span class="badge badge-success">Annual membership</span>
+          <h2>Annual option</h2>
           <p>Best for serious candidates preparing to apply abroad over the next 6–12 months.</p>
           <ul class="check-list">
             <li>Everything in monthly access</li>
-            <li>Lower founding yearly price</li>
+            <li>Check annual billing terms at Substack checkout</li>
             <li>Monthly templates or checklists when available</li>
             <li>Country and industry priority polls</li>
-            <li>Future public price may increase to $99/year</li>
+            <li>Confirm current price and renewal terms on Substack</li>
           </ul>
-          <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Join founding yearly</a>
+          <a class="button" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Review annual options on Substack</a>
         </article>
 
         <article class="pricing-card-full muted-pricing-card">

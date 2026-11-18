@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import {countries,industries,blogPosts,resourceSections} from '../data';
+import {aiCategories} from '../data/aiOpportunities';
+import '../toolkit.css';
+const entries = [
+  ...countries.map(c=>({kind:'Country',title:c.name,description:c.shortDescription,path:'/countries/'+c.slug,keywords:[c.region,c.primaryVisa,...c.keyCities,...c.popularRoles].join(' ')})),
+  ...industries.map(i=>({kind:'Industry',title:i.name,description:i.description,path:'/industries/'+i.slug,keywords:i.shortName})),
+  ...blogPosts.map(p=>({kind:'Article',title:p.title,description:p.description,path:'/blog/'+p.slug,keywords:p.category})),
+  ...aiCategories.map(a=>({kind:'Remote AI',title:a.title,description:a.summary,path:'/remote-ai-jobs/'+a.slug,keywords:a.linkScope})),
+  ...resourceSections.map(s=>({kind:'Guide',title:s.title,description:s.description,path:'/'+s.slug,keywords:'relocation research'})),
+  {kind:'Tool',title:'Compare countries',description:'Compare visa research paths, currencies and cities.',path:'/compare-countries',keywords:'country comparison destination'},
+  {kind:'Tool',title:'Relocation budget planner',description:'Estimate costs from your own figures.',path:'/relocation-budget',keywords:'money calculator savings'},
+  {kind:'Tool',title:'Moving abroad checklist',description:'Track steps for your international move.',path:'/moving-checklist',keywords:'relocation planning tasks'}
+];
+---
+<BaseLayout title="Search Relocate Works Guides & Tools" description="Search country guides, career industries, relocation topics, AI opportunity categories and free tools." canonicalPath="/search" noindex={true}>
+<Header/><main class="rw-tool-main" id="main-content">
+<section class="rw-tool-hero"><div class="container"><nav class="rw-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>Search</nav><h1>Find a guide or tool.</h1><p>Search countries, cities, careers, articles and planning tools across our free website library. This is site content search, not a live job vacancy database.</p></div></section>
+<section class="rw-tool-body"><div class="container"><div class="rw-tool-panel"><div class="rw-tool-fields"><label class="rw-tool-field">Search Relocate Works<input id="site-search-input" class="rw-tool-search" type="search" placeholder="Country, visa, career or guide" autocomplete="off"/></label><label class="rw-tool-field">Content type<select id="site-search-kind"><option value="">All content</option>{['Country','Industry','Article','Remote AI','Guide','Tool'].map(kind=><option value={kind}>{kind}</option>)}</select></label></div><p id="site-search-count" class="rw-tool-note" aria-live="polite"></p></div>
+<div class="rw-search-results">{entries.map(item=><article class="rw-search-result" data-site-search-item data-kind={item.kind} data-search={(item.title+' '+item.description+' '+item.keywords).toLowerCase()}><span class="rw-search-kind">{item.kind}</span><h2><a href={item.path}>{item.title}</a></h2><p>{item.description}</p></article>)}</div>
+<div class="rw-tool-panel" id="site-search-empty" hidden><h2>No matching guides</h2><p>Try a broader country, career, visa or relocation topic.</p></div>
+</div></section></main><Footer/></BaseLayout>
+<script>
+ const input=document.querySelector<HTMLInputElement>('#site-search-input');
+ const filter=document.querySelector<HTMLSelectElement>('#site-search-kind');
+ const count=document.querySelector<HTMLElement>('#site-search-count');
+ const empty=document.querySelector<HTMLElement>('#site-search-empty');
+ const items=Array.from(document.querySelectorAll<HTMLElement>('[data-site-search-item]'));
+ const normalize=(value:string)=>value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
+ const update=()=>{
+  const query=normalize(input?.value||'');
+  const kind=filter?.value||'';
+  const tokens=query.split(/\s+/).filter(Boolean);
+  let visible=0;
+  items.forEach(item=>{const haystack=normalize(item.dataset.search||'');const match=(!kind||item.dataset.kind===kind)&&tokens.every(token=>haystack.includes(token));item.hidden=!match;if(match)visible++;});
+  if(count)count.textContent=visible+' of '+items.length+' pages match.';
+  if(empty)empty.hidden=visible!==0;
+ };
+ const params=new URLSearchParams(window.location.search);
+ if(input)input.value=(params.get('q')||'').slice(0,150);
+ input?.addEventListener('input',update);
+ filter?.addEventListener('change',update);
+ update();
+</script>

@@ -13,7 +13,7 @@
 - `src/data.ts`: data-driven 14-country listing and per-country visa, taxation, careers, costs, healthcare, cities and settling-in paragraphs. Five previously reused generic records (Singapore, Ireland, Netherlands, Denmark and Japan) were rewritten with differentiated legal and practical details.
 - `src/countryEditorial.ts`: personalised pre-departure checklists plus one immigration, tax, healthcare and education *official starting-point link* per country.
 - `src/settlementEditorial.ts`: country-specific distinction between entry/work permission and later long-term/permanent residence, with an independent official immigration source and checklist. No "X years guarantees PR" language.
-- `src/components/CountryResourcePage.astro`: nine expanded destinations use **qualitative, destination-specific research tasks instead of unsourced numerical pay, rent or shipping estimates**. The original five focus-market numeric templates remain historical illustrative figures, **not independently verified market data**; fact-check or replace them before treating the numbers as investment-grade evidence. The original five are Australia, New Zealand, United Kingdom, Germany and Canada.
+- `src/components/CountryResourcePage.astro`: nine expanded destinations use **qualitative, destination-specific research tasks instead of unsourced numerical pay, rent or shipping estimates**. The original five focus-market numeric examples were withdrawn from the rendered templates in November 2026 because they lacked independently verified, current sources. Those pages now prompt readers to collect city-specific quotes and current employer salary data. Reintroduce figures only with primary sources, applicable dates and reviewer notes. The original five are Australia, New Zealand, United Kingdom, Germany and Canada.
 - Source links are destinations for reader verification, **not line-by-line attribution for every legacy claim**. Visa thresholds, health entitlements, income-tax bands, applicable calendar periods and immigration administration change over time; if a figure cannot be reliably sourced and dated, do not fabricate it.
 
 ### Primary official starting points for the four new destinations
@@ -41,7 +41,7 @@ Before shipping, inspect all 14 overviews and sample `/visas/`, `/salaries/`, `/
 
 ## Editorial release risks and next audits
 
-1. **Older numerical claims** in original focus-market resource templates have not undergone a fresh independently sourced audit; they now display an illustrative-data caveat. Replace with attributable, date-stamped statistics or qualitative research prompts as appropriate.
+1. **Historical numeric examples** in original focus-market resource templates were withdrawn; they require attributable, date-stamped primary sources before being restored. Review remaining prose for time-sensitive factual accuracy.
 2. The new markets' employer categories and example occupations are **research starting points**, not verified live vacancy volumes or visa eligibility.
 3. Review policy changes when announced, especially work-permit salary updates, residence-law reforms and cross-border tax treatment.
 4. After merging redesign PR #4 into `main`, retarget and merge Phase 2 PR #5 only after CI on the final head and manual visual/link checks. Confirm the resulting production deployment and search indexing separately.

@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import CountryCard from '../components/CountryCard.astro';
 import TopicLinks from '../components/TopicLinks.astro';
 import { SITE, countries, industries, blogPosts } from '../data';
+import '../toolkit.css';
 
 const featured = countries.slice(0, 6);
 const topics = [
@@ -25,10 +26,10 @@ const topics = [
           <span class="rw-kicker rw-kicker-light"><span class="rw-kicker-dot"></span> RELOCATION & REMOTE AI OPPORTUNITIES</span>
           <h1>Your next chapter starts with <em>a clearer picture.</em></h1>
           <p class="rw-hero-lead">Explore destinations, understand visa routes and compare life abroad. Discover remote AI training and specialist opportunities alongside your relocation research.</p>
-          <form class="rw-hero-search" method="GET" action="/countries" role="search">
-            <label class="sr-only" for="hero-country-search">Search countries, cities or career sectors</label>
+          <form class="rw-hero-search" method="GET" action="/search" role="search">
+            <label class="sr-only" for="hero-country-search">Search site content, countries, cities or career sectors</label>
             <span class="rw-search-icon" aria-hidden="true">⌕</span>
-            <input id="hero-country-search" name="q" type="search" placeholder="Search a country, city or career sector" autocomplete="off" />
+            <input id="hero-country-search" name="q" type="search" placeholder="Search the free guide library" autocomplete="off" />
             <button type="submit">Explore <span aria-hidden="true">→</span></button>
           </form>
           <p><a class="rw-btn rw-btn-primary" href="/remote-ai-jobs">Explore remote AI opportunities <span aria-hidden="true">↗</span></a></p>
@@ -81,6 +82,16 @@ const topics = [
       </div>
     </section>
 
+    <section class="rw-section">
+      <div class="container">
+        <div class="rw-section-head"><div><span class="rw-kicker">FREE PLANNING TOOLS</span><h2>Turn your research into a plan.</h2></div><p>Use interactive tools without creating an account or uploading personal documents.</p></div>
+        <div class="rw-tool-grid">
+          <article class="rw-tool-card"><h3><a href="/compare-countries">Compare destinations</a></h3><p>Research three countries side by side with links back to full guides.</p></article>
+          <article class="rw-tool-card"><h3><a href="/relocation-budget">Calculate your moving budget</a></h3><p>Work with real estimates instead of made-up market averages.</p></article>
+          <article class="rw-tool-card"><h3><a href="/moving-checklist">Follow a moving checklist</a></h3><p>Save your progress locally as you prepare for the move.</p></article>
+        </div>
+      </div>
+    </section>
     <section class="rw-section">
       <div class="container rw-editorial-split">
         <div class="rw-editorial-copy">

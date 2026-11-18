@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import TopicLinks from '../../components/TopicLinks.astro';
 import { SITE } from '../../data';
+import '../../toolkit.css';
 
 const guides = [
   { icon: '◈', eyebrow: 'Immigration', title: 'Visa & residence', description: 'Understand work authorization, employer support and questions to verify before applying.', href: '/visas' },
@@ -31,6 +32,16 @@ const guides = [
       <div class="container">
         <div class="rw-section-head"><div><span class="rw-kicker">EXPLORE BY TOPIC</span><h2>What would you like to understand?</h2></div><p>Choose a topic, then select the country that matters to you.</p></div>
         <TopicLinks items={guides} />
+      </div>
+    </section>
+    <section class="rw-section">
+      <div class="container">
+        <div class="rw-section-head"><div><span class="rw-kicker">DO YOUR PLANNING</span><h2>Three free tools for your next move.</h2></div><p>Interactive, browser-based and built around the information you enter.</p></div>
+        <div class="rw-tool-grid">
+          <article class="rw-tool-card"><h3><a href="/compare-countries">Compare destinations →</a></h3><p>Compare up to three country research profiles.</p></article>
+          <article class="rw-tool-card"><h3><a href="/relocation-budget">Relocation budget →</a></h3><p>Estimate your monthly spending and upfront savings target.</p></article>
+          <article class="rw-tool-card"><h3><a href="/moving-checklist">Moving checklist →</a></h3><p>Track practical tasks for each country.</p></article>
+        </div>
       </div>
     </section>
     <section class="rw-wide-band">

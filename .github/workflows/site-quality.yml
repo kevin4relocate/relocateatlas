@@ -29,6 +29,10 @@ jobs:
         run: npm run build
       - name: Audit static routes and editorial pages
         run: npm run check:site
+      - name: Run planning calculator tests
+        run: npm test
+      - name: Audit new tools, accessible forms and key routes
+        run: npm run check:features
       - name: Save external links for editorial review
         if: always()
         uses: actions/upload-artifact@v4
