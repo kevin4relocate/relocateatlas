@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../toolkit.css';
+const inputs = [
+  {name:'income',label:'Expected monthly take-home income',tip:'After tax'},
+  {name:'rent',label:'Monthly rent / housing'},
+  {name:'utilities',label:'Monthly utilities and internet'},
+  {name:'groceries',label:'Monthly groceries'},
+  {name:'transport',label:'Monthly transport'},
+  {name:'other',label:'Other monthly costs (insurance, phone, etc.)'},
+  {name:'deposit',label:'One-time deposit and initial housing'},
+  {name:'moving',label:'Flights, paperwork and moving costs'},
+  {name:'savings',label:'Savings available for the move'}
+];
+---
+<BaseLayout title="Relocation Budget Planner — Free Calculator | Relocate Works" description="Calculate your moving budget, monthly expenses, emergency savings and funding gap using your own figures. Private, browser-only, no exchange-rate assumptions." canonicalPath="/relocation-budget">
+<Header /><main class="rw-tool-main" id="main-content">
+<section class="rw-tool-hero"><div class="container"><nav class="rw-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/tools">Tools</a><span aria-hidden="true">/</span>Budget planner</nav><h1>Plan your relocation budget.</h1><p>Enter your actual estimates from offers, official fees and local quotes. We do not automatically estimate salary, rent, taxes or currency exchange rates.</p></div></section>
+<section class="rw-tool-body"><div class="container">
+<form class="rw-tool-panel" id="budget-form">
+<div class="rw-tool-fields"><label class="rw-tool-field">Currency (all figures must use the same currency)<select name="currency" id="budget-currency">{['USD','EUR','GBP','AUD','CAD','NZD','SGD','JPY'].map(currency=><option value={currency}>{currency}</option>)}</select></label><label class="rw-tool-field">Emergency fund, in months<select name="months" id="budget-months">{[0,1,2,3,4,5,6,9,12].map(n=><option selected={n===3} value={n}>{n} months</option>)}</select></label></div>
+<div class="rw-tool-fields" style="margin-top:18px">{inputs.map(field=><label class="rw-tool-field">{field.label}<input type="number" name={field.name} min="0" step="any" inputmode="decimal" placeholder="0" /></label>)}</div>
+<div class="rw-tool-actions"><button class="rw-tool-btn" type="submit">Calculate budget</button><button class="rw-tool-btn rw-tool-btn-secondary" type="reset">Reset</button></div>
+<p class="rw-tool-note">Your inputs stay in this browser and are not sent to Relocate Works. Negative input is treated as zero. This is a planning worksheet, not financial advice.</p>
+</form>
+<div class="rw-tool-panel rw-tool-results" id="budget-results" hidden aria-live="polite"><h2>Your estimated budget</h2><div class="rw-tool-summary"><div><span>Monthly expenses</span><strong data-budget-result="monthlyExpenses"></strong></div><div><span>Monthly balance after expenses</span><strong data-budget-result="monthlyBalance"></strong></div><div><span>Upfront moving / housing costs</span><strong data-budget-result="upfront"></strong></div><div><span>Emergency reserve</span><strong data-budget-result="emergency"></strong></div><div><span>Combined moving + reserve target</span><strong data-budget-result="totalTarget"></strong></div><div><span>Additional funding needed</span><strong data-budget-result="savingsGap"></strong></div></div><p id="budget-interpretation"></p><p class="rw-tool-note">Emergency reserve = monthly expenses × chosen months. Target = upfront costs + reserve. Funding gap = target minus savings (floored at zero). This does not include a tax, exchange-rate or inflation forecast.</p></div>
+<div class="rw-tool-actions"><a class="rw-tool-link" href="/moving-checklist">Next: moving checklist →</a><a class="rw-tool-link" href="/compare-countries">Compare destinations</a></div>
+</div></section></main><Footer /></BaseLayout>
+<script>
+ import { calculateRelocationBudget } from '../utils/relocationBudget.mjs';
+ const form=document.querySelector<HTMLFormElement>('#budget-form');
+ const results=document.querySelector<HTMLElement>('#budget-results');
+ const summary=document.querySelector<HTMLElement>('#budget-interpretation');
+ if(form && results){
+  form.addEventListener('submit',event=>{
+   event.preventDefault();
+   const values=Object.fromEntries(new FormData(form).entries());
+   const out=calculateRelocationBudget(values);
+   const currency=String(values.currency||'USD');
+   const format=new Intl.NumberFormat('en-US',{style:'currency',currency,maximumFractionDigits:currency==='JPY'?0:2});
+   Object.entries(out).forEach(([key,value])=>{
+    const target=results.querySelector<HTMLElement>('[data-budget-result="'+key+'"]');
+    if(target)target.textContent=format.format(value);
+   });
+   if(summary)summary.textContent=out.monthlyBalance<0?'Your monthly estimated spending exceeds take-home income. Revisit the plan before committing.':'Use the target and savings gap to decide how much to set aside before moving.';
+   results.hidden=false;
+   results.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+  form.addEventListener('reset',()=>{results.hidden=true;});
+ }
+</script>

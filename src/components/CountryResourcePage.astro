@@ -5,6 +5,7 @@ import Footer from './Footer.astro';
 import CTA from './CTA.astro';
 import CountryResourceNav from './CountryResourceNav.astro';
 import { SITE, resourceSections, blogPosts } from '../data';
+import '../toolkit.css';
 import { countryEditorial } from '../countryEditorial';
 import { settlementNotes } from '../settlementEditorial';
 
@@ -23,23 +24,23 @@ const profiles = {
   australia: {
     currency: 'AUD',
     monthly: [
-      ['Sydney', 'AUD 3,600–5,600', 'Highest rent pressure, strongest finance and tech density.'],
-      ['Melbourne', 'AUD 3,100–4,900', 'Strong job market with slightly different cost profile.'],
-      ['Brisbane', 'AUD 2,700–4,300', 'Often better lifestyle-cost balance for skilled workers.'],
-      ['Perth', 'AUD 2,600–4,200', 'Important for engineering, resources, and professional roles.']
+      ['Sydney', 'Collect current city-specific quotes', 'Highest rent pressure, strongest finance and tech density.'],
+      ['Melbourne', 'Collect current city-specific quotes', 'Strong job market with slightly different cost profile.'],
+      ['Brisbane', 'Collect current city-specific quotes', 'Often better lifestyle-cost balance for skilled workers.'],
+      ['Perth', 'Collect current city-specific quotes', 'Important for engineering, resources, and professional roles.']
     ],
-    setup: 'AUD 7,000–14,000+',
-    rent: 'AUD 1,900–3,600+ / month',
-    groceries: 'AUD 450–800 / month',
-    transport: 'AUD 120–260 / month',
-    utilities: 'AUD 180–350 / month',
+    setup: 'Collect current one-time moving and housing quotes',
+    rent: 'Collect recent city-level household quotes',
+    groceries: 'Collect recent city-level household quotes',
+    transport: 'Collect recent city-level household quotes',
+    utilities: 'Collect recent city-level household quotes',
     salaries: [
-      ['Software Engineer', 'AUD 95k–160k'],
-      ['QA / Test Engineer', 'AUD 75k–120k'],
-      ['Cloud / DevOps Engineer', 'AUD 110k–180k'],
-      ['Registered Nurse', 'AUD 75k–115k'],
-      ['Civil Engineer', 'AUD 80k–135k'],
-      ['Accountant / Auditor', 'AUD 70k–115k']
+      ['Software Engineer', 'Research current role and employer salaries'],
+      ['QA / Test Engineer', 'Research current role and employer salaries'],
+      ['Cloud / DevOps Engineer', 'Research current role and employer salaries'],
+      ['Registered Nurse', 'Research current role and employer salaries'],
+      ['Civil Engineer', 'Research current role and employer salaries'],
+      ['Accountant / Auditor', 'Research current role and employer salaries']
     ],
     tax: [
       'Tax year commonly runs July to June.',
@@ -52,32 +53,32 @@ const profiles = {
       ['State or skilled migration routes', 'Candidates with eligible skills and points.', 'May not require one employer at the start.', 'Research occupation lists and state requirements.']
     ],
     relocationCosts: [
-      ['Shipment / moving help', 'AUD 2,000–9,000+'],
-      ['Temporary housing', 'AUD 2,500–7,000+'],
-      ['Destination services', 'AUD 700–3,000+'],
+      ['Shipment / moving help', 'Request individual provider or employer quotes'],
+      ['Temporary housing', 'Request individual provider or employer quotes'],
+      ['Destination services', 'Request individual provider or employer quotes'],
       ['Full corporate package', 'Varies by employer and family size']
     ]
   },
   'new-zealand': {
     currency: 'NZD',
     monthly: [
-      ['Auckland', 'NZD 3,200–5,000', 'Largest market, high housing pressure.'],
-      ['Wellington', 'NZD 2,900–4,600', 'Government, tech, and professional services hub.'],
-      ['Christchurch', 'NZD 2,500–4,000', 'Often more manageable cost base.'],
-      ['Hamilton', 'NZD 2,300–3,800', 'Useful for some healthcare, education, and regional roles.']
+      ['Auckland', 'Collect current city-specific quotes', 'Largest market, high housing pressure.'],
+      ['Wellington', 'Collect current city-specific quotes', 'Government, tech, and professional services hub.'],
+      ['Christchurch', 'Collect current city-specific quotes', 'Often more manageable cost base.'],
+      ['Hamilton', 'Collect current city-specific quotes', 'Useful for some healthcare, education, and regional roles.']
     ],
-    setup: 'NZD 6,000–12,000+',
-    rent: 'NZD 1,700–3,200+ / month',
-    groceries: 'NZD 450–750 / month',
-    transport: 'NZD 100–240 / month',
-    utilities: 'NZD 180–330 / month',
+    setup: 'Collect current one-time moving and housing quotes',
+    rent: 'Collect recent city-level household quotes',
+    groceries: 'Collect recent city-level household quotes',
+    transport: 'Collect recent city-level household quotes',
+    utilities: 'Collect recent city-level household quotes',
     salaries: [
-      ['Software Engineer', 'NZD 85k–140k'],
-      ['QA / Test Engineer', 'NZD 70k–115k'],
-      ['Cloud / DevOps Engineer', 'NZD 100k–160k'],
-      ['Registered Nurse', 'NZD 75k–110k'],
-      ['Civil Engineer', 'NZD 80k–130k'],
-      ['Teacher / Educator', 'NZD 60k–95k']
+      ['Software Engineer', 'Research current role and employer salaries'],
+      ['QA / Test Engineer', 'Research current role and employer salaries'],
+      ['Cloud / DevOps Engineer', 'Research current role and employer salaries'],
+      ['Registered Nurse', 'Research current role and employer salaries'],
+      ['Civil Engineer', 'Research current role and employer salaries'],
+      ['Teacher / Educator', 'Research current role and employer salaries']
     ],
     tax: [
       'Tax year commonly runs April to March.',
@@ -90,32 +91,32 @@ const profiles = {
       ['Skilled residence routes', 'Long-term settlement planning.', 'May involve skills, income, and employment factors.', 'Verify current rules before applying.']
     ],
     relocationCosts: [
-      ['Shipment / moving help', 'NZD 2,000–8,000+'],
-      ['Temporary housing', 'NZD 2,000–6,000+'],
-      ['Destination services', 'NZD 600–2,500+'],
+      ['Shipment / moving help', 'Request individual provider or employer quotes'],
+      ['Temporary housing', 'Request individual provider or employer quotes'],
+      ['Destination services', 'Request individual provider or employer quotes'],
       ['Full corporate package', 'Varies widely']
     ]
   },
   'united-kingdom': {
     currency: 'GBP',
     monthly: [
-      ['London', 'GBP 2,600–4,500', 'Largest job market, highest rent pressure.'],
-      ['Manchester', 'GBP 1,700–2,900', 'Strong tech, media, finance, and healthcare activity.'],
-      ['Birmingham', 'GBP 1,600–2,700', 'Large regional market with lower rent than London.'],
-      ['Leeds', 'GBP 1,500–2,600', 'Good balance for some professional roles.']
+      ['London', 'Collect current city-specific quotes', 'Largest job market, highest rent pressure.'],
+      ['Manchester', 'Collect current city-specific quotes', 'Strong tech, media, finance, and healthcare activity.'],
+      ['Birmingham', 'Collect current city-specific quotes', 'Large regional market with lower rent than London.'],
+      ['Leeds', 'Collect current city-specific quotes', 'Good balance for some professional roles.']
     ],
-    setup: 'GBP 4,500–10,000+',
-    rent: 'GBP 900–2,400+ / month',
-    groceries: 'GBP 250–500 / month',
-    transport: 'GBP 80–250 / month',
-    utilities: 'GBP 160–320 / month',
+    setup: 'Collect current one-time moving and housing quotes',
+    rent: 'Collect recent city-level household quotes',
+    groceries: 'Collect recent city-level household quotes',
+    transport: 'Collect recent city-level household quotes',
+    utilities: 'Collect recent city-level household quotes',
     salaries: [
-      ['Software Engineer', 'GBP 50k–95k'],
-      ['QA / Test Engineer', 'GBP 38k–70k'],
-      ['Cloud / DevOps Engineer', 'GBP 60k–110k'],
-      ['Registered Nurse', 'GBP 32k–55k'],
-      ['Civil Engineer', 'GBP 40k–75k'],
-      ['Accountant / Auditor', 'GBP 38k–75k']
+      ['Software Engineer', 'Research current role and employer salaries'],
+      ['QA / Test Engineer', 'Research current role and employer salaries'],
+      ['Cloud / DevOps Engineer', 'Research current role and employer salaries'],
+      ['Registered Nurse', 'Research current role and employer salaries'],
+      ['Civil Engineer', 'Research current role and employer salaries'],
+      ['Accountant / Auditor', 'Research current role and employer salaries']
     ],
     tax: [
       'Tax year commonly runs April to April.',
@@ -128,32 +129,32 @@ const profiles = {
       ['Global talent / specialist routes', 'Exceptional or specialized profiles.', 'Employer role may vary.', 'Useful only for specific candidates.']
     ],
     relocationCosts: [
-      ['Shipment / moving help', 'GBP 1,500–7,000+'],
-      ['Temporary housing', 'GBP 2,000–6,000+'],
-      ['Destination services', 'GBP 500–2,500+'],
+      ['Shipment / moving help', 'Request individual provider or employer quotes'],
+      ['Temporary housing', 'Request individual provider or employer quotes'],
+      ['Destination services', 'Request individual provider or employer quotes'],
       ['Full corporate package', 'Varies by employer']
     ]
   },
   germany: {
     currency: 'EUR',
     monthly: [
-      ['Munich', 'EUR 2,400–4,100', 'High salaries but very high housing demand.'],
-      ['Berlin', 'EUR 2,000–3,500', 'Strong tech market with rising rents.'],
-      ['Frankfurt', 'EUR 2,100–3,700', 'Finance and corporate hub.'],
-      ['Hamburg', 'EUR 1,900–3,300', 'Good professional market with moderate-to-high costs.']
+      ['Munich', 'Collect current city-specific quotes', 'High salaries but very high housing demand.'],
+      ['Berlin', 'Collect current city-specific quotes', 'Strong tech market with rising rents.'],
+      ['Frankfurt', 'Collect current city-specific quotes', 'Finance and corporate hub.'],
+      ['Hamburg', 'Collect current city-specific quotes', 'Good professional market with moderate-to-high costs.']
     ],
-    setup: 'EUR 4,500–10,000+',
-    rent: 'EUR 900–2,200+ / month',
-    groceries: 'EUR 300–550 / month',
-    transport: 'EUR 60–150 / month',
-    utilities: 'EUR 180–350 / month',
+    setup: 'Collect current one-time moving and housing quotes',
+    rent: 'Collect recent city-level household quotes',
+    groceries: 'Collect recent city-level household quotes',
+    transport: 'Collect recent city-level household quotes',
+    utilities: 'Collect recent city-level household quotes',
     salaries: [
-      ['Software Engineer', 'EUR 60k–100k'],
-      ['QA / Test Engineer', 'EUR 48k–80k'],
-      ['Cloud / DevOps Engineer', 'EUR 70k–115k'],
-      ['Data Engineer', 'EUR 60k–105k'],
-      ['Mechanical Engineer', 'EUR 55k–90k'],
-      ['Healthcare Specialist', 'EUR 45k–85k']
+      ['Software Engineer', 'Research current role and employer salaries'],
+      ['QA / Test Engineer', 'Research current role and employer salaries'],
+      ['Cloud / DevOps Engineer', 'Research current role and employer salaries'],
+      ['Data Engineer', 'Research current role and employer salaries'],
+      ['Mechanical Engineer', 'Research current role and employer salaries'],
+      ['Healthcare Specialist', 'Research current role and employer salaries']
     ],
     tax: [
       'Tax year generally follows the calendar year.',
@@ -166,33 +167,33 @@ const profiles = {
       ['Opportunity / job-search concepts where applicable', 'Candidates exploring Germany before employment.', 'Employer role may come later.', 'Verify current rules and eligibility.']
     ],
     relocationCosts: [
-      ['Shipment / moving help', 'EUR 1,500–7,000+'],
-      ['Temporary housing', 'EUR 2,000–5,500+'],
-      ['Destination services', 'EUR 500–2,300+'],
+      ['Shipment / moving help', 'Request individual provider or employer quotes'],
+      ['Temporary housing', 'Request individual provider or employer quotes'],
+      ['Destination services', 'Request individual provider or employer quotes'],
       ['Full corporate package', 'Varies widely']
     ]
   },
   canada: {
     currency: 'CAD',
     monthly: [
-      ['Toronto', 'CAD 3,000–4,500', 'High rent but strong tech, finance, and corporate job density.'],
-      ['Vancouver', 'CAD 3,200–4,800', 'Very high housing cost with strong tech and healthcare demand.'],
-      ['Montreal', 'CAD 2,300–3,500', 'Often lower rent, but language fit may matter.'],
-      ['Calgary', 'CAD 2,400–3,700', 'Useful balance for energy, engineering, tech, and professional roles.'],
-      ['Ottawa', 'CAD 2,500–3,800', 'Government, tech, and stable professional market.']
+      ['Toronto', 'Collect current city-specific quotes', 'High rent but strong tech, finance, and corporate job density.'],
+      ['Vancouver', 'Collect current city-specific quotes', 'Very high housing cost with strong tech and healthcare demand.'],
+      ['Montreal', 'Collect current city-specific quotes', 'Often lower rent, but language fit may matter.'],
+      ['Calgary', 'Collect current city-specific quotes', 'Useful balance for energy, engineering, tech, and professional roles.'],
+      ['Ottawa', 'Collect current city-specific quotes', 'Government, tech, and stable professional market.']
     ],
-    setup: 'CAD 6,000–12,000+',
-    rent: 'CAD 1,400–2,800+ / month',
-    groceries: 'CAD 350–700 / month',
-    transport: 'CAD 100–180 / month',
-    utilities: 'CAD 120–280 / month',
+    setup: 'Collect current one-time moving and housing quotes',
+    rent: 'Collect recent city-level household quotes',
+    groceries: 'Collect recent city-level household quotes',
+    transport: 'Collect recent city-level household quotes',
+    utilities: 'Collect recent city-level household quotes',
     salaries: [
-      ['Software Engineer', 'CAD 80k–140k'],
-      ['QA / Test Engineer', 'CAD 65k–105k'],
-      ['Cloud / DevOps Engineer', 'CAD 90k–150k'],
-      ['Registered Nurse', 'CAD 70k–110k'],
-      ['Civil Engineer', 'CAD 75k–120k'],
-      ['Accountant / Auditor', 'CAD 60k–95k']
+      ['Software Engineer', 'Research current role and employer salaries'],
+      ['QA / Test Engineer', 'Research current role and employer salaries'],
+      ['Cloud / DevOps Engineer', 'Research current role and employer salaries'],
+      ['Registered Nurse', 'Research current role and employer salaries'],
+      ['Civil Engineer', 'Research current role and employer salaries'],
+      ['Accountant / Auditor', 'Research current role and employer salaries']
     ],
     tax: [
       'Tax planning should consider both federal and provincial rules.',
@@ -206,9 +207,9 @@ const profiles = {
       ['Express Entry-related skilled pathways', 'Skilled workers with strong profiles.', 'Employer may not always be required at first.', 'CRS score and eligibility matter.']
     ],
     relocationCosts: [
-      ['Shipment / moving help', 'CAD 2,000–10,000+'],
-      ['Temporary housing', 'CAD 2,000–6,000+'],
-      ['Destination services', 'CAD 500–2,500+'],
+      ['Shipment / moving help', 'Request individual provider or employer quotes'],
+      ['Temporary housing', 'Request individual provider or employer quotes'],
+      ['Destination services', 'Request individual provider or employer quotes'],
       ['Full corporate relocation package', 'Varies widely by employer']
     ]
   },
@@ -217,7 +218,7 @@ const profiles = {
 // For nine expanded markets (five refreshed + four new), show evidence-first
 // research prompts instead of unverified national salary, housing or shipping prices.
 // The original five market profiles remain historical illustrations pending an audit.
-const qualitativeProfile = !Object.prototype.hasOwnProperty.call(profiles, country.slug);
+const qualitativeProfile = true;
 const profile = profiles[country.slug] ?? {
   currency: country.currency,
   monthly: country.popularCities.slice(0, 4).map((city) => [
@@ -251,6 +252,10 @@ const profile = profiles[country.slug] ?? {
     ['Employer assistance', 'Ask what is paid upfront, reimbursed or excluded.']
   ]
 };
+// Legacy numeric tables have not been independently verified. The historical
+// values have been replaced by prompts for current city / role-specific evidence.
+const figuresNeedVerification = ['australia','new-zealand','united-kingdom','germany','canada'].includes(country.slug)
+  && ['cost-of-living','salaries','relocation-companies'].includes(section.slug);
 const paragraphs = country[section.field];
 const listItems = country[section.items] || [];
 const canonicalPath = `/${section.slug}/${country.slug}`;
@@ -383,6 +388,7 @@ const itemListJsonLd = {
       </div>
     </section>
 
+    {figuresNeedVerification && <div class="container" style="margin-top:16px"><p class="rw-tool-warn"><strong>Data-quality notice:</strong> Historical numeric examples on this guide were withdrawn because they lacked current, attributable primary sources. Use recent local quotes, official fees and current employer listings for your own budget. <a href="/relocation-budget">Build a budget with your own figures →</a></p></div>}
     <section class="section section-white resource-deep-section">
       <div class="container guide-layout single-guide">
         <CountryResourceNav country={country} active={section.slug} />
