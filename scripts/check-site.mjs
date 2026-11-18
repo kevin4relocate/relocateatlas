@@ -90,10 +90,14 @@ const blogFiles = htmlFiles.filter((path) => path.includes('/blog/') && path !==
 const seoRelease = JSON.parse(readFileSync(resolve('src/data/seoRelease.json'), 'utf8'));
 const expectedBlogCount = 9 + seoRelease.published.length;
 if (blogFiles.length !== expectedBlogCount) errors.push('Expected '+expectedBlogCount+' blog article pages, found ' + blogFiles.length);
+const queuedSeoPosts = JSON.parse(readFileSync(resolve('src/data/seoQueue.json'), 'utf8'));
+const scheduledDates = new Map(queuedSeoPosts.map(post => [post.slug, post.date]));
 for (const file of blogFiles) {
   const txt = pages.get(file);
-  if (!txt.includes('2026-09-26') || !txt.includes('Official resources') && !file.includes('how-to-find-visa-sponsor-jobs-abroad')) {
-    errors.push('Blog page lacks current editorial content or date: ' + relative(root, file));
+  const slug = relative(root, file).split('/')[1];
+  const expectedDate = scheduledDates.get(slug) ?? '2026-09-26';
+  if (!txt.includes(expectedDate) || (!txt.includes('Official resources') && !file.includes('how-to-find-visa-sponsor-jobs-abroad'))) {
+    errors.push('Blog page lacks official sources or publication date: ' + relative(root, file));
   }
 }
 const home = pages.get(join(root,'index.html')) || '';
