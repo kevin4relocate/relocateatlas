@@ -224,7 +224,7 @@ const guideDirectory = pages.get(join(root, 'guides', 'index.html')) || '';
 if (!guideDirectory.includes('THE RELOCATION LIBRARY') || !guideDirectory.includes('rw-topic-grid')) errors.push('Redesigned relocation guides directory missing');
 if (!countryDirectory.includes('data-country-search') || !countryDirectory.includes('data-country-filters')) errors.push('Destination search or region filter missing');
 if ((countryDirectory.match(/<div\b[^>]*\bdata-country-result(?=[\s=>])/g) || []).length < countrySlugs.length) errors.push('Country directory does not expose all filterable guide cards');
-if (!home.includes('action="/countries"') || !home.includes('name="q"')) errors.push('Homepage country search is not wired to the directory');
+if (!home.includes('action="/search"') || !home.includes('name="q"')) errors.push('Homepage site search is not wired to the searchable library');
 if (!home.includes('rw-newsletter-section') || !home.includes('rw-hero')) errors.push('Redesigned homepage sections missing');
 
 // All nine expanded markets must have generated topic routes and evidence-first money research.
