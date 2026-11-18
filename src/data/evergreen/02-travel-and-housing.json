@@ -1,0 +1,952 @@
+[
+  {
+    "cluster": "booking-flights",
+    "category": "Flight Booking and Connections",
+    "title": "Choose Flights for a One-Way Relocation",
+    "first": "Compare total travel time, baggage allowance and arrival time before buying",
+    "second": "Read refund, change and missed-connection rules for your precise fare",
+    "pitfall": "A cheap headline fare may cost more once checked bags are added",
+    "deliverable": "A flight comparison sheet with full journey cost",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "booking-flights",
+    "category": "Flight Booking and Connections",
+    "title": "Book a Flight Before Your Visa Is Finalised",
+    "first": "Identify which approvals must be granted before you can travel",
+    "second": "Prefer changeable arrangements if early booking is unavoidable",
+    "pitfall": "Assuming processing will finish on time can create non-refundable losses",
+    "deliverable": "A ticket-purchase decision rule linked to permit status",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "booking-flights",
+    "category": "Flight Booking and Connections",
+    "title": "Check Transit Visa Rules on a Connecting Flight",
+    "first": "List every airport and the passport or residence documents you will use",
+    "second": "Check whether changing terminals or collecting bags requires entry permission",
+    "pitfall": "An airside connection may become a landside transfer when booked on separate tickets",
+    "deliverable": "A route-by-route transit eligibility worksheet",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "booking-flights",
+    "category": "Flight Booking and Connections",
+    "title": "Compare One Ticket and Separate-Ticket Connections",
+    "first": "Check whether both flights share a single protected booking",
+    "second": "Allow additional buffer for immigration, baggage collection and recheck where needed",
+    "pitfall": "A missed self-transfer can leave you buying a replacement ticket",
+    "deliverable": "A connection-risk and responsibility comparison",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "booking-flights",
+    "category": "Flight Booking and Connections",
+    "title": "Plan Your Arrival Time in a New City",
+    "first": "Align flight arrival with accommodation check-in and ground transportation",
+    "second": "Check whether you can reach the property safely after a late arrival",
+    "pitfall": "Landing at midnight can make a low-cost flight expensive and stressful",
+    "deliverable": "An arrival-hour transport and check-in plan",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "booking-flights",
+    "category": "Flight Booking and Connections",
+    "title": "Understand Airline Change and Refund Terms",
+    "first": "Read the exact fare family rather than general airline advertising",
+    "second": "Save the airline conditions and booking confirmation before payment",
+    "pitfall": "A “flexible” label may exclude fare differences or service charges",
+    "deliverable": "A plain-language refund and change summary",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "booking-flights",
+    "category": "Flight Booking and Connections",
+    "title": "Decide Whether to Add Extra Checked Baggage",
+    "first": "Price extra weight before travel and compare shipping alternatives",
+    "second": "Account for multiple flights with different baggage rules",
+    "pitfall": "A generous long-haul allowance may not apply to a regional connection",
+    "deliverable": "An all-sector baggage allowance chart",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "booking-flights",
+    "category": "Flight Booking and Connections",
+    "title": "Book Flights for a Family Relocation",
+    "first": "Check separate passports, bookings, age-related rules and seat arrangements",
+    "second": "Confirm family transfer times, child needs and baggage distribution",
+    "pitfall": "Assuming all travellers have the same entry conditions is unsafe",
+    "deliverable": "A traveller-by-traveller itinerary checklist",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "booking-flights",
+    "category": "Flight Booking and Connections",
+    "title": "Plan a Connection With Limited Mobility",
+    "first": "Request appropriate airport assistance through official airline channels",
+    "second": "Confirm connection times, terminal layout and meeting points",
+    "pitfall": "Expecting assistance to appear automatically may leave a difficult transfer",
+    "deliverable": "A confirmed assistance and transfer plan",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "booking-flights",
+    "category": "Flight Booking and Connections",
+    "title": "Make a Backup Plan for Flight Disruptions",
+    "first": "Save booking references, airline contacts and accommodation details offline",
+    "second": "Identify alternative arrival transport and essential overnight supplies",
+    "pitfall": "Relying entirely on live email can fail during a long delay",
+    "deliverable": "A disruption folder with confirmed contact methods",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "airport-navigation",
+    "category": "Airports and Arrival",
+    "title": "Prepare for Airport Check-In When Moving Abroad",
+    "first": "Keep booking, passport and relevant entry documents accessible",
+    "second": "Check airline-specific document checks before joining the queue",
+    "pitfall": "Burying originals inside a checked suitcase can delay or prevent check-in",
+    "deliverable": "A pre-counter document sequence",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "airport-navigation",
+    "category": "Airports and Arrival",
+    "title": "Handle Airport Security With Electronics and Medicines",
+    "first": "Review departure-airport and airline security guidance in advance",
+    "second": "Pack laptops, chargers and medicines for easy inspection",
+    "pitfall": "Applying one airport's liquid rules everywhere can cause confiscation or delays",
+    "deliverable": "A security-ready carry-on layout",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "airport-navigation",
+    "category": "Airports and Arrival",
+    "title": "Navigate a Large Airport During a Connection",
+    "first": "Review airport maps, terminals and estimated walking requirements",
+    "second": "Follow live gate signs and confirm transfer procedures on arrival",
+    "pitfall": "Relying on an old screenshot of the terminal map can mislead you",
+    "deliverable": "A two-step connection route with a time buffer",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "airport-navigation",
+    "category": "Airports and Arrival",
+    "title": "What to Do When Your Connecting Flight Is Delayed",
+    "first": "Contact the operating airline and verify the status of onward sectors",
+    "second": "Keep receipts and check which passenger-rights rules apply to your route",
+    "pitfall": "Booking your own replacement immediately may complicate reimbursement",
+    "deliverable": "A documented disruption record",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "airport-navigation",
+    "category": "Airports and Arrival",
+    "title": "Handle Lost or Delayed Checked Baggage",
+    "first": "Report the problem at the airline baggage service before leaving where possible",
+    "second": "Save baggage tags, report number and essential-item receipts",
+    "pitfall": "Leaving without a report can make later tracing harder",
+    "deliverable": "A baggage-claim evidence bundle",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "airport-navigation",
+    "category": "Airports and Arrival",
+    "title": "Choose Safe Airport Transport After Arrival",
+    "first": "Compare authorised taxi desks, rail links and rideshare pickup points",
+    "second": "Keep your accommodation address in the local language where useful",
+    "pitfall": "Accepting an unsolicited ride can increase cost and security risks",
+    "deliverable": "A verified door-to-door transfer plan",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "airport-navigation",
+    "category": "Airports and Arrival",
+    "title": "Prepare for Immigration Questions at Arrival",
+    "first": "Organise accurate answers about purpose, address and supporting documentation",
+    "second": "Read current entry rules for your passport and immigration status",
+    "pitfall": "Rehearsed misleading answers can create serious problems at the border",
+    "deliverable": "A truthful arrival information sheet",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "airport-navigation",
+    "category": "Airports and Arrival",
+    "title": "Cross Customs With Personal Belongings",
+    "first": "Check destination declarations for goods, cash and restricted items",
+    "second": "Prepare a simple inventory of items whose value or status may matter",
+    "pitfall": "Assuming household goods are always duty-free can cause delays",
+    "deliverable": "A customs declaration preparation list",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "airport-navigation",
+    "category": "Airports and Arrival",
+    "title": "Reach Temporary Housing Without Mobile Data",
+    "first": "Download maps, addresses and transport directions before departure",
+    "second": "Carry a payment backup and a local emergency contact",
+    "pitfall": "Depending on a roaming app that cannot connect can strand you",
+    "deliverable": "An offline first-journey instruction card",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "airport-navigation",
+    "category": "Airports and Arrival",
+    "title": "Recover From a Long Flight Before Starting Work",
+    "first": "Allow practical time for sleep, hydration and essential errands",
+    "second": "Avoid scheduling critical appointments immediately after overnight travel",
+    "pitfall": "An exhausted arrival-day schedule increases avoidable mistakes",
+    "deliverable": "A realistic first-48-hours timetable",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "packing-shipping",
+    "category": "Packing and Shipping",
+    "title": "Build a Carry-On Bag for Relocation Day",
+    "first": "Prioritise essential documents, medicines, chargers and a change of clothes",
+    "second": "Keep weight and security restrictions specific to the operating airline",
+    "pitfall": "Putting irreplaceable records in checked luggage creates avoidable risk",
+    "deliverable": "An essential-items carry-on checklist",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "packing-shipping",
+    "category": "Packing and Shipping",
+    "title": "Pack for a Different Climate Without Overpacking",
+    "first": "Research seasonal conditions in the exact destination city",
+    "second": "Prioritise versatile layers and purchase bulky items locally if practical",
+    "pitfall": "Packing only for the weather at departure can leave you unprepared",
+    "deliverable": "A climate-based capsule packing list",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "packing-shipping",
+    "category": "Packing and Shipping",
+    "title": "Label Suitcases for Multi-Leg International Travel",
+    "first": "Use durable identification with safe contact details and backup tags",
+    "second": "Photograph each suitcase and retain its baggage tag",
+    "pitfall": "A lost paper tag without a bag description slows identification",
+    "deliverable": "A private baggage photo inventory",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "packing-shipping",
+    "category": "Packing and Shipping",
+    "title": "Decide What to Ship and What to Replace Abroad",
+    "first": "Compare shipping, storage and replacement costs for each item category",
+    "second": "Separate sentimental, necessary and easily replaceable belongings",
+    "pitfall": "Shipping low-value furniture can cost more than local replacement",
+    "deliverable": "A keep-ship-sell-donate matrix",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "packing-shipping",
+    "category": "Packing and Shipping",
+    "title": "Avoid Dangerous or Restricted Items in Luggage",
+    "first": "Check airline and national rules for batteries, liquids and prohibited goods",
+    "second": "Review medicines and special equipment separately before departure",
+    "pitfall": "Different rules can apply to checked versus cabin baggage",
+    "deliverable": "A restricted-item verification sheet",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "packing-shipping",
+    "category": "Packing and Shipping",
+    "title": "Pack Electronics for Different Power Systems",
+    "first": "Check voltage, plug types and device input ratings on the label",
+    "second": "Separate a plug adapter from a true voltage-conversion requirement",
+    "pitfall": "A plug adapter does not make an incompatible device safe",
+    "deliverable": "A device compatibility inventory",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "packing-shipping",
+    "category": "Packing and Shipping",
+    "title": "Organise Luggage for a First Week in Temporary Housing",
+    "first": "Pack seven-day essentials in accessible bags rather than sealed boxes",
+    "second": "Mark what you will need before your shipment arrives",
+    "pitfall": "A perfectly organised shipment is useless if essentials arrive weeks later",
+    "deliverable": "A first-week unpacking sequence",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "packing-shipping",
+    "category": "Packing and Shipping",
+    "title": "Ship Personal Books and Important Papers Safely",
+    "first": "Identify which records should travel with you rather than in freight",
+    "second": "Use packing protection and tracking for replaceable materials",
+    "pitfall": "International shipments may face customs delays or water damage",
+    "deliverable": "A paper-record handling plan",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "packing-shipping",
+    "category": "Packing and Shipping",
+    "title": "Move Fragile Work Equipment Between Countries",
+    "first": "Check original packaging, transit insurance and handling restrictions",
+    "second": "Document condition, serial numbers and any employer ownership constraints",
+    "pitfall": "Assuming standard baggage cover protects specialist equipment is risky",
+    "deliverable": "A high-value equipment transport register",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "packing-shipping",
+    "category": "Packing and Shipping",
+    "title": "Reduce Your Belongings Before Moving Overseas",
+    "first": "Sort by practical use, replacement difficulty and emotional importance",
+    "second": "Set sale, donation and disposal deadlines before moving week",
+    "pitfall": "Delaying decluttering until the final day creates rushed decisions",
+    "deliverable": "A staged downsizing calendar",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "first-week",
+    "category": "First Week Abroad",
+    "title": "Plan the First 24 Hours After Moving Abroad",
+    "first": "Prioritise safe accommodation, communication, food and rest",
+    "second": "Check local transport options and emergency contacts before arrival",
+    "pitfall": "Trying to finish every administrative task on day one leads to errors",
+    "deliverable": "A four-priority arrival checklist",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "first-week",
+    "category": "First Week Abroad",
+    "title": "Set Up a Local Phone Number After Relocation",
+    "first": "Compare prepaid, eSIM and contract options against identity requirements",
+    "second": "Test calls, SMS verification and connectivity before relying on the number",
+    "pitfall": "A data-only plan may not receive essential banking verification messages",
+    "deliverable": "A verified communications setup checklist",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "first-week",
+    "category": "First Week Abroad",
+    "title": "Create a First-Week Administrative Priority List",
+    "first": "Identify which registrations have deadlines and which can wait",
+    "second": "Group errands geographically and note office opening requirements",
+    "pitfall": "Following an internet checklist from another country may waste appointments",
+    "deliverable": "A deadline-driven errand plan",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "first-week",
+    "category": "First Week Abroad",
+    "title": "Buy Essentials Without Spending Too Much on Arrival",
+    "first": "List bedding, groceries, cleaning supplies and transport needs",
+    "second": "Compare prices after understanding the local neighbourhood",
+    "pitfall": "Stress shopping on the first day can consume the moving buffer",
+    "deliverable": "A first-week essentials budget",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "first-week",
+    "category": "First Week Abroad",
+    "title": "Understand Your New Neighbourhood in One Weekend",
+    "first": "Walk key routes for groceries, transport, healthcare and daily needs",
+    "second": "Note accessibility, safety and actual travel times",
+    "pitfall": "Choosing services solely from map ratings hides practical friction",
+    "deliverable": "A local-services map with verified opening hours",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "first-week",
+    "category": "First Week Abroad",
+    "title": "Find Reliable Emergency Services in a New Country",
+    "first": "Identify local emergency numbers and official public alert channels",
+    "second": "Practise how to give your address accurately to a responder",
+    "pitfall": "Assuming your home country's emergency number works abroad can be unsafe",
+    "deliverable": "An emergency contact card in your phone and wallet",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "first-week",
+    "category": "First Week Abroad",
+    "title": "Handle Registration Appointments During Your First Week",
+    "first": "Read the responsible authority's current required-document list",
+    "second": "Book appointments only through genuine government websites",
+    "pitfall": "Relying on third-party agents can add fees or misinformation",
+    "deliverable": "An appointment folder with confirmations",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "first-week",
+    "category": "First Week Abroad",
+    "title": "Start a Simple Arrival Expense Log",
+    "first": "Record deposits, transport, groceries and setup purchases",
+    "second": "Compare each expense to your pre-departure budget categories",
+    "pitfall": "Small arrival purchases can accumulate unnoticed",
+    "deliverable": "A seven-day expense summary",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "first-week",
+    "category": "First Week Abroad",
+    "title": "Get Through Your First Grocery Trip Abroad",
+    "first": "Identify staple foods, package sizes and payment options before shopping",
+    "second": "Check dietary labels carefully and learn common local product names",
+    "pitfall": "Buying everything familiar at premium import stores inflates costs",
+    "deliverable": "A reusable starter grocery list",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "first-week",
+    "category": "First Week Abroad",
+    "title": "Structure Your First Month Without Burnout",
+    "first": "Choose a limited number of weekly priorities and build recovery time",
+    "second": "Separate urgent legal tasks from optional social and shopping goals",
+    "pitfall": "Treating relocation as a sprint can affect work and wellbeing",
+    "deliverable": "A four-week settling-in plan",
+    "resources": [
+      [
+        "Official international travel checklist (US Department of State)",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "IATA passport, visa and health information service",
+        "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+      ]
+    ]
+  },
+  {
+    "cluster": "housing",
+    "category": "Renting and Housing Abroad",
+    "title": "Find Temporary Housing Before Signing a Long Lease",
+    "first": "Compare actual check-in times, transport and cancellation terms",
+    "second": "Use temporary stays to inspect neighbourhoods before committing",
+    "pitfall": "Committing to a year-long lease from photos alone can be costly",
+    "deliverable": "A temporary-housing shortlist",
+    "resources": [
+      [
+        "FTC guide to avoiding rental-listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ],
+      [
+        "EURES guide to living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "housing",
+    "category": "Renting and Housing Abroad",
+    "title": "Spot Fake Rental Listings When Moving Abroad",
+    "first": "Compare listing details with the property owner's legitimate channels",
+    "second": "Avoid payments before proper verification and keep written records",
+    "pitfall": "An urgent deposit request can be part of a rental scam",
+    "deliverable": "A rental legitimacy checklist",
+    "resources": [
+      [
+        "FTC guide to avoiding rental-listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ],
+      [
+        "EURES guide to living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "housing",
+    "category": "Renting and Housing Abroad",
+    "title": "Prepare Documents for a Rental Application Abroad",
+    "first": "Ask the landlord or agency for an exact document list",
+    "second": "Limit sensitive records to what is necessary and use secure channels",
+    "pitfall": "Sending full identity documents to unknown contacts creates privacy risk",
+    "deliverable": "A verified rental application pack",
+    "resources": [
+      [
+        "FTC guide to avoiding rental-listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ],
+      [
+        "EURES guide to living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "housing",
+    "category": "Renting and Housing Abroad",
+    "title": "Compare Two Apartments Beyond Monthly Rent",
+    "first": "Review utilities, commute, noise, deposit and lease flexibility",
+    "second": "Visit or arrange a trustworthy inspection and note actual condition",
+    "pitfall": "Choosing the cheaper advertised rent can hide high total costs",
+    "deliverable": "A side-by-side apartment cost sheet",
+    "resources": [
+      [
+        "FTC guide to avoiding rental-listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ],
+      [
+        "EURES guide to living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "housing",
+    "category": "Renting and Housing Abroad",
+    "title": "Document a Rental Property Move-In Inspection",
+    "first": "Photograph existing damage and record meter readings where applicable",
+    "second": "Send a dated condition report through the agreed channel",
+    "pitfall": "A verbal agreement about pre-existing damage is hard to prove later",
+    "deliverable": "A move-in condition inventory",
+    "resources": [
+      [
+        "FTC guide to avoiding rental-listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ],
+      [
+        "EURES guide to living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "housing",
+    "category": "Renting and Housing Abroad",
+    "title": "Understand Lease Break Clauses Before You Sign",
+    "first": "Identify notice periods, deposits, cleaning and early-exit provisions",
+    "second": "Ask for clarification from a qualified local adviser where needed",
+    "pitfall": "Assuming home-country tenancy rules apply can cause surprise charges",
+    "deliverable": "A lease risk summary",
+    "resources": [
+      [
+        "FTC guide to avoiding rental-listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ],
+      [
+        "EURES guide to living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "housing",
+    "category": "Renting and Housing Abroad",
+    "title": "Choose Between a Room and a Full Apartment",
+    "first": "Compare privacy, location, deposits, utilities and household responsibilities",
+    "second": "Ask about guests, shared spaces and house rules",
+    "pitfall": "A room advertised as all-inclusive may exclude important costs",
+    "deliverable": "A housing option decision table",
+    "resources": [
+      [
+        "FTC guide to avoiding rental-listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ],
+      [
+        "EURES guide to living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "housing",
+    "category": "Renting and Housing Abroad",
+    "title": "Find Housing Near Work Without Overpaying for Convenience",
+    "first": "Test commute routes at realistic times and compare nearby areas",
+    "second": "Include transit frequency and backup routes in the calculation",
+    "pitfall": "Straight-line map distance can misrepresent daily travel",
+    "deliverable": "A real-world commute comparison",
+    "resources": [
+      [
+        "FTC guide to avoiding rental-listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ],
+      [
+        "EURES guide to living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "housing",
+    "category": "Renting and Housing Abroad",
+    "title": "Arrange Utilities When Renting Overseas",
+    "first": "Clarify who controls electricity, water, internet and service accounts",
+    "second": "Record activation dates, deposit requirements and provider contacts",
+    "pitfall": "Assuming utilities are included can delay move-in readiness",
+    "deliverable": "A service activation checklist",
+    "resources": [
+      [
+        "FTC guide to avoiding rental-listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ],
+      [
+        "EURES guide to living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "housing",
+    "category": "Renting and Housing Abroad",
+    "title": "Plan a Move From Temporary to Permanent Housing",
+    "first": "Coordinate lease dates, delivery access and inventory inspection",
+    "second": "Budget overlap days if short-term housing ends before a new lease begins",
+    "pitfall": "Moving twice without a packing plan increases damage and cost",
+    "deliverable": "A handover schedule with contingency dates",
+    "resources": [
+      [
+        "FTC guide to avoiding rental-listing scams",
+        "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+      ],
+      [
+        "EURES guide to living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  }
+]
