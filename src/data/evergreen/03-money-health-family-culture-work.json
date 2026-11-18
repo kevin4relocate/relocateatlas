@@ -1,0 +1,952 @@
+[
+  {
+    "cluster": "money",
+    "category": "Banking and Money Abroad",
+    "title": "Open a Bank Account After Moving Abroad",
+    "first": "Check acceptable identity and address evidence with the bank directly",
+    "second": "Compare account fees, international transfers and cash access",
+    "pitfall": "A bank account advertised as free may have transaction or inactivity charges",
+    "deliverable": "A bank comparison checklist based on actual fee documents",
+    "resources": [
+      [
+        "UK government guidance on finances when travelling abroad",
+        "https://www.gov.uk/guidance/your-finances-when-travelling-abroad"
+      ],
+      [
+        "EU guidance on living and working in another country",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "money",
+    "category": "Banking and Money Abroad",
+    "title": "Transfer Savings Across Borders More Carefully",
+    "first": "Compare transfer providers by total received amount rather than headline rate",
+    "second": "Test a small transfer and verify beneficiary details before moving larger sums",
+    "pitfall": "A low transfer fee may be offset by poor exchange rates",
+    "deliverable": "A cross-border transfer cost record",
+    "resources": [
+      [
+        "UK government guidance on finances when travelling abroad",
+        "https://www.gov.uk/guidance/your-finances-when-travelling-abroad"
+      ],
+      [
+        "EU guidance on living and working in another country",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "money",
+    "category": "Banking and Money Abroad",
+    "title": "Create a Monthly Budget in a New Currency",
+    "first": "List fixed obligations and flexible spending in the destination currency",
+    "second": "Use your actual take-home pay and dated local prices",
+    "pitfall": "Converting every purchase to your home currency can obscure affordability",
+    "deliverable": "A destination-currency spending plan",
+    "resources": [
+      [
+        "UK government guidance on finances when travelling abroad",
+        "https://www.gov.uk/guidance/your-finances-when-travelling-abroad"
+      ],
+      [
+        "EU guidance on living and working in another country",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "money",
+    "category": "Banking and Money Abroad",
+    "title": "Avoid Foreign ATM and Card Surprises",
+    "first": "Review withdrawal fees, card network charges and daily limits",
+    "second": "Keep an independent payment method for emergencies",
+    "pitfall": "Dynamic currency conversion at an ATM may be less favourable",
+    "deliverable": "A cash-access and card-fee checklist",
+    "resources": [
+      [
+        "UK government guidance on finances when travelling abroad",
+        "https://www.gov.uk/guidance/your-finances-when-travelling-abroad"
+      ],
+      [
+        "EU guidance on living and working in another country",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "money",
+    "category": "Banking and Money Abroad",
+    "title": "Understand Rental Deposits and Upfront Payments",
+    "first": "Ask which amounts are refundable, held and payable before move-in",
+    "second": "Retain proof of authorised payment and receipts",
+    "pitfall": "Sending an irreversible transfer to an unverified landlord risks fraud",
+    "deliverable": "A deposit ledger tied to signed documents",
+    "resources": [
+      [
+        "UK government guidance on finances when travelling abroad",
+        "https://www.gov.uk/guidance/your-finances-when-travelling-abroad"
+      ],
+      [
+        "EU guidance on living and working in another country",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "money",
+    "category": "Banking and Money Abroad",
+    "title": "Keep an Emergency Fund During Your First Months",
+    "first": "Calculate real monthly essentials and relocation-specific uncertainties",
+    "second": "Separate accessible emergency money from routine spending",
+    "pitfall": "Allocating all savings to furniture can leave no cushion for delays",
+    "deliverable": "A minimum-cash buffer decision worksheet",
+    "resources": [
+      [
+        "UK government guidance on finances when travelling abroad",
+        "https://www.gov.uk/guidance/your-finances-when-travelling-abroad"
+      ],
+      [
+        "EU guidance on living and working in another country",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "money",
+    "category": "Banking and Money Abroad",
+    "title": "Manage Subscriptions When Changing Countries",
+    "first": "Audit billing currency, regional restrictions and cancellation terms",
+    "second": "Update payment methods only after checking account access",
+    "pitfall": "Forgetting annual renewals can create needless cross-border charges",
+    "deliverable": "An account and renewal calendar",
+    "resources": [
+      [
+        "UK government guidance on finances when travelling abroad",
+        "https://www.gov.uk/guidance/your-finances-when-travelling-abroad"
+      ],
+      [
+        "EU guidance on living and working in another country",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "money",
+    "category": "Banking and Money Abroad",
+    "title": "Plan for Taxes Without Assuming a Simple Rule",
+    "first": "Record residency dates, sources of income and relevant employer documents",
+    "second": "Consult primary tax guidance or a qualified adviser for material decisions",
+    "pitfall": "A generic online tax estimator cannot settle cross-border liability",
+    "deliverable": "A tax-question dossier without invented rates",
+    "resources": [
+      [
+        "UK government guidance on finances when travelling abroad",
+        "https://www.gov.uk/guidance/your-finances-when-travelling-abroad"
+      ],
+      [
+        "EU guidance on living and working in another country",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "money",
+    "category": "Banking and Money Abroad",
+    "title": "Protect Payment Accounts When Your Phone Number Changes",
+    "first": "Inventory services that use SMS or authenticator recovery",
+    "second": "Set secure alternative recovery methods before cancelling an old number",
+    "pitfall": "Losing access to the original SIM can lock you out of accounts",
+    "deliverable": "An authentication migration checklist",
+    "resources": [
+      [
+        "UK government guidance on finances when travelling abroad",
+        "https://www.gov.uk/guidance/your-finances-when-travelling-abroad"
+      ],
+      [
+        "EU guidance on living and working in another country",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "money",
+    "category": "Banking and Money Abroad",
+    "title": "Share Financial Responsibilities in a Relocating Household",
+    "first": "Agree on rent, deposits, childcare and emergency spending roles",
+    "second": "Keep a simple joint ledger and emergency access plan",
+    "pitfall": "Unspoken assumptions about who pays for what create conflict",
+    "deliverable": "A household money agreement",
+    "resources": [
+      [
+        "UK government guidance on finances when travelling abroad",
+        "https://www.gov.uk/guidance/your-finances-when-travelling-abroad"
+      ],
+      [
+        "EU guidance on living and working in another country",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "health-wellbeing",
+    "category": "Health and Wellbeing Abroad",
+    "title": "Arrange Medical Coverage During Your Relocation Gap",
+    "first": "Compare insurance start dates against flights and employment dates",
+    "second": "Ask a qualified source about coverage for planned care and emergencies",
+    "pitfall": "A new employer's policy may start after the day you arrive",
+    "deliverable": "A no-gap health coverage timeline",
+    "resources": [
+      [
+        "WHO travel and health resource centre",
+        "https://www.who.int/health-topics/travel-and-health"
+      ],
+      [
+        "CDC health preparation guidance for travellers",
+        "https://wwwnc.cdc.gov/travel/page/before-travel/"
+      ]
+    ]
+  },
+  {
+    "cluster": "health-wellbeing",
+    "category": "Health and Wellbeing Abroad",
+    "title": "Pack Medication for an International Move",
+    "first": "Ask your clinician about an appropriate supply and supporting documents",
+    "second": "Check destination and transit restrictions for each medicine",
+    "pitfall": "A legal prescription at home may not authorise import abroad",
+    "deliverable": "A medication documentation and travel plan",
+    "resources": [
+      [
+        "WHO travel and health resource centre",
+        "https://www.who.int/health-topics/travel-and-health"
+      ],
+      [
+        "CDC health preparation guidance for travellers",
+        "https://wwwnc.cdc.gov/travel/page/before-travel/"
+      ]
+    ]
+  },
+  {
+    "cluster": "health-wellbeing",
+    "category": "Health and Wellbeing Abroad",
+    "title": "Find a Primary Care Provider After Relocating",
+    "first": "Research how local enrolment works and which documents are needed",
+    "second": "Verify clinic availability and urgent-care alternatives",
+    "pitfall": "Assuming the closest practice accepts new patients can delay care",
+    "deliverable": "A local healthcare access map",
+    "resources": [
+      [
+        "WHO travel and health resource centre",
+        "https://www.who.int/health-topics/travel-and-health"
+      ],
+      [
+        "CDC health preparation guidance for travellers",
+        "https://wwwnc.cdc.gov/travel/page/before-travel/"
+      ]
+    ]
+  },
+  {
+    "cluster": "health-wellbeing",
+    "category": "Health and Wellbeing Abroad",
+    "title": "Prepare for Jet Lag When Starting a New Job",
+    "first": "Schedule light, meals and sleep with a realistic adjustment period",
+    "second": "Keep the arrival days less demanding where possible",
+    "pitfall": "Starting intensive work immediately after overnight travel may hurt concentration",
+    "deliverable": "A gentle sleep and arrival schedule",
+    "resources": [
+      [
+        "WHO travel and health resource centre",
+        "https://www.who.int/health-topics/travel-and-health"
+      ],
+      [
+        "CDC health preparation guidance for travellers",
+        "https://wwwnc.cdc.gov/travel/page/before-travel/"
+      ]
+    ]
+  },
+  {
+    "cluster": "health-wellbeing",
+    "category": "Health and Wellbeing Abroad",
+    "title": "Manage Stress During a Major International Move",
+    "first": "Identify practical stressors and plan rest plus social contact",
+    "second": "Seek professional support if distress interferes with daily functioning",
+    "pitfall": "Treating constant exhaustion as proof of productivity is unhelpful",
+    "deliverable": "A personal wellbeing check-in routine",
+    "resources": [
+      [
+        "WHO travel and health resource centre",
+        "https://www.who.int/health-topics/travel-and-health"
+      ],
+      [
+        "CDC health preparation guidance for travellers",
+        "https://wwwnc.cdc.gov/travel/page/before-travel/"
+      ]
+    ]
+  },
+  {
+    "cluster": "health-wellbeing",
+    "category": "Health and Wellbeing Abroad",
+    "title": "Continue Mental Health Support Across Borders",
+    "first": "Discuss continuity options with existing qualified care providers",
+    "second": "Check telehealth licensing, time zones and local emergency pathways",
+    "pitfall": "Assuming an old clinician can legally practise in the new country may be wrong",
+    "deliverable": "A care-transition contact list",
+    "resources": [
+      [
+        "WHO travel and health resource centre",
+        "https://www.who.int/health-topics/travel-and-health"
+      ],
+      [
+        "CDC health preparation guidance for travellers",
+        "https://wwwnc.cdc.gov/travel/page/before-travel/"
+      ]
+    ]
+  },
+  {
+    "cluster": "health-wellbeing",
+    "category": "Health and Wellbeing Abroad",
+    "title": "Build a Healthy Daily Routine in a New City",
+    "first": "Anchor sleep, meals and movement around your actual working hours",
+    "second": "Find accessible groceries, exercise spaces and medical services",
+    "pitfall": "Attempting a dramatic lifestyle reset during relocation can be unsustainable",
+    "deliverable": "A simple first-month habit plan",
+    "resources": [
+      [
+        "WHO travel and health resource centre",
+        "https://www.who.int/health-topics/travel-and-health"
+      ],
+      [
+        "CDC health preparation guidance for travellers",
+        "https://wwwnc.cdc.gov/travel/page/before-travel/"
+      ]
+    ]
+  },
+  {
+    "cluster": "health-wellbeing",
+    "category": "Health and Wellbeing Abroad",
+    "title": "Travel With Allergies or Dietary Requirements",
+    "first": "Check food labels, common local terms and emergency care access",
+    "second": "Discuss medication and contingency planning with a clinician",
+    "pitfall": "Assuming familiar packaging or menu labels have identical ingredients is risky",
+    "deliverable": "A translated dietary and medication information card",
+    "resources": [
+      [
+        "WHO travel and health resource centre",
+        "https://www.who.int/health-topics/travel-and-health"
+      ],
+      [
+        "CDC health preparation guidance for travellers",
+        "https://wwwnc.cdc.gov/travel/page/before-travel/"
+      ]
+    ]
+  },
+  {
+    "cluster": "health-wellbeing",
+    "category": "Health and Wellbeing Abroad",
+    "title": "Keep Healthcare Records Organised Abroad",
+    "first": "Maintain secure summaries of diagnoses, allergies, medicines and vaccinations",
+    "second": "Learn which records a new provider may need to continue care",
+    "pitfall": "Relying on a large unstructured folder can slow appointments",
+    "deliverable": "A concise personal medical record index",
+    "resources": [
+      [
+        "WHO travel and health resource centre",
+        "https://www.who.int/health-topics/travel-and-health"
+      ],
+      [
+        "CDC health preparation guidance for travellers",
+        "https://wwwnc.cdc.gov/travel/page/before-travel/"
+      ]
+    ]
+  },
+  {
+    "cluster": "health-wellbeing",
+    "category": "Health and Wellbeing Abroad",
+    "title": "Know What to Do if You Become Ill Just After Arrival",
+    "first": "Identify urgent-care options, insurer contact details and local emergency numbers",
+    "second": "Keep a trusted contact informed of your address and status",
+    "pitfall": "Waiting to research the system until a health crisis adds avoidable stress",
+    "deliverable": "A personal first-response information sheet",
+    "resources": [
+      [
+        "WHO travel and health resource centre",
+        "https://www.who.int/health-topics/travel-and-health"
+      ],
+      [
+        "CDC health preparation guidance for travellers",
+        "https://wwwnc.cdc.gov/travel/page/before-travel/"
+      ]
+    ]
+  },
+  {
+    "cluster": "family-pets",
+    "category": "Moving With Family and Pets",
+    "title": "Move Abroad With a Partner Who Is Not Working Yet",
+    "first": "Discuss work eligibility, finances and daily routine expectations early",
+    "second": "Build an independent social and professional plan for both adults",
+    "pitfall": "Assuming the accompanying partner will be occupied by errands indefinitely is unfair",
+    "deliverable": "A two-person relocation roles agreement",
+    "resources": [
+      [
+        "Official international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "EURES living and working guidance",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "family-pets",
+    "category": "Moving With Family and Pets",
+    "title": "Prepare Children for a Move to Another Country",
+    "first": "Explain the timeline with age-appropriate details and familiar routines",
+    "second": "Invite questions and identify ways to maintain friendships",
+    "pitfall": "Presenting the move as an unqualified adventure may dismiss worries",
+    "deliverable": "A family preparation calendar",
+    "resources": [
+      [
+        "Official international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "EURES living and working guidance",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "family-pets",
+    "category": "Moving With Family and Pets",
+    "title": "Choose a School After Moving Internationally",
+    "first": "Check local admissions, curriculum, language support and commute",
+    "second": "Ask authorities about residence or fee conditions applicable to your child",
+    "pitfall": "A nearby school may have no places or different eligibility requirements",
+    "deliverable": "A school enquiry comparison sheet",
+    "resources": [
+      [
+        "Official international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "EURES living and working guidance",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "family-pets",
+    "category": "Moving With Family and Pets",
+    "title": "Organise Travel Documents for Every Family Member",
+    "first": "Create individual folders for passports and entry permissions",
+    "second": "Verify the rules for accompanying adults and children separately",
+    "pitfall": "Assuming a parent's document covers a child can disrupt the journey",
+    "deliverable": "A family document matrix",
+    "resources": [
+      [
+        "Official international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "EURES living and working guidance",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "family-pets",
+    "category": "Moving With Family and Pets",
+    "title": "Move Abroad With a Baby or Toddler",
+    "first": "Plan essential feeding, sleep, medicines and airport transfers",
+    "second": "Confirm airline equipment rules and safe transport options",
+    "pitfall": "Relying on an unfamiliar shop being open on arrival is risky",
+    "deliverable": "A child-specific carry-on and arrival kit",
+    "resources": [
+      [
+        "Official international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "EURES living and working guidance",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "family-pets",
+    "category": "Moving With Family and Pets",
+    "title": "Research Pet Relocation Before Booking a Flight",
+    "first": "Check destination import rules, airline animal policies and veterinary timelines",
+    "second": "Ask the appropriate authority about identification and health documentation",
+    "pitfall": "Health certifications and approvals may require substantial lead time",
+    "deliverable": "A veterinarian-verified pet travel calendar",
+    "resources": [
+      [
+        "Official international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "EURES living and working guidance",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "family-pets",
+    "category": "Moving With Family and Pets",
+    "title": "Keep Family Connections Strong Across Time Zones",
+    "first": "Agree predictable contact windows and communication formats",
+    "second": "Create space for shorter informal updates rather than only big calls",
+    "pitfall": "Expecting everyone to be available at the same hour leads to frustration",
+    "deliverable": "A realistic cross-border family contact plan",
+    "resources": [
+      [
+        "Official international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "EURES living and working guidance",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "family-pets",
+    "category": "Moving With Family and Pets",
+    "title": "Manage Your Child's First Weeks in a New School",
+    "first": "Coordinate language support, transport and daily routines with the school",
+    "second": "Maintain familiar home routines while allowing adjustment time",
+    "pitfall": "Comparing a child to peers immediately can increase stress",
+    "deliverable": "A school transition observation journal",
+    "resources": [
+      [
+        "Official international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "EURES living and working guidance",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "family-pets",
+    "category": "Moving With Family and Pets",
+    "title": "Handle Relocation When an Elderly Parent Stays Behind",
+    "first": "Discuss support networks, contact plans and practical emergencies",
+    "second": "Record trusted local contacts without assuming remote control is enough",
+    "pitfall": "A move may change who can help quickly during a crisis",
+    "deliverable": "A consent-based family support plan",
+    "resources": [
+      [
+        "Official international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "EURES living and working guidance",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "family-pets",
+    "category": "Moving With Family and Pets",
+    "title": "Choose Family Housing With School and Work in Mind",
+    "first": "Measure commutes, childcare access and daily household logistics",
+    "second": "Compare total costs and the needs of each family member",
+    "pitfall": "A cheaper property may create expensive and exhausting transport routines",
+    "deliverable": "A family neighbourhood decision table",
+    "resources": [
+      [
+        "Official international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ],
+      [
+        "EURES living and working guidance",
+        "https://eures.europa.eu/living-and-working_en"
+      ]
+    ]
+  },
+  {
+    "cluster": "culture-language",
+    "category": "Language and Cultural Adjustment",
+    "title": "Learn the Most Useful Local Phrases Before Moving",
+    "first": "Prioritise greetings, addresses, emergencies and practical service requests",
+    "second": "Practise phrases aloud and keep an offline reference",
+    "pitfall": "Memorising rare vocabulary before basic logistics offers limited benefit",
+    "deliverable": "A 30-phrase arrival cheat sheet",
+    "resources": [
+      [
+        "EURES resources on living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning and local culture",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "culture-language",
+    "category": "Language and Cultural Adjustment",
+    "title": "Understand Workplace Etiquette Without Stereotyping",
+    "first": "Observe how colleagues actually communicate and make decisions",
+    "second": "Ask respectful clarifying questions about expectations",
+    "pitfall": "Treating one cultural blog post as a universal rule can mislead you",
+    "deliverable": "A personal observation log about workplace norms",
+    "resources": [
+      [
+        "EURES resources on living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning and local culture",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "culture-language",
+    "category": "Language and Cultural Adjustment",
+    "title": "Handle Small Language Mistakes With Confidence",
+    "first": "Prepare simple repair phrases and confirm important details in writing",
+    "second": "Practise short real-world conversations in low-pressure settings",
+    "pitfall": "Pretending to understand a safety or contract detail can be costly",
+    "deliverable": "A list of clarification phrases and situations",
+    "resources": [
+      [
+        "EURES resources on living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning and local culture",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "culture-language",
+    "category": "Language and Cultural Adjustment",
+    "title": "Make Local Friends Without Treating Networking as a Transaction",
+    "first": "Join activities based on genuine interests and regular attendance",
+    "second": "Follow up with people respectfully and accept different comfort levels",
+    "pitfall": "Approaching every interaction as a favour request can feel insincere",
+    "deliverable": "A sustainable community participation plan",
+    "resources": [
+      [
+        "EURES resources on living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning and local culture",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "culture-language",
+    "category": "Language and Cultural Adjustment",
+    "title": "Understand Everyday Politeness in a New Country",
+    "first": "Pay attention to queues, shared spaces and neighbour expectations",
+    "second": "Learn specific local conventions from credible community sources",
+    "pitfall": "Assuming people are rude because conventions differ creates tension",
+    "deliverable": "A small local etiquette notebook",
+    "resources": [
+      [
+        "EURES resources on living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning and local culture",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "culture-language",
+    "category": "Language and Cultural Adjustment",
+    "title": "Navigate Cultural Differences in Meetings",
+    "first": "Watch how turn-taking, disagreement and decisions occur in your team",
+    "second": "Ask your manager for feedback on communication preferences",
+    "pitfall": "Silence or brief replies can have several meanings",
+    "deliverable": "A working agreement for team communication",
+    "resources": [
+      [
+        "EURES resources on living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning and local culture",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "culture-language",
+    "category": "Language and Cultural Adjustment",
+    "title": "Stay Connected to Your Identity While Adapting Abroad",
+    "first": "Keep meaningful personal traditions alongside new local experiences",
+    "second": "Find trusted communities without isolating yourself from neighbours",
+    "pitfall": "Believing you must abandon your background to belong is unnecessary",
+    "deliverable": "A balance-of-belonging plan",
+    "resources": [
+      [
+        "EURES resources on living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning and local culture",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "culture-language",
+    "category": "Language and Cultural Adjustment",
+    "title": "Overcome the Awkwardness of Asking for Help Abroad",
+    "first": "Prepare direct questions and choose appropriate official or personal channels",
+    "second": "Offer context and thank people without making assumptions",
+    "pitfall": "Hiding confusion about essential paperwork can multiply mistakes",
+    "deliverable": "A short help-request template for common errands",
+    "resources": [
+      [
+        "EURES resources on living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning and local culture",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "culture-language",
+    "category": "Language and Cultural Adjustment",
+    "title": "Learn Local Slang Without Misusing It at Work",
+    "first": "Observe context, relationships and formality before copying expressions",
+    "second": "Use clear neutral language for professional or high-stakes matters",
+    "pitfall": "A phrase appropriate with friends may sound disrespectful in a formal email",
+    "deliverable": "A context-labelled language note",
+    "resources": [
+      [
+        "EURES resources on living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning and local culture",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "culture-language",
+    "category": "Language and Cultural Adjustment",
+    "title": "Handle Holidays and Traditions in a New Country",
+    "first": "Research closures, travel patterns and family customs ahead of time",
+    "second": "Plan groceries, transport and personal celebrations around local calendars",
+    "pitfall": "Assuming shops and services keep ordinary hours can cause disruption",
+    "deliverable": "A holiday logistics and social calendar",
+    "resources": [
+      [
+        "EURES resources on living and working abroad",
+        "https://eures.europa.eu/living-and-working_en"
+      ],
+      [
+        "US Department of State travel planning and local culture",
+        "https://travel.state.gov/en/international-travel/planning.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "workplace",
+    "category": "Starting Work in a New Country",
+    "title": "Prepare for Your First Day at an Overseas Job",
+    "first": "Confirm arrival location, work hours and documents with HR",
+    "second": "Plan transport and access details before the morning of work",
+    "pitfall": "Assuming your manager knows all immigration or onboarding steps can cause delays",
+    "deliverable": "A first-day arrival and onboarding checklist",
+    "resources": [
+      [
+        "EURES support for people seeking work abroad",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "EU resource on work and social security coordination",
+        "https://europa.eu/youreurope/citizens/work/social-security-and-benefits/country-coverage/index_en.htm"
+      ]
+    ]
+  },
+  {
+    "cluster": "workplace",
+    "category": "Starting Work in a New Country",
+    "title": "Understand Payslips in a New Country",
+    "first": "Identify gross pay, deductions, benefits and payment dates",
+    "second": "Ask payroll to explain unfamiliar line items in writing",
+    "pitfall": "Comparing gross pay to bank deposits without deductions creates confusion",
+    "deliverable": "A payslip annotation guide",
+    "resources": [
+      [
+        "EURES support for people seeking work abroad",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "EU resource on work and social security coordination",
+        "https://europa.eu/youreurope/citizens/work/social-security-and-benefits/country-coverage/index_en.htm"
+      ]
+    ]
+  },
+  {
+    "cluster": "workplace",
+    "category": "Starting Work in a New Country",
+    "title": "Learn Your New Employer's Communication Style",
+    "first": "Check where decisions, tasks and approvals are documented",
+    "second": "Ask how urgent issues are escalated and how feedback is given",
+    "pitfall": "Defaulting to former workplace habits may cause miscommunication",
+    "deliverable": "A personal team communication map",
+    "resources": [
+      [
+        "EURES support for people seeking work abroad",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "EU resource on work and social security coordination",
+        "https://europa.eu/youreurope/citizens/work/social-security-and-benefits/country-coverage/index_en.htm"
+      ]
+    ]
+  },
+  {
+    "cluster": "workplace",
+    "category": "Starting Work in a New Country",
+    "title": "Build Trust With Colleagues After Relocation",
+    "first": "Deliver small commitments reliably and communicate progress clearly",
+    "second": "Invite feedback on expectations instead of guessing cultural norms",
+    "pitfall": "Overpromising during the first month can harm trust",
+    "deliverable": "A modest 30-day relationship-building plan",
+    "resources": [
+      [
+        "EURES support for people seeking work abroad",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "EU resource on work and social security coordination",
+        "https://europa.eu/youreurope/citizens/work/social-security-and-benefits/country-coverage/index_en.htm"
+      ]
+    ]
+  },
+  {
+    "cluster": "workplace",
+    "category": "Starting Work in a New Country",
+    "title": "Set Boundaries When Work and Relocation Overlap",
+    "first": "Separate essential legal appointments from optional errands",
+    "second": "Communicate reasonable availability and use approved leave arrangements",
+    "pitfall": "Treating every settling-in task as an emergency can affect performance",
+    "deliverable": "A manager-approved adjustment schedule",
+    "resources": [
+      [
+        "EURES support for people seeking work abroad",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "EU resource on work and social security coordination",
+        "https://europa.eu/youreurope/citizens/work/social-security-and-benefits/country-coverage/index_en.htm"
+      ]
+    ]
+  },
+  {
+    "cluster": "workplace",
+    "category": "Starting Work in a New Country",
+    "title": "Understand Local Public Holidays and Leave",
+    "first": "Read the employment contract and official local guidance",
+    "second": "Track accrual, approval procedures and school or transport closures",
+    "pitfall": "Assuming your old country's holiday calendar applies creates scheduling mistakes",
+    "deliverable": "A personal leave and holiday calendar",
+    "resources": [
+      [
+        "EURES support for people seeking work abroad",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "EU resource on work and social security coordination",
+        "https://europa.eu/youreurope/citizens/work/social-security-and-benefits/country-coverage/index_en.htm"
+      ]
+    ]
+  },
+  {
+    "cluster": "workplace",
+    "category": "Starting Work in a New Country",
+    "title": "Discuss Remote Work From Another Country Properly",
+    "first": "Ask employer policy, tax, data security and work-permit questions",
+    "second": "Get explicit permission before changing where you physically work",
+    "pitfall": "A laptop-based job does not automatically authorise work from anywhere",
+    "deliverable": "A cross-border remote-work approval checklist",
+    "resources": [
+      [
+        "EURES support for people seeking work abroad",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "EU resource on work and social security coordination",
+        "https://europa.eu/youreurope/citizens/work/social-security-and-benefits/country-coverage/index_en.htm"
+      ]
+    ]
+  },
+  {
+    "cluster": "workplace",
+    "category": "Starting Work in a New Country",
+    "title": "Handle Feedback in a New Work Culture",
+    "first": "Ask for concrete examples and clarify the expected next action",
+    "second": "Summarise decisions without reading criticism as personal rejection",
+    "pitfall": "Different feedback styles can conceal straightforward improvement requests",
+    "deliverable": "A factual performance-feedback log",
+    "resources": [
+      [
+        "EURES support for people seeking work abroad",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "EU resource on work and social security coordination",
+        "https://europa.eu/youreurope/citizens/work/social-security-and-benefits/country-coverage/index_en.htm"
+      ]
+    ]
+  },
+  {
+    "cluster": "workplace",
+    "category": "Starting Work in a New Country",
+    "title": "Plan Professional Development After an International Move",
+    "first": "Identify local credentials, useful training and mentor opportunities",
+    "second": "Choose learning priorities that support your actual role",
+    "pitfall": "Enrolling in expensive courses without a career objective wastes resources",
+    "deliverable": "A six-month skills development plan",
+    "resources": [
+      [
+        "EURES support for people seeking work abroad",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "EU resource on work and social security coordination",
+        "https://europa.eu/youreurope/citizens/work/social-security-and-benefits/country-coverage/index_en.htm"
+      ]
+    ]
+  },
+  {
+    "cluster": "workplace",
+    "category": "Starting Work in a New Country",
+    "title": "Know When to Raise a Workplace Concern Abroad",
+    "first": "Document facts and consult appropriate internal or official channels",
+    "second": "Check local employee rights and confidential reporting options",
+    "pitfall": "Assuming home-country employment rules apply may be misleading",
+    "deliverable": "A neutral evidence and escalation record",
+    "resources": [
+      [
+        "EURES support for people seeking work abroad",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "EU resource on work and social security coordination",
+        "https://europa.eu/youreurope/citizens/work/social-security-and-benefits/country-coverage/index_en.htm"
+      ]
+    ]
+  }
+]
