@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { countries } from '../data';
+import '../toolkit.css';
+const defaults = [0,3,4];
+---
+<BaseLayout title="Compare 14 Countries for Relocation | Relocate Works" description="Compare three relocation destinations by visa research route, capital, currency, major cities and local context. Explore the full official-source guides." canonicalPath="/compare-countries">
+<Header />
+<main class="rw-tool-main" id="main-content">
+<section class="rw-tool-hero"><div class="container"><nav class="rw-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/tools">Tools</a><span aria-hidden="true">/</span>Compare countries</nav><h1>Compare relocation destinations.</h1><p>Choose up to three destinations. These are guide summaries to help research your options, not a ranking or confirmation of visa eligibility.</p></div></section>
+<section class="rw-tool-body"><div class="container">
+<div class="rw-tool-panel"><h2>Your destinations</h2><div class="rw-tool-fields">{defaults.map((defaultIndex,index)=><label class="rw-tool-field">Destination {index+1}<select data-country-compare aria-label={'Destination '+(index+1)}><option value="">Select destination</option>{countries.map((country,i)=><option value={country.slug} selected={i===defaultIndex} data-name={country.name} data-flag={country.flag} data-region={country.region} data-visa={country.primaryVisa} data-capital={country.capital} data-currency={country.currency} data-languages={country.languages} data-cities={country.keyCities.join(', ')} data-summary={country.shortDescription}>{country.flag} {country.name}</option>)}</select></label>)}</div>
+<p class="rw-tool-note" id="compare-feedback" role="status" aria-live="polite"></p></div>
+<div class="rw-tool-comparison" data-country-comparison>{defaults.map(()=> <article class="rw-tool-card" data-compare-card><h2 data-value="name"></h2><p data-value="summary"></p><div class="rw-tool-results"><dl><div><dt>Region</dt><dd data-value="region"></dd></div><div><dt>Work / visa route to research</dt><dd data-value="visa"></dd></div><div><dt>Capital</dt><dd data-value="capital"></dd></div><div><dt>Currency</dt><dd data-value="currency"></dd></div><div><dt>Language context</dt><dd data-value="languages"></dd></div><div><dt>Cities to research</dt><dd data-value="cities"></dd></div></dl></div><a class="rw-tool-link" data-guide-link href="/countries">Read full country guide →</a></article>)}</div>
+<p class="rw-tool-note">Always check the country guide’s official immigration sources. Currency names here are not exchange rates; no salary, rent or visa approval figures are estimated.</p>
+<div class="rw-tool-actions"><a class="rw-tool-btn rw-tool-btn-secondary" href="/relocation-budget">Next: plan your budget →</a><a class="rw-tool-link" href="/countries">Browse all country guides</a></div>
+</div></section></main><Footer /></BaseLayout>
+<script>
+  const selects=Array.from(document.querySelectorAll<HTMLSelectElement>('[data-country-compare]'));
+  const cards=Array.from(document.querySelectorAll<HTMLElement>('[data-compare-card]'));
+  const feedback=document.querySelector<HTMLElement>('#compare-feedback');
+  function updateComparison(changed?:HTMLSelectElement) {
+    const used=new Set<string>();
+    for (const sel of selects) {
+      if(sel.value && used.has(sel.value) && sel===changed) {sel.value=''; if(feedback) feedback.textContent='Choose a different destination for each column.';}
+      if(sel.value) used.add(sel.value);
+    }
+    selects.forEach((sel,i)=>{
+      const opt=sel.selectedOptions[0];
+      const card=cards[i];
+      const empty=!sel.value||!opt;
+      card.hidden=empty;
+      if(empty)return;
+      const data=opt.dataset;
+      const values:{[key:string]:string}={name:(data.flag||'')+' '+(data.name||''),summary:data.summary||'',region:data.region||'',visa:data.visa||'',capital:data.capital||'',currency:data.currency||'',languages:data.languages||'',cities:data.cities||''};
+      Object.entries(values).forEach(([key,value])=>{const el=card.querySelector<HTMLElement>('[data-value="'+key+'"]');if(el)el.textContent=value;});
+      const link=card.querySelector<HTMLAnchorElement>('[data-guide-link]');
+      if(link && /^[a-z-]+$/.test(sel.value))link.href='/countries/'+sel.value;
+    });
+    selects.forEach(sel=>Array.from(sel.options).forEach(opt=>{opt.disabled=!!opt.value && opt.value!==sel.value && used.has(opt.value);}));
+    if(feedback && !feedback.textContent) feedback.textContent=String(used.size)+' destinations selected.';
+  }
+  selects.forEach(sel=>sel.addEventListener('change',()=>{if(feedback)feedback.textContent='';updateComparison(sel);}));
+  updateComparison();
+</script>

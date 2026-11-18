@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import {countries} from '../data';
+import '../toolkit.css';
+const phases = [
+ {title:'Research and documents',items:['Compare possible destinations, cities and role eligibility','Check current immigration requirements on official websites','Verify professional licences, credentials and language requirements','Check passport validity and required identity documents']},
+ {title:'Job offer and money',items:['Confirm work-authorisation support with the actual employer','Read and save the written offer, contract and benefit details','Prepare a budget with real rent, tax and transport estimates','Check insurance, healthcare and dependent coverage']},
+ {title:'Before departure',items:['Book travel only when documents and entry conditions are satisfied','Arrange temporary housing and review rental requirements','Plan banking, phone, insurance and essential records','Make digital and offline copies of key documents']},
+ {title:'After arrival',items:['Confirm local registration and address requirements','Set up local banking and a functioning phone plan','Check tax registration and healthcare enrolment','Review the next residence/permit renewal deadlines']}
+];
+---
+<BaseLayout title="Moving Abroad Checklist — Free Relocation Planner | Relocate Works" description="Follow a practical moving abroad checklist for documents, work, money, travel and first weeks in a new country. Saved locally by destination." canonicalPath="/moving-checklist">
+<Header /><main class="rw-tool-main" id="main-content">
+<section class="rw-tool-hero"><div class="container"><nav class="rw-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/tools">Tools</a><span aria-hidden="true">/</span>Checklist</nav><h1>Your moving abroad checklist.</h1><p>Organise the steps from research to arrival. Select a destination to keep separate progress for each move. All checkmarks are stored only in this browser.</p></div></section>
+<section class="rw-tool-body"><div class="container"><div class="rw-tool-panel"><div class="rw-check-controls"><label class="rw-tool-field" style="max-width:350px">Destination<select id="check-country">{countries.map(country=><option value={country.slug}>{country.flag} {country.name}</option>)}</select></label><div class="rw-tool-actions"><button class="rw-tool-btn rw-tool-btn-secondary" type="button" id="check-reset">Reset this destination</button><button class="rw-tool-btn rw-tool-btn-secondary" type="button" id="check-print">Print checklist</button></div></div><progress class="rw-tool-progress" max={phases.reduce((n,group)=>n+group.items.length,0)} value="0" id="check-progress"></progress><p id="check-count" role="status" aria-live="polite"></p>
+{phases.map((group,groupIndex)=><section class="rw-check-group"><h2>{group.title}</h2>{group.items.map((item,itemIndex)=><label class="rw-check-item"><input type="checkbox" data-check-id={'task-'+groupIndex+'-'+itemIndex}/><span>{item}</span></label>)}</section>)}
+<p class="rw-tool-note">This generic checklist is not a substitute for country-specific immigration, tax or healthcare advice. Check official requirements relevant to your circumstances. Browser storage can be cleared by your device or privacy settings.</p></div><div class="rw-tool-actions"><a class="rw-tool-link" href="/relocation-budget">Open budget planner →</a><a class="rw-tool-link" href="/countries">Explore official-source country guides</a></div></div></section>
+</main><Footer /></BaseLayout>
+<script>
+ const country=document.querySelector<HTMLSelectElement>('#check-country');
+ const boxes=Array.from(document.querySelectorAll<HTMLInputElement>('[data-check-id]'));
+ const progress=document.querySelector<HTMLProgressElement>('#check-progress');
+ const count=document.querySelector<HTMLElement>('#check-count');
+ const reset=document.querySelector<HTMLButtonElement>('#check-reset');
+ const print=document.querySelector<HTMLButtonElement>('#check-print');
+ const storageKey=()=> 'rw-moving-checklist-v1-'+(country?.value||'generic');
+ const read=()=>{try{const parsed=JSON.parse(localStorage.getItem(storageKey())||'[]');return Array.isArray(parsed)?parsed.filter(v=>typeof v==='string'):[];}catch{return [];}};
+ const update=()=>{
+  const completed=boxes.filter(b=>b.checked).length;
+  if(progress)progress.value=completed;
+  if(count)count.textContent=completed+' of '+boxes.length+' tasks completed';
+ };
+ const load=()=>{const completed=new Set(read());boxes.forEach(b=>{b.checked=completed.has(b.dataset.checkId||'');});update();};
+ const save=()=>{try{localStorage.setItem(storageKey(),JSON.stringify(boxes.filter(b=>b.checked).map(b=>b.dataset.checkId)));}catch{if(count)count.textContent='Browser storage is unavailable; progress cannot be saved.';}update();};
+ boxes.forEach(b=>b.addEventListener('change',save));
+ country?.addEventListener('change',load);
+ reset?.addEventListener('click',()=>{boxes.forEach(b=>b.checked=false);save();});
+ print?.addEventListener('click',()=>window.print());
+ load();
+</script>

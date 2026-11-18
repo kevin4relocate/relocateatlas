@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../toolkit.css';
+const tools = [
+  {title:'Compare countries',description:'Compare visa-route research, cities, currencies and planning context across three destinations. No unsourced rankings.',href:'/compare-countries',cta:'Compare destinations'},
+  {title:'Relocation budget planner',description:'Estimate your own moving costs, monthly cash flow and emergency fund from figures you enter. No personal data is sent.',href:'/relocation-budget',cta:'Plan a budget'},
+  {title:'Moving abroad checklist',description:'Track important tasks before, during and after your move. Save progress locally in your browser.',href:'/moving-checklist',cta:'Start a checklist'}
+];
+---
+<BaseLayout title="Free Relocation Planning Tools | Relocate Works" description="Free browser-based relocation planning tools to compare countries, calculate your own relocation budget and track a moving abroad checklist." canonicalPath="/tools">
+  <Header />
+  <main class="rw-tool-main" id="main-content">
+    <section class="rw-tool-hero"><div class="container"><nav class="rw-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>Tools</nav><h1>Plan your move with practical tools.</h1><p>Explore and organise your next move using free, privacy-friendly tools. We do not rank countries, guarantee visa eligibility or supply unverified salary estimates.</p></div></section>
+    <section class="rw-tool-body"><div class="container"><div class="rw-tool-grid">{tools.map(tool=><article class="rw-tool-card"><h2>{tool.title}</h2><p>{tool.description}</p><a href={tool.href}>{tool.cta} →</a></article>)}</div><p class="rw-tool-note">Information is for general planning, not legal, tax or financial advice. Verify any immigration rules and current costs using official sources and local quotes.</p></div></section>
+  </main><Footer />
+</BaseLayout>
