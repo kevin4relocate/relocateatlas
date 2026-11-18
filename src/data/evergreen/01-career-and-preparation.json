@@ -1,0 +1,952 @@
+[
+  {
+    "cluster": "job-search",
+    "category": "International Job Search",
+    "title": "Find International Jobs Beyond Big Job Boards",
+    "first": "Build a shortlist from original employer career pages and public employment services",
+    "second": "Track country restrictions and position-level hiring language before applying",
+    "pitfall": "A broad job-board “remote” filter can include positions restricted to local residents",
+    "deliverable": "A two-column shortlist of verified employers and open questions",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-search",
+    "category": "International Job Search",
+    "title": "Research Employers Before Applying From Abroad",
+    "first": "Check the employer legal name, careers domain and country of employment",
+    "second": "Compare the vacancy text against its original posting and official careers page",
+    "pitfall": "A convincing social post can point to an imitation recruiter account",
+    "deliverable": "An employer verification record with source URLs and dates",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-search",
+    "category": "International Job Search",
+    "title": "Set Up a Weekly Overseas Job Search Routine",
+    "first": "Allocate separate blocks for discovery, eligibility review, applications and follow-up",
+    "second": "Review saved searches once a week and retire stale openings",
+    "pitfall": "Sending many rushed applications can hide better-fitting roles",
+    "deliverable": "A repeatable weekly calendar with four measurable actions",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-search",
+    "category": "International Job Search",
+    "title": "Use Job Alerts Without Getting Buried in Emails",
+    "first": "Create narrow alerts using role, seniority and hiring geography",
+    "second": "Label alerts by priority and review a small sample of genuine results",
+    "pitfall": "Broad keyword alerts produce duplicates and irrelevant local-only jobs",
+    "deliverable": "A clean alert inventory with saved search logic",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-search",
+    "category": "International Job Search",
+    "title": "Decide Which Countries to Target for Work",
+    "first": "Compare personal eligibility, language, professional licensing and family needs",
+    "second": "Pick a primary destination and a smaller backup list for deeper research",
+    "pitfall": "Chasing every country prevents learning any one market well",
+    "deliverable": "A destination decision matrix with unresolved requirements",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-search",
+    "category": "International Job Search",
+    "title": "Find Smaller Employers That Hire International Talent",
+    "first": "Search niche industry associations and legitimate business directories",
+    "second": "Check each employer's actual vacancy wording and application route",
+    "pitfall": "Small company does not automatically mean flexible sponsorship",
+    "deliverable": "An employer pipeline separated into confirmed and unverified prospects",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-search",
+    "category": "International Job Search",
+    "title": "Read Job Descriptions for Hidden Eligibility Restrictions",
+    "first": "Highlight work-rights, residence, security clearance and travel conditions",
+    "second": "Ask a concise recruiter question when a restriction is ambiguous",
+    "pitfall": "Ignoring a mandatory local licence wastes time even with a strong CV",
+    "deliverable": "An eligibility checklist attached to each role",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-search",
+    "category": "International Job Search",
+    "title": "Use Professional Communities to Discover Job Leads",
+    "first": "Join relevant communities and contribute useful technical or sector insight",
+    "second": "Follow up through official employer channels when a position appears",
+    "pitfall": "Treating community messages as confirmed openings can invite scams",
+    "deliverable": "A verified lead log and a short professional introduction",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-search",
+    "category": "International Job Search",
+    "title": "Research International Hiring Without Relying on Salary Websites",
+    "first": "Collect employer compensation ranges where published and label currency and period",
+    "second": "Pair pay information with local tax and housing research",
+    "pitfall": "Unverified average salaries may not describe your experience or city",
+    "deliverable": "A source-tagged compensation research sheet",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-search",
+    "category": "International Job Search",
+    "title": "Know When to Stop Applying to an Unresponsive Employer",
+    "first": "Record application dates and any stated recruitment timeline",
+    "second": "Use one polite follow-up and then redirect effort to active opportunities",
+    "pitfall": "Repeated unsolicited messages can damage your professional reputation",
+    "deliverable": "A follow-up rule and archived application history",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "cv-portfolio",
+    "category": "CV and Portfolio",
+    "title": "Write a CV for an International Recruiter",
+    "first": "Translate unfamiliar local job titles into accurate descriptions of duties",
+    "second": "Lead with evidence of achievements relevant to the advertised job",
+    "pitfall": "A direct translation of local acronyms can confuse an overseas reader",
+    "deliverable": "A role-specific CV with clear terminology and dates",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "cv-portfolio",
+    "category": "CV and Portfolio",
+    "title": "Show Transferable Skills When You Change Countries",
+    "first": "Map prior tasks to outcomes the target employer can understand",
+    "second": "Support each claim with a concise example and verifiable context",
+    "pitfall": "Claiming equivalence to a local qualification without evidence is risky",
+    "deliverable": "A transferable-skills evidence table",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "cv-portfolio",
+    "category": "CV and Portfolio",
+    "title": "Explain Employment Gaps on an Overseas CV",
+    "first": "Prepare a factual explanation that fits the chronology",
+    "second": "Highlight skills maintained through training, care work or projects where relevant",
+    "pitfall": "Inventing contract dates to close a gap can undermine trust",
+    "deliverable": "A concise truthful explanation and updated timeline",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "cv-portfolio",
+    "category": "CV and Portfolio",
+    "title": "Build a Portfolio Without Sharing Confidential Work",
+    "first": "Select public work, permission-cleared samples or reconstructed demonstrations",
+    "second": "Explain your personal contribution and the limits of each example",
+    "pitfall": "Uploading customer data or proprietary code can breach obligations",
+    "deliverable": "A safe portfolio index with permission status",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "cv-portfolio",
+    "category": "CV and Portfolio",
+    "title": "Turn Project Work Into Strong CV Bullet Points",
+    "first": "Describe the problem, your action and the observed result",
+    "second": "Use defensible measures or qualitative evidence rather than fabricated percentages",
+    "pitfall": "Generic “responsible for” bullets hide the scope of your contribution",
+    "deliverable": "Three revised bullets with evidence notes",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "cv-portfolio",
+    "category": "CV and Portfolio",
+    "title": "Prepare References Across Countries and Time Zones",
+    "first": "Ask former colleagues for consent before listing their contact details",
+    "second": "Record preferred contact windows, roles and languages",
+    "pitfall": "Listing an unprepared reference can create delays or privacy issues",
+    "deliverable": "A consent-based reference sheet",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "cv-portfolio",
+    "category": "CV and Portfolio",
+    "title": "Decide Whether to Use a Photo on Your CV",
+    "first": "Check employer instructions and local norms for the target market",
+    "second": "Maintain both photo-free and photo-included versions where appropriate",
+    "pitfall": "Applying one country's CV convention everywhere can hurt readability",
+    "deliverable": "Two controlled CV variants with consistent content",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "cv-portfolio",
+    "category": "CV and Portfolio",
+    "title": "Create a Career Portfolio for Non-Technical Jobs",
+    "first": "Show case studies, process improvements or anonymised work products",
+    "second": "Explain constraints and outcomes in terms relevant to the role",
+    "pitfall": "A gallery of attractive images without context may prove little",
+    "deliverable": "A compact case-study collection with clear authorship",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "cv-portfolio",
+    "category": "CV and Portfolio",
+    "title": "Keep Your LinkedIn Profile Consistent With Your CV",
+    "first": "Align job dates, responsibilities, location and target roles",
+    "second": "Use a clear headline and a relevant project summary",
+    "pitfall": "Contradictory dates or exaggerated titles make verification harder",
+    "deliverable": "A profile consistency checklist",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "cv-portfolio",
+    "category": "CV and Portfolio",
+    "title": "Tailor an Application Without Rewriting Everything",
+    "first": "Build reusable evidence blocks by skill and achievement",
+    "second": "Select only the blocks that match each job's essential requirements",
+    "pitfall": "Keyword stuffing can obscure qualifications rather than demonstrate them",
+    "deliverable": "A modular CV library and job-specific draft",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "interviews",
+    "category": "International Interviews",
+    "title": "Prepare for a Job Interview Across Time Zones",
+    "first": "Confirm the meeting time with its explicit time-zone abbreviation and date",
+    "second": "Test meeting software, audio and backup contact instructions ahead of time",
+    "pitfall": "A daylight-saving change can turn a correct-looking invite into a missed call",
+    "deliverable": "A calendar invitation with a tested backup connection",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "interviews",
+    "category": "International Interviews",
+    "title": "Answer Why You Want to Relocate for Work",
+    "first": "Connect your motivation to the actual role and realistic destination research",
+    "second": "Discuss practical relocation readiness without promising impossible dates",
+    "pitfall": "Saying you will move anywhere immediately may sound unprepared",
+    "deliverable": "A specific 60-second relocation motivation answer",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "interviews",
+    "category": "International Interviews",
+    "title": "Handle a Video Interview With an Unstable Connection",
+    "first": "Use a tested quiet location and a backup data connection if possible",
+    "second": "Agree how to reconnect or switch to audio if the call drops",
+    "pitfall": "Repeated apologies without a recovery plan waste interview time",
+    "deliverable": "A backup-call plan shared in advance",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "interviews",
+    "category": "International Interviews",
+    "title": "Ask About Visa Support During Recruitment",
+    "first": "Identify the role and your present right-to-work status clearly",
+    "second": "Ask which employer support is available for the specific vacancy",
+    "pitfall": "A company's history of sponsoring others is not a promise for you",
+    "deliverable": "A written work-authorisation clarification",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "interviews",
+    "category": "International Interviews",
+    "title": "Explain a Foreign Qualification to a Hiring Manager",
+    "first": "Describe the awarding body, training scope and relevant competencies",
+    "second": "State honestly what still requires local recognition or licensing",
+    "pitfall": "Calling a degree equivalent before formal recognition is misleading",
+    "deliverable": "A short qualification equivalence explanation with sources",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "interviews",
+    "category": "International Interviews",
+    "title": "Use the STAR Method Without Sounding Memorised",
+    "first": "Prepare a few factual situations with clear personal responsibility",
+    "second": "Adapt the detail to each question rather than reciting a speech",
+    "pitfall": "Overloaded stories hide the decision you actually made",
+    "deliverable": "A one-page example bank with outcomes",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "interviews",
+    "category": "International Interviews",
+    "title": "Negotiate Interview Logistics When Still Employed",
+    "first": "Offer realistic time windows and protect confidential work time",
+    "second": "Agree on an agenda and expected interview length",
+    "pitfall": "Taking late-night interviews repeatedly may hurt current performance",
+    "deliverable": "A sustainable interview availability schedule",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "interviews",
+    "category": "International Interviews",
+    "title": "Research an Interview Panel Respectfully",
+    "first": "Read professional profiles and the employer's published work",
+    "second": "Prepare questions that relate to the team's responsibilities",
+    "pitfall": "Digging into private details can be inappropriate and counterproductive",
+    "deliverable": "Three role-related questions for the panel",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "interviews",
+    "category": "International Interviews",
+    "title": "Follow Up After an Overseas Interview",
+    "first": "Summarise your interest and one relevant point from the conversation",
+    "second": "Ask about the next decision date without demanding a response",
+    "pitfall": "Excessive follow-ups can distract from your candidacy",
+    "deliverable": "A concise follow-up draft and reminder date",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "interviews",
+    "category": "International Interviews",
+    "title": "Compare Interview Feedback From Different Cultures",
+    "first": "Separate direct comments from assumptions about communication style",
+    "second": "Seek concrete feedback on skills, scope and evidence when possible",
+    "pitfall": "Reading silence as a definite rejection may be inaccurate",
+    "deliverable": "A neutral interview debrief sheet",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-offers",
+    "category": "Offers and Negotiation",
+    "title": "Review an Overseas Job Offer Before Resigning",
+    "first": "Check employer identity, contract conditions and start-date dependencies",
+    "second": "Get written confirmation of work authorisation and relocation support",
+    "pitfall": "Resigning based only on a verbal promise exposes you to risk",
+    "deliverable": "A pre-resignation evidence checklist",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-offers",
+    "category": "Offers and Negotiation",
+    "title": "Compare Total Compensation Across Currencies",
+    "first": "Separate guaranteed salary, bonuses, allowances and benefits",
+    "second": "Use a consistent period and document exchange assumptions separately",
+    "pitfall": "Headline figures in different currencies conceal take-home differences",
+    "deliverable": "A like-for-like compensation worksheet",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-offers",
+    "category": "Offers and Negotiation",
+    "title": "Ask Whether Relocation Allowances Are Reimbursed",
+    "first": "Request timing, eligibility, caps and documentation requirements",
+    "second": "Model cash needed before any reimbursement arrives",
+    "pitfall": "Assuming an allowance is paid in advance can create a funding gap",
+    "deliverable": "A payment schedule matched to moving expenses",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-offers",
+    "category": "Offers and Negotiation",
+    "title": "Understand Probation Terms in a Foreign Contract",
+    "first": "Locate probation length, notice rules and permitted termination conditions",
+    "second": "Check how permit status may be affected if employment ends early",
+    "pitfall": "A familiar term can have different legal effects in another jurisdiction",
+    "deliverable": "A list of contract clauses needing local review",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-offers",
+    "category": "Offers and Negotiation",
+    "title": "Negotiate a Realistic International Start Date",
+    "first": "Map visa processing, credential checks, notice period and travel needs",
+    "second": "Offer a range conditional on required approvals",
+    "pitfall": "Promising a fixed date before permission is granted may create conflict",
+    "deliverable": "A dependency-based start-date plan",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-offers",
+    "category": "Offers and Negotiation",
+    "title": "Ask About Employer-Paid Flights and Housing",
+    "first": "Clarify traveller coverage, fare class, baggage and housing duration",
+    "second": "Obtain written details of exclusions and repayment clauses",
+    "pitfall": "A vague “relocation included” promise can omit essential costs",
+    "deliverable": "An itemised benefits confirmation",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-offers",
+    "category": "Offers and Negotiation",
+    "title": "Decide Between Remote and Relocation Job Offers",
+    "first": "Separate work-location rights, team expectations and tax implications",
+    "second": "Compare career growth with household costs and immigration constraints",
+    "pitfall": "Remote permission does not automatically allow working from any country",
+    "deliverable": "A two-path decision sheet with legal questions",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-offers",
+    "category": "Offers and Negotiation",
+    "title": "Evaluate a Job Offer That Includes Equity",
+    "first": "Distinguish cash compensation from uncertain future equity value",
+    "second": "Ask about vesting, liquidity, tax and leaving arrangements",
+    "pitfall": "Treating a paper valuation as spendable salary can distort a budget",
+    "deliverable": "An offer breakdown that excludes speculative value from living expenses",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-offers",
+    "category": "Offers and Negotiation",
+    "title": "Ask for Contract Clarifications Without Sounding Confrontational",
+    "first": "Group questions by pay, work rights, benefits and deadlines",
+    "second": "Request precise written answers before accepting",
+    "pitfall": "Signing to avoid seeming difficult may leave costly terms unclear",
+    "deliverable": "A neutral contract clarification email",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "job-offers",
+    "category": "Offers and Negotiation",
+    "title": "Handle Two International Offers at the Same Time",
+    "first": "Track decision deadlines and unresolved eligibility checks",
+    "second": "Communicate accurately about timing without inventing competing offers",
+    "pitfall": "Rushing toward the higher headline salary can hide execution risk",
+    "deliverable": "A decision table and honest response timeline",
+    "resources": [
+      [
+        "EURES jobseekers and cross-border job-search guidance",
+        "https://eures.europa.eu/jobseekers_en"
+      ],
+      [
+        "FTC advice on spotting fraudulent job offers",
+        "https://consumer.ftc.gov/consumer-alerts/2025/07/job-scammers-are-looking-hire-you"
+      ]
+    ]
+  },
+  {
+    "cluster": "documents",
+    "category": "Documents and Departure",
+    "title": "Make a Document Folder for an International Move",
+    "first": "Separate identity, employment, housing, health and financial records",
+    "second": "Keep secure offline copies and share only through verified channels",
+    "pitfall": "Keeping every document only in email can fail without connectivity",
+    "deliverable": "A labelled folder map and access backup",
+    "resources": [
+      [
+        "UK government foreign-travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ],
+      [
+        "US State Department international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "documents",
+    "category": "Documents and Departure",
+    "title": "Check Passport Validity Before Booking Flights",
+    "first": "Verify airline, transit and destination document rules for the itinerary",
+    "second": "Check passport condition, name consistency and required validity period",
+    "pitfall": "A visa alone may not resolve a passport or transit-document problem",
+    "deliverable": "A travel-document validation sheet",
+    "resources": [
+      [
+        "UK government foreign-travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ],
+      [
+        "US State Department international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "documents",
+    "category": "Documents and Departure",
+    "title": "Plan Document Translations Without Wasting Money",
+    "first": "Ask the receiving authority which translation and certification formats it accepts",
+    "second": "Prepare only the documents needed for the next application stage",
+    "pitfall": "Unofficial translations may be rejected despite good language quality",
+    "deliverable": "A translation requirements table",
+    "resources": [
+      [
+        "UK government foreign-travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ],
+      [
+        "US State Department international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "documents",
+    "category": "Documents and Departure",
+    "title": "Keep Important Records Safe During Travel",
+    "first": "Carry essential originals securely and distribute backup copies appropriately",
+    "second": "Limit access to sensitive files on shared devices",
+    "pitfall": "Putting every original into checked luggage creates one point of failure",
+    "deliverable": "A carry-on document inventory",
+    "resources": [
+      [
+        "UK government foreign-travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ],
+      [
+        "US State Department international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "documents",
+    "category": "Documents and Departure",
+    "title": "Prepare a Notice-to-Leave Checklist at Home",
+    "first": "List leases, utilities, subscriptions, employment and banking obligations",
+    "second": "Confirm final bills and preserve cancellation receipts",
+    "pitfall": "Leaving accounts open can create continuing charges after relocation",
+    "deliverable": "A close-out tracker with account owners",
+    "resources": [
+      [
+        "UK government foreign-travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ],
+      [
+        "US State Department international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "documents",
+    "category": "Documents and Departure",
+    "title": "Create an Emergency Contact Sheet for Your Move",
+    "first": "Record trusted contacts, embassy details and insurer contact methods",
+    "second": "Save a paper copy independent of your phone",
+    "pitfall": "A dead battery can block all your emergency details",
+    "deliverable": "A wallet-sized emergency reference sheet",
+    "resources": [
+      [
+        "UK government foreign-travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ],
+      [
+        "US State Department international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "documents",
+    "category": "Documents and Departure",
+    "title": "Organise Certificates and Professional Records",
+    "first": "Check which issuing bodies provide replacement or verification letters",
+    "second": "Build a dated list of originals, scans and required attestations",
+    "pitfall": "Discovering a missing certificate after departure can be expensive",
+    "deliverable": "An education and licensing document index",
+    "resources": [
+      [
+        "UK government foreign-travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ],
+      [
+        "US State Department international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "documents",
+    "category": "Documents and Departure",
+    "title": "Plan Medical Records for a Long-Term Move",
+    "first": "Request a care summary and discuss medication continuity with clinicians",
+    "second": "Check legal restrictions on transporting prescribed medicines",
+    "pitfall": "A prescription valid at home may not be accepted abroad",
+    "deliverable": "A clinician-approved healthcare transition checklist",
+    "resources": [
+      [
+        "UK government foreign-travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ],
+      [
+        "US State Department international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "documents",
+    "category": "Documents and Departure",
+    "title": "Verify Names and Personal Details Across Documents",
+    "first": "Compare spellings, dates and name order on contracts and bookings",
+    "second": "Resolve discrepancies with issuers before paying non-refundable fees",
+    "pitfall": "Small transliteration differences can cause identity verification delays",
+    "deliverable": "A cross-document matching checklist",
+    "resources": [
+      [
+        "UK government foreign-travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ],
+      [
+        "US State Department international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ]
+    ]
+  },
+  {
+    "cluster": "documents",
+    "category": "Documents and Departure",
+    "title": "Create a Departure Timeline With Real Dependencies",
+    "first": "Place visa approval, job resignation, lease end and flights on one timeline",
+    "second": "Identify which activities can wait until permissions are confirmed",
+    "pitfall": "Booking the most expensive items first can trap you if approvals slip",
+    "deliverable": "A dependency calendar with refundable options",
+    "resources": [
+      [
+        "UK government foreign-travel checklist",
+        "https://www.gov.uk/guidance/foreign-travel-checklist"
+      ],
+      [
+        "US State Department international travel planning checklist",
+        "https://travel.state.gov/en/international-travel/planning/checklist.html"
+      ]
+    ]
+  }
+]

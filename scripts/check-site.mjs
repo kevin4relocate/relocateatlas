@@ -88,14 +88,20 @@ for (const slug of countrySlugs) {
 }
 const blogFiles = htmlFiles.filter((path) => path.includes('/blog/') && path !== join(root,'blog','index.html'));
 const seoRelease = JSON.parse(readFileSync(resolve('src/data/seoRelease.json'), 'utf8'));
-const expectedBlogCount = 9 + seoRelease.published.length;
+const evergreenRelease = JSON.parse(readFileSync(resolve('src/data/evergreenRelease.json'), 'utf8'));
+const expectedBlogCount = 9 + seoRelease.published.length + evergreenRelease.published.length;
 if (blogFiles.length !== expectedBlogCount) errors.push('Expected '+expectedBlogCount+' blog article pages, found ' + blogFiles.length);
 const queuedSeoPosts = JSON.parse(readFileSync(resolve('src/data/seoQueue.json'), 'utf8'));
-const scheduledDates = new Map(queuedSeoPosts.map(post => [post.slug, post.date]));
+const {buildEvergreenArticles} = await import('../src/evergreenEditorial.mjs');
+const evergreenFiles = ['01-career-and-preparation','02-travel-and-housing','03-money-health-family-culture-work','04-safety-digital-everyday-community'];
+const evergreenSeeds = evergreenFiles.flatMap(name => JSON.parse(readFileSync(resolve('src/data/evergreen', name+'.json'),'utf8')));
+const evergreenPosts = buildEvergreenArticles(evergreenSeeds);
+const scheduledDates = new Map([...queuedSeoPosts,...evergreenPosts].map(post => [post.slug, post.date]));
+const actualDates = {...(seoRelease.publishedAt||{}),...(evergreenRelease.publishedAt||{})};
 for (const file of blogFiles) {
   const txt = pages.get(file);
   const slug = relative(root, file).split('/')[1];
-  const expectedDate = scheduledDates.get(slug) ?? '2026-09-26';
+  const expectedDate = actualDates[slug] ?? scheduledDates.get(slug) ?? '2026-09-26';
   if (!txt.includes(expectedDate) || (!txt.includes('Official resources') && !file.includes('how-to-find-visa-sponsor-jobs-abroad'))) {
     errors.push('Blog page lacks official sources or publication date: ' + relative(root, file));
   }

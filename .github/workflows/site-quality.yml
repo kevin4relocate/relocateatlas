@@ -33,13 +33,19 @@ jobs:
         run: npm test
       - name: Audit new tools, accessible forms and key routes
         run: npm run check:features
-      - name: Validate 100 queued SEO articles and release state
+      - name: Validate 300 queued SEO and evergreen articles
         run: npm run check:seo
-      - name: Simulate next date-eligible release and verify sitemap/RSS
+      - name: Simulate both article lanes and verify sitemap/RSS
         run: |
-          node scripts/release-seo.mjs --date=2099-01-01
+          node scripts/release-seo.mjs --date=2026-11-20
           npm run build
           npm run check:site
+          npm run check:seo
+          node scripts/release-seo.mjs --date=2026-11-21
+          npm run build
+          npm run check:site
+          npm run check:seo
+          node scripts/release-seo.mjs --date=2026-11-22
           npm run check:seo
       - name: Save external links for editorial review
         if: always()
