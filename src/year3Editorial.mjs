@@ -47,7 +47,7 @@ const refs = {
  travel:{
   category:'Air Travel and Moving Logistics',
   intro:'The journey to a new country is more complicated than a holiday booking: essential documents, luggage and the first night at the destination must work together. Every carrier and transit route can have distinct rules.',
-  detail:'Check the operating airline's terms and the destination and transit authorities for your exact route and travel documents. Keep a door-to-door plan that includes the last journey from the airport.',
+  detail:'Check the operating airline’s terms and the destination and transit authorities for your exact route and travel documents. Keep a door-to-door plan that includes the last journey from the airport.',
   cross:'Airline conditions, entry restrictions and official health requirements can change. Treat airline communications and current government instructions as the final source for an actual departure.',
   resources:[['US State Department — international travel checklist','https://travel.state.gov/en/international-travel/planning/checklist.html'],['US State Department — travel planning','https://travel.state.gov/en/international-travel/planning.html']],
   related:['/moving-checklist','/guides','/countries']
@@ -56,7 +56,7 @@ const refs = {
   category:'Family Relocation Planning',
   intro:'A household move has more than one timetable. Partners, children, elderly relatives and pets may each have separate needs, responsibilities and administrative requirements.',
   detail:'Prepare an individual plan for each family member or animal as appropriate. Confirm rules with the relevant school, authority, airline, veterinarian or healthcare professional before making expensive commitments.',
-  cross:'Dependent eligibility and family services vary by status and place. A worker's approval is not proof that the entire household meets entry, schooling or healthcare conditions.',
+  cross:'Dependent eligibility and family services vary by status and place. A worker’s approval is not proof that the entire household meets entry, schooling or healthcare conditions.',
   resources:[['US State Department — international travel planning','https://travel.state.gov/en/international-travel/planning/checklist.html'],['EURES — living and working abroad','https://eures.europa.eu/living-and-working_en']],
   related:['/moving-checklist','/countries','/relocation-budget']
  },
@@ -72,7 +72,7 @@ const refs = {
   category:'Everyday Life and Belonging',
   intro:'Settling abroad is shaped by repeated ordinary experiences, not only by dramatic moving-day decisions. Learning how a particular neighbourhood and community works is more useful than memorising broad stereotypes.',
   detail:'Observe real services and people, ask respectful clarifying questions and build routines that fit your own household. Small, reversible experiments can help you choose what works before committing.',
-  cross:'Local conventions and social expectations vary within each country. Avoid treating one person's experience or an old online list as a universal cultural rule.',
+  cross:'Local conventions and social expectations vary within each country. Avoid treating one person’s experience or an old online list as a universal cultural rule.',
   resources:[['EURES — living and working conditions','https://eures.europa.eu/living-and-working_en'],['US State Department — travel planning and local information','https://travel.state.gov/en/international-travel/planning.html']],
   related:['/countries','/moving-checklist','/guides']
  },
@@ -139,10 +139,10 @@ const value = (seed,index) => {
  const f=endings[index%endings.length];
  const focus=seed.cluster.toLowerCase();
  const initial=trimPeriod(action),confirm=trimPeriod(verify),warning=trimPeriod(risk),worksheet=trimPeriod(output);
- const question=title.endsWith('?')?title:title+'?';
+ const focusPhrase=title.replace(/^How to /i,'').replace(/[?]+$/,'').replace(/^./,char=>char.toLowerCase());
  const paragraphs = [
   [
-   'There is a practical decision behind '+question+' '+profile.intro+' '+f.opener+' The immediate aim is to '+lowerFirst(action)+'. This narrows the problem to an action that can be checked rather than a vague feeling of being prepared.',
+   'When you need to '+focusPhrase+', the practical challenge is turning research into a justified action. '+profile.intro+' '+f.opener+' The immediate aim is to '+lowerFirst(action)+'. This narrows the problem to an action that can be checked rather than a vague feeling of being prepared.',
    'The reader may be deciding this while juggling documents, work or family arrangements. The important distinction is between a convenient assumption and something supported by the actual provider, authority or written agreement. '+profile.detail+' Record the answer with enough context that it is still understandable several weeks later.'
   ],
   [
@@ -183,11 +183,11 @@ const value = (seed,index) => {
    ['Confirm any changing details using current primary sources.','Keep local and personal requirements separate from general tips.','Revisit the plan when an important fact changes.']
  ];
  const sections=headings.map((heading,i)=>({heading,paragraphs:paragraphs[i],bullets:bullets[i]}));
- const metaDescription=trimPeriod(action)+'. '+trimPeriod(verify)+'. Practical relocation guide and checklist.';
+ const metaDescription=trimPeriod(action)+'. '+trimPeriod(verify)+'. Practical checklist and research tips.';
  const desc=metaDescription.length<=160?metaDescription:metaDescription.slice(0,156).replace(/\s+\S*$/,'')+'.';
  const date=publicationDate(index);
  const editorial={
-  intro:'A practical way to approach '+lowerFirst(title)+'. '+sentence(action)+' '+sentence(verify)+' '+sentence(risk)+' This step-by-step guide explains which evidence to gather, what to avoid and how to keep a usable record without claiming personal experience or current eligibility.',
+  intro:'When you need to '+focusPhrase+', the first step is to identify a decision you can verify. '+sentence(action)+' '+sentence(verify)+' '+sentence(risk)+' This step-by-step guide explains which evidence to gather, what to avoid and how to keep a usable record without claiming personal experience or current eligibility.',
   sections,
   resources:profile.resources,
   related:profile.related
