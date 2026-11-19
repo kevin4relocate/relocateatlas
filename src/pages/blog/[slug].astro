@@ -19,7 +19,9 @@ const isSponsorGuide = post.slug === 'how-to-find-visa-sponsor-jobs-abroad';
 const seoArticle = seoArticlesBySlug.get(post.slug);
 const editorial = blogEditorial[post.slug] ?? seoArticle?.editorial;
 if (!isSponsorGuide && !editorial) throw new Error(`Missing unique blog editorial content: ${post.slug}`);
-const relatedPosts = allPublishedBlogPosts.filter((item) => item.slug !== post.slug).slice(0, 4);
+const sameTopicPosts = allPublishedBlogPosts.filter((item) => item.slug !== post.slug && (item.category === post.category || (item.theme && item.theme === post.theme)));
+const otherPosts = allPublishedBlogPosts.filter((item) => item.slug !== post.slug && !sameTopicPosts.some(related => related.slug === item.slug));
+const relatedPosts = [...sameTopicPosts, ...otherPosts].slice(0, 4);
 
 const articleJsonLd = {
   '@context': 'https://schema.org',
