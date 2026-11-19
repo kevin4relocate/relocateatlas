@@ -1,0 +1,542 @@
+[
+  {
+    "cluster": "Choosing Temporary Housing",
+    "source": "housing",
+    "title": "How to Compare Hotels and Serviced Apartments Before a Relocation",
+    "action": "Calculate total lodging cost for the expected duration",
+    "verify": "Check kitchen, laundry and cancellation conditions",
+    "risk": "An attractive nightly rate may not cover necessary facilities",
+    "output": "Temporary-stay comparison"
+  },
+  {
+    "cluster": "Choosing Temporary Housing",
+    "source": "housing",
+    "title": "How to Choose a Temporary Rental Near Essential Services",
+    "action": "Map groceries, transit and practical errands",
+    "verify": "Test commute routes at realistic hours",
+    "risk": "A cheap unit far from everything may cost more in time",
+    "output": "Service-access neighbourhood map"
+  },
+  {
+    "cluster": "Choosing Temporary Housing",
+    "source": "housing",
+    "title": "What to Ask Before Booking a Month-Long Temporary Stay",
+    "action": "Clarify deposits, cleaning, extensions and guest policies",
+    "verify": "Verify the exact unit and responsible property manager",
+    "risk": "Marketing photos may describe another apartment",
+    "output": "Long-stay questions list"
+  },
+  {
+    "cluster": "Choosing Temporary Housing",
+    "source": "housing",
+    "title": "How to Plan a Backup If Temporary Housing Ends Early",
+    "action": "Check extension policy and nearby alternatives",
+    "verify": "Set an early review date for a permanent home search",
+    "risk": "Waiting until checkout week may leave few choices",
+    "output": "Temporary-housing exit plan"
+  },
+  {
+    "cluster": "Choosing Temporary Housing",
+    "source": "housing",
+    "title": "How to Choose Between Short-Term Housing and a Room Rental",
+    "action": "Compare privacy, total costs, rules and flexibility",
+    "verify": "Ask which arrangement fits the move's uncertainty",
+    "risk": "A room with unclear utility charges can be expensive",
+    "output": "First-month housing decision"
+  },
+  {
+    "cluster": "Rental Search Process",
+    "source": "housing",
+    "title": "How to Organize Apartment Viewings When You Arrive Abroad",
+    "action": "Group viewings by neighbourhood and travel time",
+    "verify": "Keep contact details and appointment confirmations",
+    "risk": "Too many viewings on one day can reduce careful inspection",
+    "output": "Apartment viewing route"
+  },
+  {
+    "cluster": "Rental Search Process",
+    "source": "housing",
+    "title": "How to Evaluate Rental Listing Photos Before a Viewing",
+    "action": "Note missing angles, floor plan details and inconsistencies",
+    "verify": "Request an in-person or trusted live inspection",
+    "risk": "Highly polished photos can conceal property condition",
+    "output": "Photo-question list"
+  },
+  {
+    "cluster": "Rental Search Process",
+    "source": "housing",
+    "title": "How to Ask a Landlord About Furnishings and Appliances",
+    "action": "Request an inventory of included items",
+    "verify": "Clarify repairs and ownership of supplied equipment",
+    "risk": "An unfurnished listing may omit fixtures you expected",
+    "output": "Furnished-rental inventory"
+  },
+  {
+    "cluster": "Rental Search Process",
+    "source": "housing",
+    "title": "How to Compare Apartments With Different Utility Arrangements",
+    "action": "List included, separately metered and shared charges",
+    "verify": "Ask for credible recent usage information if available",
+    "risk": "A low base rent may exclude significant utilities",
+    "output": "Total housing cost sheet"
+  },
+  {
+    "cluster": "Rental Search Process",
+    "source": "housing",
+    "title": "How to Track Rental Applications Without Mixing Up Terms",
+    "action": "Keep property details, offer dates and deposits separately",
+    "verify": "Record accepted requirements and declined applications",
+    "risk": "Confusing two agents' instructions can cause errors",
+    "output": "Rental pipeline tracker"
+  },
+  {
+    "cluster": "Inspecting and Signing a Lease",
+    "source": "housing",
+    "title": "What to Photograph During a Rental Viewing Abroad",
+    "action": "Capture condition of floors, fixtures, windows and appliances with permission",
+    "verify": "Check water, ventilation and visible damage",
+    "risk": "Relying on memory hides practical defects",
+    "output": "Property inspection evidence set"
+  },
+  {
+    "cluster": "Inspecting and Signing a Lease",
+    "source": "housing",
+    "title": "How to Review a Rental Deposit Clause Before Paying",
+    "action": "Identify when money is due and conditions for return",
+    "verify": "Confirm legal payment channels and written receipts",
+    "risk": "An unverified deposit request can be fraudulent",
+    "output": "Deposit terms summary"
+  },
+  {
+    "cluster": "Inspecting and Signing a Lease",
+    "source": "housing",
+    "title": "How to Ask for Repairs Before Moving Into a Rental",
+    "action": "List visible issues with photos and dates",
+    "verify": "Agree who will fix them before handover",
+    "risk": "A verbal repair promise may be hard to enforce",
+    "output": "Pre-move repair request"
+  },
+  {
+    "cluster": "Inspecting and Signing a Lease",
+    "source": "housing",
+    "title": "How to Check Heating and Cooling in a New Apartment",
+    "action": "Inspect installed equipment and typical operating conditions",
+    "verify": "Ask about maintenance responsibility and energy costs",
+    "risk": "Climate comfort can be overlooked during a brief tour",
+    "output": "Comfort and utility assessment"
+  },
+  {
+    "cluster": "Inspecting and Signing a Lease",
+    "source": "housing",
+    "title": "How to Review a Shared Lease With Housemates",
+    "action": "Clarify rent liability, deposits and house rules",
+    "verify": "Check what happens when one tenant leaves",
+    "risk": "A casual agreement may create unexpected obligations",
+    "output": "Shared-tenancy obligations sheet"
+  },
+  {
+    "cluster": "Living With Housemates",
+    "source": "housing",
+    "title": "How to Discuss Cleaning Responsibilities in an International Shared House",
+    "action": "Agree common-area expectations before moving in",
+    "verify": "Write a simple rota that suits schedules",
+    "risk": "Unspoken standards can become conflict",
+    "output": "Household cleaning agreement"
+  },
+  {
+    "cluster": "Living With Housemates",
+    "source": "housing",
+    "title": "How to Set Boundaries Around Guests in a Shared Rental",
+    "action": "Ask about lease rules and housemate preferences",
+    "verify": "Agree notice, overnight and quiet-time expectations",
+    "risk": "Different assumptions about visitors can strain trust",
+    "output": "Guest policy agreement"
+  },
+  {
+    "cluster": "Living With Housemates",
+    "source": "housing",
+    "title": "How to Divide Shared Utility Bills Fairly",
+    "action": "Record which bills are shared and payment dates",
+    "verify": "Agree the split before subscriptions start",
+    "risk": "One person paying everything without records creates disputes",
+    "output": "Shared expense ledger"
+  },
+  {
+    "cluster": "Living With Housemates",
+    "source": "housing",
+    "title": "How to Handle Noise Problems With a New Housemate",
+    "action": "Start with a calm discussion of specific times and behaviour",
+    "verify": "Consult building rules if necessary",
+    "risk": "Assuming deliberate disrespect may escalate tension",
+    "output": "Noise-resolution conversation plan"
+  },
+  {
+    "cluster": "Living With Housemates",
+    "source": "housing",
+    "title": "How to Leave a Shared Apartment Without Losing Important Records",
+    "action": "Document notice, payments and handover condition",
+    "verify": "Confirm keys, deposit and ongoing obligations in writing",
+    "risk": "An informal departure can leave disputed charges",
+    "output": "Shared-house move-out file"
+  },
+  {
+    "cluster": "Housing Utilities",
+    "source": "housing",
+    "title": "How to Confirm Internet Availability Before Signing a Rental",
+    "action": "Check provider coverage and expected installation timing",
+    "verify": "Ask whether building restrictions affect service",
+    "risk": "An advertised Wi-Fi connection may not suit remote work",
+    "output": "Internet-readiness checklist"
+  },
+  {
+    "cluster": "Housing Utilities",
+    "source": "housing",
+    "title": "How to Compare Electricity Plans in a New Country",
+    "action": "Review fixed charges, unit rates and contract duration",
+    "verify": "Check the actual tariff for the rental address",
+    "risk": "A headline discounted rate may expire or exclude fees",
+    "output": "Electricity tariff comparison"
+  },
+  {
+    "cluster": "Housing Utilities",
+    "source": "housing",
+    "title": "How to Set Up Water Service After an International Move",
+    "action": "Identify provider, meter and landlord responsibilities",
+    "verify": "Confirm activation timing and deposit rules",
+    "risk": "Assuming service transfers automatically can delay move-in",
+    "output": "Water-service activation plan"
+  },
+  {
+    "cluster": "Housing Utilities",
+    "source": "housing",
+    "title": "How to Document Meter Readings at a New Property",
+    "action": "Photograph meters with date and address",
+    "verify": "Send readings to the appropriate provider or landlord",
+    "risk": "Unrecorded opening readings can create billing disputes",
+    "output": "Move-in meter evidence"
+  },
+  {
+    "cluster": "Housing Utilities",
+    "source": "housing",
+    "title": "How to Cancel Utilities Correctly When Moving Again",
+    "action": "Find notice requirements and final-reading procedures",
+    "verify": "Request written closing balance confirmation",
+    "risk": "Accounts left open can accrue charges",
+    "output": "Utilities close-out checklist"
+  },
+  {
+    "cluster": "Relocation Budget Frameworks",
+    "source": "finance",
+    "title": "How to Separate Moving Costs From Monthly Living Expenses",
+    "action": "List one-off flights, deposits and equipment apart from recurring bills",
+    "verify": "Use actual quotes in one currency for each worksheet",
+    "risk": "Mixing categories can understate initial cash needed",
+    "output": "Two-part relocation budget"
+  },
+  {
+    "cluster": "Relocation Budget Frameworks",
+    "source": "finance",
+    "title": "How to Budget for a Delayed First Paycheck Abroad",
+    "action": "Confirm actual payroll cutoff dates with employer",
+    "verify": "Keep an arrival reserve for required payments",
+    "risk": "Assuming salary arrives in the first week can cause a shortfall",
+    "output": "First-payday cash plan"
+  },
+  {
+    "cluster": "Relocation Budget Frameworks",
+    "source": "finance",
+    "title": "How to Estimate a Rental Deposit Without Inventing a National Average",
+    "action": "Use exact local listings and written lease terms",
+    "verify": "Record what is refundable and when",
+    "risk": "Published averages cannot substitute for your lease",
+    "output": "Lease-linked deposit calculation"
+  },
+  {
+    "cluster": "Relocation Budget Frameworks",
+    "source": "finance",
+    "title": "How to Build a Three-Scenario Relocation Budget",
+    "action": "Model expected, higher-cost and delayed-arrival cases",
+    "verify": "Keep assumptions explicit and adjust real quotes",
+    "risk": "One optimistic budget can conceal downside risk",
+    "output": "Three-scenario cashflow table"
+  },
+  {
+    "cluster": "Relocation Budget Frameworks",
+    "source": "finance",
+    "title": "How to Plan for Replacement Purchases After Moving",
+    "action": "Rank household purchases by urgency and price",
+    "verify": "Account for shipping and installation costs",
+    "risk": "Buying everything in the first week can drain reserves",
+    "output": "Staged replacement budget"
+  },
+  {
+    "cluster": "Banking Documentation",
+    "source": "finance",
+    "title": "How to Prepare Address Evidence for Opening a Bank Account Abroad",
+    "action": "Ask the bank which documents and formats it accepts",
+    "verify": "Compare requirements for temporary and permanent addresses",
+    "risk": "A hotel booking may not meet the bank's proof standard",
+    "output": "Bank document readiness file"
+  },
+  {
+    "cluster": "Banking Documentation",
+    "source": "finance",
+    "title": "How to Keep Access to a Bank Account When Your Phone Number Changes",
+    "action": "Add supported recovery methods before switching numbers",
+    "verify": "Test app login and two-factor authentication",
+    "risk": "Losing the original SIM can block money access",
+    "output": "Secure banking transition plan"
+  },
+  {
+    "cluster": "Banking Documentation",
+    "source": "finance",
+    "title": "How to Compare Student and Standard Bank Accounts as a Newcomer",
+    "action": "Review actual eligibility and fee conditions",
+    "verify": "Check age, study status and proof requirements",
+    "risk": "Advertising categories may not match your immigration status",
+    "output": "Account eligibility matrix"
+  },
+  {
+    "cluster": "Banking Documentation",
+    "source": "finance",
+    "title": "How to Check Whether a Bank Transfer Is Reversible",
+    "action": "Read the payment method's terms and transfer status",
+    "verify": "Verify recipient details before sending",
+    "risk": "A mistaken irreversible payment can be costly",
+    "output": "Transfer verification checklist"
+  },
+  {
+    "cluster": "Banking Documentation",
+    "source": "finance",
+    "title": "How to Set Up Rent Payments Without Sharing More Data Than Needed",
+    "action": "Confirm genuine landlord payment instructions",
+    "verify": "Use traceable methods and preserve receipts",
+    "risk": "A changed bank account sent by a spoofed email is risky",
+    "output": "Rental payment approval record"
+  },
+  {
+    "cluster": "Cross-Border Currency Management",
+    "source": "finance",
+    "title": "How to Compare Currency Conversion Quotes for Moving Savings",
+    "action": "Calculate the exact net amount received by each provider",
+    "verify": "Include exchange spread, flat fees and transfer charges",
+    "risk": "A zero-fee claim can hide a weak exchange rate",
+    "output": "Net-received conversion chart"
+  },
+  {
+    "cluster": "Cross-Border Currency Management",
+    "source": "finance",
+    "title": "How to Avoid Confusing Annual and Monthly Salaries in Currency Comparisons",
+    "action": "Normalize pay periods before converting currencies",
+    "verify": "Separate gross pay from taxes and benefits",
+    "risk": "A converted headline figure is not take-home pay",
+    "output": "Like-for-like income worksheet"
+  },
+  {
+    "cluster": "Cross-Border Currency Management",
+    "source": "finance",
+    "title": "How to Choose When to Convert Money Before Moving",
+    "action": "Identify deadlines for deposits and essential expenses",
+    "verify": "Avoid presenting exchange timing as a guaranteed winning strategy",
+    "risk": "Speculating with needed cash increases risk",
+    "output": "Cash conversion schedule"
+  },
+  {
+    "cluster": "Cross-Border Currency Management",
+    "source": "finance",
+    "title": "How to Record Exchange Rates for Your Relocation Budget",
+    "action": "Write currency pair, date and provider source next to every figure",
+    "verify": "Recalculate major amounts when committing",
+    "risk": "An old rate in a spreadsheet can distort decisions",
+    "output": "Dated exchange assumptions log"
+  },
+  {
+    "cluster": "Cross-Border Currency Management",
+    "source": "finance",
+    "title": "How to Plan Emergency Money Across Two Countries",
+    "action": "Check legal and practical access to funds in each location",
+    "verify": "Keep secure payment alternatives for disruptions",
+    "risk": "One account or card can fail while travelling",
+    "output": "Two-country liquidity plan"
+  },
+  {
+    "cluster": "Managing Moving Subscriptions",
+    "source": "finance",
+    "title": "How to Audit Monthly Subscriptions Before Leaving a Country",
+    "action": "List every renewal date, service and payment method",
+    "verify": "Check cancellation steps and retained account access",
+    "risk": "Unused subscriptions can continue after departure",
+    "output": "Pre-move subscriptions tracker"
+  },
+  {
+    "cluster": "Managing Moving Subscriptions",
+    "source": "finance",
+    "title": "How to Transfer a Mobile Plan Without Losing Important SMS",
+    "action": "Identify accounts dependent on the current phone number",
+    "verify": "Review porting, roaming and number retention terms",
+    "risk": "Cancelling too early can lock you out of services",
+    "output": "Phone-number change plan"
+  },
+  {
+    "cluster": "Managing Moving Subscriptions",
+    "source": "finance",
+    "title": "How to Decide Whether to Keep a Home-Country Bank Account",
+    "action": "Check residency, fees, tax and address update requirements",
+    "verify": "Ask the bank what changes when you move",
+    "risk": "Keeping an account without valid details can create restrictions",
+    "output": "Account retention decision note"
+  },
+  {
+    "cluster": "Managing Moving Subscriptions",
+    "source": "finance",
+    "title": "How to Cancel a Local Gym or Membership Before Moving Abroad",
+    "action": "Read notice, minimum-term and refund clauses",
+    "verify": "Save cancellation acknowledgement",
+    "risk": "A verbal cancellation may not stop charges",
+    "output": "Membership close-out record"
+  },
+  {
+    "cluster": "Managing Moving Subscriptions",
+    "source": "finance",
+    "title": "How to Track One-Time Cancellation Fees During Relocation",
+    "action": "List contract penalties separately from usual bills",
+    "verify": "Ask providers for written final settlement quotes",
+    "risk": "Small exit fees can accumulate at departure",
+    "output": "Exit-cost worksheet"
+  },
+  {
+    "cluster": "Consumer Rights and Purchases",
+    "source": "consumer",
+    "title": "How to Evaluate Warranty Coverage for Electronics Bought Abroad",
+    "action": "Check regional service availability and purchase documentation",
+    "verify": "Ask whether international warranty actually applies",
+    "risk": "A familiar brand may have country-limited coverage",
+    "output": "Warranty comparison note"
+  },
+  {
+    "cluster": "Consumer Rights and Purchases",
+    "source": "consumer",
+    "title": "How to Compare Delivery Fees When Furnishing a New Home",
+    "action": "Include stairs, assembly, return and missed-delivery terms",
+    "verify": "Verify measurements and access requirements",
+    "risk": "A cheap item can have costly delivery extras",
+    "output": "Delivered-cost checklist"
+  },
+  {
+    "cluster": "Consumer Rights and Purchases",
+    "source": "consumer",
+    "title": "How to Review Return Policies Before Buying Appliances Abroad",
+    "action": "Read restocking, return-window and defect procedures",
+    "verify": "Save receipts and packaging where practical",
+    "risk": "Assuming every store accepts returns can cause loss",
+    "output": "Returns-policy quick reference"
+  },
+  {
+    "cluster": "Consumer Rights and Purchases",
+    "source": "consumer",
+    "title": "How to Buy Second-Hand Furniture More Safely Abroad",
+    "action": "Inspect dimensions and condition before payment",
+    "verify": "Arrange legitimate pickup and secure payment",
+    "risk": "An online photo can hide damage or infestation",
+    "output": "Used-furniture inspection list"
+  },
+  {
+    "cluster": "Consumer Rights and Purchases",
+    "source": "consumer",
+    "title": "How to Handle a Disputed Charge After an International Purchase",
+    "action": "Gather order, invoice and seller communications",
+    "verify": "Use the card issuer's official dispute process if appropriate",
+    "risk": "Waiting too long can complicate charge review",
+    "output": "Purchase dispute evidence pack"
+  },
+  {
+    "cluster": "Taxes and Payslips",
+    "source": "finance",
+    "title": "How to Keep Employment Tax Documents Organized Across Borders",
+    "action": "Save payroll records with dates and issuing entities",
+    "verify": "Consult the relevant tax authority for actual obligations",
+    "risk": "A single work location does not settle every tax question",
+    "output": "Cross-border tax document index"
+  },
+  {
+    "cluster": "Taxes and Payslips",
+    "source": "finance",
+    "title": "How to Read a New-Country Payslip Without Guessing at Deductions",
+    "action": "Identify each line and ask payroll for an explanation",
+    "verify": "Check official guidance for unfamiliar terms",
+    "risk": "Misreading an employer contribution as personal take-home distorts budget",
+    "output": "Annotated payslip copy"
+  },
+  {
+    "cluster": "Taxes and Payslips",
+    "source": "finance",
+    "title": "How to Prepare Questions for an Expat Tax Adviser",
+    "action": "List residency dates, work locations and income types",
+    "verify": "Bring written contract and prior tax documents",
+    "risk": "A generic online answer may miss your personal circumstances",
+    "output": "Tax adviser briefing"
+  },
+  {
+    "cluster": "Taxes and Payslips",
+    "source": "finance",
+    "title": "How to Track Work-Related Expenses During Relocation",
+    "action": "Keep receipts and employer reimbursement approvals separate",
+    "verify": "Check current rules before assuming tax deductibility",
+    "risk": "A legitimate moving expense may not be tax-deductible",
+    "output": "Expense classification sheet"
+  },
+  {
+    "cluster": "Taxes and Payslips",
+    "source": "finance",
+    "title": "How to Avoid Using Outdated Tax Rates in a Relocation Plan",
+    "action": "Use the tax authority's live guidance when decisions are made",
+    "verify": "Date every estimate and note what assumptions apply",
+    "risk": "An old infographic can misstate the current position",
+    "output": "Verified tax-data review date"
+  },
+  {
+    "cluster": "Long-Term Housing Choices",
+    "source": "housing",
+    "title": "How to Decide Whether to Renew a Rental Lease Abroad",
+    "action": "Compare rent, commuting and actual apartment condition",
+    "verify": "Check renewal notice and proposed changes early",
+    "risk": "Staying by default can hide costly terms",
+    "output": "Lease renewal decision chart"
+  },
+  {
+    "cluster": "Long-Term Housing Choices",
+    "source": "housing",
+    "title": "How to Prepare for a Rent Increase Conversation Overseas",
+    "action": "Review current lease terms and applicable local process",
+    "verify": "Request changes and reasons in writing",
+    "risk": "Assuming an increase is lawful or unlawful without local rules is risky",
+    "output": "Rent review questions"
+  },
+  {
+    "cluster": "Long-Term Housing Choices",
+    "source": "housing",
+    "title": "How to Evaluate a Home Purchase Without Rushing After Relocation",
+    "action": "Assess legal eligibility, financing and long-term location certainty",
+    "verify": "Consult independent qualified property professionals",
+    "risk": "First-month enthusiasm is not a safe buying strategy",
+    "output": "Home purchase readiness worksheet"
+  },
+  {
+    "cluster": "Long-Term Housing Choices",
+    "source": "housing",
+    "title": "How to Budget for Moving Between Neighbourhoods in the Same City",
+    "action": "List deposits, overlap rent and transport costs",
+    "verify": "Compare actual new commute and amenities",
+    "risk": "A shorter distance can still be an expensive move",
+    "output": "In-city moving budget"
+  },
+  {
+    "cluster": "Long-Term Housing Choices",
+    "source": "housing",
+    "title": "How to Plan a Rental Exit Inspection Before Leaving a Country",
+    "action": "Document condition, keys and meter readings",
+    "verify": "Follow written notice and deposit return instructions",
+    "risk": "Missing evidence may complicate the final balance",
+    "output": "Property handover evidence pack"
+  }
+]
