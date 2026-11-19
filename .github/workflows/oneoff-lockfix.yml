@@ -1,0 +1,58 @@
+name: One-time npm advisory remediation (delete after run)
+
+on:
+  push:
+    branches:
+      - fix/pre-cloudflare-final-audit-20261119
+    paths:
+      - .github/workflows/oneoff-lockfix.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: oneoff-relocate-npm-security
+  cancel-in-progress: false
+
+jobs:
+  patch-dependencies:
+    if: github.ref_name == 'fix/pre-cloudflare-final-audit-20261119'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/pre-cloudflare-final-audit-20261119
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Upgrade Astro to npm audit recommended patched version
+        run: |
+          npm install --save-exact astro@7.4.13
+          npm audit fix || true
+          npm audit --json > /tmp/final-audit.json || true
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const r=JSON.parse(fs.readFileSync("/tmp/final-audit.json","utf8"));
+            console.log("POST-FIX AUDIT: "+JSON.stringify(r.metadata?.vulnerabilities||{}));
+            console.log("REMAINING: "+Object.entries(r.vulnerabilities||{}).map(([n,v])=>n+"="+v.severity+" "+JSON.stringify(v.fixAvailable)).join(" ; "));
+          '
+      - name: Smoke and editorial checks on updated dependencies
+        run: |
+          npm run build
+          npm test
+          npm run check:site
+          npm run check:seo
+      - name: Commit lockfile patch to audit branch
+        run: |
+          if git diff --quiet -- package.json package-lock.json; then
+            echo "Dependencies unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package.json package-lock.json
+          git commit -m "chore: patch Astro and transitive npm security advisories"
+          git push origin HEAD:fix/pre-cloudflare-final-audit-20261119
