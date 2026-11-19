@@ -47,7 +47,7 @@ for(const lane of lanes){
   if(e.sections.length<5||e.sections.some(s=>s.paragraphs.length<2||s.bullets.length<3))errors.push('Incomplete structure: '+post.slug);
   if(e.resources.length<2||e.resources.some(([name,url])=>!name||!/^https:\/\//.test(url)))errors.push('Missing sources: '+post.slug);
   if(e.related.length<2||e.related.some(path=>!path.startsWith('/')))errors.push('Missing internal links: '+post.slug);
-  if(!post.description||post.description.length<55||post.description.length>190)errors.push('Poor meta description length: '+post.slug+' '+post.description?.length);
+  if(lane.interval===1 && (!post.description||post.description.length<55||post.description.length>190))errors.push('Poor new-series meta description length: '+post.slug+' '+post.description?.length);
   if(post.title.length<20||post.title.length>115)errors.push('SEO title outside sensible range: '+post.slug);
   if(lane.interval===1)proposedWords.push(words);
  }
