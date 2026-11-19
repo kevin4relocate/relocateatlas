@@ -14,7 +14,7 @@ permissions:
 jobs:
   build-and-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 18
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,15 +27,15 @@ jobs:
         run: npm ci
       - name: Build Astro site
         run: npm run build
-      - name: Audit static routes and editorial pages
+      - name: Audit routes, original country guides and editorial pages
         run: npm run check:site
-      - name: Run planning calculator tests
+      - name: Run unit tests for tools and all publication calendars
         run: npm test
-      - name: Audit new tools, accessible forms and key routes
+      - name: Audit tool pages and accessibility essentials
         run: npm run check:features
-      - name: Validate 300 queued SEO and evergreen articles
+      - name: Audit 665 future editorial entries and zero advance publication
         run: npm run check:seo
-      - name: Simulate both article lanes and verify sitemap/RSS
+      - name: Simulate first releases in existing SEO and evergreen queues
         run: |
           node scripts/release-seo.mjs --date=2026-11-20
           npm run build
@@ -47,7 +47,14 @@ jobs:
           npm run check:seo
           node scripts/release-seo.mjs --date=2026-11-22
           npm run check:seo
-      - name: Save external links for editorial review
+      - name: Simulate transition to 365 daily year-three articles
+        run: |
+          node scripts/simulate-year3.mjs
+          node scripts/release-seo.mjs --date=2028-07-11
+          npm run build
+          npm run check:site
+          npm run check:seo
+      - name: Save external links for manual editorial review
         if: always()
         uses: actions/upload-artifact@v4
         with:

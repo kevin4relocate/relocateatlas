@@ -2,8 +2,10 @@ name: Scheduled Relocate Works editorial release
 
 on:
   schedule:
-    # Daily 00:17 UTC = 07:17 Asia/Bangkok.
-    # 20 Nov: original SEO; 21 Nov: evergreen; 22 Nov: gap day.
+    # 00:17 UTC = 07:17 Asia/Bangkok each day.
+    # 2026-11-20: SEO (every 3 days); 2026-11-21: evergreen (every 3 days).
+    # 2028-07-11: 365 new evergreen guides begin, one per day,
+    # only after both legacy queues are completed.
     - cron: '17 0 * * *'
   workflow_dispatch:
 
@@ -17,7 +19,7 @@ concurrency:
 jobs:
   publish-due-article:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v4
@@ -31,23 +33,23 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Release at most one article in the correct date lane
+      - name: Publish at most one due article from the correct queue
         run: npm run release:seo
-      - name: Verify entire site and both future queues
+      - name: Check HTML routes, sources, sitemaps and editorial quality
         run: |
           npm run build
           npm run check:site
           npm run check:seo
           npm test
           npm run check:features
-      - name: Commit release manifest and trigger Cloudflare via main
+      - name: Commit only changed release manifest, triggering Cloudflare deploy
         run: |
-          if git diff --quiet -- src/data/seoRelease.json src/data/evergreenRelease.json; then
+          if git diff --quiet -- src/data/seoRelease.json src/data/evergreenRelease.json src/data/year3Release.json; then
             echo "No article due; nothing to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/seoRelease.json src/data/evergreenRelease.json
+          git add src/data/seoRelease.json src/data/evergreenRelease.json src/data/year3Release.json
           git commit -m "Publish next scheduled Relocate Works editorial article"
           git push origin HEAD:main
