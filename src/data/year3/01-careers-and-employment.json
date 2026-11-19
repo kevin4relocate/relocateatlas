@@ -1,0 +1,542 @@
+[
+  {
+    "cluster": "Original Employer Research",
+    "source": "jobs",
+    "title": "How to Check Whether an Overseas Employer Has a Real Careers Team",
+    "action": "Locate the firm's careers domain and hiring contact details",
+    "verify": "Cross-check staff roles with the published company site",
+    "risk": "Social profiles alone do not verify the job poster",
+    "output": "Verified employer contact record"
+  },
+  {
+    "cluster": "Original Employer Research",
+    "source": "jobs",
+    "title": "How to Find International Employers Through Industry Associations",
+    "action": "Search directories of legitimate sector associations",
+    "verify": "Confirm listed members are actually recruiting internationally",
+    "risk": "Association membership is not a promise of sponsorship",
+    "output": "Shortlist with source links"
+  },
+  {
+    "cluster": "Original Employer Research",
+    "source": "jobs",
+    "title": "How to Assess a Job Ad With No Salary Range",
+    "action": "Ask how compensation is determined and what the role covers",
+    "verify": "Compare requirements and location-specific duties",
+    "risk": "Guessing pay from a different country can mislead",
+    "output": "Questions for an early recruiter call"
+  },
+  {
+    "cluster": "Original Employer Research",
+    "source": "jobs",
+    "title": "How to Compare Two Listings for the Same Overseas Role",
+    "action": "Check whether employer and agency ads describe one vacancy",
+    "verify": "Record reference numbers and hiring entities",
+    "risk": "Applying twice through intermediaries can cause confusion",
+    "output": "Deduplicated application record"
+  },
+  {
+    "cluster": "Original Employer Research",
+    "source": "jobs",
+    "title": "How to Research a Company Before an International Move",
+    "action": "Review the employer's business model and local operating presence",
+    "verify": "Check contractual entity and workplace address",
+    "risk": "A famous parent brand may not be your employer",
+    "output": "Employer due-diligence brief"
+  },
+  {
+    "cluster": "Cross-Border CV Evidence",
+    "source": "jobs",
+    "title": "How to Show a Project's Impact on an International CV",
+    "action": "State the problem, your responsibility and a verifiable outcome",
+    "verify": "Separate team outcomes from your own contribution",
+    "risk": "Invented percentage improvements damage credibility",
+    "output": "Evidence-backed achievement bullet"
+  },
+  {
+    "cluster": "Cross-Border CV Evidence",
+    "source": "jobs",
+    "title": "How to Translate Local Job Titles for Overseas Recruiters",
+    "action": "Explain duties alongside the original job title",
+    "verify": "Compare responsibilities with the target vacancy",
+    "risk": "A translated title may imply seniority you never held",
+    "output": "Accurate CV job-title annotation"
+  },
+  {
+    "cluster": "Cross-Border CV Evidence",
+    "source": "jobs",
+    "title": "How to Describe Freelance Projects in a Global Resume",
+    "action": "Group genuine client work by scope and deliverables",
+    "verify": "Protect confidential information and confirm dates",
+    "risk": "Presenting independent projects as full-time employment can mislead",
+    "output": "Transparent freelance experience section"
+  },
+  {
+    "cluster": "Cross-Border CV Evidence",
+    "source": "jobs",
+    "title": "How to Present an Unfinished Qualification on a CV",
+    "action": "Describe completed modules and current status accurately",
+    "verify": "Check employer requirements for completed credentials",
+    "risk": "A nearly finished qualification is not an awarded degree",
+    "output": "Honest education entry"
+  },
+  {
+    "cluster": "Cross-Border CV Evidence",
+    "source": "jobs",
+    "title": "How to Explain International Career Breaks Without Oversharing",
+    "action": "Prepare a factual one- or two-sentence explanation",
+    "verify": "Highlight relevant skills and recent work",
+    "risk": "Unnecessary personal details distract from professional fit",
+    "output": "Concise gap explanation"
+  },
+  {
+    "cluster": "Recruiter Messaging",
+    "source": "jobs",
+    "title": "What to Include in a First Message to an Overseas Recruiter",
+    "action": "Identify the exact vacancy and relevant experience in two sentences",
+    "verify": "Confirm the recruiter handles that position",
+    "risk": "Generic requests for jobs rarely get useful responses",
+    "output": "Focused introduction message"
+  },
+  {
+    "cluster": "Recruiter Messaging",
+    "source": "jobs",
+    "title": "How to Ask About Work Authorization Before a Long Interview Process",
+    "action": "Describe your current work-rights status clearly",
+    "verify": "Ask whether this specific position can consider your profile",
+    "risk": "A global employer is not necessarily willing to sponsor",
+    "output": "Written eligibility clarification"
+  },
+  {
+    "cluster": "Recruiter Messaging",
+    "source": "jobs",
+    "title": "When to Send a Follow-Up After an International Application",
+    "action": "Use the employer's stated timing before choosing a date",
+    "verify": "Check that the application was properly submitted",
+    "risk": "Too many reminders can distract recruiters",
+    "output": "Reasonable follow-up calendar"
+  },
+  {
+    "cluster": "Recruiter Messaging",
+    "source": "jobs",
+    "title": "How to Respond When a Recruiter Requests a Passport Too Early",
+    "action": "Verify why the document is needed and who will receive it",
+    "verify": "Use the official company channel and privacy policy",
+    "risk": "Sharing sensitive identity data with a stranger is risky",
+    "output": "Document-request verification message"
+  },
+  {
+    "cluster": "Recruiter Messaging",
+    "source": "jobs",
+    "title": "How to Politely Decline an Overseas Job That Is Not a Fit",
+    "action": "State your decision without criticizing the employer",
+    "verify": "Keep useful professional contact details consensually",
+    "risk": "An unexplained disappearance may harm future relationships",
+    "output": "Short decline email"
+  },
+  {
+    "cluster": "Salary Discussions Abroad",
+    "source": "finance",
+    "title": "How to Ask an Overseas Employer About Pay Frequency",
+    "action": "Clarify monthly, annual or hourly amounts and payday dates",
+    "verify": "Confirm guaranteed pay versus variable elements",
+    "risk": "Mixing pay periods distorts comparisons",
+    "output": "Pay-frequency worksheet"
+  },
+  {
+    "cluster": "Salary Discussions Abroad",
+    "source": "finance",
+    "title": "What to Check When an International Offer Includes Overtime",
+    "action": "Read whether overtime is expected, optional and paid",
+    "verify": "Confirm local rules and actual working hours",
+    "risk": "Uncertain overtime should not fund essential expenses",
+    "output": "Base-pay-only budget"
+  },
+  {
+    "cluster": "Salary Discussions Abroad",
+    "source": "finance",
+    "title": "How to Compare an Offer With a Costly Commute Abroad",
+    "action": "Estimate actual travel time and recurring transport charges",
+    "verify": "Test routes during the working schedule",
+    "risk": "Headline salary ignores daily commute costs",
+    "output": "Net-benefit comparison"
+  },
+  {
+    "cluster": "Salary Discussions Abroad",
+    "source": "finance",
+    "title": "How to Ask About Currency in a Cross-Border Employment Contract",
+    "action": "Identify the contract currency and payment account",
+    "verify": "Clarify who bears conversion and transfer costs",
+    "risk": "Exchange-rate promises may not appear in the contract",
+    "output": "Written currency-terms summary"
+  },
+  {
+    "cluster": "Salary Discussions Abroad",
+    "source": "finance",
+    "title": "How to Review a Performance Bonus Before Relocating",
+    "action": "Check eligibility, measurement period and discretionary clauses",
+    "verify": "Ask what happens during probation or partial years",
+    "risk": "A target bonus is not guaranteed income",
+    "output": "Guaranteed-versus-variable pay table"
+  },
+  {
+    "cluster": "Changing Career Markets",
+    "source": "jobs",
+    "title": "How to Identify Transferable Roles for a Move Abroad",
+    "action": "Compare your responsibilities with adjacent role descriptions",
+    "verify": "Find repeated skills in genuine employer listings",
+    "risk": "Similar job titles can hide different legal scopes",
+    "output": "Role transferability map"
+  },
+  {
+    "cluster": "Changing Career Markets",
+    "source": "jobs",
+    "title": "How to Research an Overseas Industry Without Starting From Zero",
+    "action": "Use employer reports and professional associations for context",
+    "verify": "Speak to practitioners about entry requirements respectfully",
+    "risk": "Online salary rankings cannot replace role research",
+    "output": "Industry entry research sheet"
+  },
+  {
+    "cluster": "Changing Career Markets",
+    "source": "jobs",
+    "title": "How to Explain a Career Pivot to an International Hiring Manager",
+    "action": "Connect past evidence to one target job requirement",
+    "verify": "Show what you have learned and what remains a gap",
+    "risk": "A vague desire for change can weaken credibility",
+    "output": "Three-part career-pivot explanation"
+  },
+  {
+    "cluster": "Changing Career Markets",
+    "source": "jobs",
+    "title": "How to Test a New Career Direction Before Moving Countries",
+    "action": "Apply selectively and interview before making commitments",
+    "verify": "Compare required qualifications with your current records",
+    "risk": "A course advertisement is not proof of employability",
+    "output": "Low-cost market experiment"
+  },
+  {
+    "cluster": "Changing Career Markets",
+    "source": "jobs",
+    "title": "How to Decide If a Junior Role Abroad Is Worth Pursuing",
+    "action": "Compare training value with salary and relocation expenses",
+    "verify": "Check whether entry-level jobs can support required permission",
+    "risk": "A junior title does not automatically make relocation viable",
+    "output": "Junior-role decision worksheet"
+  },
+  {
+    "cluster": "Interview Practice Techniques",
+    "source": "jobs",
+    "title": "How to Prepare Evidence for a Technical Interview Abroad",
+    "action": "Choose real examples aligned with the job's essential tasks",
+    "verify": "Confirm which tools or tests are actually used",
+    "risk": "Overpreparing generic questions wastes study time",
+    "output": "Role-aligned interview prep list"
+  },
+  {
+    "cluster": "Interview Practice Techniques",
+    "source": "jobs",
+    "title": "How to Discuss a Failed Project in a Job Interview",
+    "action": "Explain what happened and the corrective action you owned",
+    "verify": "Distinguish learning from blaming colleagues",
+    "risk": "A flawless story can sound unrealistic",
+    "output": "Accountable project-retrospective answer"
+  },
+  {
+    "cluster": "Interview Practice Techniques",
+    "source": "jobs",
+    "title": "How to Answer Questions About Managing Remote Teams Across Time Zones",
+    "action": "Describe real coordination habits and written handoffs",
+    "verify": "Show how decisions and deadlines are documented",
+    "risk": "Availability around the clock is not sustainable",
+    "output": "Cross-time-zone teamwork example"
+  },
+  {
+    "cluster": "Interview Practice Techniques",
+    "source": "jobs",
+    "title": "How to Prepare for an International Panel Interview",
+    "action": "Research each role's likely perspective on the job",
+    "verify": "Prepare evidence and questions that address different responsibilities",
+    "risk": "Treating every panelist as having identical priorities misses opportunities",
+    "output": "Panel interview question map"
+  },
+  {
+    "cluster": "Interview Practice Techniques",
+    "source": "jobs",
+    "title": "How to Discuss Relocation Timing During a Job Interview",
+    "action": "Separate tentative availability from required immigration approvals",
+    "verify": "Explain notice, paperwork and travel dependencies",
+    "risk": "Promising a fixed date before permission is granted creates risk",
+    "output": "Conditional start-date answer"
+  },
+  {
+    "cluster": "Language Readiness at Work",
+    "source": "community",
+    "title": "How to Assess Workplace Language Requirements Before Applying",
+    "action": "Read the exact customer, safety and reporting responsibilities",
+    "verify": "Ask which tasks require local-language communication",
+    "risk": "An English-language advertisement may still require other languages",
+    "output": "Role-language needs checklist"
+  },
+  {
+    "cluster": "Language Readiness at Work",
+    "source": "community",
+    "title": "How to Practise Professional Small Talk in a New Language",
+    "action": "Focus on greetings, introductions and scheduling phrases",
+    "verify": "Seek feedback from a fluent speaker on register",
+    "risk": "Memorised slang may sound inappropriate at work",
+    "output": "Short workplace conversation set"
+  },
+  {
+    "cluster": "Language Readiness at Work",
+    "source": "community",
+    "title": "How to Handle a Meeting When You Miss a Key Phrase",
+    "action": "Use a clarification question and restate the decision",
+    "verify": "Confirm action items in writing",
+    "risk": "Pretending to understand can affect safety or work quality",
+    "output": "Meeting clarification script"
+  },
+  {
+    "cluster": "Language Readiness at Work",
+    "source": "community",
+    "title": "How to Learn Industry Vocabulary Before an Overseas Job",
+    "action": "Collect actual terms from manuals and role descriptions",
+    "verify": "Check meanings against reputable profession-specific references",
+    "risk": "Literal translations may change technical meaning",
+    "output": "Targeted job vocabulary list"
+  },
+  {
+    "cluster": "Language Readiness at Work",
+    "source": "community",
+    "title": "How to Explain Your Language Skills Honestly on a CV",
+    "action": "Describe what tasks you can perform in the language",
+    "verify": "Include official test results only when actually held",
+    "risk": "Overstated fluency may unravel in the interview",
+    "output": "Evidence-based language profile"
+  },
+  {
+    "cluster": "Remote Work Across Borders",
+    "source": "labor",
+    "title": "How to Check Country Restrictions on a Remote Job",
+    "action": "Find explicit eligible hiring locations in the posting",
+    "verify": "Ask whether employment is available from your present country",
+    "risk": "Remote does not automatically mean worldwide",
+    "output": "Country-eligibility note"
+  },
+  {
+    "cluster": "Remote Work Across Borders",
+    "source": "labor",
+    "title": "How to Clarify Whether an Overseas Remote Role Is Employment or Contract Work",
+    "action": "Ask who provides taxes, benefits and equipment",
+    "verify": "Read the written engagement and payment structure",
+    "risk": "Calling a contractor an employee obscures responsibilities",
+    "output": "Engagement-type checklist"
+  },
+  {
+    "cluster": "Remote Work Across Borders",
+    "source": "labor",
+    "title": "How to Set Hours for a Remote Job in Another Time Zone",
+    "action": "Map overlapping working hours against personal obligations",
+    "verify": "Clarify meeting and emergency coverage expectations",
+    "risk": "Permanent overnight schedules can be unsustainable",
+    "output": "Weekly overlap calendar"
+  },
+  {
+    "cluster": "Remote Work Across Borders",
+    "source": "labor",
+    "title": "How to Test a Remote Employer's Equipment Policy",
+    "action": "Ask about security, device ownership and required connectivity",
+    "verify": "Check whether a work laptop can be shipped to you",
+    "risk": "Buying equipment in advance on request may signal a scam",
+    "output": "Verified equipment policy"
+  },
+  {
+    "cluster": "Remote Work Across Borders",
+    "source": "labor",
+    "title": "How to Evaluate a Remote Job With Frequent Travel Requirements",
+    "action": "Confirm actual travel frequency and reimbursement terms",
+    "verify": "Check whether your documents permit necessary trips",
+    "risk": "A remote label may hide substantial on-site obligations",
+    "output": "Travel-duty decision sheet"
+  },
+  {
+    "cluster": "Credentials and Licensing",
+    "source": "labor",
+    "title": "How to Find the Correct Licensing Body for an Overseas Profession",
+    "action": "Identify the legally regulated job title and location",
+    "verify": "Use an official government or regulator directory",
+    "risk": "The most popular course provider may not be the authority",
+    "output": "Verified regulator contact"
+  },
+  {
+    "cluster": "Credentials and Licensing",
+    "source": "labor",
+    "title": "How to Prepare Evidence of Supervised Work Experience Abroad",
+    "action": "Ask the regulator what hours and duties count",
+    "verify": "Obtain truthful records from prior supervisors",
+    "risk": "A generic reference may not satisfy formal requirements",
+    "output": "Experience evidence matrix"
+  },
+  {
+    "cluster": "Credentials and Licensing",
+    "source": "labor",
+    "title": "How to Compare Credential Assessment and Professional Registration",
+    "action": "Identify which service checks education and which grants practice rights",
+    "verify": "Follow the specified order before paying fees",
+    "risk": "An educational assessment may not grant a licence",
+    "output": "Credential process map"
+  },
+  {
+    "cluster": "Credentials and Licensing",
+    "source": "labor",
+    "title": "How to Prepare a Translation for Professional Registration",
+    "action": "Ask whether certified translations must follow a special format",
+    "verify": "Verify accepted document and identity matching rules",
+    "risk": "Unofficial translations can be rejected",
+    "output": "Translation specification list"
+  },
+  {
+    "cluster": "Credentials and Licensing",
+    "source": "labor",
+    "title": "How to Plan Around an Expiring Professional Certificate",
+    "action": "List issue date, renewal conditions and processing lead time",
+    "verify": "Ask the responsible authority about renewal from abroad",
+    "risk": "An expired licence can block work despite an offer",
+    "output": "Renewal calendar"
+  },
+  {
+    "cluster": "International Recruitment Security",
+    "source": "fraud",
+    "title": "How to Recognize a Fake Recruitment Video Interview Invitation",
+    "action": "Check the meeting domain and sender identity through the company",
+    "verify": "Confirm the vacancy reference using an independent channel",
+    "risk": "A spoofed invitation can harvest credentials",
+    "output": "Interview invitation verification"
+  },
+  {
+    "cluster": "International Recruitment Security",
+    "source": "fraud",
+    "title": "How to Verify an Overseas Employment Agency",
+    "action": "Look for required registration and actual employer details",
+    "verify": "Check government or industry registers where available",
+    "risk": "A glossy website does not prove legal authority",
+    "output": "Agency due-diligence record"
+  },
+  {
+    "cluster": "International Recruitment Security",
+    "source": "fraud",
+    "title": "How to Handle a Recruiter Who Demands Payment for a Guaranteed Job",
+    "action": "Stop the transaction and verify company details independently",
+    "verify": "Keep evidence and report suspicious requests through appropriate channels",
+    "risk": "Promises of guaranteed foreign employment can be fraudulent",
+    "output": "Incident evidence file"
+  },
+  {
+    "cluster": "International Recruitment Security",
+    "source": "fraud",
+    "title": "How to Avoid Downloading Malicious Files During Job Applications",
+    "action": "Confirm document origins and use updated device security",
+    "verify": "Prefer official application portals for uploading CVs",
+    "risk": "Unexpected installers may contain malicious software",
+    "output": "Safe application channel record"
+  },
+  {
+    "cluster": "International Recruitment Security",
+    "source": "fraud",
+    "title": "How to Check Whether an Overseas Job Offer Is a Phishing Attempt",
+    "action": "Compare sender domain, legal entity and stated role",
+    "verify": "Call the employer using a separately found number",
+    "risk": "Urgent credential or bank requests can be traps",
+    "output": "Offer authenticity checklist"
+  },
+  {
+    "cluster": "Application Pipeline Quality",
+    "source": "jobs",
+    "title": "How to Prioritize Overseas Vacancies by Eligibility Before Fit",
+    "action": "Screen mandatory work rights and registration first",
+    "verify": "Then compare duties against your strongest evidence",
+    "risk": "A dream role may be legally unavailable",
+    "output": "Two-stage vacancy scorecard"
+  },
+  {
+    "cluster": "Application Pipeline Quality",
+    "source": "jobs",
+    "title": "How to Record Why an International Job Application Failed",
+    "action": "Separate verified reasons from guesses about rejection",
+    "verify": "Adjust only the part of the process supported by feedback",
+    "risk": "One rejection does not prove the entire market is closed",
+    "output": "Application learning log"
+  },
+  {
+    "cluster": "Application Pipeline Quality",
+    "source": "jobs",
+    "title": "How to Avoid Applying Twice to the Same Job Abroad",
+    "action": "Track original employer reference numbers across websites",
+    "verify": "Mark recruiter-submitted roles separately",
+    "risk": "Duplicate submissions can create ownership confusion",
+    "output": "Single-source application ledger"
+  },
+  {
+    "cluster": "Application Pipeline Quality",
+    "source": "jobs",
+    "title": "How to Set an Overseas Job Search Budget",
+    "action": "Include language tests, credential checks and document costs",
+    "verify": "Limit optional paid services until their value is clear",
+    "risk": "High spending does not guarantee interviews",
+    "output": "Application-cost budget"
+  },
+  {
+    "cluster": "Application Pipeline Quality",
+    "source": "jobs",
+    "title": "How to Review a Month of International Job Searching",
+    "action": "Count qualified applications, replies and confirmed blockers",
+    "verify": "Adjust target roles based on evidence rather than mood",
+    "risk": "Raw application volume alone is a weak success measure",
+    "output": "Monthly job search retrospective"
+  },
+  {
+    "cluster": "Employer Relocation Assistance",
+    "source": "labor",
+    "title": "How to Ask an Employer for Temporary Housing Support",
+    "action": "Clarify accommodation duration and eligibility in writing",
+    "verify": "Compare actual move-in dates with first payday",
+    "risk": "An allowance arriving later may not cover first rent",
+    "output": "Housing-support request"
+  },
+  {
+    "cluster": "Employer Relocation Assistance",
+    "source": "labor",
+    "title": "How to Compare Two Corporate Relocation Packages",
+    "action": "Itemize transport, temporary lodging, shipments and tax treatment",
+    "verify": "Ask which benefits apply to dependants",
+    "risk": "Similar package names can conceal different coverage",
+    "output": "Benefits comparison matrix"
+  },
+  {
+    "cluster": "Employer Relocation Assistance",
+    "source": "labor",
+    "title": "How to Check Relocation Repayment Clauses in a Job Offer",
+    "action": "Locate any clawback period and triggering events",
+    "verify": "Request local legal review when consequences are significant",
+    "risk": "Leaving a role early may create a repayment obligation",
+    "output": "Relocation clause summary"
+  },
+  {
+    "cluster": "Employer Relocation Assistance",
+    "source": "labor",
+    "title": "How to Plan Employer-Supported Travel for Dependants",
+    "action": "Confirm which travellers and baggage costs are covered",
+    "verify": "Check family permissions and booking responsibility separately",
+    "risk": "Employee-only coverage may exclude family members",
+    "output": "Dependent travel coverage sheet"
+  },
+  {
+    "cluster": "Employer Relocation Assistance",
+    "source": "labor",
+    "title": "How to Negotiate a Relocation Start Window Rather Than a Date",
+    "action": "Map work permit, housing and arrival dependencies",
+    "verify": "Propose clear conditions for finalizing the start",
+    "risk": "An inflexible start can conflict with lawful entry",
+    "output": "Conditional start window proposal"
+  }
+]

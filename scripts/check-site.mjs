@@ -86,18 +86,23 @@ for (const slug of countrySlugs) {
   else if (!txt.includes('Official starting points')) errors.push('Country guide missing official references: ' + slug);
   else if (txt.includes('Editorial edition: September 2026')) errors.push('Country guide contains obsolete editorial edition notice: ' + slug);
 }
-const blogFiles = htmlFiles.filter((path) => path.includes('/blog/') && path !== join(root,'blog','index.html'));
+const blogFiles = htmlFiles.filter((path) => path.includes('/blog/') && !path.includes('/blog/page/') && path !== join(root,'blog','index.html'));
 const seoRelease = JSON.parse(readFileSync(resolve('src/data/seoRelease.json'), 'utf8'));
 const evergreenRelease = JSON.parse(readFileSync(resolve('src/data/evergreenRelease.json'), 'utf8'));
-const expectedBlogCount = 9 + seoRelease.published.length + evergreenRelease.published.length;
+const year3Release = JSON.parse(readFileSync(resolve('src/data/year3Release.json'), 'utf8'));
+const expectedBlogCount = 9 + seoRelease.published.length + evergreenRelease.published.length + year3Release.published.length;
 if (blogFiles.length !== expectedBlogCount) errors.push('Expected '+expectedBlogCount+' blog article pages, found ' + blogFiles.length);
 const queuedSeoPosts = JSON.parse(readFileSync(resolve('src/data/seoQueue.json'), 'utf8'));
 const {buildEvergreenArticles} = await import('../src/evergreenEditorial.mjs');
 const evergreenFiles = ['01-career-and-preparation','02-travel-and-housing','03-money-health-family-culture-work','04-safety-digital-everyday-community'];
 const evergreenSeeds = evergreenFiles.flatMap(name => JSON.parse(readFileSync(resolve('src/data/evergreen', name+'.json'),'utf8')));
 const evergreenPosts = buildEvergreenArticles(evergreenSeeds);
-const scheduledDates = new Map([...queuedSeoPosts,...evergreenPosts].map(post => [post.slug, post.date]));
-const actualDates = {...(seoRelease.publishedAt||{}),...(evergreenRelease.publishedAt||{})};
+const {buildYear3Articles} = await import('../src/year3Editorial.mjs');
+const year3Files = ['01-careers-and-employment','02-flight-and-travel','03-housing-and-money','04-family-health-community','05-work-digital-safety','06-long-term-and-return'];
+const year3Seeds = year3Files.flatMap(name => JSON.parse(readFileSync(resolve('src/data/year3', name+'.json'),'utf8')));
+const year3Posts = buildYear3Articles(year3Seeds);
+const scheduledDates = new Map([...queuedSeoPosts,...evergreenPosts,...year3Posts].map(post => [post.slug, post.date]));
+const actualDates = {...(seoRelease.publishedAt||{}),...(evergreenRelease.publishedAt||{}),...(year3Release.publishedAt||{})};
 for (const file of blogFiles) {
   const txt = pages.get(file);
   const slug = relative(root, file).split('/')[1];

@@ -1,0 +1,542 @@
+[
+  {
+    "cluster": "Partner Relocation Decisions",
+    "source": "family",
+    "title": "How to Discuss Career Sacrifices With a Partner Before Moving Abroad",
+    "action": "Compare both partners' professional plans and financial expectations",
+    "verify": "Check work rights and local credential rules for each adult",
+    "risk": "A one-sided decision can cause lasting resentment",
+    "output": "Two-person career decision sheet"
+  },
+  {
+    "cluster": "Partner Relocation Decisions",
+    "source": "family",
+    "title": "How to Plan for One Income During the First Months Abroad",
+    "action": "Model essential household costs with only confirmed income",
+    "verify": "Separate expected future earnings from money actually available",
+    "risk": "A partner's job search may take longer than hoped",
+    "output": "Single-income transition budget"
+  },
+  {
+    "cluster": "Partner Relocation Decisions",
+    "source": "family",
+    "title": "How to Help an Accompanying Partner Build Their Own Routine",
+    "action": "Explore language classes, communities and career resources together",
+    "verify": "Protect independent time and personal priorities",
+    "risk": "Making one partner responsible for every errand can be unfair",
+    "output": "Balanced first-month routine"
+  },
+  {
+    "cluster": "Partner Relocation Decisions",
+    "source": "family",
+    "title": "How to Divide Relocation Tasks Fairly as a Couple",
+    "action": "List document, housing, budget and communication responsibilities",
+    "verify": "Agree deadlines and who has final decision authority",
+    "risk": "Invisible administrative work can become a conflict",
+    "output": "Shared responsibility board"
+  },
+  {
+    "cluster": "Partner Relocation Decisions",
+    "source": "family",
+    "title": "How to Reassess a Family Relocation Decision After Arrival",
+    "action": "Set a calm review date and agree which outcomes matter",
+    "verify": "Compare facts with your original goals",
+    "risk": "A difficult first week should not decide a long-term move",
+    "output": "Family adjustment review"
+  },
+  {
+    "cluster": "Children and School Transitions",
+    "source": "family",
+    "title": "How to Ask a Foreign School About Admission Requirements",
+    "action": "Contact the official school or education authority",
+    "verify": "Confirm eligibility, records and available places",
+    "risk": "A nearby school may not accept a child immediately",
+    "output": "School admissions questions"
+  },
+  {
+    "cluster": "Children and School Transitions",
+    "source": "family",
+    "title": "How to Prepare a Child's School Records for an International Move",
+    "action": "Ask which transcripts, reports and translations are required",
+    "verify": "Protect confidential student information",
+    "risk": "Sending incomplete records may delay placement",
+    "output": "School documents checklist"
+  },
+  {
+    "cluster": "Children and School Transitions",
+    "source": "family",
+    "title": "How to Compare Two Schools for a Relocating Child",
+    "action": "Look at curriculum, language support, commute and wellbeing",
+    "verify": "Verify fee status and transport arrangements",
+    "risk": "Exam scores alone cannot measure a child's fit",
+    "output": "School comparison table"
+  },
+  {
+    "cluster": "Children and School Transitions",
+    "source": "family",
+    "title": "How to Support a Child Learning in an Unfamiliar Language",
+    "action": "Speak with teachers about realistic classroom support",
+    "verify": "Maintain familiar home communication and routines",
+    "risk": "Pressure to learn instantly can increase anxiety",
+    "output": "Gentle language-support routine"
+  },
+  {
+    "cluster": "Children and School Transitions",
+    "source": "family",
+    "title": "How to Explain a Change of School to Children Before Departure",
+    "action": "Discuss what changes and what stays familiar",
+    "verify": "Invite specific questions about friends and daily life",
+    "risk": "Surprise announcements can make the move harder",
+    "output": "Age-appropriate transition conversation"
+  },
+  {
+    "cluster": "Childcare and Family Routines",
+    "source": "family",
+    "title": "How to Research Childcare Before Starting an Overseas Job",
+    "action": "List working hours, commute and care coverage needs",
+    "verify": "Check licensing, eligibility and enrolment availability",
+    "risk": "Assuming a place will be available on arrival is risky",
+    "output": "Childcare enquiries tracker"
+  },
+  {
+    "cluster": "Childcare and Family Routines",
+    "source": "family",
+    "title": "How to Plan Emergency Childcare When Family Lives Far Away",
+    "action": "Identify vetted services and trusted local contacts",
+    "verify": "Agree permissions, schedules and pickup rules",
+    "risk": "An informal backup may be unavailable during a crisis",
+    "output": "Family contingency contacts"
+  },
+  {
+    "cluster": "Childcare and Family Routines",
+    "source": "family",
+    "title": "How to Organize School Drop-Off With a New Commute",
+    "action": "Test routes at real departure and collection times",
+    "verify": "Include traffic, weather and after-school care",
+    "risk": "A workplace-adjacent home may still create a school commute problem",
+    "output": "Daily family transport map"
+  },
+  {
+    "cluster": "Childcare and Family Routines",
+    "source": "family",
+    "title": "How to Set Up a Child-Friendly Temporary Apartment",
+    "action": "Prioritise safe sleeping and essential routines",
+    "verify": "Confirm property suitability and available equipment",
+    "risk": "A holiday rental may not be equipped for young children",
+    "output": "First-week child essentials list"
+  },
+  {
+    "cluster": "Childcare and Family Routines",
+    "source": "family",
+    "title": "How to Prepare for School Holidays as a Newcomer Family",
+    "action": "Check the local calendar and available care options early",
+    "verify": "Compare paid leave, camps and household schedules",
+    "risk": "Assuming school calendars match your former country can cause gaps",
+    "output": "Family holiday coverage plan"
+  },
+  {
+    "cluster": "Pet Relocation Administration",
+    "source": "family",
+    "title": "How to Build a Pet Import Timeline Before Moving Abroad",
+    "action": "Check the destination animal-health authority's entry rules",
+    "verify": "Consult an accredited veterinarian about documentation lead times",
+    "risk": "Some steps cannot be completed at the last minute",
+    "output": "Pet travel requirements calendar"
+  },
+  {
+    "cluster": "Pet Relocation Administration",
+    "source": "family",
+    "title": "How to Compare Pet Transport Providers for an International Move",
+    "action": "Request itemised handling and welfare arrangements",
+    "verify": "Verify licences or approvals where required",
+    "risk": "An informal provider may not understand country import rules",
+    "output": "Pet transport provider checklist"
+  },
+  {
+    "cluster": "Pet Relocation Administration",
+    "source": "family",
+    "title": "How to Prepare a Dog for a Travel Crate Humanely",
+    "action": "Ask a veterinarian or qualified professional about gradual acclimatisation",
+    "verify": "Confirm crate specifications with the airline",
+    "risk": "A last-minute unfamiliar crate can increase distress",
+    "output": "Pet crate training plan"
+  },
+  {
+    "cluster": "Pet Relocation Administration",
+    "source": "family",
+    "title": "How to Find Pet-Friendly Temporary Housing Abroad",
+    "action": "Confirm animal limits, deposits and building policies in writing",
+    "verify": "Plan nearby exercise and veterinary services",
+    "risk": "A listing labelled pet-friendly may have weight or breed conditions",
+    "output": "Pet-approved accommodation shortlist"
+  },
+  {
+    "cluster": "Pet Relocation Administration",
+    "source": "family",
+    "title": "How to Transfer Veterinary Records to a New Country",
+    "action": "Request vaccination and treatment records in an accepted format",
+    "verify": "Verify destination veterinarian intake requirements",
+    "risk": "Missing records can complicate care or transport",
+    "output": "Veterinary record transfer file"
+  },
+  {
+    "cluster": "Health Preparation Before Travel",
+    "source": "health",
+    "title": "How to Schedule a Pre-Move Healthcare Review",
+    "action": "Discuss travel dates and relevant care needs with a qualified clinician",
+    "verify": "Ask which records or repeat prescriptions will be needed",
+    "risk": "Late planning can interrupt essential treatment",
+    "output": "Healthcare transition appointment list"
+  },
+  {
+    "cluster": "Health Preparation Before Travel",
+    "source": "health",
+    "title": "How to Prepare a Medication List for Customs and New Doctors",
+    "action": "Record generic names, dosage and prescriber details securely",
+    "verify": "Check legal import rules for destination and transit",
+    "risk": "A brand name alone may be unfamiliar abroad",
+    "output": "Medication information sheet"
+  },
+  {
+    "cluster": "Health Preparation Before Travel",
+    "source": "health",
+    "title": "How to Check Whether Your Health Insurance Covers Transit Days",
+    "action": "Compare start and end dates of both policies",
+    "verify": "Ask the insurer about relevant exclusions",
+    "risk": "A coverage gap can occur between jobs or countries",
+    "output": "Insurance date-gap chart"
+  },
+  {
+    "cluster": "Health Preparation Before Travel",
+    "source": "health",
+    "title": "How to Find Travel Health Advice for a Specific Destination",
+    "action": "Consult official travel health guidance and a qualified clinician",
+    "verify": "Use the correct itinerary and relevant personal circumstances",
+    "risk": "One universal vaccine list is not appropriate for everyone",
+    "output": "Destination health consultation note"
+  },
+  {
+    "cluster": "Health Preparation Before Travel",
+    "source": "health",
+    "title": "How to Carry a Medical Device Through Airport Security",
+    "action": "Check airline and security requirements for the device",
+    "verify": "Ask your healthcare professional about supporting documents",
+    "risk": "Unapproved batteries or equipment may create complications",
+    "output": "Medical equipment travel plan"
+  },
+  {
+    "cluster": "Health Systems After Arrival",
+    "source": "health",
+    "title": "How to Research Primary Care Registration After a Move Abroad",
+    "action": "Find the local health service's official enrolment process",
+    "verify": "Check documents and whether providers accept new patients",
+    "risk": "Assuming a service is automatically available may delay care",
+    "output": "Primary-care registration file"
+  },
+  {
+    "cluster": "Health Systems After Arrival",
+    "source": "health",
+    "title": "How to Find an After-Hours Clinic in a New Country",
+    "action": "Locate authorised urgent-care services and contact methods",
+    "verify": "Confirm the difference between emergency and routine care",
+    "risk": "Searching for help only after hours can be difficult",
+    "output": "Out-of-hours care map"
+  },
+  {
+    "cluster": "Health Systems After Arrival",
+    "source": "health",
+    "title": "How to Prepare for a First Appointment With a New Doctor Abroad",
+    "action": "Summarise allergies, medicines, relevant history and questions",
+    "verify": "Arrange interpretation support if needed",
+    "risk": "A long unstructured document can obscure urgent information",
+    "output": "One-page health summary"
+  },
+  {
+    "cluster": "Health Systems After Arrival",
+    "source": "health",
+    "title": "How to Check Healthcare Costs Before a Non-Urgent Appointment",
+    "action": "Ask provider and insurer about payment and coverage",
+    "verify": "Separate estimated charges from confirmed fees",
+    "risk": "Public coverage may not apply to every visitor or service",
+    "output": "Medical payment questions"
+  },
+  {
+    "cluster": "Health Systems After Arrival",
+    "source": "health",
+    "title": "How to Keep Vaccination Records Accessible Across Countries",
+    "action": "Obtain an official record from the issuing healthcare provider",
+    "verify": "Check which formats new schools or clinics accept",
+    "risk": "Missing proof can delay school or healthcare administration",
+    "output": "Vaccination record archive"
+  },
+  {
+    "cluster": "Supporting Mental Wellbeing",
+    "source": "health",
+    "title": "How to Plan Rest Days Around an International Move",
+    "action": "Identify the busiest packing, flight and onboarding periods",
+    "verify": "Reserve realistic breaks rather than overfilling every day",
+    "risk": "Constant tasks can lead to exhaustion",
+    "output": "Pre-and-post-flight rest plan"
+  },
+  {
+    "cluster": "Supporting Mental Wellbeing",
+    "source": "health",
+    "title": "How to Notice When Relocation Stress Is Becoming Overwhelming",
+    "action": "Track practical sleep, concentration and daily functioning changes",
+    "verify": "Contact qualified support when distress becomes hard to manage",
+    "risk": "Trying to solve severe distress with productivity hacks is inadequate",
+    "output": "Wellbeing support contacts"
+  },
+  {
+    "cluster": "Supporting Mental Wellbeing",
+    "source": "health",
+    "title": "How to Keep Helpful Routines During Culture Shock",
+    "action": "Retain one familiar habit while adding a manageable local activity",
+    "verify": "Adjust expectations to work and family schedules",
+    "risk": "A complete overnight routine reset is hard to maintain",
+    "output": "Small stability habits plan"
+  },
+  {
+    "cluster": "Supporting Mental Wellbeing",
+    "source": "health",
+    "title": "How to Find Legitimate Mental Health Resources Abroad",
+    "action": "Use official health services and qualified professional directories",
+    "verify": "Check language, access and emergency options",
+    "risk": "An unverified online group is not a substitute for urgent care",
+    "output": "Support service research list"
+  },
+  {
+    "cluster": "Supporting Mental Wellbeing",
+    "source": "health",
+    "title": "How to Talk With Family About Difficult Adjustment Days",
+    "action": "Describe practical needs instead of blaming the destination or people",
+    "verify": "Agree when to seek extra support together",
+    "risk": "Withholding difficulties can strain relationships",
+    "output": "Family check-in conversation"
+  },
+  {
+    "cluster": "Language Skills for Daily Life",
+    "source": "community",
+    "title": "How to Learn Grocery and Pharmacy Vocabulary Before Relocating",
+    "action": "Collect common words from actual labels and local services",
+    "verify": "Practise asking for clarification in simple language",
+    "risk": "A direct translation may not match the correct local term",
+    "output": "Daily errands vocabulary sheet"
+  },
+  {
+    "cluster": "Language Skills for Daily Life",
+    "source": "community",
+    "title": "How to Practise Giving Your Address Clearly in a New Language",
+    "action": "Learn the full street format and building details",
+    "verify": "Check how locals pronounce important place names",
+    "risk": "An incomplete address can affect deliveries and emergency help",
+    "output": "Readable address and pronunciation card"
+  },
+  {
+    "cluster": "Language Skills for Daily Life",
+    "source": "community",
+    "title": "How to Ask for Help at a Public Office in a Second Language",
+    "action": "Prepare the precise purpose and relevant reference numbers",
+    "verify": "Request clarification or qualified interpretation when necessary",
+    "risk": "Guessing legal instructions can cause mistakes",
+    "output": "Official appointment question list"
+  },
+  {
+    "cluster": "Language Skills for Daily Life",
+    "source": "community",
+    "title": "How to Build a Language Routine Around a Full-Time Job Abroad",
+    "action": "Choose short practice slots linked to real tasks",
+    "verify": "Track useful phrases rather than only textbook pages",
+    "risk": "An unrealistic study target can collapse under work pressure",
+    "output": "Sustainable weekly language routine"
+  },
+  {
+    "cluster": "Language Skills for Daily Life",
+    "source": "community",
+    "title": "How to Prepare for Phone Calls in an Unfamiliar Language",
+    "action": "Write the account number, request and key questions in advance",
+    "verify": "Ask for written follow-up on material decisions",
+    "risk": "Missing details on a rushed call can create billing problems",
+    "output": "Call notes template"
+  },
+  {
+    "cluster": "Community Entry Points",
+    "source": "community",
+    "title": "How to Find a Local Library After Moving Internationally",
+    "action": "Locate the public library service and membership process",
+    "verify": "Check accessible hours and language resources",
+    "risk": "Assuming every branch has identical services can disappoint",
+    "output": "Library access shortlist"
+  },
+  {
+    "cluster": "Community Entry Points",
+    "source": "community",
+    "title": "How to Choose a Hobby Group That Fits a New Work Schedule",
+    "action": "List one or two genuine interests and recurring meeting times",
+    "verify": "Verify safety, cost and transport to sessions",
+    "risk": "Joining too many groups can add stress",
+    "output": "Hobby group trial calendar"
+  },
+  {
+    "cluster": "Community Entry Points",
+    "source": "community",
+    "title": "How to Make Professional Connections Without Asking for Jobs Immediately",
+    "action": "Contribute a useful question or insight in a sector event",
+    "verify": "Follow up respectfully with relevant work context",
+    "risk": "Cold requests for referrals can feel transactional",
+    "output": "Professional contact note"
+  },
+  {
+    "cluster": "Community Entry Points",
+    "source": "community",
+    "title": "How to Find Volunteer Opportunities With Clear Responsibilities",
+    "action": "Check the organisation's legitimacy and role description",
+    "verify": "Confirm applicable immigration and insurance rules",
+    "risk": "Unclear unpaid work may create legal or safety issues",
+    "output": "Volunteer opportunity due-diligence list"
+  },
+  {
+    "cluster": "Community Entry Points",
+    "source": "community",
+    "title": "How to Meet Neighbours Without Intruding on Their Privacy",
+    "action": "Start with simple introductions and ordinary shared-space courtesy",
+    "verify": "Observe building rules and individual preferences",
+    "risk": "Assuming everyone welcomes drop-in visits is risky",
+    "output": "Neighbour introduction plan"
+  },
+  {
+    "cluster": "Local Etiquette and Communication",
+    "source": "community",
+    "title": "How to Learn Apartment Building Etiquette in a New Country",
+    "action": "Read posted quiet hours, waste and shared-space rules",
+    "verify": "Ask management when instructions are unclear",
+    "risk": "Assuming your former building norms apply may cause friction",
+    "output": "Building etiquette cheat sheet"
+  },
+  {
+    "cluster": "Local Etiquette and Communication",
+    "source": "community",
+    "title": "How to Understand Queue and Service Counter Customs Abroad",
+    "action": "Observe how numbers, appointments or lines operate",
+    "verify": "Politely ask staff when the process is unclear",
+    "risk": "Pushing ahead because no visible line exists may offend",
+    "output": "Public service observation note"
+  },
+  {
+    "cluster": "Local Etiquette and Communication",
+    "source": "community",
+    "title": "How to Ask for a Receipt or Refund Politely in Another Language",
+    "action": "Prepare a clear description of the transaction",
+    "verify": "Check the actual store policy before requesting",
+    "risk": "Demanding a home-country return policy may not help",
+    "output": "Refund request phrase card"
+  },
+  {
+    "cluster": "Local Etiquette and Communication",
+    "source": "community",
+    "title": "How to Write a Short Professional Email in a New Workplace Culture",
+    "action": "Follow the organisation's existing email style",
+    "verify": "Confirm the desired action and deadline in the message",
+    "risk": "Overly casual or ambiguous wording can be misread",
+    "output": "Concise email template"
+  },
+  {
+    "cluster": "Local Etiquette and Communication",
+    "source": "community",
+    "title": "How to Handle a Cultural Misunderstanding Without Stereotyping",
+    "action": "Describe the specific incident and seek clarification",
+    "verify": "Adjust your own assumption after getting context",
+    "risk": "One person's behaviour cannot represent an entire country",
+    "output": "Neutral misunderstanding debrief"
+  },
+  {
+    "cluster": "Daily Family Management",
+    "source": "family",
+    "title": "How to Keep Household Documents Accessible to Both Partners Abroad",
+    "action": "Agree secure storage and emergency access permissions",
+    "verify": "Update versions when renewals occur",
+    "risk": "Only one person knowing every password creates vulnerability",
+    "output": "Shared document-access protocol"
+  },
+  {
+    "cluster": "Daily Family Management",
+    "source": "family",
+    "title": "How to Plan Weekly Groceries for a Family in a New City",
+    "action": "Map reliable stores and essential dietary needs",
+    "verify": "Compare real package sizes and transport convenience",
+    "risk": "A one-time bulk shop can waste money in temporary housing",
+    "output": "Family grocery planning sheet"
+  },
+  {
+    "cluster": "Daily Family Management",
+    "source": "family",
+    "title": "How to Create a Family Emergency Contact Tree Overseas",
+    "action": "Identify trusted local and home-country contacts",
+    "verify": "Clarify who should be told in different situations",
+    "risk": "An outdated phone number can delay help",
+    "output": "Family emergency contact card"
+  },
+  {
+    "cluster": "Daily Family Management",
+    "source": "family",
+    "title": "How to Decide Which Household Tasks to Outsource During Settling In",
+    "action": "Compare time saved with actual cash costs",
+    "verify": "Check service reliability and safe access requirements",
+    "risk": "Paying for every convenience can erode reserves",
+    "output": "Task outsourcing priority list"
+  },
+  {
+    "cluster": "Daily Family Management",
+    "source": "family",
+    "title": "How to Build a Family Calendar Across Different School and Work Hours",
+    "action": "Combine confirmed work, care and local holiday schedules",
+    "verify": "Review conflicts before committing to activities",
+    "risk": "Separate calendars can hide childcare gaps",
+    "output": "Shared family operations calendar"
+  },
+  {
+    "cluster": "Long Distance Family Relationships",
+    "source": "family",
+    "title": "How to Schedule Family Video Calls Across Large Time Differences",
+    "action": "Choose a recurring time that respects both households",
+    "verify": "Leave space for asynchronous updates",
+    "risk": "Constant late-night calls can affect health and work",
+    "output": "Realistic family call routine"
+  },
+  {
+    "cluster": "Long Distance Family Relationships",
+    "source": "family",
+    "title": "How to Share Relocation Photos Without Revealing Sensitive Information",
+    "action": "Avoid posting exact addresses, tickets and identity documents",
+    "verify": "Review access controls before sharing",
+    "risk": "Public travel details can expose privacy",
+    "output": "Private family updates folder"
+  },
+  {
+    "cluster": "Long Distance Family Relationships",
+    "source": "family",
+    "title": "How to Stay Connected With Ageing Parents After Relocating",
+    "action": "Agree a practical check-in frequency and trusted nearby contacts",
+    "verify": "Discuss wishes and boundaries openly",
+    "risk": "Remote messages alone may not cover urgent physical help",
+    "output": "Consent-based elder support plan"
+  },
+  {
+    "cluster": "Long Distance Family Relationships",
+    "source": "family",
+    "title": "How to Plan Visits Home Without Destabilizing Your New Budget",
+    "action": "Check real flight prices and leave allowances",
+    "verify": "Budget accommodation, insurance and missed work separately",
+    "risk": "A spontaneous trip can consume emergency reserves",
+    "output": "Home-visit savings plan"
+  },
+  {
+    "cluster": "Long Distance Family Relationships",
+    "source": "family",
+    "title": "How to Support a Partner Feeling Isolated After Moving Abroad",
+    "action": "Listen to specific challenges and make time for independent activities",
+    "verify": "Explore legitimate local support and social opportunities",
+    "risk": "Assigning all adjustment responsibility to one person is unfair",
+    "output": "Shared social support action plan"
+  }
+]

@@ -1,0 +1,542 @@
+[
+  {
+    "cluster": "Route Planning for a Move",
+    "source": "travel",
+    "title": "How to Compare Nonstop and Connecting Flights for Relocation",
+    "action": "List every sector and the total hours door to door",
+    "verify": "Check baggage, transfer time and airport changes on each option",
+    "risk": "The cheaper ticket may require a risky connection",
+    "output": "Door-to-door itinerary comparison"
+  },
+  {
+    "cluster": "Route Planning for a Move",
+    "source": "travel",
+    "title": "How to Plan an International Flight With Two Different Airlines",
+    "action": "Confirm whether both airlines share one booking reference",
+    "verify": "Ask who handles bags and missed connections",
+    "risk": "An unprotected transfer can require new tickets",
+    "output": "Connection responsibility checklist"
+  },
+  {
+    "cluster": "Route Planning for a Move",
+    "source": "travel",
+    "title": "How to Check a Transit Airport Before Buying a Ticket",
+    "action": "Identify the terminal and whether passengers must clear immigration",
+    "verify": "Verify official transit requirements for your nationality",
+    "risk": "A transit stop may require extra documentation",
+    "output": "Transit-rule research record"
+  },
+  {
+    "cluster": "Route Planning for a Move",
+    "source": "travel",
+    "title": "How to Compare Daytime and Overnight Arrival Flights",
+    "action": "Map transport, accommodation access and rest needs at arrival",
+    "verify": "Verify safe transport options at the landing hour",
+    "risk": "A late arrival can create extra hotel or taxi costs",
+    "output": "Arrival-hour decision matrix"
+  },
+  {
+    "cluster": "Route Planning for a Move",
+    "source": "travel",
+    "title": "How to Plan a Relocation Flight During Peak Travel Periods",
+    "action": "Compare itinerary flexibility and available alternatives",
+    "verify": "Check cancellation terms before paying",
+    "risk": "A crowded travel day can reduce backup options",
+    "output": "Peak-period contingency plan"
+  },
+  {
+    "cluster": "Booking and Ticket Details",
+    "source": "travel",
+    "title": "What to Verify on a Flight Ticket Before a Permanent Move",
+    "action": "Match every traveller name with the issued travel documents",
+    "verify": "Check itinerary dates, airports and contact details",
+    "risk": "A minor naming mismatch may cause significant delays",
+    "output": "Ticket proofing checklist"
+  },
+  {
+    "cluster": "Booking and Ticket Details",
+    "source": "travel",
+    "title": "How to Compare Airline Fare Families for One-Way Flights",
+    "action": "Review checked-bag weight, changes and refund rules together",
+    "verify": "Calculate the full price after likely additions",
+    "risk": "A low base fare can be expensive after baggage fees",
+    "output": "Complete fare-cost worksheet"
+  },
+  {
+    "cluster": "Booking and Ticket Details",
+    "source": "travel",
+    "title": "How to Handle a Flight Change After Receiving Immigration Approval",
+    "action": "Compare updated entry permissions and ticket validity",
+    "verify": "Check airline change deadlines and fee rules",
+    "risk": "A flight change may alter transit document requirements",
+    "output": "Revised itinerary evidence file"
+  },
+  {
+    "cluster": "Booking and Ticket Details",
+    "source": "travel",
+    "title": "How to Choose a Departure Airport for an International Move",
+    "action": "Compare travel time, baggage handling and transport to each airport",
+    "verify": "Check flights available if the first route is disrupted",
+    "risk": "A distant airport may not save money overall",
+    "output": "Departure-airport decision sheet"
+  },
+  {
+    "cluster": "Booking and Ticket Details",
+    "source": "travel",
+    "title": "How to Organize Flight Confirmation Emails and References",
+    "action": "Save original receipts and all booking references offline",
+    "verify": "Compare ticket numbers with confirmed airline reservations",
+    "risk": "A payment receipt alone may not prove ticket issuance",
+    "output": "Offline booking archive"
+  },
+  {
+    "cluster": "Travel Document Cross-Checks",
+    "source": "travel",
+    "title": "How to Check Passport and Visa Names Before Flying",
+    "action": "Compare spelling, birth date and passport number across documents",
+    "verify": "Request correction through the official issuer if needed",
+    "risk": "An inconsistent spelling can delay check-in",
+    "output": "Cross-document accuracy table"
+  },
+  {
+    "cluster": "Travel Document Cross-Checks",
+    "source": "travel",
+    "title": "How to Prepare Proof of Accommodation for Border Questions",
+    "action": "Save the truthful address and booking or invitation evidence",
+    "verify": "Check what is required under the actual entry category",
+    "risk": "An invented address may create immigration problems",
+    "output": "Arrival-address evidence card"
+  },
+  {
+    "cluster": "Travel Document Cross-Checks",
+    "source": "travel",
+    "title": "How to Organize Work Permit Evidence in a Carry-On",
+    "action": "Keep the applicable approval or entry paperwork accessible",
+    "verify": "Confirm which originals the airline or border authority requires",
+    "risk": "A mobile screenshot may not meet every documentation rule",
+    "output": "Portable work-permission file"
+  },
+  {
+    "cluster": "Travel Document Cross-Checks",
+    "source": "travel",
+    "title": "How to Research Travel Rules for Dual Passport Holders",
+    "action": "Identify which document is used for each border crossing",
+    "verify": "Verify current official rules for both documents",
+    "risk": "Using different passport details without a clear record can confuse bookings",
+    "output": "Document-by-border plan"
+  },
+  {
+    "cluster": "Travel Document Cross-Checks",
+    "source": "travel",
+    "title": "How to Handle Travel When a Passport Is Near Expiry",
+    "action": "Check destination and transit validity requirements early",
+    "verify": "Review renewal lead times with your own passport authority",
+    "risk": "A valid visa cannot necessarily fix an insufficient passport validity period",
+    "output": "Renewal-or-travel decision note"
+  },
+  {
+    "cluster": "Airport Check-In Planning",
+    "source": "travel",
+    "title": "How Early to Arrive at the Airport With Extra Relocation Bags",
+    "action": "Use airline and airport guidance rather than a universal number",
+    "verify": "Allow for bag payments and document verification",
+    "risk": "Extra bags may require more time at the counter",
+    "output": "Departure timing worksheet"
+  },
+  {
+    "cluster": "Airport Check-In Planning",
+    "source": "travel",
+    "title": "How to Prepare for Airline Document Verification at Check-In",
+    "action": "Separate passport, ticket, visa and onward details in a folder",
+    "verify": "Verify the operator's check-in and document-check rules",
+    "risk": "Searching through devices at the counter adds stress",
+    "output": "Counter-ready paperwork order"
+  },
+  {
+    "cluster": "Airport Check-In Planning",
+    "source": "travel",
+    "title": "How to Handle a Check-In Kiosk That Rejects Your Documents",
+    "action": "Ask the operating airline staff to review the booking",
+    "verify": "Keep identity and booking information ready for inspection",
+    "risk": "Repeated kiosk attempts cannot resolve every document hold",
+    "output": "Manual-check escalation plan"
+  },
+  {
+    "cluster": "Airport Check-In Planning",
+    "source": "travel",
+    "title": "How to Verify Special Baggage Before Reaching the Airport",
+    "action": "Read the airline's approval and size conditions",
+    "verify": "Contact the carrier about equipment needing advance notice",
+    "risk": "An oversized item may be refused without authorization",
+    "output": "Approved baggage confirmation"
+  },
+  {
+    "cluster": "Airport Check-In Planning",
+    "source": "travel",
+    "title": "How to Plan Airport Check-In When Travelling With Family",
+    "action": "Assign document ownership and bag weights per traveller",
+    "verify": "Check any child and guardian travel requirements in advance",
+    "risk": "Assuming one adult can check everything automatically may fail",
+    "output": "Family check-in responsibility list"
+  },
+  {
+    "cluster": "International Connections",
+    "source": "travel",
+    "title": "How to Check Whether You Need to Recheck Bags in Transit",
+    "action": "Read the ticket and baggage-routing instructions",
+    "verify": "Confirm actual bag tags at the first check-in",
+    "risk": "A bag not transferred automatically can miss the next flight",
+    "output": "Baggage-routing evidence"
+  },
+  {
+    "cluster": "International Connections",
+    "source": "travel",
+    "title": "How to Plan a Transfer Between Two Airports in One City",
+    "action": "Calculate ground transport, border checks and realistic buffers",
+    "verify": "Confirm whether visa or entry permission is needed to transfer",
+    "risk": "A same-city airport change is not an airside connection",
+    "output": "City-airport transfer plan"
+  },
+  {
+    "cluster": "International Connections",
+    "source": "travel",
+    "title": "How to Prepare for a Long Overnight Airport Layover",
+    "action": "Check terminal operating hours and airside access conditions",
+    "verify": "Research legitimate airport hotels and rest options",
+    "risk": "Assuming terminal facilities stay open all night may disappoint",
+    "output": "Overnight-layover survival plan"
+  },
+  {
+    "cluster": "International Connections",
+    "source": "travel",
+    "title": "How to Reduce Risk on a Short International Connection",
+    "action": "Compare official minimum connections and required formalities",
+    "verify": "Consider a more forgiving route when documents are complex",
+    "risk": "Small delays can invalidate self-transfers",
+    "output": "Transfer-risk table"
+  },
+  {
+    "cluster": "International Connections",
+    "source": "travel",
+    "title": "What to Do When You Miss a Connection on Separate Tickets",
+    "action": "Contact each operating airline about available options",
+    "verify": "Document schedule changes and paid expenses",
+    "risk": "The second airline may treat you as a no-show",
+    "output": "Missed-connection action plan"
+  },
+  {
+    "cluster": "Luggage and Claims",
+    "source": "travel",
+    "title": "How to Photograph Your Suitcases for Easier Identification",
+    "action": "Capture each bag's exterior, distinctive features and contents overview",
+    "verify": "Store tag references securely in another location",
+    "risk": "Generic black luggage can be difficult to describe",
+    "output": "Private baggage photo record"
+  },
+  {
+    "cluster": "Luggage and Claims",
+    "source": "travel",
+    "title": "How to Check Checked-Bag Rules for Connecting Flights",
+    "action": "Compare piece count and weight on every operating carrier",
+    "verify": "Look for the allowance shown on the issued ticket",
+    "risk": "An international allowance may not apply on a separate regional ticket",
+    "output": "Segment baggage allowance chart"
+  },
+  {
+    "cluster": "Luggage and Claims",
+    "source": "travel",
+    "title": "How to Handle a Suitcase That Arrives Damaged",
+    "action": "Document the damage before leaving the arrival area where possible",
+    "verify": "Follow the airline's reporting and claim conditions",
+    "risk": "Missing photos or receipt details can slow resolution",
+    "output": "Damage report evidence pack"
+  },
+  {
+    "cluster": "Luggage and Claims",
+    "source": "travel",
+    "title": "How to Pack One Bag for a Delayed Household Shipment",
+    "action": "Separate medicines, work essentials and minimum daily clothing",
+    "verify": "Confirm what can safely travel in the cabin",
+    "risk": "Sending every practical item by freight creates a long gap",
+    "output": "Shipment-delay contingency bag"
+  },
+  {
+    "cluster": "Luggage and Claims",
+    "source": "travel",
+    "title": "How to Research Baggage Coverage Before Relocation Travel",
+    "action": "Compare carrier limits with insurer exclusions and documentation needs",
+    "verify": "Check the policy for high-value work equipment",
+    "risk": "General travel coverage may exclude specialist belongings",
+    "output": "Baggage insurance question list"
+  },
+  {
+    "cluster": "International Shipping Decisions",
+    "source": "consumer",
+    "title": "How to Compare Door-to-Door Moving Quotes From Different Carriers",
+    "action": "Separate packing, freight, customs, delivery and storage charges",
+    "verify": "Read exclusions and destination fees in writing",
+    "risk": "A low initial quote may omit final-mile costs",
+    "output": "Comparable shipping quote table"
+  },
+  {
+    "cluster": "International Shipping Decisions",
+    "source": "consumer",
+    "title": "How to Inventory Household Goods for International Customs",
+    "action": "Record descriptions, approximate values and ownership status",
+    "verify": "Check import rules for the actual destination and status",
+    "risk": "Assuming used goods never need declaration may be wrong",
+    "output": "Customs inventory draft"
+  },
+  {
+    "cluster": "International Shipping Decisions",
+    "source": "consumer",
+    "title": "How to Decide Whether to Ship a Bicycle Overseas",
+    "action": "Compare protective packaging, freight and destination costs",
+    "verify": "Check equipment import or airline sports-gear conditions",
+    "risk": "Oversized fees may exceed replacement cost",
+    "output": "Ship-or-replace calculation"
+  },
+  {
+    "cluster": "International Shipping Decisions",
+    "source": "consumer",
+    "title": "How to Manage Shipment Arrival When You Have No Permanent Address",
+    "action": "Ask the carrier about delivery changes and short-term storage",
+    "verify": "Check storage rates and release requirements",
+    "risk": "Freight can arrive before your new lease begins",
+    "output": "Delivery coordination schedule"
+  },
+  {
+    "cluster": "International Shipping Decisions",
+    "source": "consumer",
+    "title": "How to Protect Important Furniture During Overseas Freight",
+    "action": "Identify dismantling, packing and moisture protection needs",
+    "verify": "Confirm who accepts responsibility for damaged pieces",
+    "risk": "Photographs alone may not meet an insurer's requirements",
+    "output": "Furniture packing and condition record"
+  },
+  {
+    "cluster": "Restricted and Sensitive Items",
+    "source": "travel",
+    "title": "How to Check Battery Rules Before Packing Relocation Luggage",
+    "action": "List lithium batteries, power banks and removable batteries",
+    "verify": "Confirm current airline and airport placement rules",
+    "risk": "Packing spare batteries incorrectly can create safety problems",
+    "output": "Battery compliance checklist"
+  },
+  {
+    "cluster": "Restricted and Sensitive Items",
+    "source": "travel",
+    "title": "How to Travel With a Work Laptop Owned by Your Employer",
+    "action": "Ask for written authorization and security instructions",
+    "verify": "Check customs declarations and data-protection requirements where relevant",
+    "risk": "A company device may need extra approval to cross borders",
+    "output": "Employer equipment travel clearance"
+  },
+  {
+    "cluster": "Restricted and Sensitive Items",
+    "source": "travel",
+    "title": "How to Transport Fragile Instruments on an Overseas Flight",
+    "action": "Check carrier acceptance, size and protective case requirements",
+    "verify": "Document condition and any special handling agreement",
+    "risk": "A fragile label is not guaranteed protection",
+    "output": "Instrument transport plan"
+  },
+  {
+    "cluster": "Restricted and Sensitive Items",
+    "source": "travel",
+    "title": "How to Verify Import Restrictions on Food and Plants",
+    "action": "Check destination agriculture and customs websites",
+    "verify": "Declare items honestly where required",
+    "risk": "A snack or seed may be regulated or prohibited",
+    "output": "Food-and-plant packing decision list"
+  },
+  {
+    "cluster": "Restricted and Sensitive Items",
+    "source": "travel",
+    "title": "How to Handle Valuable Jewellery During International Relocation",
+    "action": "Assess security, insurance and customs declaration needs",
+    "verify": "Use documented ownership evidence where appropriate",
+    "risk": "Checked baggage may be inappropriate for irreplaceable items",
+    "output": "Valuables transport register"
+  },
+  {
+    "cluster": "Airport Accessibility and Needs",
+    "source": "travel",
+    "title": "How to Request Airport Assistance Before an International Flight",
+    "action": "Contact the airline through its official support process",
+    "verify": "Confirm arrangements for every leg and connection",
+    "risk": "Assistance booked on one flight may not cover another",
+    "output": "Assistance confirmation sheet"
+  },
+  {
+    "cluster": "Airport Accessibility and Needs",
+    "source": "travel",
+    "title": "How to Prepare for Air Travel With Mobility Equipment",
+    "action": "Review battery, size, handling and documentation rules",
+    "verify": "Communicate equipment details before departure",
+    "risk": "Unexpected handling limits can disrupt travel",
+    "output": "Mobility-equipment travel file"
+  },
+  {
+    "cluster": "Airport Accessibility and Needs",
+    "source": "travel",
+    "title": "How to Plan Airport Transfers With a Wheelchair or Stroller",
+    "action": "Check transport vehicle availability and pick-up access",
+    "verify": "Book suitable options where required",
+    "risk": "Not every vehicle at the rank can accommodate equipment",
+    "output": "Accessible transfer booking plan"
+  },
+  {
+    "cluster": "Airport Accessibility and Needs",
+    "source": "travel",
+    "title": "How to Reduce Sensory Stress During a Busy Airport Transit",
+    "action": "Research quiet spaces and accessibility support if offered",
+    "verify": "Keep an alternative waiting and boarding plan",
+    "risk": "A crowded transfer can increase fatigue and confusion",
+    "output": "Low-stress terminal route"
+  },
+  {
+    "cluster": "Airport Accessibility and Needs",
+    "source": "travel",
+    "title": "How to Request Special Meals on Multi-Airline Flights",
+    "action": "Check deadlines and meal availability for every segment",
+    "verify": "Carry suitable backup food subject to travel rules",
+    "risk": "A request on the first airline may not carry over",
+    "output": "Meal request verification list"
+  },
+  {
+    "cluster": "Ground Transfer and Arrival",
+    "source": "travel",
+    "title": "How to Validate an Airport Taxi Price Before Leaving the Terminal",
+    "action": "Locate official transport desks or regulated fare guidance",
+    "verify": "Confirm payment method before entering the vehicle",
+    "risk": "Unsolicited drivers may overcharge newcomers",
+    "output": "Airport transfer payment plan"
+  },
+  {
+    "cluster": "Ground Transfer and Arrival",
+    "source": "travel",
+    "title": "How to Reach a Rental Address That Is Hard to Find",
+    "action": "Obtain the complete street address, building and contact instructions",
+    "verify": "Download a map and arrange a clear meeting point",
+    "risk": "A building nickname alone may not be navigable",
+    "output": "Door-to-door arrival card"
+  },
+  {
+    "cluster": "Ground Transfer and Arrival",
+    "source": "travel",
+    "title": "How to Organize a Late-Night Arrival Into Temporary Housing",
+    "action": "Confirm a real check-in method and support contact",
+    "verify": "Check local transport availability for the landing hour",
+    "risk": "An unstaffed property can leave you waiting overnight",
+    "output": "Late-arrival check-in contingency"
+  },
+  {
+    "cluster": "Ground Transfer and Arrival",
+    "source": "travel",
+    "title": "How to Travel From the Airport With Several Heavy Bags",
+    "action": "Compare luggage-friendly rail, shuttle and vehicle capacity",
+    "verify": "Allow for stairs, transfers and help with bags",
+    "risk": "The cheapest ticket may not be workable with your luggage",
+    "output": "Luggage-aware transport decision"
+  },
+  {
+    "cluster": "Ground Transfer and Arrival",
+    "source": "travel",
+    "title": "What to Do If Your Accommodation Host Does Not Respond at Arrival",
+    "action": "Keep original booking messages and customer-support details",
+    "verify": "Know a verified fallback lodging option",
+    "risk": "Relying on one messaging app can leave you stranded",
+    "output": "Accommodation failure response list"
+  },
+  {
+    "cluster": "Flights With Children and Pets",
+    "source": "family",
+    "title": "How to Organize Cabin Essentials for a Toddler on a Long Flight",
+    "action": "Separate food, clean clothes, comfort items and medical needs",
+    "verify": "Check airline security and age-specific policies",
+    "risk": "A checked bag may not be available during a long delay",
+    "output": "Toddler cabin kit"
+  },
+  {
+    "cluster": "Flights With Children and Pets",
+    "source": "family",
+    "title": "How to Research Airline Rules for Child Car Seats",
+    "action": "Confirm aircraft-seat approval and airline installation policies",
+    "verify": "Check transfer and baggage handling arrangements",
+    "risk": "A child seat accepted in a car may not be approved onboard",
+    "output": "Car-seat travel checklist"
+  },
+  {
+    "cluster": "Flights With Children and Pets",
+    "source": "family",
+    "title": "How to Handle Separate Bookings for Family Members",
+    "action": "Compare travel dates, connection risks and shared documents",
+    "verify": "Confirm each booking and entry permission independently",
+    "risk": "A family itinerary can become fragmented by changes",
+    "output": "Family booking coordination sheet"
+  },
+  {
+    "cluster": "Flights With Children and Pets",
+    "source": "family",
+    "title": "How to Prepare for a Child's First Long International Flight",
+    "action": "Explain stages of the journey in simple age-appropriate terms",
+    "verify": "Plan movement, rest and entertainment for transfers",
+    "risk": "Expecting a child to follow an adult timetable without breaks may be unrealistic",
+    "output": "Child-friendly flight routine"
+  },
+  {
+    "cluster": "Flights With Children and Pets",
+    "source": "family",
+    "title": "How to Compare Pet Cabin, Hold and Cargo Travel Options",
+    "action": "Ask the airline and veterinarian which arrangements are permitted",
+    "verify": "Review animal welfare, documents and route restrictions",
+    "risk": "Not every breed or animal can travel on every route",
+    "output": "Pet transport decision file"
+  },
+  {
+    "cluster": "Travel Disruptions and Recovery",
+    "source": "travel",
+    "title": "How to Build an Emergency Overnight Kit for Flight Cancellations",
+    "action": "Keep medicines, documents and minimal clothing accessible",
+    "verify": "Check hotel and rerouting support rules for the actual ticket",
+    "risk": "A shipment or checked bag may be unavailable during the delay",
+    "output": "Disruption overnight bag list"
+  },
+  {
+    "cluster": "Travel Disruptions and Recovery",
+    "source": "travel",
+    "title": "How to Keep Receipts When an Airline Cancels Your Relocation Flight",
+    "action": "Record expenses by date, currency and cause",
+    "verify": "Check applicable passenger-rights and insurer processes",
+    "risk": "Unclear receipts can complicate claims",
+    "output": "Disruption expenses ledger"
+  },
+  {
+    "cluster": "Travel Disruptions and Recovery",
+    "source": "travel",
+    "title": "How to Update an Employer About a Relocation Flight Delay",
+    "action": "Explain confirmed changes and realistic next steps",
+    "verify": "Share only details needed for work scheduling",
+    "risk": "Promising a new arrival time too early can backfire",
+    "output": "Arrival-delay notification"
+  },
+  {
+    "cluster": "Travel Disruptions and Recovery",
+    "source": "travel",
+    "title": "How to Respond When Your Relocation Luggage Goes to Another Airport",
+    "action": "File a trace request with the responsible airline",
+    "verify": "Save destination address changes and report references",
+    "risk": "Leaving without a trace number makes later follow-up harder",
+    "output": "Delayed-bag recovery plan"
+  },
+  {
+    "cluster": "Travel Disruptions and Recovery",
+    "source": "travel",
+    "title": "How to Rebuild a Travel Itinerary After a Major Schedule Change",
+    "action": "Check the whole connection chain and entry/transit implications",
+    "verify": "Reconfirm housing and pickup times with affected providers",
+    "risk": "Fixing only the first flight can break every onward arrangement",
+    "output": "Revised end-to-end route plan"
+  }
+]

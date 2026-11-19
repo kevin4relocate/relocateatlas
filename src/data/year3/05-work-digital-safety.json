@@ -1,0 +1,542 @@
+[
+  {
+    "cluster": "Digital Account Security",
+    "source": "digital",
+    "title": "How to Replace an Old Phone Number Without Losing Account Access",
+    "action": "List accounts using SMS and recovery calls",
+    "verify": "Add supported alternate authentication before cancelling service",
+    "risk": "An inactive number can lock you out of essential accounts",
+    "output": "Account recovery migration table"
+  },
+  {
+    "cluster": "Digital Account Security",
+    "source": "digital",
+    "title": "How to Set Up a Secure Password Manager Before Moving Abroad",
+    "action": "Choose a reputable manager and save recovery materials securely",
+    "verify": "Test access on a second trusted device",
+    "risk": "A single forgotten master password can interrupt critical tasks",
+    "output": "Password recovery readiness checklist"
+  },
+  {
+    "cluster": "Digital Account Security",
+    "source": "digital",
+    "title": "How to Protect Your Documents on Shared Public Computers Abroad",
+    "action": "Avoid signing in to sensitive accounts where possible",
+    "verify": "Use trusted private devices and verify secure uploads",
+    "risk": "A public browser may retain sensitive information",
+    "output": "Public-device avoidance plan"
+  },
+  {
+    "cluster": "Digital Account Security",
+    "source": "digital",
+    "title": "How to Spot a Fake Government Service Login When Overseas",
+    "action": "Start from a known official authority website",
+    "verify": "Inspect domain and payment instructions independently",
+    "risk": "Sponsored links can impersonate legitimate government pages",
+    "output": "Official account bookmarks"
+  },
+  {
+    "cluster": "Digital Account Security",
+    "source": "digital",
+    "title": "How to Secure Shared Household Devices During Relocation",
+    "action": "Separate personal profiles and enable appropriate device locks",
+    "verify": "Agree backup and access rules with household members",
+    "risk": "Shared devices may expose banking and identity records",
+    "output": "Household device access policy"
+  },
+  {
+    "cluster": "Phone and Connectivity",
+    "source": "digital",
+    "title": "How to Compare eSIM and Physical SIM Options for a Long-Term Move",
+    "action": "Check phone compatibility, voice and SMS features",
+    "verify": "Read identification, top-up and roaming conditions",
+    "risk": "A data-only eSIM may not support banking verification",
+    "output": "SIM feature comparison"
+  },
+  {
+    "cluster": "Phone and Connectivity",
+    "source": "digital",
+    "title": "How to Prepare for a Country Where Your Phone May Not Be Compatible",
+    "action": "Check radio bands, carrier locking and supported networks",
+    "verify": "Confirm service using official provider information",
+    "risk": "A working phone at home may not connect reliably abroad",
+    "output": "Device compatibility check"
+  },
+  {
+    "cluster": "Phone and Connectivity",
+    "source": "digital",
+    "title": "How to Keep Your Old Number Active Only for Essential Accounts",
+    "action": "Identify required SMS services and minimum viable plan",
+    "verify": "Review ongoing costs and expiration rules",
+    "risk": "A cheap plan may stop receiving messages internationally",
+    "output": "Number-retention budget"
+  },
+  {
+    "cluster": "Phone and Connectivity",
+    "source": "digital",
+    "title": "How to Set Up Offline Contact Details for Your First Week Abroad",
+    "action": "Save addresses, airline contacts and workplace details without internet",
+    "verify": "Test access in airplane mode",
+    "risk": "A cloud-only contact list can fail during an outage",
+    "output": "Offline contacts pack"
+  },
+  {
+    "cluster": "Phone and Connectivity",
+    "source": "digital",
+    "title": "How to Handle Two-Factor Authentication When Crossing Borders",
+    "action": "Check recovery options for travel-related logins",
+    "verify": "Test authentication apps and backup codes securely",
+    "risk": "A blocked roaming SIM can prevent a crucial login",
+    "output": "Cross-border authentication checklist"
+  },
+  {
+    "cluster": "Work Laptop and Home Office",
+    "source": "digital",
+    "title": "How to Check a Rental Apartment for Remote Work Connectivity",
+    "action": "Ask about provider, real connection options and installation timing",
+    "verify": "Test signal strength where you will actually work",
+    "risk": "An advertised fibre address may not mean a usable connection",
+    "output": "Remote-work housing checklist"
+  },
+  {
+    "cluster": "Work Laptop and Home Office",
+    "source": "digital",
+    "title": "How to Plan a Backup Internet Connection for Your Overseas Job",
+    "action": "Compare mobile tethering and alternate networks",
+    "verify": "Check coverage, data limits and equipment compatibility",
+    "risk": "One router failure can interrupt important meetings",
+    "output": "Connectivity fallback plan"
+  },
+  {
+    "cluster": "Work Laptop and Home Office",
+    "source": "digital",
+    "title": "How to Travel Safely With Company-Owned Work Equipment",
+    "action": "Follow employer security and customs instructions",
+    "verify": "Record asset details without exposing confidential data",
+    "risk": "Unauthorized movement of devices can create compliance problems",
+    "output": "Company equipment transport consent"
+  },
+  {
+    "cluster": "Work Laptop and Home Office",
+    "source": "digital",
+    "title": "How to Set Up a Quiet Workspace in Temporary Housing",
+    "action": "Assess noise, lighting and call privacy",
+    "verify": "Agree shared-space use with household members",
+    "risk": "A beautiful room may not support confidential meetings",
+    "output": "Temporary workspace layout"
+  },
+  {
+    "cluster": "Work Laptop and Home Office",
+    "source": "digital",
+    "title": "How to Protect Client Confidentiality While Working Abroad",
+    "action": "Use only approved systems and devices",
+    "verify": "Clarify geographic data-handling restrictions with employer",
+    "risk": "A café Wi-Fi session can expose sensitive material",
+    "output": "Safe remote-work practices plan"
+  },
+  {
+    "cluster": "Official Registrations",
+    "source": "government",
+    "title": "How to Find the Official Local Address Registration Process",
+    "action": "Identify the exact local authority responsible",
+    "verify": "Check appointment, document and residency requirements",
+    "risk": "Old expat forum instructions can be inaccurate",
+    "output": "Address-registration source sheet"
+  },
+  {
+    "cluster": "Official Registrations",
+    "source": "government",
+    "title": "How to Prepare a Government Office Appointment Folder",
+    "action": "Gather only documents requested by the relevant authority",
+    "verify": "Confirm translation, copy and original requirements",
+    "risk": "A missing original can cause a wasted visit",
+    "output": "Appointment-ready file"
+  },
+  {
+    "cluster": "Official Registrations",
+    "source": "government",
+    "title": "How to Track Important Residency Renewal Deadlines",
+    "action": "Record document expiry and official renewal windows",
+    "verify": "Set reminders that allow for evidence preparation",
+    "risk": "Relying on one reminder the day before expiry is risky",
+    "output": "Renewal calendar"
+  },
+  {
+    "cluster": "Official Registrations",
+    "source": "government",
+    "title": "How to Keep a Record of Every Official Application Submitted Abroad",
+    "action": "Save acknowledgement numbers and approved communication channels",
+    "verify": "Track outstanding questions and next steps",
+    "risk": "A paid fee is not necessarily approval",
+    "output": "Government application ledger"
+  },
+  {
+    "cluster": "Official Registrations",
+    "source": "government",
+    "title": "How to Avoid Unofficial Agencies That Resell Free Appointments",
+    "action": "Find booking pages from the government website directly",
+    "verify": "Check the authorised process and published fees",
+    "risk": "Third-party appointment brokers may overcharge or mislead",
+    "output": "Verified booking procedure"
+  },
+  {
+    "cluster": "Workplace Onboarding Abroad",
+    "source": "labor",
+    "title": "How to Prepare for Payroll Enrollment at a New Overseas Employer",
+    "action": "Ask HR for its exact required identity and bank records",
+    "verify": "Check how deductions and pay dates are communicated",
+    "risk": "Missing onboarding details can delay salary",
+    "output": "Payroll onboarding checklist"
+  },
+  {
+    "cluster": "Workplace Onboarding Abroad",
+    "source": "labor",
+    "title": "How to Confirm a Workplace's Probation Review Schedule",
+    "action": "Read contract and manager expectations",
+    "verify": "Record meeting dates and measurable objectives",
+    "risk": "Assuming a standard probation length can be misleading",
+    "output": "Probation progress plan"
+  },
+  {
+    "cluster": "Workplace Onboarding Abroad",
+    "source": "labor",
+    "title": "How to Understand Mandatory Training at a Foreign Job",
+    "action": "Identify which sessions are required for safety or compliance",
+    "verify": "Confirm completion proof and deadlines",
+    "risk": "An optional-looking course may be mandatory",
+    "output": "Training obligations tracker"
+  },
+  {
+    "cluster": "Workplace Onboarding Abroad",
+    "source": "labor",
+    "title": "How to Ask for Clear Priorities During Your First Two Weeks Abroad",
+    "action": "Request a written list of expected outcomes",
+    "verify": "Clarify who approves work and gives feedback",
+    "risk": "Trying to impress everyone at once dilutes effort",
+    "output": "Two-week priority plan"
+  },
+  {
+    "cluster": "Workplace Onboarding Abroad",
+    "source": "labor",
+    "title": "How to Prepare for Your First Performance Conversation Overseas",
+    "action": "Collect factual accomplishments and questions",
+    "verify": "Ask about the organisation's review format",
+    "risk": "Comparing unfamiliar evaluation labels without context misleads",
+    "output": "Performance conversation notes"
+  },
+  {
+    "cluster": "Working Across Cultures",
+    "source": "community",
+    "title": "How to Clarify Direct and Indirect Feedback at Work Abroad",
+    "action": "Ask what specific change is expected",
+    "verify": "Summarise the agreed action without judging communication style",
+    "risk": "Taking every brief comment personally can distort intent",
+    "output": "Feedback clarification note"
+  },
+  {
+    "cluster": "Working Across Cultures",
+    "source": "community",
+    "title": "How to Confirm Who Makes Decisions in a New International Team",
+    "action": "Map managers, approvers and subject specialists",
+    "verify": "Ask where final decisions are documented",
+    "risk": "Assuming a meeting attendee is the decision-maker creates delays",
+    "output": "Decision owner map"
+  },
+  {
+    "cluster": "Working Across Cultures",
+    "source": "community",
+    "title": "How to Handle Unfamiliar Meeting Etiquette in a Foreign Office",
+    "action": "Observe turn-taking, agendas and follow-up habits",
+    "verify": "Ask for the team's preferred meeting norms",
+    "risk": "One colleague's habit is not national culture",
+    "output": "Team norms observation"
+  },
+  {
+    "cluster": "Working Across Cultures",
+    "source": "community",
+    "title": "How to Communicate Work Delays Across Time Zones",
+    "action": "Explain the impact, new dependency and proposed response time",
+    "verify": "Use an agreed channel for urgent escalation",
+    "risk": "Silence during another team's workday can cause confusion",
+    "output": "Cross-time-zone status note"
+  },
+  {
+    "cluster": "Working Across Cultures",
+    "source": "community",
+    "title": "How to Ask Colleagues to Repeat Technical Details Without Embarrassment",
+    "action": "Use neutral clarification requests and confirm terminology",
+    "verify": "Summarise important steps back in writing",
+    "risk": "Pretending comprehension can affect safety or quality",
+    "output": "Technical clarification script"
+  },
+  {
+    "cluster": "Career Growth After Moving",
+    "source": "labor",
+    "title": "How to Build a Local Professional Network During Your First Six Months",
+    "action": "Attend a manageable set of sector events",
+    "verify": "Follow up with substantive work-related questions",
+    "risk": "Collecting contacts without relationships produces little value",
+    "output": "Networking activity log"
+  },
+  {
+    "cluster": "Career Growth After Moving",
+    "source": "labor",
+    "title": "How to Document Achievements in a New Overseas Role",
+    "action": "Keep a private record of projects and verified results",
+    "verify": "Respect employer confidentiality",
+    "risk": "Inventing metrics or saving client data creates problems",
+    "output": "Professional accomplishments journal"
+  },
+  {
+    "cluster": "Career Growth After Moving",
+    "source": "labor",
+    "title": "How to Find Mentorship Without Asking for a Job",
+    "action": "Identify a specific skill or question to discuss",
+    "verify": "Respect the mentor's availability and boundaries",
+    "risk": "An immediate referral request can feel transactional",
+    "output": "Mentorship outreach plan"
+  },
+  {
+    "cluster": "Career Growth After Moving",
+    "source": "labor",
+    "title": "How to Research Professional Certifications Before Paying Fees Abroad",
+    "action": "Check regulator recognition and employer relevance",
+    "verify": "Compare official eligibility and renewal requirements",
+    "risk": "A certificate advertisement may exaggerate value",
+    "output": "Credential investment matrix"
+  },
+  {
+    "cluster": "Career Growth After Moving",
+    "source": "labor",
+    "title": "How to Review Your Career Plan One Year After Relocation",
+    "action": "Compare achieved responsibilities with initial goals",
+    "verify": "Update the skills and relationships that matter next",
+    "risk": "Staying on autopilot can reduce long-term satisfaction",
+    "output": "Annual career progression review"
+  },
+  {
+    "cluster": "Local Transport and Mobility",
+    "source": "transport",
+    "title": "How to Compare Monthly Transit Passes With Pay-As-You-Go Travel",
+    "action": "Calculate trips from your actual commute and errands",
+    "verify": "Check official ticket conditions and eligibility",
+    "risk": "A discounted pass may not cover all zones",
+    "output": "Transit-cost calculator worksheet"
+  },
+  {
+    "cluster": "Local Transport and Mobility",
+    "source": "transport",
+    "title": "How to Test a Train Commute Before Choosing Permanent Housing",
+    "action": "Ride the likely route at real work hours",
+    "verify": "Record transfers, crowding and backup options",
+    "risk": "Map estimates may ignore service disruptions",
+    "output": "Commute reliability report"
+  },
+  {
+    "cluster": "Local Transport and Mobility",
+    "source": "transport",
+    "title": "How to Decide Whether You Need a Car After Relocating",
+    "action": "Compare total ownership and transport costs",
+    "verify": "Check licence recognition, insurance and parking requirements",
+    "risk": "The purchase price is only a fraction of car cost",
+    "output": "Car-or-transit decision matrix"
+  },
+  {
+    "cluster": "Local Transport and Mobility",
+    "source": "transport",
+    "title": "How to Understand Bicycle Rules in a New City",
+    "action": "Check road rules, required safety equipment and bike storage",
+    "verify": "Choose suitable routes for daily needs",
+    "risk": "Home-country cycling conventions may differ",
+    "output": "Cycling readiness checklist"
+  },
+  {
+    "cluster": "Local Transport and Mobility",
+    "source": "transport",
+    "title": "How to Plan Safe Late-Night Transport in an Unfamiliar City",
+    "action": "Identify official operators and trusted pickup points",
+    "verify": "Agree a backup ride method",
+    "risk": "Assuming public transit runs all night may be unsafe",
+    "output": "After-hours route plan"
+  },
+  {
+    "cluster": "Everyday Services and Addresses",
+    "source": "consumer",
+    "title": "How to Format a Local Mailing Address for Deliveries Abroad",
+    "action": "Verify street, building, unit and postal code format",
+    "verify": "Test the address with a low-risk delivery if appropriate",
+    "risk": "Missing apartment numbers can cause repeated returns",
+    "output": "Validated local address template"
+  },
+  {
+    "cluster": "Everyday Services and Addresses",
+    "source": "consumer",
+    "title": "How to Find a Trustworthy Laundry Service After Moving",
+    "action": "Read service terms and garment-handling policies",
+    "verify": "Separate delicate or essential work clothes",
+    "risk": "Assuming every service accepts all fabrics can cause damage",
+    "output": "Laundry service shortlist"
+  },
+  {
+    "cluster": "Everyday Services and Addresses",
+    "source": "consumer",
+    "title": "How to Choose an Everyday Grocery Store Near Your New Home",
+    "action": "Compare the actual staples you buy and travel time",
+    "verify": "Check opening hours and practical payment methods",
+    "risk": "Imported items can distort cost comparisons",
+    "output": "Weekly shopping basket log"
+  },
+  {
+    "cluster": "Everyday Services and Addresses",
+    "source": "consumer",
+    "title": "How to Learn Your Building's Package Collection Rules",
+    "action": "Ask management about access hours and identity checks",
+    "verify": "Confirm what happens when no one is home",
+    "risk": "Uncollected parcels may be returned or misplaced",
+    "output": "Parcel collection quick guide"
+  },
+  {
+    "cluster": "Everyday Services and Addresses",
+    "source": "consumer",
+    "title": "How to Set Up Reliable Household Maintenance Contacts Abroad",
+    "action": "Save landlord, building and licensed service channels",
+    "verify": "Clarify who may authorize repairs",
+    "risk": "Hiring an unverified technician can be unsafe or costly",
+    "output": "Home maintenance contact sheet"
+  },
+  {
+    "cluster": "Moving and Identity Fraud",
+    "source": "fraud",
+    "title": "How to Check a Relocation Service Provider Before Paying",
+    "action": "Verify business registration and service scope",
+    "verify": "Get a written itemised quote and cancellation terms",
+    "risk": "A fake broker can disappear after an advance payment",
+    "output": "Relocation provider verification"
+  },
+  {
+    "cluster": "Moving and Identity Fraud",
+    "source": "fraud",
+    "title": "How to Recognize a Fake Apartment Deposit Reminder",
+    "action": "Confirm the payment request with the known landlord through another channel",
+    "verify": "Compare bank account details with signed documents",
+    "risk": "A spoofed email can redirect a valid deposit",
+    "output": "Deposit change verification checklist"
+  },
+  {
+    "cluster": "Moving and Identity Fraud",
+    "source": "fraud",
+    "title": "How to Keep Identity Documents Out of Unsafe Rental Chats",
+    "action": "Ask about secure document submission and necessity",
+    "verify": "Remove unnecessary sensitive details where permitted",
+    "risk": "Sharing full scans in open groups creates identity risk",
+    "output": "Rental document sharing protocol"
+  },
+  {
+    "cluster": "Moving and Identity Fraud",
+    "source": "fraud",
+    "title": "How to Check an Offer Letter Sent Through a Messaging App",
+    "action": "Verify the sender and hiring entity through the company's own site",
+    "verify": "Match contract details with prior interview information",
+    "risk": "A PDF logo is not proof of authenticity",
+    "output": "Employment offer authenticity record"
+  },
+  {
+    "cluster": "Moving and Identity Fraud",
+    "source": "fraud",
+    "title": "How to Report Suspected Overseas Recruitment Fraud",
+    "action": "Preserve messages, payment records and original links",
+    "verify": "Use the appropriate official reporting channels",
+    "risk": "Deleting evidence too early can hinder investigation",
+    "output": "Fraud incident timeline"
+  },
+  {
+    "cluster": "Personal Safety After Arrival",
+    "source": "safety",
+    "title": "How to Build a Personal Safety Contact Plan in a New City",
+    "action": "Record local emergency and non-emergency contacts",
+    "verify": "Confirm official numbers and current address information",
+    "risk": "Home-country numbers may not provide local help",
+    "output": "Local safety contact card"
+  },
+  {
+    "cluster": "Personal Safety After Arrival",
+    "source": "safety",
+    "title": "How to Review a Neighbourhood's Nighttime Accessibility",
+    "action": "Test well-used transport and lighting at appropriate times",
+    "verify": "Use official local information rather than rumours",
+    "risk": "Daytime impressions may miss practical late-night difficulties",
+    "output": "Nighttime movement map"
+  },
+  {
+    "cluster": "Personal Safety After Arrival",
+    "source": "safety",
+    "title": "How to Prepare for Severe Weather in an Unfamiliar Country",
+    "action": "Find the local meteorological warning service",
+    "verify": "Identify shelter, transport disruptions and essential supplies",
+    "risk": "Weather expectations from home may not apply",
+    "output": "Weather alert preparation sheet"
+  },
+  {
+    "cluster": "Personal Safety After Arrival",
+    "source": "safety",
+    "title": "How to Share Your Location Safely With Trusted Contacts During Travel",
+    "action": "Choose consent-based sharing and privacy settings",
+    "verify": "Agree when and how to check in",
+    "risk": "Permanent public location sharing can create risks",
+    "output": "Private journey check-in plan"
+  },
+  {
+    "cluster": "Personal Safety After Arrival",
+    "source": "safety",
+    "title": "How to Respond When You Lose a Phone Abroad",
+    "action": "Use device security, account recovery and provider contacts",
+    "verify": "Keep backups independent of the missing device",
+    "risk": "A lost phone can also mean lost payment and identity access",
+    "output": "Lost-phone recovery playbook"
+  },
+  {
+    "cluster": "Digital Receipts and Archives",
+    "source": "digital",
+    "title": "How to Organize Your Relocation Receipts for Reimbursement",
+    "action": "Label each invoice with purpose, currency and employer approval",
+    "verify": "Check claim deadlines and required formats",
+    "risk": "Unlabelled screenshots can cause rejected claims",
+    "output": "Reimbursement-ready receipt folder"
+  },
+  {
+    "cluster": "Digital Receipts and Archives",
+    "source": "digital",
+    "title": "How to Digitize Important Paper Records Before Moving Abroad",
+    "action": "Create legible copies and preserve originals securely",
+    "verify": "Confirm which institutions require certified copies",
+    "risk": "A scan may not replace a legally required original",
+    "output": "Document scanning checklist"
+  },
+  {
+    "cluster": "Digital Receipts and Archives",
+    "source": "digital",
+    "title": "How to Back Up Photos and Records From Relocation Day",
+    "action": "Use a second secure location independent of your phone",
+    "verify": "Verify backups can actually be opened",
+    "risk": "Automatic sync can fail during roaming interruptions",
+    "output": "Tested relocation backup"
+  },
+  {
+    "cluster": "Digital Receipts and Archives",
+    "source": "digital",
+    "title": "How to Track Contact Details for Services Across Two Countries",
+    "action": "Separate emergency, banking, employment and housing contacts",
+    "verify": "Record time zones and current support channels",
+    "risk": "One outdated contact list slows urgent communication",
+    "output": "Cross-border service directory"
+  },
+  {
+    "cluster": "Digital Receipts and Archives",
+    "source": "digital",
+    "title": "How to Archive Old Housing and Employment Contracts Safely",
+    "action": "Store dated versions with access controls",
+    "verify": "Follow legitimate retention and privacy obligations",
+    "risk": "Keeping sensitive files in public links creates avoidable exposure",
+    "output": "Secure contract archive"
+  }
+]
