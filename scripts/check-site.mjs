@@ -86,7 +86,7 @@ for (const slug of countrySlugs) {
   else if (!txt.includes('Official starting points')) errors.push('Country guide missing official references: ' + slug);
   else if (txt.includes('Editorial edition: September 2026')) errors.push('Country guide contains obsolete editorial edition notice: ' + slug);
 }
-const blogFiles = htmlFiles.filter((path) => path.includes('/blog/') && path !== join(root,'blog','index.html'));
+const blogFiles = htmlFiles.filter((path) => path.includes('/blog/') && !path.includes('/blog/page/') && path !== join(root,'blog','index.html'));
 const seoRelease = JSON.parse(readFileSync(resolve('src/data/seoRelease.json'), 'utf8'));
 const evergreenRelease = JSON.parse(readFileSync(resolve('src/data/evergreenRelease.json'), 'utf8'));
 const year3Release = JSON.parse(readFileSync(resolve('src/data/year3Release.json'), 'utf8'));

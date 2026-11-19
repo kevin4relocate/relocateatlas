@@ -1,4 +1,4 @@
-import {readFileSync,existsSync} from 'node:fs';
+import {readFileSync,existsSync,readdirSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {buildEvergreenArticles,releaseDay} from '../src/evergreenEditorial.mjs';
 import {buildYear3Articles,publicationDate,YEAR3_START} from '../src/year3Editorial.mjs';
@@ -57,7 +57,12 @@ if(seo.at(-1)?.date!=='2027-09-13'||evergreen.at(-1)?.date!=='2028-07-10'||year3
 if(states[2].published.length>0&&(states[0].published.length!==100||states[1].published.length!==200))errors.push('Year-three published before legacy queues completed');
 if(existsSync(resolve('dist/sitemap-0.xml'))){
  const sitemap=readFileSync(resolve('dist/sitemap-0.xml'),'utf8'),rss=readFileSync(resolve('dist/rss.xml'),'utf8');
- const blog=readFileSync(resolve('dist/blog/index.html'),'utf8');
+ const archiveBase=resolve('dist/blog/page');
+ const archivePages=existsSync(archiveBase)?readdirSync(archiveBase).filter(n=>/^\d+$/.test(n)).map(n=>readFileSync(resolve(archiveBase,n,'index.html'),'utf8')):[];
+ const publicArticleCount=9+states.reduce((n,state)=>n+state.published.length,0);
+ const expectedArchivePages=Math.max(0,Math.ceil(publicArticleCount/24)-1);
+ if(archivePages.length!==expectedArchivePages)errors.push('Blog archives mismatch: expected '+expectedArchivePages+', found '+archivePages.length);
+ const blog=[readFileSync(resolve('dist/blog/index.html'),'utf8'),...archivePages].join(' ');
  const search=readFileSync(resolve('dist/search/index.html'),'utf8');
  for(const lane of lanes)for(let i=0;i<lane.queue.length;i++){
   const post=lane.queue[i],url='https://relocateworks.com/blog/'+post.slug;

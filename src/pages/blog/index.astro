@@ -4,35 +4,38 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTA from '../../components/CTA.astro';
 import { allPublishedBlogPosts } from '../../seoPublished';
+const PAGE_SIZE = 24;
+const posts = allPublishedBlogPosts.slice(0,PAGE_SIZE);
+const hasMore = allPublishedBlogPosts.length > PAGE_SIZE;
 ---
-<BaseLayout
-  title="Relocate Works Blog — Visa Sponsor Jobs and Relocation Guides"
-  description="Read practical guides about visa sponsor jobs, relocation-friendly employers, global career moves, and international job applications."
-  canonicalPath="/blog"
->
+<BaseLayout title="Relocate Works Blog — Visa Sponsor Jobs and Relocation Guides" description="Explore practical international moving guides, overseas job-search tips, airline and housing advice, finance planning and evergreen checklists." canonicalPath="/blog">
   <Header />
   <main>
     <section class="page-hero">
       <div class="container">
         <span class="eyebrow">Relocation Guides</span>
-        <h1>Visa sponsor jobs and relocation articles.</h1>
-        <p class="lead">
-          Practical guides for international candidates who want to find better global job opportunities and understand relocation signals.
-        </p>
+        <h1>Practical advice for moving and working abroad.</h1>
+        <p class="lead">Explore visa research, job search, airline travel, housing, finances and everyday life. Articles are displayed newest first.</p>
       </div>
     </section>
     <section class="section">
       <div class="container grid-3">
-        {allPublishedBlogPosts.map((post) => (
-          <a class="article-card" href={`/blog/${post.slug}`}>
+        {posts.map((post) => (
+          <a class="article-card" href={'/blog/'+post.slug}>
             <div class="article-meta">{post.category} · {post.date}</div>
-            <h3>{post.title}</h3>
+            <h2 class="blog-card-title">{post.title}</h2>
             <p>{post.description}</p>
           </a>
         ))}
       </div>
+      {hasMore && <nav class="blog-pager container" aria-label="Blog pages"><span>Page 1 of {Math.ceil(allPublishedBlogPosts.length/PAGE_SIZE)}</span><a class="button" href="/blog/page/2">Older articles →</a></nav>}
     </section>
     <CTA />
   </main>
   <Footer />
 </BaseLayout>
+<style>
+  .blog-pager{display:flex;gap:20px;align-items:center;justify-content:space-between;margin-top:30px;flex-wrap:wrap}
+  .blog-pager span{color:#475569;font-size:.95rem}
+  .blog-card-title{font-size:1.3rem;line-height:1.35;margin:8px 0}
+</style>

@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import CTA from '../../../components/CTA.astro';
+import { allPublishedBlogPosts } from '../../../seoPublished';
+const PAGE_SIZE = 24;
+export function getStaticPaths(){
+  const count=Math.ceil(allPublishedBlogPosts.length/PAGE_SIZE);
+  return Array.from({length:Math.max(0,count-1)},(_,index)=>({
+    params:{number:String(index+2)},
+    props:{page:index+2}
+  }));
+}
+const {page}=Astro.props;
+const posts=allPublishedBlogPosts.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE);
+const totalPages=Math.ceil(allPublishedBlogPosts.length/PAGE_SIZE);
+const previous=page===2?'/blog':'/blog/page/'+(page-1);
+const next=page<totalPages?'/blog/page/'+(page+1):null;
+---
+<BaseLayout title={'Relocation Guides Archive — Page '+page+' | Relocate Works'} description={'Page '+page+' of Relocate Works evergreen relocation guides, job-search advice, housing and moving tips.'} canonicalPath={'/blog/page/'+page}>
+  <Header />
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="rw-breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog">Blog</a><span aria-hidden="true">/</span><span>Page {page}</span></nav>
+        <h1>More relocation articles — page {page}</h1>
+        <p class="lead">Practical guidance on jobs, international travel, housing, money and daily life. Browse the archive or return to the latest articles.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container grid-3">
+        {posts.map((post) => (
+          <a class="article-card" href={'/blog/'+post.slug}>
+            <div class="article-meta">{post.category} · {post.date}</div>
+            <h2 class="blog-card-title">{post.title}</h2>
+            <p>{post.description}</p>
+          </a>
+        ))}
+      </div>
+      <nav class="blog-pager container" aria-label="Blog pages">
+        <a class="button" href={previous}>← Newer articles</a>
+        <span>Page {page} of {totalPages}</span>
+        {next && <a class="button" href={next}>Older articles →</a>}
+      </nav>
+    </section>
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>
+<style>
+ .blog-pager{display:flex;gap:20px;justify-content:space-between;align-items:center;margin-top:30px;flex-wrap:wrap}
+ .blog-pager span{color:#475569;font-size:.95rem}
+ .blog-card-title{font-size:1.3rem;line-height:1.35;margin:8px 0}
+</style>
