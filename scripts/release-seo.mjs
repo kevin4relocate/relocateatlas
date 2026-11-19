@@ -11,7 +11,8 @@
 import {readFileSync,writeFileSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {buildEvergreenArticles,releaseDay} from '../src/evergreenEditorial.mjs';
-import {buildYear3Articles,publicationDate,YEAR3_START} from '../src/year3Editorial.mjs';
+import {buildYear3Articles,YEAR3_START} from '../src/year3Editorial.mjs';
+import {selectPublicationLane,laneDueDate} from '../src/releaseCalendar.mjs';
 
 const readJson=path=>JSON.parse(readFileSync(resolve(path),'utf8'));
 const originalQueue=readJson('src/data/seoQueue.json');
@@ -45,29 +46,19 @@ if(new Set([...originalQueue,...evergreenQueue,...year3Queue].map(post=>post.slu
 const [first,second,third]=stateLanes;
 const previousComplete=first.state.published.length===100 && second.state.published.length===200;
 if(third.state.published.length>0&&!previousComplete)throw new Error('Next-year releases exist while earlier queues are incomplete');
-const baseline=Date.parse('2026-11-20T00:00:00Z');
-const dayDifference=Math.round((Date.parse(today+'T00:00:00Z')-baseline)/86400000);
-let lane;
-if(today>=YEAR3_START&&previousComplete){
- lane=third;
-} else {
- if(dayDifference<0){
-  console.log('Nothing due: next 2026-11-20 '+originalQueue[0].slug);
-  process.exit(0);
- }
- const slot=dayDifference%3;
- if(slot===2){
-  console.log('No publication slot today: '+today+' (intentional gap day or completing earlier queues)');
-  process.exit(0);
- }
- lane=slot===0?first:second;
+const plan=selectPublicationLane(today,previousComplete);
+if(plan.index===null){
+ if(plan.reason==='before-start') console.log('Nothing due: next 2026-11-20 '+originalQueue[0].slug);
+ else console.log('No publication slot today: '+today+' (intentional gap day or completing earlier queues)');
+ process.exit(0);
 }
+const lane=stateLanes[plan.index];
 const index=lane.state.published.length;
 if(index>=lane.queue.length){
  console.log(lane.label+' queue complete: '+index+'/'+lane.queue.length);
  process.exit(0);
 }
-const due=lane.interval===1?publicationDate(index):releaseDay(lane.start,index);
+const due=laneDueDate(plan.index,index);
 const article=lane.queue[index];
 if(article.date!==due)throw new Error('Scheduled article date mismatch: '+article.slug+' expected '+due);
 if(today<due){
