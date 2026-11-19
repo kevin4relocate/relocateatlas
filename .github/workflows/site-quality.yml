@@ -14,7 +14,7 @@ permissions:
 jobs:
   build-and-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 18
+    timeout-minutes: 22
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,6 +25,19 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Report dependency advisories without blocking static-site QA
+        run: |
+          npm audit --json > /tmp/relocate-npm-audit.json || true
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const report=JSON.parse(fs.readFileSync("/tmp/relocate-npm-audit.json","utf8"));
+            const entries=Object.entries(report.vulnerabilities||{});
+            console.log("NPM AUDIT INVENTORY: "+entries.length+" affected packages; "+JSON.stringify(report.metadata?.vulnerabilities||{}));
+            for(const [name,v] of entries){
+              const through=(v.via||[]).map(item=>typeof item==="string"?item:(item.name+": "+item.title+" ("+item.url+")"));
+              console.log("AUDIT PACKAGE: "+name+" severity="+v.severity+" affected="+v.range+" fix="+JSON.stringify(v.fixAvailable)+" via="+through.join(" | ").slice(0,900));
+            }
+          '
       - name: Build Astro site
         run: npm run build
       - name: Audit routes, original country guides and editorial pages
@@ -51,6 +64,12 @@ jobs:
         run: |
           node scripts/simulate-year3.mjs
           node scripts/release-seo.mjs --date=2028-07-11
+          npm run build
+          npm run check:site
+          npm run check:seo
+      - name: Simulate complete 665-article publication inventory
+        run: |
+          node scripts/simulate-all-published.mjs
           npm run build
           npm run check:site
           npm run check:seo
