@@ -2,9 +2,11 @@
   "startDate": "2026-11-20",
   "intervalDays": 3,
   "published": [
-    "australia-verify-job-visa-sponsorship"
+    "australia-verify-job-visa-sponsorship",
+    "new-zealand-verify-job-visa-sponsorship"
   ],
   "publishedAt": {
-    "australia-verify-job-visa-sponsorship": "2026-11-20"
+    "australia-verify-job-visa-sponsorship": "2026-11-20",
+    "new-zealand-verify-job-visa-sponsorship": "2026-11-23"
   }
 }
