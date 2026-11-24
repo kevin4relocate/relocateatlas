@@ -2,9 +2,11 @@
   "startDate": "2026-11-21",
   "intervalDays": 3,
   "published": [
-    "find-international-jobs-beyond-big-job-boards"
+    "find-international-jobs-beyond-big-job-boards",
+    "research-employers-before-applying-from-abroad"
   ],
   "publishedAt": {
-    "find-international-jobs-beyond-big-job-boards": "2026-11-21"
+    "find-international-jobs-beyond-big-job-boards": "2026-11-21",
+    "research-employers-before-applying-from-abroad": "2026-11-24"
   }
 }
